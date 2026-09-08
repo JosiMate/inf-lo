@@ -26,7 +26,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 
 | Temat | Godz. | Materiały |
 | --- | :---: | --- |
-| Podstawy pracy z arkuszem | 1 | *w przygotowaniu* |
+| **[Podstawy pracy z arkuszem](podstawy-arkusza.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Stosowanie instrukcji warunkowych | 2 | *w przygotowaniu* |
 | Porównywanie ofert w arkuszu | 2 | *w przygotowaniu* |
 | Zakupy grupowe z arkuszem | 2 | *w przygotowaniu* |

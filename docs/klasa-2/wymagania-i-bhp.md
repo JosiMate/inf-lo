@@ -348,7 +348,7 @@ Rozwiń dział, żeby zobaczyć, co trzeba umieć na każdą ocenę.
 
 Pełne wymagania w jednym dokumencie — do wydruku albo przekazania rodzicom.
 
-[:material-file-word: Wymagania edukacyjne (.docx)](../pliki/wymagania-edukacyjne-informatyka-2loa.docx){ .md-button download }
+[:material-file-word: Wymagania edukacyjne (.docx)](../pliki/wymagania-edukacyjne-informatyka-2loa.docx){ .md-button download="wymagania-edukacyjne-informatyka-2loa.docx" }
 
 ---
 
