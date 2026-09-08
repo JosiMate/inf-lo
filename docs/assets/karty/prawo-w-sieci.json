@@ -1,0 +1,96 @@
+{
+  "id": "prawo-w-sieci",
+  "tytul": "Prawo w sieci",
+  "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+  "klasa": "2LOA",
+  "sufiks": "PRAWO",
+  "zadania": [
+    {
+      "nr": 1,
+      "tytul": "Co jest utworem",
+      "poziom": "wymagania podstawowe · ocena 3",
+      "polecenie": "Rozstrzygnij, czy każda z pozycji jest utworem w rozumieniu ustawy, i dopisz jednozdaniowe uzasadnienie.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z1_zdjecie", "Zdjęcie zrobione telefonem", "utwór / nie — dlaczego"],
+          ["z1_pomysl", "Pomysł na aplikację", ""],
+          ["z1_ustawa", "Tekst ustawy", ""],
+          ["z1_wpis", "Wpis na blogu", ""],
+          ["z1_wzor", "Wzór matematyczny", ""]
+        ]},
+        { "typ": "tekst", "id": "z1_zasada", "wiersze": 3,
+          "pytanie": "Sformułuj jedną zasadę, która pozwala rozstrzygnąć wszystkie te przypadki." }
+      ]
+    },
+    {
+      "nr": 2,
+      "tytul": "Prawa osobiste i majątkowe",
+      "poziom": "wymagania podstawowe · ocena 3",
+      "polecenie": "Uzupełnij porównanie obu grup praw.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z2_os_czas", "Prawa osobiste — jak długo trwają", ""],
+          ["z2_maj_czas", "Prawa majątkowe — jak długo trwają", ""],
+          ["z2_os_przen", "Prawa osobiste — czy można przenieść", ""],
+          ["z2_maj_przen", "Prawa majątkowe — czy można przenieść", ""]
+        ]},
+        { "typ": "tekst", "id": "z2_domena", "wiersze": 3,
+          "pytanie": "Utwór jest w domenie publicznej. Czy trzeba podać autora? Odpowiedz i uzasadnij przez rodzaj praw." }
+      ]
+    },
+    {
+      "nr": 3,
+      "tytul": "Ustal licencję zdjęcia",
+      "poziom": "wymagania rozszerzające · ocena 4",
+      "polecenie": "Znajdź na Wikimedia Commons trzy zdjęcia zabytku z twojej okolicy. Dla każdego ustal autora i licencję, a potem zapisz poprawne oznaczenie źródła — <strong>autor, tytuł, licencja, odnośnik</strong>.",
+      "pola": [
+        { "typ": "tekst", "id": "z3_a", "wiersze": 2, "pytanie": "Zdjęcie 1 — pełne oznaczenie źródła" },
+        { "typ": "tekst", "id": "z3_b", "wiersze": 2, "pytanie": "Zdjęcie 2 — pełne oznaczenie źródła" },
+        { "typ": "tekst", "id": "z3_c", "wiersze": 2, "pytanie": "Zdjęcie 3 — pełne oznaczenie źródła" },
+        { "typ": "tekst", "id": "z3_wniosek", "wiersze": 3,
+          "pytanie": "Które z tych zdjęć wolno umieścić na szkolnej stronie internetowej i pod jakim warunkiem?" }
+      ]
+    },
+    {
+      "nr": 4,
+      "tytul": "Dobór licencji Creative Commons",
+      "poziom": "wymagania rozszerzające · ocena 4",
+      "polecenie": "Dla każdej sytuacji wskaż oznaczenie licencji i uzasadnij wybór jednym zdaniem.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z4_a", "Zdjęcia miasta, wolno wszystko, byle podać autora", "licencja + uzasadnienie"],
+          ["z4_b", "Materiał do nauki, przeróbki mają zostać otwarte", ""],
+          ["z4_c", "Wiersz, żadnych zmian w tekście", ""],
+          ["z4_d", "Grafika oddana bez żadnych warunków", ""]
+        ]},
+        { "typ": "tekst", "id": "z4_nc", "wiersze": 3,
+          "pytanie": "Dlaczego warunek NC bywa kłopotliwy w praktyce? Podaj przykład sytuacji, w której trudno rozstrzygnąć, czy użycie jest komercyjne." }
+      ]
+    },
+    {
+      "nr": 5,
+      "tytul": "Cytat, plagiat, naruszenie",
+      "poziom": "wymagania dopełniające · ocena 5",
+      "polecenie": "Oceń przypadki z ćwiczenia 3 na stronie materiału. Przy każdym wskaż, który warunek prawa cytatu jest spełniony, a który złamany.",
+      "pola": [
+        { "typ": "tekst", "id": "z5_1", "wiersze": 2, "pytanie": "Przypadek 1 — cztery wersy wiersza z analizą" },
+        { "typ": "tekst", "id": "z5_2", "wiersze": 2, "pytanie": "Przypadek 2 — cały artykuł z portalu" },
+        { "typ": "tekst", "id": "z5_3", "wiersze": 2, "pytanie": "Przypadek 3 — kadr z plakatu z opisem kompozycji" },
+        { "typ": "tekst", "id": "z5_4", "wiersze": 2, "pytanie": "Przypadek 4 — praca złożona z dwunastu cytatów" },
+        { "typ": "tekst", "id": "z5_roznica", "wiersze": 3,
+          "pytanie": "Podaj przykład czynu, który jest plagiatem, ale nie narusza praw majątkowych — i odwrotnie." }
+      ]
+    },
+    {
+      "nr": 6,
+      "tytul": "Do wyboru — na ocenę wyższą",
+      "poziom": "wymagania dopełniające i wykraczające · oceny 5–6",
+      "polecenie": "Wykonaj jedno z trzech zadań opisanych w sekcji „Na ocenę celującą” na stronie materiału.",
+      "pola": [
+        { "typ": "wybor", "id": "z6_wybor", "pytanie": "Wybieram zadanie",
+          "opcje": ["A — licencje w regulaminie serwisu", "B — eksploracja tekstów i danych a AI", "C — ścieżka zgłoszenia naruszenia"] },
+        { "typ": "tekst", "id": "z6_odp", "wiersze": 10, "pytanie": "Rozwiązanie wraz z wnioskami" }
+      ]
+    }
+  ]
+}
