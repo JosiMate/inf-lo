@@ -179,21 +179,21 @@ Pobierz przygotowany skoroszyt — dane są już wpisane, ty dodajesz formuły.
     "pytanie": "Od czego musi zaczynać się każda formuła?",
     "typ": "jedna",
     "opcje": ["Od nazwy funkcji", "Od znaku =", "Od znaku $", "Od nawiasu"],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Bez znaku równości arkusz uzna wpis za zwykły tekst i wyświetli go dosłownie, zamiast policzyć."
   },
   {
     "pytanie": "W komórce C2 jest formuła =A2*B$1. Kopiujesz ją do komórki D3. Jak będzie wyglądać po skopiowaniu?",
     "typ": "jedna",
     "opcje": ["=A2*B$1", "=B3*C$1", "=A3*C$1", "=B3*B$1"],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Przesuwasz się o jedną kolumnę w prawo i jeden wiersz w dół. A2 jest w pełni względny, więc staje się B3. W B$1 dolar blokuje wiersz, ale nie kolumnę — kolumna przesuwa się na C, wiersz zostaje 1."
   },
   {
     "pytanie": "W B4 jest kurs euro. Piszesz w C7 formułę przeliczającą cenę i chcesz skopiować ją w dół. Który zapis jest poprawny?",
     "typ": "jedna",
     "opcje": ["=B7/B4", "=B7/$B$4", "=$B$7/B4", "=$B7/$B4"],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Cena ma się zmieniać wiersz po wierszu (B7 względne), a kurs ma zostać w B4 przy każdej kopii — stąd $B$4."
   },
   {
@@ -205,21 +205,21 @@ Pobierz przygotowany skoroszyt — dane są już wpisane, ty dodajesz formuły.
       "Czy arkusz ma włączone automatyczne przeliczanie",
       "Czy kolumna jest dość szeroka"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Wartości wyrównane do lewej to tekst, a tekstu SUMA nie dodaje. Najczęstsza przyczyna to kropka zamiast przecinka jako separator dziesiętny."
   },
   {
     "pytanie": "Który skrót przełącza adres między względnym, bezwzględnym i mieszanym?",
     "typ": "jedna",
     "opcje": ["F2", "F4", "Ctrl + D", "Alt + Enter"],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "F4 przechodzi w kółko: B4 → $B$4 → B$4 → $B4 → B4. Działa w Excelu i w LibreOffice Calc."
   },
   {
     "pytanie": "Chcesz pokazać, jak temperatura zmieniała się od 8:00 do 15:00. Jaki wykres?",
     "typ": "jedna",
     "opcje": ["Kołowy", "Liniowy", "Punktowy XY", "Słupkowy skumulowany"],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Wykres liniowy pokazuje przebieg wielkości w czasie. Kołowy pokazywałby udział w całości, co dla temperatury nie ma sensu."
   },
   {
@@ -231,7 +231,7 @@ Pobierz przygotowany skoroszyt — dane są już wpisane, ty dodajesz formuły.
       "Zależy od tego, czy włączone jest zaokrąglanie wyników",
       "Zero, bo format zamienia liczbę w tekst"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Formatowanie zmienia tylko wygląd. Żeby naprawdę zmienić wartość, trzeba użyć funkcji ZAOKR."
   },
   {
@@ -243,7 +243,7 @@ Pobierz przygotowany skoroszyt — dane są już wpisane, ty dodajesz formuły.
       "Zastępujesz go średnią z sąsiednich pomiarów",
       "Ignorujesz — jeden pomiar nie ma znaczenia"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Wartość odstająca bywa najciekawszą informacją w zestawie — może wskazywać błąd pomiaru albo realne zdarzenie. Usunięcie danych, które nie pasują, jest fałszowaniem wyników."
   }
 ]

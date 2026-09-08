@@ -160,7 +160,7 @@ nie udaje się wcale.
       "granit-mandarynka-parasol-wiolonczela",
       "Informatyka2026!"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Decyduje długość i nieprzewidywalność. Fraza z czterech niepowiązanych słów ma 36 znaków i nie występuje w żadnym słowniku haseł; pozostałe trzy to typowe wzorce, których łamiące programy szukają w pierwszej kolejności."
   },
   {
@@ -172,7 +172,7 @@ nie udaje się wcale.
       "Hasło należy zmieniać co pół roku",
       "Hasło trzeba zmieniać po każdym logowaniu z nowego urządzenia"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Wymuszona rotacja pogarszała hasła — ludzie zmieniali w nich jedną cyfrę. Zmiana ma być reakcją na zdarzenie, nie elementem kalendarza."
   },
   {
@@ -184,7 +184,7 @@ nie udaje się wcale.
       "Bo takie strony działają tylko dla haseł krótszych niż 12 znaków",
       "Bo przeglądarka zapamięta hasło w historii"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Nie da się zweryfikować, czy strona liczy wszystko lokalnie. Testuj hasło o podobnej budowie, nigdy to, którego naprawdę używasz."
   },
   {
@@ -196,7 +196,7 @@ nie udaje się wcale.
       "Informacja o stanie zdrowia",
       "Data urodzenia"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Dane o zdrowiu należą do szczególnych kategorii, chronionych mocniej. Pozostałe to zwykłe dane osobowe — też chronione, ale na ogólnych zasadach."
   },
   {
@@ -208,7 +208,7 @@ nie udaje się wcale.
       "Klucz sprzętowy albo passkey",
       "Pytanie pomocnicze o nazwisko panieńskie matki"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Klucz i passkey są związane z adresem strony — na podrobionej witrynie po prostu nie zadziałają. Kod SMS i kod z aplikacji można wyłudzić i przepisać na fałszywej stronie."
   },
   {
@@ -220,7 +220,7 @@ nie udaje się wcale.
       "Jeden nośnik, na którym trzymamy wszystko",
       "Jedno hasło chroniące wszystkie kopie"
     ],
-    "odp": 0,
+    "poprawna": 0,
     "wyjasnienie": "Trzy kopie, na dwóch różnych nośnikach, jedna poza domem lub szkołą — żeby pożar, zalanie albo kradzież nie zabrały wszystkich naraz."
   },
   {
@@ -232,7 +232,7 @@ nie udaje się wcale.
       "Bo blokuje strony phishingowe",
       "Bo automatycznie zmienia hasła co miesiąc"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Największym realnym zagrożeniem jest to samo hasło w wielu serwisach: jeden wyciek otwiera wszystkie konta. Menedżer usuwa tę zależność, a on sam jest chroniony frazą hasłową i drugim składnikiem."
   },
   {
@@ -244,7 +244,7 @@ nie udaje się wcale.
       "O numer PESEL",
       "O odpowiedź na pytanie pomocnicze"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Wyszukiwanie odbywa się po adresie e-mail albo numerze telefonu. Gdyby serwis pytał o hasło, sam byłby zagrożeniem."
   }
 ]

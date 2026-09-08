@@ -188,7 +188,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Po umieszczeniu przy utworze symbolu ©",
       "Po opublikowaniu utworu"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Ochrona powstaje sama, z chwilą ustalenia utworu. Symbol © i rejestracja nie są w polskim prawie wymagane."
   },
   {
@@ -200,7 +200,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Pomysł na grę komputerową",
       "Rysunek wykonany na lekcji"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Prawo autorskie chroni sposób wyrażenia, nie sam pomysł. Dopiero scenariusz, grafika czy kod tej gry będą utworami."
   },
   {
@@ -212,7 +212,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Bezterminowo — nie wygasają",
       "Do momentu sprzedaży praw majątkowych"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Prawa osobiste są niezbywalne i nie wygasają. Dlatego autora utworu z domeny publicznej nadal trzeba podać."
   },
   {
@@ -224,7 +224,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Nie — publikacja w internecie wykracza poza krąg osób bliskich",
       "Tak, jeśli film był już wcześniej rozpowszechniony"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "Dozwolony użytek osobisty obejmuje krąg rodziny i znajomych. Publikacja w sieci jest udostępnieniem nieograniczonej liczbie osób."
   },
   {
@@ -236,7 +236,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Wolno korzystać wyłącznie niekomercyjnie",
       "Nie trzeba podawać autora"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "SA (ShareAlike, „na tych samych warunkach”) przenosi wolność dalej: przeróbka musi być objęta tą samą licencją."
   },
   {
@@ -248,7 +248,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "CC BY-NC",
       "CC BY-ND"
     ],
-    "odp": 0,
+    "poprawna": 0,
     "wyjasnienie": "CC BY stawia tylko warunek uznania autorstwa. Każdy dodatkowy człon (NC, ND) odebrałby jedną ze swobód, na które się zgadzasz."
   },
   {
@@ -260,7 +260,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Plagiat dotyczy tylko tekstów, a naruszenie praw — tylko obrazów",
       "Plagiat jest karalny, a naruszenie praw majątkowych nie"
     ],
-    "odp": 1,
+    "poprawna": 1,
     "wyjasnienie": "Można podać autora i mimo to naruszyć prawa majątkowe, i odwrotnie: przypisać sobie utwór z domeny publicznej, nie naruszając niczyich praw majątkowych."
   },
   {
@@ -272,7 +272,7 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
       "Prawo pokrewne wydawców prasy i dozwolony użytek na eksplorację tekstów i danych",
       "Zakaz cytowania utworów w pracach szkolnych"
     ],
-    "odp": 2,
+    "poprawna": 2,
     "wyjasnienie": "To wdrożenie unijnej dyrektywy o prawie autorskim na jednolitym rynku cyfrowym. Prawo wydawców prasy trwa dwa lata, a przepis o eksploracji tekstów i danych jest dziś osią sporu o trenowanie modeli AI."
   }
 ]
