@@ -108,9 +108,11 @@ plugins:
 nav:
   - Start: index.md
   - Klasa 1:
+      - Spis tematów: klasa-1/index.md
       - Wymagania edukacyjne i bhp: klasa-1/wymagania-i-bhp.md
       - Bezpieczna praca z komputerem: klasa-1/bezpieczna-praca.md
   - Klasa 2:
+      - Spis tematów: klasa-2/index.md
       - Wymagania edukacyjne i bhp: klasa-2/wymagania-i-bhp.md
       - Prawo w sieci: klasa-2/prawo-w-sieci.md
 

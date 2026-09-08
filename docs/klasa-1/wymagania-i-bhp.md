@@ -8,6 +8,8 @@
     i według czego będziesz oceniany. Do tej strony warto wracać przed
     sprawdzianem — to jest lista, według której powstają zadania.
 
+[:material-format-list-bulleted: Spis tematów](index.md){ .md-button }
+
 ## Bezpieczeństwo i higiena pracy
 
 Pracownia komputerowa to miejsce, w którym łatwo o drobny wypadek i o zniszczenie
