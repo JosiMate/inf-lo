@@ -10,6 +10,17 @@
     umieć rozstrzygnąć konkretne pytanie: *czy mogę użyć tego zdjęcia
     w swojej pracy i co muszę przy nim napisać*.
 
+!!! success "Cele lekcji"
+
+    Po tej lekcji potrafisz:
+
+    1. rozstrzygnąć, czy dany materiał jest utworem w rozumieniu prawa autorskiego
+    2. odróżnić prawa osobiste od majątkowych i wskazać, które z nich wygasają
+    3. zastosować dozwolony użytek osobisty i edukacyjny do konkretnej sytuacji
+    4. rozpoznać licencje Creative Commons i powiedzieć, na co pozwala każdy z ich warunków
+    5. opisać źródło wykorzystanego materiału tak, aby spełnić wymagania licencji
+    6. wskazać, co w prawie autorskim zmieniła nowelizacja z 2024 roku
+
 ## 1. Co jest utworem
 
 Utwór w rozumieniu ustawy o prawie autorskim i prawach pokrewnych to **każdy

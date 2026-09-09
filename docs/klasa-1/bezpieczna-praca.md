@@ -10,6 +10,16 @@
     lekcji masz umieć zabezpieczyć własne konto tak, żeby przejęcie go
     było trudne, a nie tylko „mało prawdopodobne”.
 
+!!! success "Cele lekcji"
+
+    Po tej lekcji potrafisz:
+
+    1. stosować zasady bhp obowiązujące na stanowisku komputerowym i uzasadnić, przed czym każda z nich chroni
+    2. rozpoznać dane osobowe i wskazać, które z nich RODO chroni mocniej niż pozostałe
+    3. ułożyć hasło zgodne z aktualnymi zaleceniami i wyjaśnić, dlaczego jego długość znaczy więcej niż znaki specjalne
+    4. włączyć uwierzytelnianie dwuskładnikowe i porównać bezpieczeństwo jego metod
+    5. zaplanować kopię zapasową własnych danych według zasady 3-2-1
+
 ## 1. Stanowisko pracy — zanim dotkniesz klawiatury
 
 Zasady bhp w pracowni to nie rytuał. Trzy z nich mają konkretne uzasadnienie:

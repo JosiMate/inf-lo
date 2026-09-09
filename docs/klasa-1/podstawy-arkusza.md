@@ -10,6 +10,17 @@
     się do jednej umiejętności: **napisać formułę raz i skopiować ją tak,
     żeby wszędzie działała poprawnie**.
 
+!!! success "Cele lekcji"
+
+    Po tej lekcji potrafisz:
+
+    1. wskazać w arkuszu komórkę, zakres, wiersz, kolumnę i arkusz oraz odczytać adres komórki
+    2. rozróżnić dane liczbowe, tekstowe i daty oraz nadać im właściwy format
+    3. zastosować funkcje SUMA, ŚREDNIA, MIN, MAKS i JEŻELI do konkretnego zestawienia
+    4. napisać formułę z adresowaniem względnym i bezwzględnym i skopiować ją tak, żeby wszędzie liczyła poprawnie
+    5. dobrać typ wykresu do rodzaju danych i uzasadnić wybór
+    6. zinterpretować wynik obliczeń i ocenić, czy jest sensowny
+
 ## 1. Z czego składa się arkusz
 
 | Pojęcie | Co to jest |
