@@ -7,12 +7,14 @@
    ikony — jest wczytywany jako trzeci, po stylesheets/extra.css, i dotyczy
    wyłącznie tego serwisu.
 
-   Kontrast sprawdzony rachunkiem, nie na oko (WCAG 2.1, próg AA dla tekstu
-   to 4,5:1):
-       #b45309 na białym          → 5,02:1  ✔ motyw jasny
-       #b45309 na tle slate       → 3,21:1  ✘ za mało, stąd jaśniejszy wariant
-       #f59e0b na tle slate       → 7,49:1  ✔ motyw ciemny
-       tekst #1e2129 na #f59e0b   → 7,49:1  ✔ napis na przycisku podstawowym
+   Kontrast policzony na wartościach, które CSS naprawdę wylicza w przeglądarce
+   (a nie na tle „mniej więcej takim jak slate"). Próg AA dla tekstu to 4,5:1;
+   tło motywu ciemnego wychodzi tu #29231e:
+       #b45309 na białym        → 5,02:1  ✔ motyw jasny
+       #b45309 na tle slate     → 3,09:1  ✘ za mało, stąd jaśniejszy wariant
+       #f59e0b na tle slate     → 7,22:1  ✔ motyw ciemny
+       tekst #1a1714 na #f59e0b → 8,31:1  ✔ napis na przycisku podstawowym
+       biel na #f59e0b          → 2,15:1  ✘ dlatego napis jest ciemny
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ─────────────────────────── motyw ciemny (slate) ─────────────────────────── */
