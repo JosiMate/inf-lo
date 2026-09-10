@@ -26,7 +26,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 
 | Temat | Godz. | Materiały |
 | --- | :---: | --- |
-| Podstawy pracy w środowisku Python | 1 | *w przygotowaniu* |
+| **[Podstawy pracy w środowisku Python](podstawy-pythona.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Definiowanie funkcji obliczeniowych | 1 | *w przygotowaniu* |
 | Wyszukiwanie wzorca w tekście | 1 | *w przygotowaniu* |
 | Przetwarzanie napisów | 1 | *w przygotowaniu* |

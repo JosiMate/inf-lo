@@ -1,0 +1,98 @@
+{
+  "id": "inf-lo-podstawy-pythona",
+  "tytul": "Podstawy pracy w środowisku Python",
+  "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+  "klasa": "2LOA",
+  "sufiks": "INF-LO-PYTHON",
+  "zadania": [
+    {
+      "nr": 1,
+      "tytul": "Środowisko i dwa tryby pracy",
+      "poziom": "wymagania konieczne · ocena 2",
+      "polecenie": "Uruchom środowisko, wpisz w konsoli <code>2 + 2</code>, a potem ten sam zapis umieść w skrypcie i uruchom przyciskiem <strong>Run</strong>.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z1_konsola", "Co wypisała konsola po wpisaniu 2 + 2", ""],
+          ["z1_skrypt", "Co wypisał skrypt zawierający sam wiersz 2 + 2", ""],
+          ["z1_poprawka", "Jak trzeba poprawić skrypt, żeby wynik było widać", "przepisz wiersz"],
+          ["z1_zapis", "Skrót, którym zapisujesz pracę jako plik .py", ""]
+        ]},
+        { "typ": "zrzut", "id": "z1_zrzut", "opis": "okno środowiska z uruchomionym programem i widoczną konsolą" }
+      ]
+    },
+    {
+      "nr": 2,
+      "tytul": "Wizytówka — zmienne i f-napis",
+      "poziom": "wymagania podstawowe · ocena 3",
+      "polecenie": "Ćwiczenie 1 ze szkieletu. Trzy zmienne, jeden f-napis, trzy wypisane wiersze.",
+      "pola": [
+        { "typ": "tekst", "id": "z2_kod", "wiersze": 8,
+          "pytanie": "Przepisz swój program (albo wklej go ze środowiska)" },
+        { "typ": "zrzut", "id": "z2_zrzut", "opis": "wynik działania programu w konsoli" },
+        { "typ": "tekst", "id": "z2_zmiana", "wiersze": 3,
+          "pytanie": "Zmień wartość jednej zmiennej i uruchom program ponownie. Co się zmieniło w wypisanym tekście i dlaczego nie trzeba było poprawiać instrukcji print()?" }
+      ]
+    },
+    {
+      "nr": 3,
+      "tytul": "Rachunek za zakupy — input() i typy",
+      "poziom": "wymagania rozszerzające · ocena 4",
+      "polecenie": "Ćwiczenie 2 ze szkieletu. Nazwa towaru, cena za sztukę i liczba sztuk pochodzą od użytkownika.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z3_cena", "Wiersz wczytujący cenę", "przepisz dokładnie"],
+          ["z3_sztuki", "Wiersz wczytujący liczbę sztuk", "przepisz dokładnie"],
+          ["z3_wynik", "Wynik dla: zeszyt, 3.90, 3 sztuki", ""]
+        ]},
+        { "typ": "tekst", "id": "z3_dlaczego", "wiersze": 4,
+          "pytanie": "Dlaczego przy cenie użyto float(), a przy liczbie sztuk int()? Co stałoby się z obliczeniem, gdyby pominąć przekształcenie i zostawić same input()?" }
+      ]
+    },
+    {
+      "nr": 4,
+      "tytul": "Sekundy na czas — // oraz %",
+      "poziom": "wymagania dopełniające · ocena 5",
+      "polecenie": "Ćwiczenie 3 ze szkieletu. Wczytaj liczbę sekund i rozłóż ją na godziny, minuty i sekundy.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z4_3725", "Wynik dla 3725 sekund", ""],
+          ["z4_86399", "Wynik dla 86399 sekund", ""],
+          ["z4_godziny", "Wiersz obliczający godziny", "przepisz dokładnie"],
+          ["z4_minuty", "Wiersz obliczający minuty", "przepisz dokładnie"]
+        ]},
+        { "typ": "tekst", "id": "z4_reszta", "wiersze": 4,
+          "pytanie": "Wyjaśnij, co robi // , a co % w twoim rozwiązaniu. Dlaczego minuty liczy się z reszty po godzinach, a nie od razu z wczytanej liczby sekund?" }
+      ]
+    },
+    {
+      "nr": 5,
+      "tytul": "Naprawa programu — czytanie komunikatów",
+      "poziom": "wymagania dopełniające · ocena 5",
+      "polecenie": "Ćwiczenie 4 ze szkieletu. Poprawiaj po jednym błędzie i uruchamiaj program po każdej poprawce.",
+      "pola": [
+        { "typ": "tabela", "wiersze": [
+          ["z5_b1", "Błąd 1 — rodzaj i numer wiersza", ""],
+          ["z5_p1", "Co go powodowało i jak go poprawiono", ""],
+          ["z5_b2", "Błąd 2 — rodzaj i numer wiersza", ""],
+          ["z5_p2", "Co go powodowało i jak go poprawiono", ""],
+          ["z5_b3", "Błąd 3 — rodzaj i numer wiersza", ""],
+          ["z5_p3", "Co go powodowało i jak go poprawiono", ""]
+        ]},
+        { "typ": "zrzut", "id": "z5_zrzut", "opis": "działający program po wszystkich poprawkach" },
+        { "typ": "tekst", "id": "z5_zasada", "wiersze": 3,
+          "pytanie": "Która część komunikatu o błędzie okazała się najbardziej pomocna: numer wiersza, nazwa błędu czy treść po dwukropku? Uzasadnij na przykładzie z tego zadania." }
+      ]
+    },
+    {
+      "nr": 6,
+      "tytul": "Do wyboru — na ocenę wyższą",
+      "poziom": "wymagania dopełniające i wykraczające · oceny 5–6",
+      "polecenie": "Wykonaj jedno z trzech zadań opisanych w sekcji „Na ocenę celującą” na stronie materiału.",
+      "pola": [
+        { "typ": "wybor", "id": "z6_wybor", "pytanie": "Wybieram zadanie",
+          "opcje": ["A — rozmienianie kwoty na nominały", "B — zamiana wartości dwóch zmiennych", "C — parzystość bez instrukcji warunkowej"] },
+        { "typ": "tekst", "id": "z6_odp", "wiersze": 12, "pytanie": "Kod programu wraz z wyjaśnieniem" }
+      ]
+    }
+  ]
+}
