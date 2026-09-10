@@ -59,6 +59,8 @@ extra_css:
   # potem warstwa wyglądu powłoki dokumentacji.
   - assets/extra.css
   - stylesheets/extra.css
+  # Motyw kolorystyczny tego serwisu — wyprowadzony z jego ikony.
+  - stylesheets/motyw.css
 
 extra_javascript:
   # docx.umd.js celowo NIE jest tu wymieniony — karta.js doczyta go dopiero

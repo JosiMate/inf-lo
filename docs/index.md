@@ -8,12 +8,15 @@ hide:
 
 **Liceum ogólnokształcące · 1 godzina tygodniowo · PCEiKZ Szczucin**
 
+Przedmiot trwa **trzy lata**, po jednej godzinie tygodniowo — w klasie czwartej
+informatyki w zakresie podstawowym już nie ma.
+
 Wybierz swój rocznik. Znajdziesz tam spis tematów, materiały do lekcji
 i wymagania na poszczególne oceny.
 
 <div class="grid cards wybor-rocznika" markdown>
 
--   :material-numeric-1-circle:{ .lg .middle } __Klasa 1 — oddział 1A__
+-   :material-numeric-1-circle:{ .lg .middle } __Klasa 1__
 
     ---
 
@@ -24,7 +27,7 @@ i wymagania na poszczególne oceny.
     [:material-format-list-bulleted: Tematy](klasa-1/index.md){ .md-button .md-button--primary }
     [:material-clipboard-check: Wymagania](klasa-1/wymagania-i-bhp.md){ .md-button }
 
--   :material-numeric-2-circle:{ .lg .middle } __Klasa 2 — oddział 2LOA__
+-   :material-numeric-2-circle:{ .lg .middle } __Klasa 2__
 
     ---
 
@@ -40,14 +43,6 @@ i wymagania na poszczególne oceny.
     ---
 
     Bazy danych, sieci komputerowe, algorytmy na strukturach danych.
-
-    *Materiały pojawią się w kolejnych latach cyklu.*
-
--   :material-numeric-4-circle:{ .lg .middle } __Klasa 4__
-
-    ---
-
-    Powtórzenie i przygotowanie do matury z informatyki.
 
     *Materiały pojawią się w kolejnych latach cyklu.*
 

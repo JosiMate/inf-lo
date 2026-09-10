@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Motyw kolorystyczny serwisu inf-lo — wyprowadzony z ikony serwisu.
+
+   Ikona (docs/assets/favicon.png) jest w kolorze #b45309: ciepły bursztyn.
+   Reszta interfejsu chodziła dotąd w indygo, więc jedno z drugim się kłóciło.
+   Ten plik dopasowuje kolory akcentu i ocieplenie neutralnych szarości do
+   ikony — jest wczytywany jako trzeci, po stylesheets/extra.css, i dotyczy
+   wyłącznie tego serwisu.
+
+   Kontrast sprawdzony rachunkiem, nie na oko (WCAG 2.1, próg AA dla tekstu
+   to 4,5:1):
+       #b45309 na białym          → 5,02:1  ✔ motyw jasny
+       #b45309 na tle slate       → 3,21:1  ✘ za mało, stąd jaśniejszy wariant
+       #f59e0b na tle slate       → 7,49:1  ✔ motyw ciemny
+       tekst #1e2129 na #f59e0b   → 7,49:1  ✔ napis na przycisku podstawowym
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────── motyw ciemny (slate) ─────────────────────────── */
+/* Selektory celowo dwuczłonowe. Material ustawia --md-typeset-a-color regułą
+   [data-md-color-scheme=slate][data-md-color-primary=indigo], która ma wyższą
+   swoistość niż sam [data-md-color-scheme=slate] — bez dopisania drugiego
+   atrybutu odnośniki i aktywna pozycja nawigacji zostawały indygo. */
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  /* Material buduje wszystkie szarości slate z jednego odcienia. Domyślne 232
+     to chłodny błękitny grafit; 28 przesuwa je w stronę ciepłego węgla, przez
+     co bursztynowy akcent przestaje wyglądać jak wtręt z innego zestawu.
+     Wartość dobrana nisko — przy większej całe tło robi się sepiowe. */
+  --md-hue: 28;
+
+  /* Odnośniki i akcenty: jaśniejszy brat koloru ikony, żeby wyrobić kontrast. */
+  --md-typeset-a-color: #f59e0b;
+  --md-primary-fg-color: #f59e0b;
+  --md-primary-fg-color--light: #fbbf24;
+  --md-primary-fg-color--dark: #b45309;
+  --md-accent-fg-color: #fbbf24;
+
+  /* Napis na przycisku podstawowym musi być ciemny — biały na bursztynie
+     daje 2,15:1, czyli poniżej każdego progu. */
+  --md-primary-bg-color: #1a1714;
+  --md-primary-bg-color--light: #1a1714;
+}
+
+/* ─────────────────────────── motyw jasny (default) ─────────────────────────── */
+[data-md-color-scheme="default"][data-md-color-primary] {
+  /* Tu wchodzi dokładnie kolor ikony — na bieli ma 5,02:1. */
+  --md-typeset-a-color: #b45309;
+  --md-primary-fg-color: #b45309;
+  --md-primary-fg-color--light: #d97706;
+  --md-primary-fg-color--dark: #92400e;
+  --md-accent-fg-color: #92400e;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+}
+
+/* Pasek wyboru tekstu — drobiazg, ale przy zaznaczaniu widać go na każdej
+   stronie i w indygo wyglądałby obco. */
+::selection {
+  background-color: color-mix(in srgb, var(--md-typeset-a-color) 28%, transparent);
+}
+
+/* Kafelki wyboru rocznika: cienka bursztynowa obwódka zamiast neutralnej,
+   żeby strona startowa od razu niosła kolor serwisu. Roczniki bez materiałów
+   zostają szare — wygaszenie odpowiada za nie reguła w extra.css. */
+.wybor-rocznika.grid.cards > ul > li:has(.md-button) {
+  border-color: color-mix(in srgb, var(--md-typeset-a-color) 35%, var(--ui-linia));
+}
+
+/* Numer rocznika na kafelku — w kolorze serwisu, żeby strona startowa
+   niosła go od pierwszego spojrzenia. Kafelki bez materiałów zostają szare;
+   ich wygaszeniem zajmuje się reguła w extra.css. */
+.wybor-rocznika.grid.cards > ul > li:has(.md-button) .twemoji {
+  color: var(--md-typeset-a-color);
+}
