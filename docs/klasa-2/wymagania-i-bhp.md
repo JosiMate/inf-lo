@@ -145,8 +145,12 @@ Na to statut przewiduje osobną drogę (§ 35 statutu):
   (§ 37 ust. 2–3 statutu)
 - jeżeli czasowo nie możesz pracować przy komputerze, wykonujesz zadania
   w formie zastępczej ustalonej z nauczycielem
+- wykonane zadanie dodatkowe z sekcji „Na ocenę celującą” przy temacie liczy się
+  jako „inne, porównywalne osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c
+  statutu — droga do szóstki nie prowadzi wyłącznie przez konkursy
 - laureaci i finaliści olimpiad informatycznych otrzymują celującą roczną ocenę
-  klasyfikacyjną (§ 37 ust. 6 statutu)
+  klasyfikacyjną (§ 37 ust. 6 statutu); z mocy art. 44j ustawy o systemie oświaty to samo prawo mają laureaci
+  konkursów przedmiotowych o zasięgu wojewódzkim i ponadwojewódzkim
 
 Te wymagania, sposoby sprawdzania osiągnięć oraz warunki uzyskania oceny wyższej niż
 przewidywana zostały podane do wiadomości do **25 września**, zgodnie z § 26 ust. 1 statutu.

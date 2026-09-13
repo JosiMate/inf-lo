@@ -307,6 +307,11 @@ go przez **Zadania domowe w dzienniku VULCAN**.
     zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN w zadaniu
     *Zadanie na ocenę celującą: Prawo w sieci*, w ciągu **dwóch tygodni** od
     omówienia tematu.
+
+    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
+    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
+    celującej nie trzeba startować w konkursie.
+
 Wybierz jedno zadanie i opisz wyniki w karcie pracy.
 
 **A. Licencje w praktyce jednego serwisu.** Wybierz serwis, z którego korzystasz

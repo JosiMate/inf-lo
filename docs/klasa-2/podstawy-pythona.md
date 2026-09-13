@@ -409,6 +409,11 @@ klawisz ++print-screen++ albo ++win+shift+s++.
     zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN w zadaniu
     *Zadanie na ocenę celującą: Podstawy pracy w środowisku Python*, w ciągu **dwóch tygodni** od
     omówienia tematu.
+
+    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
+    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
+    celującej nie trzeba startować w konkursie.
+
 Wybierz jedno zadanie i opisz rozwiązanie w karcie pracy.
 
 **A. Rozmienianie kwoty.** Program wczytuje kwotę w pełnych złotych i wypisuje,
