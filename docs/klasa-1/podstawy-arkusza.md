@@ -268,41 +268,6 @@ go przez **Zadania domowe w dzienniku VULCAN**.
 
 <div class="karta-pracy" data-karta="podstawy-arkusza"></div>
 
-## Na ocenę celującą
-
-
-!!! info "Jak oddajesz zadanie na ocenę celującą"
-
-    W karcie pracy zaznaczasz tylko, **które zadanie wybrałeś**, i opisujesz
-    w kilku zdaniach, co z niego wyszło. Samą pracę — plik, kod, witrynę albo
-    zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN, w zadaniu
-    *Zadanie na ocenę celującą* założonym do tego działu. Termin: **dwa tygodnie
-    od zakończenia działu**.
-
-    Plik nazwij `nr<numer w dzienniku>-<skrót tematu>`, a w treści zadania dopisz
-    3–5 zdań: którego tematu i zadania dotyczy, co zrobiłeś i jaki jest wynik.
-
-    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
-    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
-    celującej nie trzeba startować w konkursie. Pełne zasady opisuje strona
-    *Wymagania edukacyjne i bhp*.
-
-Wybierz jedno zadanie i opisz wyniki w karcie pracy.
-
-**A. Kalkulator z jednym pokrętłem.** Zbuduj arkusz liczący koszt wycieczki dla
-klasy, w którym **wszystkie** dane wejściowe (liczba uczniów, cena noclegu za
-osobę, cena biletu, koszt autokaru) siedzą w osobnych, wyraźnie oznaczonych
-komórkach, a cała reszta jest formułami. Pokaż, że zmiana liczby uczniów
-przelicza cały arkusz i nie wymaga poprawienia ani jednej formuły.
-
-**B. Tabliczka mnożenia jedną formułą.** Zbuduj siatkę 10 × 10 wypełnioną
-**jedną** formułą wpisaną w lewym górnym rogu i skopiowaną na całą siatkę.
-Wyjaśnij, gdzie postawiłeś znaki `$` i dlaczego akurat tam.
-
-**C. Ta sama dana, trzy wykresy.** Weź dane z zakładki *Pomiary* i zrób z nich
-trzy różne wykresy: liniowy, kolumnowy i kołowy. Napisz, na jakie pytanie
-odpowiada każdy z nich i który z tych trzech jest tu po prostu zły — z uzasadnieniem.
-
 ---
 
 *Skrót `F4` działa tak samo w Microsoft Excel i w LibreOffice Calc. Dane

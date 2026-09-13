@@ -1,0 +1,130 @@
+{
+  "Dział I. Organizacja pracy i bezpieczeństwo": [
+    {
+      "ozn": "A",
+      "tytul": "Audyt własnych zabezpieczeń — wszystkie konta naraz",
+      "wymaga": "po temacie „Bezpieczna praca z komputerem”",
+      "opis": [
+        "Zrób spis kont, z których faktycznie korzystasz: poczta, dziennik, media społecznościowe, sklepy, gry. Dla każdego sprawdź trzy rzeczy — czy hasło powtarza się gdzie indziej, czy włączone jest uwierzytelnianie dwuskładnikowe i jaką metodą, oraz czy adres pojawia się w znanym wycieku danych.",
+        "Potem napraw co najmniej trzy najsłabsze punkty i pokaż stan po naprawie. W dokumentacji **nie podawaj haseł ani pełnych adresów** — wystarczy „konto pocztowe nr 1”, „sklep nr 2”."
+      ],
+      "oddajesz": "tabelę stanu przed i po naprawie oraz wniosek: które zabezpieczenie dało najwięcej przy najmniejszym wysiłku"
+    },
+    {
+      "ozn": "B",
+      "tytul": "Drugi składnik — porównanie trzech metod",
+      "wymaga": "po temacie „Bezpieczna praca z komputerem”",
+      "opis": [
+        "Uruchom uwierzytelnianie dwuskładnikowe na jednym koncie testowym trzema sposobami po kolei: kodem SMS, aplikacją z kodami czasowymi (TOTP) oraz kluczem sprzętowym albo kluczem dostępu (passkey). Jeśli nie masz klucza sprzętowego, opisz go na podstawie dokumentacji producenta.",
+        "Porównaj: co trzeba mieć przy sobie, co się dzieje po utracie telefonu, na jaki atak każda metoda jest odporna, a na jaki nie."
+      ],
+      "oddajesz": "tabelę porównawczą, zrzuty z konfiguracji i wskazanie metody, którą poleciłbyś rodzicom — z uzasadnieniem"
+    },
+    {
+      "ozn": "C",
+      "tytul": "Instrukcja bezpiecznej pracowni dla klasy pierwszej",
+      "wymaga": "po obu tematach działu",
+      "opis": [
+        "Napisz jednostronicową instrukcję łączącą bhp stanowiska komputerowego z bezpieczeństwem konta: co robić przy uruchamianiu, co przed wylogowaniem, co przy awarii, czego nigdy nie robić na koncie szkolnym.",
+        "Każdy punkt musi mieć uzasadnienie — nie „nie zapisuj hasła w przeglądarce”, tylko „…, bo przy koncie używanym przez kilkanaście osób…”. Na koniec daj instrukcję komuś, kto jej nie pisał, i popraw to, co okazało się niejasne."
+      ],
+      "oddajesz": "instrukcję w formacie A4 do powieszenia w pracowni oraz akapit o tym, co zmieniłeś po teście"
+    }
+  ],
+  "Dział II. Arkusz kalkulacyjny": [
+    {
+      "ozn": "A",
+      "tytul": "Badanie w klasie: od ankiety do raportu",
+      "wymaga": "po tematach o formułach, wykresach i tabelach przestawnych",
+      "opis": [
+        "Wymyśl pytanie, na które da się odpowiedzieć danymi z Twojej klasy lub szkoły — czas dojazdu, długość snu w dni nauki, miesięczny koszt telefonu. Zbierz co najmniej 25 odpowiedzi formularzem i uporządkuj je w arkuszu.",
+        "Zbuduj tabelę przestawną i dwa wykresy różnych typów, a na końcu napisz raport na jedną stronę: co wyszło, co Cię zaskoczyło i **czego ta dana nie mówi**."
+      ],
+      "oddajesz": "plik arkusza (surowe dane, tabela przestawna, wykresy) oraz raport"
+    },
+    {
+      "ozn": "B",
+      "tytul": "Kalkulator, który ktoś inny obsłuży bez instrukcji",
+      "wymaga": "po tematach o formułach i adresowaniu",
+      "opis": [
+        "Zbuduj arkusz liczący coś praktycznego: koszt wyjazdu klasowego, ratę pożyczki albo zapotrzebowanie na materiały. Pola do wpisania mają być wyraźnie oddzielone od wyników, formuły zabezpieczone przed przypadkową zmianą, a tam, gdzie to ma sens — listy wyboru zamiast wpisywania z ręki.",
+        "Sumowanie zrób funkcją `SUMA.ILOCZYNÓW`, bez kolumny pomocniczej. Na koniec daj arkusz komuś do przetestowania i popraw to, co zrozumiał inaczej, niż planowałeś."
+      ],
+      "oddajesz": "plik arkusza i krótki opis, co zmieniłeś po teście użytkownika"
+    },
+    {
+      "ozn": "C",
+      "tytul": "Symulacja: co się stanie, jeśli…",
+      "wymaga": "po tematach o formułach i wykresach",
+      "opis": [
+        "Wybierz proces zależny od losu albo od jednego parametru: rzuty kostką, oszczędzanie z odsetkami, rozchodzenie się plotki w klasie. Zbuduj arkusz, który przelicza co najmniej 200 powtórzeń albo 50 kroków.",
+        "Pokaż wynik na wykresie i sprawdź, jak reaguje on na zmianę parametru wejściowego — minimum trzy warianty. Napisz też, w którym miejscu model przestaje być wiarygodny."
+      ],
+      "oddajesz": "plik z symulacją, wykres dla trzech wariantów i akapit o ograniczeniach modelu"
+    }
+  ],
+  "Dział I. Organizacja pracy i prawo w sieci": [
+    {
+      "ozn": "A",
+      "tytul": "Sześć licencji CC na jednym przykładzie",
+      "wymaga": "po temacie „Prawo w sieci”",
+      "opis": [
+        "Weź jeden konkretny materiał — zdjęcie, utwór muzyczny albo tekst — i opisz, co wolno z nim zrobić przy każdej z sześciu licencji Creative Commons. Sprawdź cztery zastosowania: remiks, użycie w filmie na YouTube, wydruk na koszulce na sprzedaż, umieszczenie w szkolnej gazetce.",
+        "Przy każdej odpowiedzi wskaż, **który człon licencji** (BY, SA, NC, ND) o tym decyduje."
+      ],
+      "oddajesz": "tabelę sześć licencji × cztery zastosowania, z uzasadnieniem w każdej komórce"
+    },
+    {
+      "ozn": "B",
+      "tytul": "Legalna ścieżka do materiału na prezentację",
+      "wymaga": "po temacie „Prawo w sieci”",
+      "opis": [
+        "Przygotuj komplet materiałów do dowolnej prezentacji, korzystając wyłącznie ze źródeł, których licencja na to pozwala: pięć zdjęć, jedna ścieżka dźwiękowa, jedna czcionka.",
+        "Dla każdego zapisz autora, źródło, licencję i wymaganą formę oznaczenia — a potem zbuduj z tego poprawną notę o źródłach."
+      ],
+      "oddajesz": "zestaw plików, tabelę źródeł i gotową notę o źródłach"
+    },
+    {
+      "ozn": "C",
+      "tytul": "Zgłoszenie naruszenia — przejdź drogę do końca",
+      "wymaga": "po temacie „Prawo w sieci”",
+      "opis": [
+        "Znajdź materiał, który wyraźnie narusza cudze prawa — cudze zdjęcie bez oznaczenia, skopiowany tekst — i prześledź drogę jego zgłoszenia na **dwóch** różnych platformach.",
+        "Sprawdź: kto jest administratorem, jaki jest formularz, jakich danych żąda, jaki termin odpowiedzi deklaruje i co dzieje się, gdy druga strona wniesie sprzeciw."
+      ],
+      "oddajesz": "opis obu ścieżek krok po kroku i wskazanie, która jest przyjaźniejsza dla zgłaszającego"
+    }
+  ],
+  "Dział II. Algorytmika i programowanie w Pythonie": [
+    {
+      "ozn": "A",
+      "tytul": "Własna biblioteka funkcji liczbowych — z testami",
+      "wymaga": "po temacie o definiowaniu funkcji",
+      "opis": [
+        "Napisz moduł z co najmniej sześcioma funkcjami z tego działu: NWD, sprawdzanie pierwszości, rozkład na czynniki, działania na ułamkach zwykłych, zamiana liczby na słowa.",
+        "Do każdej dopisz zestaw przypadków testowych, w tym **przypadki brzegowe** — zero, liczba ujemna, ułamek nieskracalny. Testy mają się uruchamiać jednym poleceniem i wypisywać, które przeszły, a które nie."
+      ],
+      "oddajesz": "plik modułu, plik z testami i zrzut z ich uruchomienia"
+    },
+    {
+      "ozn": "B",
+      "tytul": "Szyfr, który sam łamiesz",
+      "wymaga": "po temacie o szyfrowaniu i przetwarzaniu napisów",
+      "opis": [
+        "Zaimplementuj dwa szyfry oparte na kodach ASCII: przesuwający (Cezara) i z kluczem tekstowym (Vigenère'a). Potem napisz program, który łamie ten pierwszy **bez znajomości klucza**, korzystając z częstości liter w języku polskim.",
+        "Sprawdź go na tekście o długości co najmniej 500 znaków i wyjaśnij, dlaczego ta sama metoda zawodzi przy drugim szyfrze."
+      ],
+      "oddajesz": "kod obu szyfrów, kod łamiący, użyty tekst i wnioski"
+    },
+    {
+      "ozn": "C",
+      "tytul": "Trzy sortowania zmierzone, nie opowiedziane",
+      "wymaga": "po temacie o sortowaniu",
+      "opis": [
+        "Zaimplementuj sortowanie bąbelkowe, przez wstawianie oraz użyj wbudowanego `sorted()`. Zmierz czas dla list o długości 100, 1000 i 10 000 elementów, osobno dla danych losowych, już posortowanych i posortowanych odwrotnie.",
+        "Zestaw wyniki w tabeli i na wykresie, a potem wyjaśnij, dlaczego jedno z sortowań zachowuje się na danych już posortowanych zupełnie inaczej niż pozostałe."
+      ],
+      "oddajesz": "kod, tabelę pomiarów, wykres i wyjaśnienie"
+    }
+  ]
+}

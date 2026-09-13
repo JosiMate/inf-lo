@@ -268,42 +268,6 @@ go przez **Zadania domowe w dzienniku VULCAN**.
 
 <div class="karta-pracy" data-karta="bezpieczna-praca"></div>
 
-## Na ocenę celującą
-
-
-!!! info "Jak oddajesz zadanie na ocenę celującą"
-
-    W karcie pracy zaznaczasz tylko, **które zadanie wybrałeś**, i opisujesz
-    w kilku zdaniach, co z niego wyszło. Samą pracę — plik, kod, witrynę albo
-    zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN, w zadaniu
-    *Zadanie na ocenę celującą* założonym do tego działu. Termin: **dwa tygodnie
-    od zakończenia działu**.
-
-    Plik nazwij `nr<numer w dzienniku>-<skrót tematu>`, a w treści zadania dopisz
-    3–5 zdań: którego tematu i zadania dotyczy, co zrobiłeś i jaki jest wynik.
-
-    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
-    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
-    celującej nie trzeba startować w konkursie. Pełne zasady opisuje strona
-    *Wymagania edukacyjne i bhp*.
-
-Wybierz jedno zadanie i opisz wyniki w karcie pracy.
-
-**A. Ile trwa złamanie hasła.** Znajdź trzy różne źródła podające szacowany czas
-łamania haseł metodą siłową. Porównaj ich założenia (jaki sprzęt, jaki algorytm
-skrótu) i wyjaśnij, dlaczego wyniki się różnią nawet o rzędy wielkości.
-
-**B. Audyt bezpieczeństwa domowego routera.** Sprawdź: czy hasło administratora
-zostało zmienione z fabrycznego, jaki standard szyfrowania sieci jest ustawiony,
-czy oprogramowanie routera jest aktualne. Opisz, co znalazłeś, i co poprawiłeś
-(w porozumieniu z domownikami).
-
-**C. Rozbiór wiadomości phishingowej.** Znajdź w swojej skrzynce (albo
-w publicznej kolekcji przykładów) wiadomość wyłudzającą dane. Wskaż w niej pięć
-sygnałów ostrzegawczych: adres nadawcy, adres odnośnika, presja czasu, błędy
-językowe, żądanie danych. Zaproponuj, jak wyglądałaby ta sama wiadomość, gdyby
-była prawdziwa.
-
 ---
 
 *Źródła danych o hasłach: NIST Special Publication 800-63B, rewizja 4 (wersja

@@ -74,29 +74,90 @@ ciebie i nie ma nic wspólnego z ocenami.
 
 ## Zadania na ocenę celującą
 
-Każdy dział ma w Dzienniku VULCAN własne zadanie **„Zadanie na ocenę celującą:
-Dział …”**. Wybierasz **jedno** zadanie z listy poniżej i odsyłasz je tam
-w ciągu **dwóch tygodni od zakończenia działu**. Zadanie da się wykonać po
-przerobieniu tematu, przy którym stoi — dlatego cała lista jest widoczna
-od początku działu, a nie dopiero na jego końcu.
+Zadania na szóstkę są **działowe, nie tematyczne** — obejmują materiał całego
+działu i wymagają czegoś więcej niż powtórzenia ćwiczenia z lekcji. Wybierasz
+**jedno** z listy poniżej.
 
-Pełne zasady (co zostaje w karcie pracy, jak nazwać plik, co jest oceniane)
-opisuje strona [wymagań edukacyjnych](wymagania-i-bhp.md).
+Pracę oddajesz w Dzienniku VULCAN, w zadaniu **„Zadanie na ocenę celującą:
+Dział …”** założonym do tego działu, w ciągu **dwóch tygodni od zakończenia
+działu**. Plik nazwij `nr<numer w dzienniku>-<litera zadania>`, a w treści
+zadania dopisz 3–5 zdań o tym, co zrobiłeś i co z tego wyszło. Karty pracy
+do tematów są od tego niezależne — tam zadań na szóstkę nie ma.
 
-??? example "Dział I. Organizacja pracy i prawo w sieci"
+Cała lista jest widoczna **od początku działu**, żebyś miał czas wybrać
+i popracować. Przy każdym zadaniu jest napisane, po którym temacie da się
+je wykonać. Pełne zasady opisuje strona [wymagań edukacyjnych](wymagania-i-bhp.md).
 
-    | Zadanie | Z tematu |
-    | --- | --- |
-    | **A.** Licencje w praktyce jednego serwisu | [Prawo w sieci](prawo-w-sieci.md) |
-    | **B.** Eksploracja tekstów i danych a sztuczna inteligencja | [Prawo w sieci](prawo-w-sieci.md) |
-    | **C.** Ścieżka zgłoszenia naruszenia | [Prawo w sieci](prawo-w-sieci.md) |
+??? example "Dział I. Organizacja pracy i prawo w sieci — 3 zadania do wyboru"
 
-??? example "Dział II. Algorytmika i programowanie w Pythonie"
+    **A. Sześć licencji CC na jednym przykładzie**
 
-    | Zadanie | Z tematu |
-    | --- | --- |
-    | **A.** Rozmienianie kwoty | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
-    | **B.** Zamiana wartości dwóch zmiennych | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
-    | **C.** Sprawdzenie, czy liczba jest parzysta — bez instrukcji warunkowej | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
+    *Do wykonania po temacie „Prawo w sieci”.*
+
+    Weź jeden konkretny materiał — zdjęcie, utwór muzyczny albo tekst — i opisz, co wolno z nim zrobić przy każdej z sześciu licencji Creative Commons. Sprawdź cztery zastosowania: remiks, użycie w filmie na YouTube, wydruk na koszulce na sprzedaż, umieszczenie w szkolnej gazetce.
+
+    Przy każdej odpowiedzi wskaż, **który człon licencji** (BY, SA, NC, ND) o tym decyduje.
+
+    **Oddajesz:** tabelę sześć licencji × cztery zastosowania, z uzasadnieniem w każdej komórce
+
+    ---
+
+    **B. Legalna ścieżka do materiału na prezentację**
+
+    *Do wykonania po temacie „Prawo w sieci”.*
+
+    Przygotuj komplet materiałów do dowolnej prezentacji, korzystając wyłącznie ze źródeł, których licencja na to pozwala: pięć zdjęć, jedna ścieżka dźwiękowa, jedna czcionka.
+
+    Dla każdego zapisz autora, źródło, licencję i wymaganą formę oznaczenia — a potem zbuduj z tego poprawną notę o źródłach.
+
+    **Oddajesz:** zestaw plików, tabelę źródeł i gotową notę o źródłach
+
+    ---
+
+    **C. Zgłoszenie naruszenia — przejdź drogę do końca**
+
+    *Do wykonania po temacie „Prawo w sieci”.*
+
+    Znajdź materiał, który wyraźnie narusza cudze prawa — cudze zdjęcie bez oznaczenia, skopiowany tekst — i prześledź drogę jego zgłoszenia na **dwóch** różnych platformach.
+
+    Sprawdź: kto jest administratorem, jaki jest formularz, jakich danych żąda, jaki termin odpowiedzi deklaruje i co dzieje się, gdy druga strona wniesie sprzeciw.
+
+    **Oddajesz:** opis obu ścieżek krok po kroku i wskazanie, która jest przyjaźniejsza dla zgłaszającego
+
+??? example "Dział II. Algorytmika i programowanie w Pythonie — 3 zadania do wyboru"
+
+    **A. Własna biblioteka funkcji liczbowych — z testami**
+
+    *Do wykonania po temacie o definiowaniu funkcji.*
+
+    Napisz moduł z co najmniej sześcioma funkcjami z tego działu: NWD, sprawdzanie pierwszości, rozkład na czynniki, działania na ułamkach zwykłych, zamiana liczby na słowa.
+
+    Do każdej dopisz zestaw przypadków testowych, w tym **przypadki brzegowe** — zero, liczba ujemna, ułamek nieskracalny. Testy mają się uruchamiać jednym poleceniem i wypisywać, które przeszły, a które nie.
+
+    **Oddajesz:** plik modułu, plik z testami i zrzut z ich uruchomienia
+
+    ---
+
+    **B. Szyfr, który sam łamiesz**
+
+    *Do wykonania po temacie o szyfrowaniu i przetwarzaniu napisów.*
+
+    Zaimplementuj dwa szyfry oparte na kodach ASCII: przesuwający (Cezara) i z kluczem tekstowym (Vigenère'a). Potem napisz program, który łamie ten pierwszy **bez znajomości klucza**, korzystając z częstości liter w języku polskim.
+
+    Sprawdź go na tekście o długości co najmniej 500 znaków i wyjaśnij, dlaczego ta sama metoda zawodzi przy drugim szyfrze.
+
+    **Oddajesz:** kod obu szyfrów, kod łamiący, użyty tekst i wnioski
+
+    ---
+
+    **C. Trzy sortowania zmierzone, nie opowiedziane**
+
+    *Do wykonania po temacie o sortowaniu.*
+
+    Zaimplementuj sortowanie bąbelkowe, przez wstawianie oraz użyj wbudowanego `sorted()`. Zmierz czas dla list o długości 100, 1000 i 10 000 elementów, osobno dla danych losowych, już posortowanych i posortowanych odwrotnie.
+
+    Zestaw wyniki w tabeli i na wykresie, a potem wyjaśnij, dlaczego jedno z sortowań zachowuje się na danych już posortowanych zupełnie inaczej niż pozostałe.
+
+    **Oddajesz:** kod, tabelę pomiarów, wykres i wyjaśnienie
 
 <!-- zadania6:end -->

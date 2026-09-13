@@ -399,43 +399,6 @@ klawisz ++print-screen++ albo ++win+shift+s++.
 
 <div class="karta-pracy" data-karta="podstawy-pythona"></div>
 
-## Na ocenę celującą
-
-
-!!! info "Jak oddajesz zadanie na ocenę celującą"
-
-    W karcie pracy zaznaczasz tylko, **które zadanie wybrałeś**, i opisujesz
-    w kilku zdaniach, co z niego wyszło. Samą pracę — plik, kod, witrynę albo
-    zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN, w zadaniu
-    *Zadanie na ocenę celującą* założonym do tego działu. Termin: **dwa tygodnie
-    od zakończenia działu**.
-
-    Plik nazwij `nr<numer w dzienniku>-<skrót tematu>`, a w treści zadania dopisz
-    3–5 zdań: którego tematu i zadania dotyczy, co zrobiłeś i jaki jest wynik.
-
-    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
-    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
-    celującej nie trzeba startować w konkursie. Pełne zasady opisuje strona
-    *Wymagania edukacyjne i bhp*.
-
-Wybierz jedno zadanie i opisz rozwiązanie w karcie pracy.
-
-**A. Rozmienianie kwoty.** Program wczytuje kwotę w pełnych złotych i wypisuje,
-ile najmniej banknotów i monet trzeba wydać: 200, 100, 50, 20, 10, 5, 2, 1 zł.
-Użyj wyłącznie `//` i `%`. Wyjaśnij, dlaczego kolejność od największego nominału
-jest tu istotna.
-
-**B. Zamiana wartości dwóch zmiennych.** Napisz program, który zamienia wartości
-zmiennych `a` i `b` miejscami: raz z użyciem zmiennej pomocniczej, raz bez niej
-(`a, b = b, a`). Wypisz stan przed i po. Wyjaśnij, dlaczego sam zapis
-`a = b` i potem `b = a` **nie działa**.
-
-**C. Sprawdzenie, czy liczba jest parzysta — bez instrukcji warunkowej.**
-Program wczytuje liczbę i wypisuje `Reszta z dzielenia przez 2 wynosi: …`,
-a potem — na podstawie tej reszty — wyjaśnia w komentarzu, po czym poznaje się
-liczbę parzystą. To wstęp do instrukcji `if`, którą poznasz na kolejnych
-lekcjach.
-
 ---
 
 *Środowisko online-python.com uruchamia Python 3.12, najnowsza wersja do

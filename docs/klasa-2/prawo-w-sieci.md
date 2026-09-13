@@ -297,42 +297,6 @@ go przez **Zadania domowe w dzienniku VULCAN**.
 
 <div class="karta-pracy" data-karta="prawo-w-sieci"></div>
 
-## Na ocenę celującą
-
-
-!!! info "Jak oddajesz zadanie na ocenę celującą"
-
-    W karcie pracy zaznaczasz tylko, **które zadanie wybrałeś**, i opisujesz
-    w kilku zdaniach, co z niego wyszło. Samą pracę — plik, kod, witrynę albo
-    zrzuty z pomiarami — oddajesz **osobno**, w Dzienniku VULCAN, w zadaniu
-    *Zadanie na ocenę celującą* założonym do tego działu. Termin: **dwa tygodnie
-    od zakończenia działu**.
-
-    Plik nazwij `nr<numer w dzienniku>-<skrót tematu>`, a w treści zadania dopisz
-    3–5 zdań: którego tematu i zadania dotyczy, co zrobiłeś i jaki jest wynik.
-
-    Wykonane i oddane w terminie zadanie liczy się jako „inne, porównywalne
-    osiągnięcie” w rozumieniu § 29 ust. 1 pkt 1 lit. c statutu — do oceny
-    celującej nie trzeba startować w konkursie. Pełne zasady opisuje strona
-    *Wymagania edukacyjne i bhp*.
-
-Wybierz jedno zadanie i opisz wyniki w karcie pracy.
-
-**A. Licencje w praktyce jednego serwisu.** Wybierz serwis, z którego korzystasz
-(portal ze zdjęciami, platforma wideo, serwis z muzyką). Znajdź jego regulamin
-i ustal: jakie prawa przekazujesz serwisowi, publikując tam swój utwór, i na
-jakich zasadach inni mogą z niego korzystać. Zacytuj punkty regulaminu.
-
-**B. Eksploracja tekstów i danych a sztuczna inteligencja.** Zbierz dwa
-przeciwstawne stanowiska w sporze o to, czy trenowanie modeli AI na cudzych
-utworach mieści się w dozwolonym użytku na eksplorację tekstów i danych.
-Przedstaw argumenty każdej ze stron i wskaż, którego przepisu dotyczy spór.
-
-**C. Ścieżka zgłoszenia naruszenia.** Opisz krok po kroku, co zrobić, gdy ktoś
-opublikował twoje zdjęcie bez zgody: od wezwania do usunięcia, przez zgłoszenie
-do platformy, po drogę sądową. Wskaż, jakie dowody warto zabezpieczyć na
-początku i dlaczego.
-
 ---
 
 *Podstawa prawna: ustawa z 4 lutego 1994 r. o prawie autorskim i prawach
