@@ -68,3 +68,35 @@ ciebie i nie ma nic wspólnego z ocenami.
 | E-learning | 1 | *w przygotowaniu* |
 
 </div>
+
+
+<!-- zadania6:start -->
+
+## Zadania na ocenę celującą
+
+Każdy dział ma w Dzienniku VULCAN własne zadanie **„Zadanie na ocenę celującą:
+Dział …”**. Wybierasz **jedno** zadanie z listy poniżej i odsyłasz je tam
+w ciągu **dwóch tygodni od zakończenia działu**. Zadanie da się wykonać po
+przerobieniu tematu, przy którym stoi — dlatego cała lista jest widoczna
+od początku działu, a nie dopiero na jego końcu.
+
+Pełne zasady (co zostaje w karcie pracy, jak nazwać plik, co jest oceniane)
+opisuje strona [wymagań edukacyjnych](wymagania-i-bhp.md).
+
+??? example "Dział I. Organizacja pracy i prawo w sieci"
+
+    | Zadanie | Z tematu |
+    | --- | --- |
+    | **A.** Licencje w praktyce jednego serwisu | [Prawo w sieci](prawo-w-sieci.md) |
+    | **B.** Eksploracja tekstów i danych a sztuczna inteligencja | [Prawo w sieci](prawo-w-sieci.md) |
+    | **C.** Ścieżka zgłoszenia naruszenia | [Prawo w sieci](prawo-w-sieci.md) |
+
+??? example "Dział II. Algorytmika i programowanie w Pythonie"
+
+    | Zadanie | Z tematu |
+    | --- | --- |
+    | **A.** Rozmienianie kwoty | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
+    | **B.** Zamiana wartości dwóch zmiennych | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
+    | **C.** Sprawdzenie, czy liczba jest parzysta — bez instrukcji warunkowej | [Podstawy pracy w środowisku Python](podstawy-pythona.md) |
+
+<!-- zadania6:end -->
