@@ -109,19 +109,9 @@ plugins:
   # Wyszukiwanie po polsku działa, ale bez odmiany przez przypadki:
   # "wymagania" znajdzie "wymagania", nie znajdzie "wymaganiom".
   - search
-
-nav:
-  - Start: index.md
-  - Klasa 1:
-      - Spis tematów: klasa-1/index.md
-      - Wymagania edukacyjne i bhp: klasa-1/wymagania-i-bhp.md
-      - Bezpieczna praca z komputerem: klasa-1/bezpieczna-praca.md
-      - Podstawy pracy z arkuszem: klasa-1/podstawy-arkusza.md
-  - Klasa 2:
-      - Spis tematów: klasa-2/index.md
-      - Wymagania edukacyjne i bhp: klasa-2/wymagania-i-bhp.md
-      - Prawo w sieci: klasa-2/prawo-w-sieci.md
-      - Podstawy pracy w środowisku Python: klasa-2/podstawy-pythona.md
+  # Nawigacją rządzą pliki .nav.yml w katalogach docs/ — dzięki temu
+  # dopisanie tematu nie wymaga już zaglądania do tego pliku.
+  - awesome-nav
 
 extra:
   social:
@@ -129,6 +119,3 @@ extra:
       link: https://www.pceikz.pl
       name: PCEiKZ Szczucin
   generator: false
-
-not_in_nav: |
-  /assets/

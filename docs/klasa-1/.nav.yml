@@ -1,0 +1,11 @@
+# Kolejność i nazwy tematów w tym dziale — wtyczka awesome-nav.
+# Plik dopisany bez wpisu niżej trafi na koniec listy (append_unmatched)
+# i dostanie tytuł z nagłówka pierwszego poziomu.
+
+title: "Klasa 1"
+append_unmatched: true
+nav:
+  - "Spis tematów": index.md
+  - "Wymagania edukacyjne i bhp": wymagania-i-bhp.md
+  - "Bezpieczna praca z komputerem": bezpieczna-praca.md
+  - "Podstawy pracy z arkuszem": podstawy-arkusza.md
