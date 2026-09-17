@@ -1,89 +1,223 @@
 {
-  "id": "bezpieczna-praca",
-  "tytul": "Bezpieczna praca z komputerem",
-  "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
-  "klasa": "1A",
-  "sufiks": "BEZPIECZENSTWO",
-  "zadania": [
+ "id": "inf-lo-bezpieczna-praca",
+ "tytul": "Bezpieczna praca z komputerem",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "BEZPIECZENSTWO",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Fraza hasłowa",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ułóż frazę hasłową z czterech niepowiązanych ze sobą słów. <strong>Nie zapisuj tu frazy, której naprawdę używasz</strong> — podaj przykład zbudowany tą samą metodą.",
+   "pola": [
     {
-      "nr": 1,
-      "tytul": "Fraza hasłowa",
-      "poziom": "wymagania podstawowe · ocena 3",
-      "polecenie": "Ułóż frazę hasłową z czterech niepowiązanych ze sobą słów. <strong>Nie zapisuj tu frazy, której naprawdę używasz</strong> — podaj przykład zbudowany tą samą metodą.",
-      "pola": [
-        { "typ": "tekst", "id": "z1_fraza", "wiersze": 2,
-          "pytanie": "Przykładowa fraza (nie twoja prawdziwa)" },
-        { "typ": "tabela", "wiersze": [
-          ["z1_dlugosc", "Długość frazy w znakach", ""],
-          ["z1_slowa", "Liczba słów", ""]
-        ]},
-        { "typ": "tekst", "id": "z1_regula", "wiersze": 3,
-          "pytanie": "Opisz regułę, według której budujesz takie frazy. Dlaczego słowa mają być niepowiązane z tobą?" }
-      ]
+     "typ": "tekst",
+     "id": "z1_fraza",
+     "wiersze": 2,
+     "pytanie": "Przykładowa fraza (nie twoja prawdziwa)"
     },
     {
-      "nr": 2,
-      "tytul": "Dawne i obecne zasady dotyczące haseł",
-      "poziom": "wymagania podstawowe · ocena 3",
-      "polecenie": "Uzupełnij porównanie na podstawie sekcji 3 materiału.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z2_dlugosc", "Zalecana minimalna długość hasła", "gdy hasło jest jedynym zabezpieczeniem"],
-          ["z2_zlozonosc", "Czy wymuszać wielkie litery, cyfry i symbole", ""],
-          ["z2_rotacja", "Kiedy zmieniać hasło", ""],
-          ["z2_wycieki", "Wobec czego trzeba sprawdzać nowe hasło", ""]
-        ]},
-        { "typ": "tekst", "id": "z2_dlaczego", "wiersze": 3,
-          "pytanie": "Dlaczego wymuszona zmiana hasła co 30 dni pogarszała bezpieczeństwo zamiast je poprawiać?" }
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_dlugosc",
+       "Długość frazy w znakach",
+       ""
+      ],
+      [
+       "z1_slowa",
+       "Liczba słów",
+       ""
       ]
+     ]
     },
     {
-      "nr": 3,
-      "tytul": "Sprawdzenie wycieków",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Sprawdź swój adres e-mail w serwisie <code>haveibeenpwned.com</code>. Serwis pyta o adres e-mail — <strong>nigdy nie podawaj mu hasła</strong>.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z3_liczba", "Liczba wycieków, w których wystąpił adres", ""],
-          ["z3_serwis1", "Nazwa serwisu z wyciekiem — pierwszy", ""],
-          ["z3_serwis2", "Nazwa serwisu z wyciekiem — drugi", ""],
-          ["z3_rodzaje", "Jakie rodzaje danych wyciekły", "np. hasła, daty urodzenia"]
-        ]},
-        { "typ": "zrzut", "id": "z3_zrzut", "opis": "wynik wyszukiwania (zasłoń pełny adres e-mail)" },
-        { "typ": "tekst", "id": "z3_dzialania", "wiersze": 3,
-          "pytanie": "Co konkretnie należy zrobić po stwierdzeniu, że dane wyciekły? Wymień trzy działania w kolejności ważności." }
-      ]
-    },
-    {
-      "nr": 4,
-      "tytul": "Przegląd zabezpieczeń konta",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Wejdź w ustawienia bezpieczeństwa swojego konta pocztowego i sprawdź trzy rzeczy: drugi składnik, zalogowane urządzenia, aplikacje z dostępem do konta.",
-      "pola": [
-        { "typ": "wybor", "id": "z4_2fa", "pytanie": "Metoda drugiego składnika na twoim koncie",
-          "opcje": ["brak — nie było włączone", "kod SMS", "aplikacja z kodami czasowymi", "klucz sprzętowy lub passkey"] },
-        { "typ": "tabela", "wiersze": [
-          ["z4_urzadzenia", "Liczba zalogowanych urządzeń", ""],
-          ["z4_nieznane", "Ile z nich rozpoznajesz", ""],
-          ["z4_aplikacje", "Liczba aplikacji z dostępem do konta", ""]
-        ]},
-        { "typ": "tekst", "id": "z4_zmiany", "wiersze": 3,
-          "pytanie": "Co zmieniłeś po tym przeglądzie? Jeśli nic — uzasadnij, dlaczego nic nie wymagało zmiany." }
-      ]
-    },
-    {
-      "nr": 5,
-      "tytul": "Dane osobowe i drugi składnik",
-      "poziom": "wymagania dopełniające · ocena 5",
-      "polecenie": "Odpowiedzi mają być argumentem, nie definicją przepisaną z materiału.",
-      "pola": [
-        { "typ": "tekst", "id": "z5_szczegolne", "wiersze": 3,
-          "pytanie": "Wymień trzy szczególne kategorie danych osobowych i wyjaśnij, dlaczego akurat te chroni się mocniej niż numer telefonu." },
-        { "typ": "tekst", "id": "z5_phishing", "wiersze": 4,
-          "pytanie": "Fałszywa strona logowania przejęła twoje hasło i kod SMS. Dlaczego klucz sprzętowy albo passkey by to udaremnił? Odpowiedz przez mechanizm, nie przez „bo jest bezpieczniejszy”." },
-        { "typ": "tekst", "id": "z5_menedzer", "wiersze": 3,
-          "pytanie": "Menedżer haseł trzyma wszystkie hasła w jednym miejscu. Dlaczego mimo to zwiększa bezpieczeństwo?" }
-      ]
+     "typ": "tekst",
+     "id": "z1_regula",
+     "wiersze": 3,
+     "pytanie": "Opisz regułę, według której budujesz takie frazy. Dlaczego słowa mają być niepowiązane z tobą?"
     }
-  ]
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Dawne i obecne zasady dotyczące haseł",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Uzupełnij porównanie na podstawie sekcji 3 materiału.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_dlugosc",
+       "Zalecana minimalna długość hasła",
+       "gdy hasło jest jedynym zabezpieczeniem"
+      ],
+      [
+       "z2_zlozonosc",
+       "Czy wymuszać wielkie litery, cyfry i symbole",
+       ""
+      ],
+      [
+       "z2_rotacja",
+       "Kiedy zmieniać hasło",
+       ""
+      ],
+      [
+       "z2_wycieki",
+       "Wobec czego trzeba sprawdzać nowe hasło",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_dlaczego",
+     "wiersze": 3,
+     "pytanie": "Dlaczego wymuszona zmiana hasła co 30 dni pogarszała bezpieczeństwo zamiast je poprawiać?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Sprawdzenie wycieków",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Sprawdź swój adres e-mail w serwisie <code>haveibeenpwned.com</code>. Serwis pyta o adres e-mail — <strong>nigdy nie podawaj mu hasła</strong>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_liczba",
+       "Liczba wycieków, w których wystąpił adres",
+       ""
+      ],
+      [
+       "z3_serwis1",
+       "Nazwa serwisu z wyciekiem — pierwszy",
+       ""
+      ],
+      [
+       "z3_serwis2",
+       "Nazwa serwisu z wyciekiem — drugi",
+       ""
+      ],
+      [
+       "z3_rodzaje",
+       "Jakie rodzaje danych wyciekły",
+       "np. hasła, daty urodzenia"
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z3_zrzut",
+     "opis": "wynik wyszukiwania (zasłoń pełny adres e-mail)"
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_dzialania",
+     "wiersze": 3,
+     "pytanie": "Co konkretnie należy zrobić po stwierdzeniu, że dane wyciekły? Wymień trzy działania w kolejności ważności."
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Przegląd zabezpieczeń konta",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Wejdź w ustawienia bezpieczeństwa swojego konta pocztowego i sprawdź trzy rzeczy: drugi składnik, zalogowane urządzenia, aplikacje z dostępem do konta.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z4_2fa",
+     "pytanie": "Metoda drugiego składnika na twoim koncie",
+     "opcje": [
+      "brak — nie było włączone",
+      "kod SMS",
+      "aplikacja z kodami czasowymi",
+      "klucz sprzętowy lub passkey"
+     ]
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_urzadzenia",
+       "Liczba zalogowanych urządzeń",
+       ""
+      ],
+      [
+       "z4_nieznane",
+       "Ile z nich rozpoznajesz",
+       ""
+      ],
+      [
+       "z4_aplikacje",
+       "Liczba aplikacji z dostępem do konta",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_zmiany",
+     "wiersze": 3,
+     "pytanie": "Co zmieniłeś po tym przeglądzie? Jeśli nic — uzasadnij, dlaczego nic nie wymagało zmiany."
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Dane osobowe i drugi składnik",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Odpowiedzi mają być argumentem, nie definicją przepisaną z materiału.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_szczegolne",
+     "wiersze": 3,
+     "pytanie": "Wymień trzy szczególne kategorie danych osobowych i wyjaśnij, dlaczego akurat te chroni się mocniej niż numer telefonu."
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_phishing",
+     "wiersze": 4,
+     "pytanie": "Fałszywa strona logowania przejęła twoje hasło i kod SMS. Dlaczego klucz sprzętowy albo passkey by to udaremnił? Odpowiedz przez mechanizm, nie przez „bo jest bezpieczniejszy”."
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_menedzer",
+     "wiersze": 3,
+     "pytanie": "Menedżer haseł trzyma wszystkie hasła w jednym miejscu. Dlaczego mimo to zwiększa bezpieczeństwo?"
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Do wyboru — na ocenę wyższą",
+   "poziom": "wymagania dopełniające i wykraczające · oceny 5–6",
+   "polecenie": "Wykonaj jedno z trzech zadań opisanych w sekcji „Na ocenę celującą” na stronie materiału.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_wybor",
+     "pytanie": "Wybieram zadanie",
+     "opcje": [
+      "A — ile trwa złamanie hasła",
+      "B — audyt domowego routera",
+      "C — rozbiór wiadomości phishingowej"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_odp",
+     "wiersze": 10,
+     "pytanie": "Rozwiązanie wraz z wnioskami"
+    }
+   ]
+  }
+ ],
+ "idPoprzedni": "bezpieczna-praca"
 }

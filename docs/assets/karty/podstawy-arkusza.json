@@ -1,92 +1,241 @@
 {
-  "id": "podstawy-arkusza",
-  "tytul": "Podstawy pracy z arkuszem",
-  "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
-  "klasa": "1A",
-  "sufiks": "ARKUSZ",
-  "zadania": [
+ "id": "inf-lo-podstawy-arkusza",
+ "tytul": "Podstawy pracy z arkuszem",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "ARKUSZ",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Rozliczenie wycieczki",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Zakładka <em>Wycieczka</em> w skoroszycie do ćwiczeń. Uzupełnij kolumnę „Koszt na osobę” i policz zestawienie dla kolumny „Koszt”.",
+   "pola": [
     {
-      "nr": 1,
-      "tytul": "Rozliczenie wycieczki",
-      "poziom": "wymagania podstawowe · ocena 3",
-      "polecenie": "Zakładka <em>Wycieczka</em> w skoroszycie do ćwiczeń. Uzupełnij kolumnę „Koszt na osobę” i policz zestawienie dla kolumny „Koszt”.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z1_suma", "Suma kosztów (zł)", ""],
-          ["z1_srednia", "Średnia pozycja (zł)", ""],
-          ["z1_min", "Najtańsza pozycja (zł)", ""],
-          ["z1_max", "Najdroższa pozycja (zł)", ""],
-          ["z1_ile", "Liczba pozycji", ""],
-          ["z1_formula", "Formuła użyta do sumy", "przepisz dokładnie"]
-        ]},
-        { "typ": "zrzut", "id": "z1_zrzut", "opis": "gotowa tabela z widocznymi wynikami" },
-        { "typ": "tekst", "id": "z1_kontrola", "wiersze": 3,
-          "pytanie": "Czy suma kosztów na osobę pomnożona przez liczbę osób daje sumę całkowitą? Jeśli wynik się różni — wyjaśnij, skąd bierze się różnica." }
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_suma",
+       "Suma kosztów (zł)",
+       ""
+      ],
+      [
+       "z1_srednia",
+       "Średnia pozycja (zł)",
+       ""
+      ],
+      [
+       "z1_min",
+       "Najtańsza pozycja (zł)",
+       ""
+      ],
+      [
+       "z1_max",
+       "Najdroższa pozycja (zł)",
+       ""
+      ],
+      [
+       "z1_ile",
+       "Liczba pozycji",
+       ""
+      ],
+      [
+       "z1_formula",
+       "Formuła użyta do sumy",
+       "przepisz dokładnie"
       ]
+     ]
     },
     {
-      "nr": 2,
-      "tytul": "Cennik i adres bezwzględny",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Zakładka <em>Cennik</em>. Napisz formułę <strong>raz</strong> i skopiuj ją w dół. Potem zmień kurs w komórce B4 na 4,60 i sprawdź, czy przeliczyła się cała kolumna.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z2_euro", "Formuła przeliczająca cenę na euro", "przepisz z pierwszego wiersza"],
-          ["z2_rabat", "Formuła licząca cenę po rabacie", ""],
-          ["z2_razem425", "Suma w euro przy kursie 4,25", ""],
-          ["z2_razem460", "Suma w euro przy kursie 4,60", ""]
-        ]},
-        { "typ": "zrzut", "id": "z2_zrzut", "opis": "tabela po zmianie kursu na 4,60" },
-        { "typ": "tekst", "id": "z2_dlaczego", "wiersze": 4,
-          "pytanie": "Dlaczego odwołanie do kursu musi być bezwzględne? Napisz, co dokładnie stałoby się z formułami w kolejnych wierszach, gdyby zapisać je jako B4 zamiast $B$4." }
-      ]
+     "typ": "zrzut",
+     "id": "z1_zrzut",
+     "opis": "gotowa tabela z widocznymi wynikami"
     },
     {
-      "nr": 3,
-      "tytul": "Rodzaje adresowania",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Zadania na kartce — policz i uzasadnij, nie zgaduj.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z3_a", "W C2 jest =A2*B$1. Jak wygląda po skopiowaniu do D3?", ""],
-          ["z3_b", "W C2 jest =$A2*B1. Jak wygląda po skopiowaniu do D3?", ""],
-          ["z3_c", "W C2 jest =$A$2*$B$1. Jak wygląda po skopiowaniu do D3?", ""]
-        ]},
-        { "typ": "tekst", "id": "z3_zasada", "wiersze": 3,
-          "pytanie": "Sformułuj jedną zasadę, która pozwala rozstrzygnąć wszystkie trzy przypadki: co dokładnie blokuje znak $?" }
-      ]
-    },
-    {
-      "nr": 4,
-      "tytul": "Wykres i wartość odstająca",
-      "poziom": "wymagania dopełniające · ocena 5",
-      "polecenie": "Zakładka <em>Pomiary</em>. Policz zestawienie dla trzech dni, wstaw wykres zmiany temperatury w czasie i przyjrzyj się środowemu pomiarowi z godziny 13:00.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z4_typ", "Wybrany typ wykresu", ""],
-          ["z4_srednia_sr", "Średnia środowa — ze wszystkimi pomiarami", ""],
-          ["z4_srednia_bez", "Średnia środowa — bez pomiaru z 13:00", ""],
-          ["z4_roznica", "Różnica między nimi", ""],
-          ["z4_rozstep", "Rozstęp temperatur w środę", ""]
-        ]},
-        { "typ": "zrzut", "id": "z4_zrzut", "opis": "wykres z tytułem i podpisanymi osiami" },
-        { "typ": "tekst", "id": "z4_typ_dlaczego", "wiersze": 3,
-          "pytanie": "Uzasadnij wybór typu wykresu. Napisz też, dlaczego wykres kołowy byłby tu złym wyborem." },
-        { "typ": "tekst", "id": "z4_odstajaca", "wiersze": 4,
-          "pytanie": "Co mógł oznaczać pomiar odstający i dlaczego nie należy go usuwać? Która miara — średnia, mediana czy rozstęp — najlepiej opisuje ten dzień?" }
-      ]
-    },
-    {
-      "nr": 5,
-      "tytul": "Formatowanie i typy danych",
-      "poziom": "wymagania dopełniające · ocena 5",
-      "polecenie": "Odpowiedzi mają być wyjaśnieniem mechanizmu, nie definicją przepisaną z materiału.",
-      "pola": [
-        { "typ": "tekst", "id": "z5_tekst", "wiersze": 3,
-          "pytanie": "Wklejasz dane ze strony internetowej i SUMA zwraca zero, choć liczby są widoczne. Po czym poznasz przyczynę i jak ją usuniesz?" },
-        { "typ": "tekst", "id": "z5_format", "wiersze": 3,
-          "pytanie": "Komórka pokazuje 3,14, a naprawdę zawiera 3,14159265. Kiedy ta różnica ma znaczenie? Podaj konkretny przykład obliczenia, w którym wynik się rozjedzie." }
-      ]
+     "typ": "tekst",
+     "id": "z1_kontrola",
+     "wiersze": 3,
+     "pytanie": "Czy suma kosztów na osobę pomnożona przez liczbę osób daje sumę całkowitą? Jeśli wynik się różni — wyjaśnij, skąd bierze się różnica."
     }
-  ]
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Cennik i adres bezwzględny",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Zakładka <em>Cennik</em>. Napisz formułę <strong>raz</strong> i skopiuj ją w dół. Potem zmień kurs w komórce B4 na 4,60 i sprawdź, czy przeliczyła się cała kolumna.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_euro",
+       "Formuła przeliczająca cenę na euro",
+       "przepisz z pierwszego wiersza"
+      ],
+      [
+       "z2_rabat",
+       "Formuła licząca cenę po rabacie",
+       ""
+      ],
+      [
+       "z2_razem425",
+       "Suma w euro przy kursie 4,25",
+       ""
+      ],
+      [
+       "z2_razem460",
+       "Suma w euro przy kursie 4,60",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z2_zrzut",
+     "opis": "tabela po zmianie kursu na 4,60"
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_dlaczego",
+     "wiersze": 4,
+     "pytanie": "Dlaczego odwołanie do kursu musi być bezwzględne? Napisz, co dokładnie stałoby się z formułami w kolejnych wierszach, gdyby zapisać je jako B4 zamiast $B$4."
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Rodzaje adresowania",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Zadania na kartce — policz i uzasadnij, nie zgaduj.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_a",
+       "W C2 jest =A2*B$1. Jak wygląda po skopiowaniu do D3?",
+       ""
+      ],
+      [
+       "z3_b",
+       "W C2 jest =$A2*B1. Jak wygląda po skopiowaniu do D3?",
+       ""
+      ],
+      [
+       "z3_c",
+       "W C2 jest =$A$2*$B$1. Jak wygląda po skopiowaniu do D3?",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_zasada",
+     "wiersze": 3,
+     "pytanie": "Sformułuj jedną zasadę, która pozwala rozstrzygnąć wszystkie trzy przypadki: co dokładnie blokuje znak $?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Wykres i wartość odstająca",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Zakładka <em>Pomiary</em>. Policz zestawienie dla trzech dni, wstaw wykres zmiany temperatury w czasie i przyjrzyj się środowemu pomiarowi z godziny 13:00.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_typ",
+       "Wybrany typ wykresu",
+       ""
+      ],
+      [
+       "z4_srednia_sr",
+       "Średnia środowa — ze wszystkimi pomiarami",
+       ""
+      ],
+      [
+       "z4_srednia_bez",
+       "Średnia środowa — bez pomiaru z 13:00",
+       ""
+      ],
+      [
+       "z4_roznica",
+       "Różnica między nimi",
+       ""
+      ],
+      [
+       "z4_rozstep",
+       "Rozstęp temperatur w środę",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "wykres z tytułem i podpisanymi osiami"
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_typ_dlaczego",
+     "wiersze": 3,
+     "pytanie": "Uzasadnij wybór typu wykresu. Napisz też, dlaczego wykres kołowy byłby tu złym wyborem."
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_odstajaca",
+     "wiersze": 4,
+     "pytanie": "Co mógł oznaczać pomiar odstający i dlaczego nie należy go usuwać? Która miara — średnia, mediana czy rozstęp — najlepiej opisuje ten dzień?"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Formatowanie i typy danych",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Odpowiedzi mają być wyjaśnieniem mechanizmu, nie definicją przepisaną z materiału.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_tekst",
+     "wiersze": 3,
+     "pytanie": "Wklejasz dane ze strony internetowej i SUMA zwraca zero, choć liczby są widoczne. Po czym poznasz przyczynę i jak ją usuniesz?"
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_format",
+     "wiersze": 3,
+     "pytanie": "Komórka pokazuje 3,14, a naprawdę zawiera 3,14159265. Kiedy ta różnica ma znaczenie? Podaj konkretny przykład obliczenia, w którym wynik się rozjedzie."
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Do wyboru — na ocenę wyższą",
+   "poziom": "wymagania dopełniające i wykraczające · oceny 5–6",
+   "polecenie": "Wykonaj jedno z trzech zadań opisanych w sekcji „Na ocenę celującą” na stronie materiału.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_wybor",
+     "pytanie": "Wybieram zadanie",
+     "opcje": [
+      "A — kalkulator z jednym pokrętłem",
+      "B — tabliczka mnożenia jedną formułą",
+      "C — ta sama dana, trzy wykresy"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_odp",
+     "wiersze": 10,
+     "pytanie": "Rozwiązanie wraz z wnioskami"
+    }
+   ]
+  }
+ ],
+ "idPoprzedni": "podstawy-arkusza"
 }

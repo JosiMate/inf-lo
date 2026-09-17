@@ -66,6 +66,8 @@ extra_javascript:
   # docx.umd.js celowo NIE jest tu wymieniony — karta.js doczyta go dopiero
   # przy generowaniu pliku, żeby nie obciążać czytelników materiału.
   - assets/js/karta.js
+  # karty.js korzysta z window.KartaPracy, więc musi iść PO karta.js
+  - assets/js/karty.js
   - assets/js/quiz.js
   - assets/js/postep.js
   - assets/js/narzedzia.js
@@ -103,15 +105,35 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
+validation:
+  links:
+    # Strony tematów odsyłają do konkretnych zadań w karcie pracy
+    # (…#zadanie-3). Te kotwice powstają dopiero w przeglądarce, gdy karta.js
+    # zbuduje kartę z pliku JSON, więc MkDocs ich w źródle nie widzi i przy
+    # każdym temacie zgłaszałby INFO o „braku kotwicy". Wyłączamy sprawdzanie
+    # SAMYCH KOTWIC — sprawdzanie istnienia plików zostaje włączone.
+    anchors: ignore
+
 plugins:
   # Wyszukiwarka lunr nie ma polskiego stemmera (biblioteka lunr-languages
   # nie wspiera polskiego), więc świadomie zostawiamy tokenizer domyślny.
   # Wyszukiwanie po polsku działa, ale bez odmiany przez przypadki:
   # "wymagania" znajdzie "wymagania", nie znajdzie "wymaganiom".
   - search
-  # Nawigacją rządzą pliki .nav.yml w katalogach docs/ — dzięki temu
-  # dopisanie tematu nie wymaga już zaglądania do tego pliku.
-  - awesome-nav
+
+nav:
+  - Start: index.md
+  - Klasa 1:
+      - Spis tematów: klasa-1/index.md
+      - Wymagania edukacyjne i bhp: klasa-1/wymagania-i-bhp.md
+      - Bezpieczna praca z komputerem: klasa-1/bezpieczna-praca.md
+      - Podstawy pracy z arkuszem: klasa-1/podstawy-arkusza.md
+  - Klasa 2:
+      - Spis tematów: klasa-2/index.md
+      - Wymagania edukacyjne i bhp: klasa-2/wymagania-i-bhp.md
+      - Prawo w sieci: klasa-2/prawo-w-sieci.md
+
+  - Karty pracy: karty/index.md
 
 extra:
   social:
@@ -119,3 +141,6 @@ extra:
       link: https://www.pceikz.pl
       name: PCEiKZ Szczucin
   generator: false
+
+not_in_nav: |
+  /assets/

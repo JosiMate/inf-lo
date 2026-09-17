@@ -295,7 +295,32 @@ w życie 20 września 2024 r.** Najważniejsze zmiany:
 Wypełnij kartę na tej stronie, a potem pobierz gotowy dokument Worda i oddaj
 go przez **Zadania domowe w dzienniku VULCAN**.
 
-<div class="karta-pracy" data-karta="prawo-w-sieci"></div>
+<div class="kp-podsumowanie" data-karta="prawo-w-sieci"></div>
+
+<span id="karta" class="kp-kotwica"></span>
+
+???+ karta "Rozwiń kartę pracy"
+
+    <div class="karta-pracy" data-karta="prawo-w-sieci"></div>
+
+## Na ocenę celującą
+
+Wybierz jedno zadanie i opisz wyniki w karcie pracy.
+
+**A. Licencje w praktyce jednego serwisu.** Wybierz serwis, z którego korzystasz
+(portal ze zdjęciami, platforma wideo, serwis z muzyką). Znajdź jego regulamin
+i ustal: jakie prawa przekazujesz serwisowi, publikując tam swój utwór, i na
+jakich zasadach inni mogą z niego korzystać. Zacytuj punkty regulaminu.
+
+**B. Eksploracja tekstów i danych a sztuczna inteligencja.** Zbierz dwa
+przeciwstawne stanowiska w sporze o to, czy trenowanie modeli AI na cudzych
+utworach mieści się w dozwolonym użytku na eksplorację tekstów i danych.
+Przedstaw argumenty każdej ze stron i wskaż, którego przepisu dotyczy spór.
+
+**C. Ścieżka zgłoszenia naruszenia.** Opisz krok po kroku, co zrobić, gdy ktoś
+opublikował twoje zdjęcie bez zgody: od wezwania do usunięcia, przez zgłoszenie
+do platformy, po drogę sądową. Wskaż, jakie dowody warto zabezpieczyć na
+początku i dlaczego.
 
 ---
 
