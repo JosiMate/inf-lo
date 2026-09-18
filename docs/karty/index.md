@@ -7,7 +7,9 @@ hide:
 
 **Informatyka · liceum ogólnokształcące**
 
-Tu w jednym miejscu widzisz **całą swoją pracę z informatyki**: ile masz wypełnione w każdej karcie i kiedy ostatnio przy tym siedziałeś. Kartę otwierasz, klikając nazwę tematu.
+Tu w jednym miejscu widzisz **całą swoją pracę z tego przedmiotu**: ile masz
+wypełnione w każdej karcie i kiedy ostatnio przy tym siedziałeś. Kartę
+otwierasz, klikając nazwę tematu.
 
 <div class="kp-przeglad">
 <script type="application/json">
@@ -23,9 +25,19 @@ Tu w jednym miejscu widzisz **całą swoją pracę z informatyki**: ile masz wyp
     "url": "../klasa-1/podstawy-arkusza/#karta"
   },
   {
+    "plik": "instrukcje-warunkowe",
+    "tytul": "Klasa 1 · Stosowanie instrukcji warunkowych",
+    "url": "../klasa-1/instrukcje-warunkowe/#karta"
+  },
+  {
     "plik": "prawo-w-sieci",
     "tytul": "Klasa 2 · Prawo w sieci",
     "url": "../klasa-2/prawo-w-sieci/#karta"
+  },
+  {
+    "plik": "podstawy-pythona",
+    "tytul": "Klasa 2 · Podstawy pracy w środowisku Python",
+    "url": "../klasa-2/podstawy-pythona/#karta"
   }
 ]
 </script>
@@ -38,7 +50,7 @@ wysyłane do szkoły ani nigdzie indziej. To wygodne, ale ma jeden skutek:
 w pracowni i w domu to są dwa osobne komplety.
 
 Dlatego jest przycisk **Zapisz wszystkie karty do pliku**. Dostajesz jeden plik
-`moje-karty-pracy.json` ze wszystkimi tematami naraz — przenosisz go
+`moje-karty-pracy.json` ze wszystkimi tematach naraz — przenosisz go
 pendrive'em, OneDrive'em albo mailem do siebie i na drugim komputerze klikasz
 **Wczytaj karty z pliku**. Plik z pojedynczej karty też tu zadziała.
 

@@ -1,97 +1,242 @@
 {
-  "id": "instrukcje-warunkowe",
-  "tytul": "Stosowanie instrukcji warunkowych",
-  "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
-  "klasa": "1A",
-  "sufiks": "WARUNKI",
-  "zadania": [
+ "id": "inf-lo-instrukcje-warunkowe",
+ "tytul": "Stosowanie instrukcji warunkowych",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "WARUNKI",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Zaliczony czy nie",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Zakładka <em>Zaliczenie</em> w skoroszycie do ćwiczeń. Skopiuj wzorcową formułę z <code>C8</code> w dół, wypełnij kolumnę „Ile brakuje do progu”, a na koniec zmień próg w <code>C4</code> z 13 na 15.",
+   "pola": [
     {
-      "nr": 1,
-      "tytul": "Zaliczony czy nie",
-      "poziom": "wymagania podstawowe · ocena 3",
-      "polecenie": "Zakładka <em>Zaliczenie</em> w skoroszycie do ćwiczeń. Skopiuj wzorcową formułę z <code>C8</code> w dół, wypełnij kolumnę „Ile brakuje do progu”, a na koniec zmień próg w <code>C4</code> z 13 na 15.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z1_formula", "Formuła z kolumny „Zaliczone?”", "przepisz z wiersza 8"],
-          ["z1_brakuje", "Formuła z kolumny „Ile brakuje do progu”", "przepisz z wiersza 8"],
-          ["z1_zal13", "Ile osób zaliczyło przy progu 13", ""],
-          ["z1_zal15", "Ile osób zaliczyło po zmianie progu na 15", ""],
-          ["z1_graniczny", "Który uczeń ma dokładnie tyle punktów, ile wynosi próg 13", ""]
-        ]},
-        { "typ": "zrzut", "id": "z1_zrzut", "opis": "wypełniona tabela przy progu 15" },
-        { "typ": "tekst", "id": "z1_rowne", "wiersze": 3,
-          "pytanie": "Co stałoby się z uczniem, który ma dokładnie 13 punktów, gdyby w formule zapisać warunek jako B8>13 zamiast B8>=13? Odpowiedz, podając jego wynik w obu wersjach." }
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_formula",
+       "Formuła z kolumny „Zaliczone?”",
+       "przepisz z wiersza 8"
+      ],
+      [
+       "z1_brakuje",
+       "Formuła z kolumny „Ile brakuje do progu”",
+       "przepisz z wiersza 8"
+      ],
+      [
+       "z1_zal13",
+       "Ile osób zaliczyło przy progu 13",
+       ""
+      ],
+      [
+       "z1_zal15",
+       "Ile osób zaliczyło po zmianie progu na 15",
+       ""
+      ],
+      [
+       "z1_graniczny",
+       "Który uczeń ma dokładnie tyle punktów, ile wynosi próg 13",
+       ""
       ]
+     ]
     },
     {
-      "nr": 2,
-      "tytul": "Od punktów do oceny",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Zakładka <em>Oceny</em>. Policz kolumnę „Wynik (%)”, a ocenę wystaw <strong>jedną formułą</strong> z zagnieżdżonymi <code>JEŻELI</code>. Buduj ją po jednym progu naraz.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z2_procent", "Formuła licząca wynik w procentach", "przepisz z wiersza 15"],
-          ["z2_dwa_progi", "Wersja robocza formuły — tylko dwa progi", "od niej zaczynasz"],
-          ["z2_ocena", "Gotowa formuła wystawiająca ocenę", "przepisz w całości"],
-          ["z2_ile_2", "Ile osób dostało dwójkę", ""],
-          ["z2_ile_3", "Ile osób dostało trójkę", ""],
-          ["z2_ile_6", "Ile osób dostało szóstkę", ""]
-        ]},
-        { "typ": "zrzut", "id": "z2_zrzut", "opis": "tabela z wypełnionymi kolumnami „Wynik (%)” i „Ocena”" },
-        { "typ": "tekst", "id": "z2_kolejnosc", "wiersze": 4,
-          "pytanie": "Zbuduj formułę od najniższego progu, czyli zacznij od JEŻELI(C15>=30%;2; … . Uruchom ją i zapisz, jaką ocenę dostał uczeń z wynikiem 88%. Wyjaśnij, dlaczego tak wyszło." }
-      ]
+     "typ": "zrzut",
+     "id": "z1_zrzut",
+     "opis": "wypełniona tabela przy progu 15"
     },
     {
-      "nr": 3,
-      "tytul": "Dwa warunki naraz",
-      "poziom": "wymagania rozszerzające · ocena 4",
-      "polecenie": "Zakładka <em>Klasyfikacja</em>. Wypełnij kolumny „Klasyfikowany?” i „Zagrożenie?”. Wszystkie cztery progi z komórek <code>E4:E7</code> mają być w formułach adresami bezwzględnymi.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z3_klas", "Formuła z kolumny „Klasyfikowany?”", "przepisz z wiersza 10"],
-          ["z3_zagr", "Formuła z kolumny „Zagrożenie?”", "przepisz z wiersza 10"],
-          ["z3_ile_klas", "Ilu uczniów jest klasyfikowanych", ""],
-          ["z3_kto_nie", "Którzy uczniowie nie są klasyfikowani", "podaj numery"],
-          ["z3_ile_zagr", "Ilu uczniów ma zagrożenie", ""],
-          ["z3_oba", "Którzy są jednocześnie klasyfikowani i zagrożeni", "podaj numery"]
-        ]},
-        { "typ": "tekst", "id": "z3_spojnik", "wiersze": 4,
-          "pytanie": "Dlaczego przy klasyfikacji użyłeś ORAZ, a przy zagrożeniu LUB? Napisz, po czym w treści warunku poznaje się, której funkcji trzeba użyć." },
-        { "typ": "tekst", "id": "z3_zamiana", "wiersze": 4,
-          "pytanie": "Zamień w kolumnie „Klasyfikowany?” funkcję ORAZ na LUB i uruchom. Ilu uczniów wyszło teraz klasyfikowanych i którzy doszli? Wyjaśnij, dlaczego akurat oni." }
-      ]
-    },
-    {
-      "nr": 4,
-      "tytul": "Policz, ilu i za ile",
-      "poziom": "wymagania dopełniające · ocena 5",
-      "polecenie": "Zakładka <em>Statystyka</em>. Wypełnij całe zestawienie. Kryterium ma brać próg z komórki <code>C4</code> przez sklejenie znakiem <code>&amp;</code>, a nie mieć go wpisanego na sztywno.",
-      "pola": [
-        { "typ": "tabela", "wiersze": [
-          ["z4_licz", "Formuła licząca, ile osób zaliczyło", "przepisz w całości"],
-          ["z4_suma", "Formuła sumująca punkty osób, które zaliczyły", "przepisz w całości"],
-          ["z4_srednia_f", "Formuła licząca średnią punktów tych osób", "przepisz w całości"],
-          ["z4_suma_pkt", "Suma punktów osób, które zaliczyły", ""],
-          ["z4_srednia", "Średnia punktów osób, które zaliczyły", "dwa miejsca po przecinku"],
-          ["z4_kontrola", "Kontrola: suma liczby ocen od 1 do 6", ""]
-        ]},
-        { "typ": "zrzut", "id": "z4_zrzut", "opis": "wypełnione zestawienie razem z wierszem kontrolnym" },
-        { "typ": "tekst", "id": "z4_sklejenie", "wiersze": 4,
-          "pytanie": "Zapisz kryterium na sztywno jako \">=13\", a potem zmień próg w C4 na 15. Co się stało z wynikiem i dlaczego? Napisz, co dokładnie robi znak & w poprawnej wersji." }
-      ]
-    },
-    {
-      "nr": 5,
-      "tytul": "Sprawdzanie własnej formuły",
-      "poziom": "wymagania dopełniające · ocena 5",
-      "polecenie": "Odpowiedzi mają opisywać mechanizm, nie powtarzać definicji z materiału.",
-      "pola": [
-        { "typ": "tekst", "id": "z5_graniczny", "wiersze": 4,
-          "pytanie": "Dlaczego formułę warunkową sprawdza się na wartości dokładnie równej progowi, a nie na przypadku typowym? Podaj z własnych ćwiczeń przykład błędu, który widać wyłącznie na takiej wartości." },
-        { "typ": "tekst", "id": "z5_cicho", "wiersze": 4,
-          "pytanie": "Błędna formuła warunkowa zwykle nie pokazuje żadnego komunikatu o błędzie — po prostu liczy coś innego. Opisz dwa sposoby, którymi można wykryć taki cichy błąd, zanim odda się pracę." }
-      ]
+     "typ": "tekst",
+     "id": "z1_rowne",
+     "wiersze": 3,
+     "pytanie": "Co stałoby się z uczniem, który ma dokładnie 13 punktów, gdyby w formule zapisać warunek jako B8>13 zamiast B8>=13? Odpowiedz, podając jego wynik w obu wersjach."
     }
-  ]
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Od punktów do oceny",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Zakładka <em>Oceny</em>. Policz kolumnę „Wynik (%)”, a ocenę wystaw <strong>jedną formułą</strong> z zagnieżdżonymi <code>JEŻELI</code>. Buduj ją po jednym progu naraz.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_procent",
+       "Formuła licząca wynik w procentach",
+       "przepisz z wiersza 15"
+      ],
+      [
+       "z2_dwa_progi",
+       "Wersja robocza formuły — tylko dwa progi",
+       "od niej zaczynasz"
+      ],
+      [
+       "z2_ocena",
+       "Gotowa formuła wystawiająca ocenę",
+       "przepisz w całości"
+      ],
+      [
+       "z2_ile_2",
+       "Ile osób dostało dwójkę",
+       ""
+      ],
+      [
+       "z2_ile_3",
+       "Ile osób dostało trójkę",
+       ""
+      ],
+      [
+       "z2_ile_6",
+       "Ile osób dostało szóstkę",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z2_zrzut",
+     "opis": "tabela z wypełnionymi kolumnami „Wynik (%)” i „Ocena”"
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_kolejnosc",
+     "wiersze": 4,
+     "pytanie": "Zbuduj formułę od najniższego progu, czyli zacznij od JEŻELI(C15>=30%;2; … . Uruchom ją i zapisz, jaką ocenę dostał uczeń z wynikiem 88%. Wyjaśnij, dlaczego tak wyszło."
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Dwa warunki naraz",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Zakładka <em>Klasyfikacja</em>. Wypełnij kolumny „Klasyfikowany?” i „Zagrożenie?”. Wszystkie cztery progi z komórek <code>E4:E7</code> mają być w formułach adresami bezwzględnymi.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_klas",
+       "Formuła z kolumny „Klasyfikowany?”",
+       "przepisz z wiersza 10"
+      ],
+      [
+       "z3_zagr",
+       "Formuła z kolumny „Zagrożenie?”",
+       "przepisz z wiersza 10"
+      ],
+      [
+       "z3_ile_klas",
+       "Ilu uczniów jest klasyfikowanych",
+       ""
+      ],
+      [
+       "z3_kto_nie",
+       "Którzy uczniowie nie są klasyfikowani",
+       "podaj numery"
+      ],
+      [
+       "z3_ile_zagr",
+       "Ilu uczniów ma zagrożenie",
+       ""
+      ],
+      [
+       "z3_oba",
+       "Którzy są jednocześnie klasyfikowani i zagrożeni",
+       "podaj numery"
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_spojnik",
+     "wiersze": 4,
+     "pytanie": "Dlaczego przy klasyfikacji użyłeś ORAZ, a przy zagrożeniu LUB? Napisz, po czym w treści warunku poznaje się, której funkcji trzeba użyć."
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_zamiana",
+     "wiersze": 4,
+     "pytanie": "Zamień w kolumnie „Klasyfikowany?” funkcję ORAZ na LUB i uruchom. Ilu uczniów wyszło teraz klasyfikowanych i którzy doszli? Wyjaśnij, dlaczego akurat oni."
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Policz, ilu i za ile",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Zakładka <em>Statystyka</em>. Wypełnij całe zestawienie. Kryterium ma brać próg z komórki <code>C4</code> przez sklejenie znakiem <code>&amp;</code>, a nie mieć go wpisanego na sztywno.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_licz",
+       "Formuła licząca, ile osób zaliczyło",
+       "przepisz w całości"
+      ],
+      [
+       "z4_suma",
+       "Formuła sumująca punkty osób, które zaliczyły",
+       "przepisz w całości"
+      ],
+      [
+       "z4_srednia_f",
+       "Formuła licząca średnią punktów tych osób",
+       "przepisz w całości"
+      ],
+      [
+       "z4_suma_pkt",
+       "Suma punktów osób, które zaliczyły",
+       ""
+      ],
+      [
+       "z4_srednia",
+       "Średnia punktów osób, które zaliczyły",
+       "dwa miejsca po przecinku"
+      ],
+      [
+       "z4_kontrola",
+       "Kontrola: suma liczby ocen od 1 do 6",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "wypełnione zestawienie razem z wierszem kontrolnym"
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_sklejenie",
+     "wiersze": 4,
+     "pytanie": "Zapisz kryterium na sztywno jako \">=13\", a potem zmień próg w C4 na 15. Co się stało z wynikiem i dlaczego? Napisz, co dokładnie robi znak & w poprawnej wersji."
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Sprawdzanie własnej formuły",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Odpowiedzi mają opisywać mechanizm, nie powtarzać definicji z materiału.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_graniczny",
+     "wiersze": 4,
+     "pytanie": "Dlaczego formułę warunkową sprawdza się na wartości dokładnie równej progowi, a nie na przypadku typowym? Podaj z własnych ćwiczeń przykład błędu, który widać wyłącznie na takiej wartości."
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_cicho",
+     "wiersze": 4,
+     "pytanie": "Błędna formuła warunkowa zwykle nie pokazuje żadnego komunikatu o błędzie — po prostu liczy coś innego. Opisz dwa sposoby, którymi można wykryć taki cichy błąd, zanim odda się pracę."
+    }
+   ]
+  }
+ ],
+ "idPoprzedni": "instrukcje-warunkowe"
 }

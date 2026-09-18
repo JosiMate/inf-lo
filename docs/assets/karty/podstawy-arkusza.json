@@ -211,30 +211,6 @@
      "pytanie": "Komórka pokazuje 3,14, a naprawdę zawiera 3,14159265. Kiedy ta różnica ma znaczenie? Podaj konkretny przykład obliczenia, w którym wynik się rozjedzie."
     }
    ]
-  },
-  {
-   "nr": 6,
-   "tytul": "Do wyboru — na ocenę wyższą",
-   "poziom": "wymagania dopełniające i wykraczające · oceny 5–6",
-   "polecenie": "Wykonaj jedno z trzech zadań opisanych w sekcji „Na ocenę celującą” na stronie materiału.",
-   "pola": [
-    {
-     "typ": "wybor",
-     "id": "z6_wybor",
-     "pytanie": "Wybieram zadanie",
-     "opcje": [
-      "A — kalkulator z jednym pokrętłem",
-      "B — tabliczka mnożenia jedną formułą",
-      "C — ta sama dana, trzy wykresy"
-     ]
-    },
-    {
-     "typ": "tekst",
-     "id": "z6_odp",
-     "wiersze": 10,
-     "pytanie": "Rozwiązanie wraz z wnioskami"
-    }
-   ]
   }
  ],
  "idPoprzedni": "podstawy-arkusza"

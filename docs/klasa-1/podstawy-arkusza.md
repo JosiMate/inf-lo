@@ -274,24 +274,6 @@ go przez **Zadania domowe w dzienniku VULCAN**.
 
     <div class="karta-pracy" data-karta="podstawy-arkusza"></div>
 
-## Na ocenę celującą
-
-Wybierz jedno zadanie i opisz wyniki w karcie pracy.
-
-**A. Kalkulator z jednym pokrętłem.** Zbuduj arkusz liczący koszt wycieczki dla
-klasy, w którym **wszystkie** dane wejściowe (liczba uczniów, cena noclegu za
-osobę, cena biletu, koszt autokaru) siedzą w osobnych, wyraźnie oznaczonych
-komórkach, a cała reszta jest formułami. Pokaż, że zmiana liczby uczniów
-przelicza cały arkusz i nie wymaga poprawienia ani jednej formuły.
-
-**B. Tabliczka mnożenia jedną formułą.** Zbuduj siatkę 10 × 10 wypełnioną
-**jedną** formułą wpisaną w lewym górnym rogu i skopiowaną na całą siatkę.
-Wyjaśnij, gdzie postawiłeś znaki `$` i dlaczego akurat tam.
-
-**C. Ta sama dana, trzy wykresy.** Weź dane z zakładki *Pomiary* i zrób z nich
-trzy różne wykresy: liniowy, kolumnowy i kołowy. Napisz, na jakie pytanie
-odpowiada każdy z nich i który z tych trzech jest tu po prostu zły — z uzasadnieniem.
-
 ---
 
 *Skrót `F4` działa tak samo w Microsoft Excel i w LibreOffice Calc. Dane

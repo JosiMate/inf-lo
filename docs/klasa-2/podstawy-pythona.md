@@ -397,7 +397,13 @@ Wypełnij kartę na tej stronie, a potem pobierz gotowy dokument Worda i oddaj
 go przez **Zadania domowe w dzienniku VULCAN**. Do zrzutów ekranu wystarczy
 klawisz ++print-screen++ albo ++win+shift+s++.
 
-<div class="karta-pracy" data-karta="podstawy-pythona"></div>
+<div class="kp-podsumowanie" data-karta="podstawy-pythona"></div>
+
+<span id="karta" class="kp-kotwica"></span>
+
+???+ karta "Rozwiń kartę pracy"
+
+    <div class="karta-pracy" data-karta="podstawy-pythona"></div>
 
 ---
 

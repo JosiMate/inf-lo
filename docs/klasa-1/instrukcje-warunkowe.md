@@ -359,7 +359,13 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
 Wypełnij kartę na tej stronie, a potem pobierz gotowy dokument Worda i oddaj
 go przez **Zadania domowe w dzienniku VULCAN**.
 
-<div class="karta-pracy" data-karta="instrukcje-warunkowe"></div>
+<div class="kp-podsumowanie" data-karta="instrukcje-warunkowe"></div>
+
+<span id="karta" class="kp-kotwica"></span>
+
+???+ karta "Rozwiń kartę pracy"
+
+    <div class="karta-pracy" data-karta="instrukcje-warunkowe"></div>
 
 ---
 
