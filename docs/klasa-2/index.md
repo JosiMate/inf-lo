@@ -27,7 +27,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 | Temat | Godz. | Materiały |
 | --- | :---: | --- |
 | **[Podstawy pracy w środowisku Python](podstawy-pythona.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Definiowanie funkcji obliczeniowych | 1 | *w przygotowaniu* |
+| **[Definiowanie funkcji obliczeniowych](funkcje-obliczeniowe.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Wyszukiwanie wzorca w tekście | 1 | *w przygotowaniu* |
 | Przetwarzanie napisów | 1 | *w przygotowaniu* |
 | Szyfrowanie i deszyfrowanie tekstu | 2 | *w przygotowaniu* |

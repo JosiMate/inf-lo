@@ -38,6 +38,11 @@ otwierasz, klikając nazwę tematu.
     "plik": "podstawy-pythona",
     "tytul": "Klasa 2 · Podstawy pracy w środowisku Python",
     "url": "../klasa-2/podstawy-pythona/#karta"
+  },
+  {
+    "plik": "funkcje-obliczeniowe",
+    "tytul": "Klasa 2 · Definiowanie funkcji obliczeniowych",
+    "url": "../klasa-2/funkcje-obliczeniowe/#karta"
   }
 ]
 </script>

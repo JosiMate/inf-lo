@@ -1,0 +1,138 @@
+{
+ "id": "inf-lo-funkcje-obliczeniowe",
+ "tytul": "Definiowanie funkcji obliczeniowych",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-FUNKCJE",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Pole i obwód — pierwsze własne funkcje",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Ćwiczenie 1 ze szkieletu. Dwie funkcje, obie z instrukcją <code>return</code>, wyniki wypisane jednym f-napisem.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z1_kod",
+     "wiersze": 8,
+     "pytanie": "Przepisz obie funkcje (albo wklej je ze środowiska)"
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z1_34", "Wypisany wiersz dla boków 3 i 4", ""],
+      ["z1_125", "Wypisany wiersz dla boków 12,5 i 2", ""]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z1_zrzut",
+     "opis": "konsola z wynikami obu wywołań"
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Wartość domyślna parametru",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ćwiczenie 2 ze szkieletu. Funkcja <code>na_zlotowki(kwota, kurs=4.30)</code> sprawdzona trzy razy.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z2_bez", "Wynik wywołania bez podania kursu", ""],
+      ["z2_415", "Wynik dla kursu 4.15", ""],
+      ["z2_zero", "Wynik dla kursu 0", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_sens",
+     "wiersze": 4,
+     "pytanie": "Czy wynik dla kursu 0 ma sens? Jeżeli nie — co funkcja powinna z takim argumentem zrobić i dlaczego lepiej rozstrzygnąć to w funkcji niż w programie, który ją wywołuje?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Warunki w funkcji i wartości brzegowe",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 3 ze szkieletu. Funkcja <code>cena_biletu(wiek)</code> sprawdzona dokładnie na granicach progów.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z3_6", "cena_biletu(6)", "oczekiwane 0 zł"],
+      ["z3_7", "cena_biletu(7)", "oczekiwane 12 zł"],
+      ["z3_18", "cena_biletu(18)", "oczekiwane 12 zł"],
+      ["z3_19", "cena_biletu(19)", "oczekiwane 25 zł"],
+      ["z3_64", "cena_biletu(64)", "oczekiwane 25 zł"],
+      ["z3_65", "cena_biletu(65)", "oczekiwane 15 zł"]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_granica",
+     "wiersze": 4,
+     "pytanie": "Czy któraś granica wyszła źle? Jeżeli tak — jak wyglądał błędny warunek, jak go poprawiłeś i dlaczego błąd nie ujawniłby się przy sprawdzaniu liczb ze środka przedziału?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Naprawa trzech funkcji",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 4 ze szkieletu. Odkomentowuj po jednej funkcji, czytaj komunikat, poprawiaj.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z4_a_blad", "Funkcja A — rodzaj błędu zgłoszony przez Pythona", ""],
+      ["z4_a_przyczyna", "Funkcja A — na czym polegała pomyłka", ""],
+      ["z4_b_blad", "Funkcja B — rodzaj błędu", ""],
+      ["z4_b_przyczyna", "Funkcja B — na czym polegała pomyłka", ""],
+      ["z4_c_blad", "Funkcja C — rodzaj błędu", ""],
+      ["z4_c_przyczyna", "Funkcja C — na czym polegała pomyłka", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_wniosek",
+     "wiersze": 3,
+     "pytanie": "Która z trzech pomyłek byłaby najtrudniejsza do zauważenia, gdyby Python jej nie zgłosił? Uzasadnij."
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Funkcja zbudowana z funkcji",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 5 ze szkieletu. <code>koszt_paneli()</code> wywołuje w środku <code>pole_prostokata()</code> z zadania 1.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 6,
+     "pytanie": "Przepisz funkcję koszt_paneli()"
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z5_wynik", "Koszt dla pokoju 4 × 5 m przy cenie 89 zł/m²", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_zmiana",
+     "wiersze": 4,
+     "pytanie": "Co stanie się z koszt_paneli(), jeżeli ktoś poprawi wzór w pole_prostokata()? Dlaczego to argument za dzieleniem programu na funkcje?"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z5_zrzut",
+     "opis": "konsola z wynikiem dla pokoju 4 × 5 m"
+    }
+   ]
+  }
+ ]
+}
