@@ -1,0 +1,200 @@
+{
+ "id": "inf-lo-porownywanie-ofert",
+ "tytul": "Porównywanie ofert w arkuszu",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "OFERTY",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Które opakowanie jest tańsze",
+   "poziom": "wymagania konieczne i podstawowe · oceny 2–3",
+   "polecenie": "Ćwiczenie 1, zakładka <em>Opakowania</em>. Kolumny „Cena za jednostkę” i „Za 100 g / 100 ml” wypełnij jedną formułą skopiowaną w dół.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z1_formula", "Formuła z kolumny „Cena za jednostkę”", "przepisz z wiersza 5"],
+      ["z1_formula100", "Formuła z kolumny „Za 100 g / 100 ml”", ""],
+      ["z1_sok_maly", "Sok w butelce 0,3 l — cena za litr", ""],
+      ["z1_sok_duzy", "Sok w kartonie 1 l — cena za litr", ""],
+      ["z1_para", "Para, w której opłaca się MNIEJSZE opakowanie", ""],
+      ["z1_roznica", "O ile groszy na kilogram różnią się oba opakowania w tej parze", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z1_wniosek",
+     "wiersze": 3,
+     "pytanie": "Dlaczego samo porównanie cen na metkach („4,29 zł to mniej niż 7,99 zł”) prowadzi tu do złej decyzji? Odpowiedz, powołując się na liczby z tabeli."
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Koszt całkowity i długość umowy",
+   "poziom": "wymagania podstawowe i rozszerzające · oceny 3–4",
+   "polecenie": "Ćwiczenie 2, zakładka <em>Telefon</em>. Okres bierz z komórki <code>B2</code> adresem bezwzględnym — bez wpisywania liczby miesięcy w formułę.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z2_formula", "Formuła z kolumny „Koszt całkowity”", "przepisz z wiersza 5"],
+      ["z2_a24", "Oferta A — koszt za 24 miesiące", ""],
+      ["z2_b24", "Oferta B — koszt za 24 miesiące", ""],
+      ["z2_c24", "Oferta C — koszt za 24 miesiące", ""],
+      ["z2_naj24", "Która oferta wygrywa przy 24 miesiącach", ""],
+      ["z2_naj12", "Która oferta wygrywa po wpisaniu 12 w B2", ""],
+      ["z2_przewaga12", "O ile złotych wygrywa przy 12 miesiącach", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_dlaczego",
+     "wiersze": 4,
+     "pytanie": "Dlaczego zmiana samego okresu odwraca kolejność ofert? Wyjaśnij, patrząc na to, co jest opłatą jednorazową, a co powtarza się co miesiąc.",
+     "podpowiedz": "Oferta C ma wysoką … , ale niską … , więc im dłużej …"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z2_zrzut",
+     "opis": "tabela z wypełnioną kolumną „Koszt całkowity” przy 24 miesiącach"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Nazwy zakresów i automatyczny werdykt",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 3, zakładka <em>Telefon</em>. Najpierw nazwij zakresy, potem wypełnij podsumowanie i dodaj formatowanie warunkowe.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z3_oferty", "Zakres nazwany „Oferty” — które komórki", ""],
+      ["z3_koszty", "Zakres nazwany „Koszty” — które komórki", ""],
+      ["z3_min", "Formuła z pola „Najniższy koszt”", ""],
+      ["z3_indeks", "Formuła z pola „Najtańsza oferta”", "z INDEKS i PODAJ.POZYCJĘ"],
+      ["z3_roznica", "Formuła z pola „Różnica: najdroższa − najtańsza”", ""],
+      ["z3_regula", "Reguła formatowania warunkowego", "cała formuła, razem z dolarami"]
+     ]
+    },
+    {
+     "typ": "wybor",
+     "id": "z3_przeskok",
+     "pytanie": "Po zmianie komórki Okres na 12 zielone podświetlenie",
+     "opcje": ["przeskoczyło do innego wiersza samo", "zostało tam, gdzie było", "zniknęło", "podświetliło wszystkie wiersze"]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_trzeci_argument",
+     "wiersze": 3,
+     "pytanie": "Co robi trzeci argument funkcji PODAJ.POZYCJĘ i dlaczego akurat tutaj musi mieć wartość 0?"
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_remis",
+     "wiersze": 3,
+     "pytanie": "Co pokaże formuła z INDEKS, gdyby dwie oferty wyszły dokładnie po tyle samo? Jak rozpoznasz taką sytuację, patrząc na podsumowanie?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Dwa sklepy, jeden koszyk",
+   "poziom": "wymagania rozszerzające i dopełniające · oceny 4–5",
+   "polecenie": "Ćwiczenia 4 i 5, zakładka <em>Koszyk</em>. Wartość koszyka policz <strong>jedną formułą</strong>, bez kolumny pomocniczej.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z4_formula", "Formuła z pola „Wartość koszyka” dla sklepu A", ""],
+      ["z4_suma_a", "Wartość koszyka w sklepie A", ""],
+      ["z4_suma_b", "Wartość koszyka w sklepie B", ""],
+      ["z4_pozycje", "W ilu z ośmiu pozycji tańszy jest sklep A", ""],
+      ["z4_wybor", "Formuła pokazująca sumę sklepu wybranego z listy", ""],
+      ["z4_razem_a", "Sklep A razem z dojazdem", ""],
+      ["z4_razem_b", "Sklep B razem z dojazdem", ""],
+      ["z4_rowno", "Przy jakim koszcie dojazdu do B obie sumy się zrównają", ""]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_pozycje_wniosek",
+     "wiersze": 4,
+     "pytanie": "Sklep A jest tańszy w większości pozycji, a jego koszyk wychodzi drożej. Wyjaśnij, skąd ta sprzeczność — wskaż konkretne pozycje z tabeli."
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_lista",
+     "wiersze": 3,
+     "pytanie": "Po co w komórce z nazwą sklepu jest lista rozwijana zamiast zwykłego wpisywania? Podaj jeden błąd, przed którym ona chroni."
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "rozwinięta lista wyboru sklepu razem z przeliczoną sumą obok"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Własne dwie oferty",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Teraz poza skoroszytem: znajdź <strong>dwie prawdziwe oferty</strong> tego samego produktu lub tej samej usługi (dwa opakowania, dwa abonamenty, dwa sklepy internetowe) i porównaj je tą samą metodą.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      ["z5_co", "Co porównujesz", ""],
+      ["z5_gdzie", "Skąd wzięte oferty i z jakiego dnia", ""],
+      ["z5_a_cena", "Oferta 1 — cena widoczna w ogłoszeniu", ""],
+      ["z5_a_miara", "Oferta 1 — po sprowadzeniu do wspólnej miary", "za kg / za litr / za cały okres"],
+      ["z5_b_cena", "Oferta 2 — cena widoczna w ogłoszeniu", ""],
+      ["z5_b_miara", "Oferta 2 — po sprowadzeniu do wspólnej miary", ""],
+      ["z5_miara", "Jaką wspólną miarę przyjąłeś i dlaczego tę", ""]
+     ]
+    },
+    {
+     "typ": "wybor",
+     "id": "z5_odwrocenie",
+     "pytanie": "Czy po przeliczeniu na wspólną miarę tańsza okazała się inna oferta niż ta, która wygląda taniej w ogłoszeniu?",
+     "opcje": ["tak, kolejność się odwróciła", "nie, wygrywa ta sama", "wyszło praktycznie po równo"]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_wniosek",
+     "wiersze": 6,
+     "pytanie": "Napisz wniosek w trzech zdaniach: która oferta wygrywa, o ile, i przy jakim założeniu. W trzecim zdaniu wymień co najmniej dwie rzeczy, których twoje wyliczenie NIE obejmuje.",
+     "podpowiedz": "Tańsza jest … o … , przy założeniu że … . Wyliczenie nie obejmuje … ani … ."
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Na koniec tematu.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_poziom",
+     "pytanie": "Gdyby ktoś jutro podał ci trzy oferty i poprosił o wskazanie najtańszej, zbudowałbyś takie porównanie",
+     "opcje": ["samodzielnie, od początku do końca", "samodzielnie, ale z zaglądaniem do materiału", "z pomocą nauczyciela", "jeszcze nie"]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_trudne",
+     "wiersze": 3,
+     "pytanie": "Co sprawiło największy kłopot: nazwy zakresów, INDEKS z PODAJ.POZYCJĘ, formatowanie warunkowe czy SUMA.ILOCZYNÓW? Napisz, na czym dokładnie się zacięło."
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_przyda",
+     "wiersze": 2,
+     "pytanie": "Do czego poza lekcją przyda ci się to, co dziś policzyłeś?"
+    }
+   ]
+  }
+ ]
+}

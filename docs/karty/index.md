@@ -30,6 +30,11 @@ otwierasz, klikając nazwę tematu.
     "url": "../klasa-1/instrukcje-warunkowe/#karta"
   },
   {
+    "plik": "porownywanie-ofert",
+    "tytul": "Klasa 1 · Porównywanie ofert w arkuszu",
+    "url": "../klasa-1/porownywanie-ofert/#karta"
+  },
+  {
     "plik": "prawo-w-sieci",
     "tytul": "Klasa 2 · Prawo w sieci",
     "url": "../klasa-2/prawo-w-sieci/#karta"

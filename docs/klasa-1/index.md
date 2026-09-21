@@ -28,7 +28,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 | --- | :---: | --- |
 | **[Podstawy pracy z arkuszem](podstawy-arkusza.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Stosowanie instrukcji warunkowych](instrukcje-warunkowe.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Porównywanie ofert w arkuszu | 2 | *w przygotowaniu* |
+| **[Porównywanie ofert w arkuszu](porownywanie-ofert.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Zakupy grupowe z arkuszem | 2 | *w przygotowaniu* |
 | Wykresy funkcji w arkuszu | 1 | *w przygotowaniu* |
 | Komputerowe wspomaganie pomiarów | 1 | *w przygotowaniu* |
