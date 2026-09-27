@@ -28,7 +28,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 | --- | :---: | --- |
 | **[Podstawy pracy w środowisku Python](podstawy-pythona.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Definiowanie funkcji obliczeniowych](funkcje-obliczeniowe.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Wyszukiwanie wzorca w tekście | 1 | *w przygotowaniu* |
+| **[Wyszukiwanie wzorca w tekście](wyszukiwanie-wzorca.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Przetwarzanie napisów | 1 | *w przygotowaniu* |
 | Szyfrowanie i deszyfrowanie tekstu | 2 | *w przygotowaniu* |
 | Algorytm Euklidesa w praktyce | 1 | *w przygotowaniu* |

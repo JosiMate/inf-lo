@@ -9,3 +9,5 @@ nav:
   - "Wymagania edukacyjne i bhp": wymagania-i-bhp.md
   - "Prawo w sieci": prawo-w-sieci.md
   - "Podstawy pracy w środowisku Python": podstawy-pythona.md
+  - "Definiowanie funkcji obliczeniowych": funkcje-obliczeniowe.md
+  - "Wyszukiwanie wzorca w tekście": wyszukiwanie-wzorca.md

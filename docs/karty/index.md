@@ -48,6 +48,11 @@ otwierasz, klikając nazwę tematu.
     "plik": "funkcje-obliczeniowe",
     "tytul": "Klasa 2 · Definiowanie funkcji obliczeniowych",
     "url": "../klasa-2/funkcje-obliczeniowe/#karta"
+  },
+  {
+    "plik": "wyszukiwanie-wzorca",
+    "tytul": "Klasa 2 · Wyszukiwanie wzorca w tekście",
+    "url": "../klasa-2/wyszukiwanie-wzorca/#karta"
   }
 ]
 </script>

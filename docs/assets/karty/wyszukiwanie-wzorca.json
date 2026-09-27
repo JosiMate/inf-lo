@@ -1,0 +1,186 @@
+{
+ "id": "inf-lo-wyszukiwanie-wzorca",
+ "tytul": "Wyszukiwanie wzorca w tekście",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-WZORZEC",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Gotowe narzędzia Pythona",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Ćwiczenie 1. Zdanie: <em>Na szkolnym boisku gramy w piłkę, a po lekcjach gramy w kosza.</em>",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_in",
+       "Czy jest słowo „boisku” — zapis w Pythonie i wynik",
+       ""
+      ],
+      [
+       "z1_find",
+       "Pozycja pierwszego „gramy” — zapis i wynik",
+       ""
+      ],
+      [
+       "z1_count",
+       "Liczba wystąpień „gramy” — zapis i wynik",
+       ""
+      ],
+      [
+       "z1_brak",
+       "Wynik find() dla „siatkówkę”",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z1_pozycja",
+     "wiersze": 3,
+     "pytanie": "„gramy” zaczyna się od dwudziestego znaku zdania, a find() zwróciło 19. Wyjaśnij dlaczego."
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Wielkość liter",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ćwiczenie 2. Funkcja <code>zawiera(tekst, wzorzec)</code> niezależna od wielkości liter oraz pułapka z <code>find()</code> z sekcji 3.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "wiersze": 4,
+     "pytanie": "Przepisz funkcję zawiera()"
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_pulapka",
+     "wiersze": 3,
+     "pytanie": "Program sprawdza if zdanie.find(\"Ala\"): i wypisuje „nie ma”, choć zdanie zaczyna się od „Ala”. Na czym polega błąd i jak go poprawić?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Wystąpienia nakładające się",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 3. Funkcja <code>ile_wystapien(tekst, wzorzec)</code> napisana algorytmem naiwnym.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod",
+     "wiersze": 8,
+     "pytanie": "Przepisz funkcję ile_wystapien()"
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_banana",
+       "ile_wystapien(\"banana\", \"ana\") i \"banana\".count(\"ana\")",
+       ""
+      ],
+      [
+       "z3_aaaa",
+       "ile_wystapien(\"aaaa\", \"aa\") i \"aaaa\".count(\"aa\")",
+       ""
+      ],
+      [
+       "z3_mama",
+       "ile_wystapien(\"Mama ma mamę\", \"ma\")",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_dlaczego",
+     "wiersze": 4,
+     "pytanie": "Dlaczego count() daje mniej niż twoja funkcja? Dlaczego pierwsze „Ma” w „Mama ma mamę” nie zostało policzone?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Ile pracy wykonuje algorytm naiwny",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 4. Funkcja <code>porownania(tekst, wzorzec)</code> zliczająca porównania znaków.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_abra",
+       "Porównania: \"ABRAKADABRA\", wzorzec \"ABRA\"",
+       ""
+      ],
+      [
+       "z4_aaab",
+       "Porównania: \"aaaaaaaaab\", wzorzec \"aaab\"",
+       ""
+      ],
+      [
+       "z4_ustawienia",
+       "Liczba ustawień wzorca w obu przypadkach",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_wniosek",
+     "wiersze": 4,
+     "pytanie": "Teksty mają prawie tyle samo znaków (11 i 10), a ustawień wzorca jest 8 i 7. Skąd tak duża różnica w liczbie porównań? Jak wygląda tekst i wzorzec, przy których algorytm naiwny wykonuje najwięcej pracy?"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "okienko z funkcją i oboma wynikami"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Naprawa funkcji",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 5. Funkcja <code>pierwsze(tekst, wzorzec)</code> z dwoma błędami.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_b1",
+       "Błąd pierwszy — co było źle",
+       ""
+      ],
+      [
+       "z5_b1_tekst",
+       "Błąd pierwszy — tekst i wzorzec, na których wychodzi na jaw",
+       ""
+      ],
+      [
+       "z5_b2",
+       "Błąd drugi — co było źle",
+       ""
+      ],
+      [
+       "z5_b2_tekst",
+       "Błąd drugi — tekst i wzorzec, na których wychodzi na jaw",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 7,
+     "pytanie": "Przepisz poprawioną funkcję"
+    }
+   ]
+  }
+ ]
+}

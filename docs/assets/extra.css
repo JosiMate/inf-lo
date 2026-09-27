@@ -433,6 +433,76 @@
    otwierałaby się wbrew temu, co uczeń ostatnio wybrał. */
 .kp-kotwica { display: block; height: 0; scroll-margin-top: 3.6rem; }
 
+/* ------------------------------------------ wizualizator wyszukiwania wzorca */
+/* Widget z docs/assets/js/wzorzec.js. Pola mają stałą szerokość jak znaki
+   w edytorze — przesunięcie wzorca o jedną pozycję ma być widać jako
+   przesunięcie o dokładnie jedną kratkę. Długi tekst przewija się w poziomie. */
+.wz { margin: 1.4em 0; }
+.wz-dane { display: flex; flex-wrap: wrap; gap: .5em 1.2em; margin-bottom: .8em;
+           font-size: .72rem; }
+.wz-dane label { display: flex; align-items: center; gap: .5em; }
+.wz-dane input { font-family: var(--md-code-font-family, monospace); font-size: .78rem;
+                 padding: .3em .5em; border-radius: .2rem; min-width: 0;
+                 border: 1px solid var(--md-default-fg-color--lighter);
+                 background: var(--md-code-bg-color); color: var(--md-code-fg-color); }
+.wz-tekst { width: 22em; max-width: 100%; }
+.wz-wzorzec { width: 10em; }
+
+.wz-sterowanie { display: flex; flex-wrap: wrap; gap: .8em 1.2em;
+                 align-items: center; margin-bottom: .9em; }
+.wz-tryby { display: flex; border-radius: .25rem; overflow: hidden;
+            border: 1px solid var(--md-default-fg-color--lighter); }
+.wz-tryby[hidden] { display: none; }
+.wz-tryb { padding: .35em .9em; font: inherit; font-size: .72rem; cursor: pointer;
+           border: 0; background: var(--md-default-bg-color);
+           color: var(--md-default-fg-color--light); }
+.wz-tryb + .wz-tryb { border-left: 1px solid var(--md-default-fg-color--lighter); }
+.wz-tryb.wz-wybrany { background: var(--md-accent-fg-color);
+                      color: var(--md-primary-bg-color); font-weight: 700; }
+.wz-przyciski { display: flex; gap: .5em; }
+.wz-przyciski button { padding: .35em .9em; font: inherit; font-size: .72rem;
+                       cursor: pointer; border-radius: .2rem;
+                       border: 1px solid var(--md-default-fg-color--lighter);
+                       background: var(--md-default-bg-color);
+                       color: var(--md-default-fg-color); }
+.wz-przyciski button:disabled { opacity: .45; cursor: default; }
+
+.wz-plansza { overflow-x: auto; padding-bottom: .3em; }
+.wz-rzad { display: grid; grid-template-columns: repeat(var(--wz-n), 1.55rem);
+           gap: 2px; margin-bottom: 2px; width: max-content; }
+.wz-rzad span { height: 1.55rem; display: flex; align-items: center; justify-content: center;
+                border-radius: .15rem; font-family: var(--md-code-font-family, monospace);
+                font-size: .8rem; }
+.wz-indeksy span { height: 1.1rem; font-size: .58rem; color: var(--md-default-fg-color--light); }
+.wz-t span { background: var(--md-code-bg-color); }
+.wz-t span.wz-poza { background: transparent; }
+.wz-p .wz-zw { background: color-mix(in srgb, var(--md-accent-fg-color) 14%, var(--md-default-bg-color));
+               border: 1px dashed var(--md-default-fg-color--lighter); }
+.wz-p .wz-ok, .wz-kl.wz-ok { background: #2e7d32; color: #fff; border-color: #2e7d32; }
+.wz-p .wz-zle, .wz-kl.wz-zle { background: #c62828; color: #fff; border-color: #c62828; }
+.wz-p .wz-znane, .wz-kl.wz-znane { background: color-mix(in srgb, #2e7d32 35%, var(--md-default-bg-color));
+                                   border: 1px dashed #2e7d32; }
+.wz-t .wz-trafienie, .wz-kl.wz-trafienie { box-shadow: inset 0 -3px 0 #f9a825; }
+.wz-rzad .wz-teraz { outline: 2px solid #f9a825; outline-offset: 1px; }
+
+.wz-tablica { margin: .7em 0 0; overflow-x: auto; }
+.wz-tablica table { border-collapse: collapse; font-size: .68rem; }
+.wz-tablica th, .wz-tablica td { padding: .2em .55em; text-align: center;
+                                 border: 1px solid var(--md-default-fg-color--lightest); }
+.wz-tablica th { text-align: left; font-weight: 700; }
+.wz-tablica td { font-family: var(--md-code-font-family, monospace); }
+
+.wz-opis { margin: .9em 0 .5em; font-size: .78rem; min-height: 2.6em; }
+.wz-liczniki { display: flex; flex-wrap: wrap; gap: .4em 1.2em; font-size: .72rem;
+               color: var(--md-default-fg-color--light); }
+.wz-liczniki b { color: var(--md-default-fg-color); }
+.wz-legenda { display: flex; flex-wrap: wrap; align-items: center; gap: .3em .9em;
+              margin: .9em 0 0; font-size: .68rem; color: var(--md-default-fg-color--light); }
+.wz-poz { display: inline-flex; align-items: center; gap: .3em; white-space: nowrap; }
+.wz-poz[hidden] { display: none; }
+.wz-kl { display: inline-block; width: .8em; height: .8em; border-radius: .15rem; flex: none;
+         background: var(--md-code-bg-color); border: 1px solid var(--md-default-fg-color--lighter); }
+
 /* ---------------------------------------------------- konsola Pythona
    Edytor, dane wejściowe i wynik przy przykładach — python-konsola.js.
    Wygląd celowo „terminalowy” w wyniku, ale edytor zostaje jasny w motywie
