@@ -432,3 +432,75 @@
    zwykłe przewinięcie strony wyglądałoby jak wejście z odsyłacza i sekcja
    otwierałaby się wbrew temu, co uczeń ostatnio wybrał. */
 .kp-kotwica { display: block; height: 0; scroll-margin-top: 3.6rem; }
+
+/* ---------------------------------------------------- konsola Pythona
+   Edytor, dane wejściowe i wynik przy przykładach — python-konsola.js.
+   Wygląd celowo „terminalowy” w wyniku, ale edytor zostaje jasny w motywie
+   jasnym, żeby kod czytało się jak na stronie, a nie jak w czarnym oknie. */
+.py-konsola {
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .35rem;
+  background: var(--md-code-bg-color);
+  overflow: hidden;
+}
+.pyk-pasek {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .4em;
+  padding: .35em .5em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-fg-color--lightest);
+}
+.pyk-etykieta { font-size: .66rem; font-weight: 700; letter-spacing: .04em;
+                text-transform: uppercase; color: var(--md-default-fg-color--light); margin-right: .3em; }
+.pyk-odstep { flex: 1; }
+.pyk-pasek button {
+  font: inherit; font-size: .7rem; font-weight: 600; cursor: pointer;
+  padding: .25em .75em; border-radius: .25rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+}
+.pyk-pasek .pyk-uruchom { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color);
+                          border-color: var(--md-primary-fg-color); }
+.pyk-pasek button:disabled { opacity: .5; cursor: progress; }
+.pyk-pasek .pyk-zatrzymaj { border-color: #c62828; color: #c62828; }
+.pyk-pasek .pyk-zatrzymaj[hidden] { display: none; }
+.pyk-kod {
+  display: block; width: 100%; min-height: 4.5em; resize: vertical; box-sizing: border-box;
+  margin: 0; padding: .7em .9em; border: 0; outline: none;
+  font-family: var(--md-code-font-family); font-size: .8rem; line-height: 1.55;
+  tab-size: 4; white-space: pre; overflow-x: auto;
+  color: var(--md-code-fg-color); background: transparent;
+}
+.pyk-kod:focus { box-shadow: inset 0 0 0 2px var(--md-accent-fg-color); }
+.pyk-wejscie-et { display: block; padding: .4em .9em .6em; font-size: .68rem;
+                  color: var(--md-default-fg-color--light);
+                  border-top: 1px dashed var(--md-default-fg-color--lightest); }
+.pyk-wejscie {
+  display: block; width: 100%; box-sizing: border-box; margin-top: .3em; padding: .35em .6em;
+  font-family: var(--md-code-font-family); font-size: .76rem; resize: vertical;
+  border: 1px solid var(--md-default-fg-color--lighter); border-radius: .25rem;
+  color: var(--md-default-fg-color); background: var(--md-default-bg-color);
+}
+.md-typeset .pyk-wynik, .pyk-wynik {
+  margin: 0; padding: .7em .9em; max-height: 22em; overflow: auto;
+  font-family: var(--md-code-font-family); font-size: .76rem; line-height: 1.5;
+  white-space: pre-wrap; word-break: break-word;
+  color: #e6e6e6; background: #1e1e24; border-radius: 0;
+}
+.pyk-wynik[hidden], .pyk-testy[hidden], .pyk-uwaga[hidden] { display: none !important; }
+.pyk-wynik .pyk-blad { color: #ff8a80; }
+.pyk-wynik .pyk-info { color: #9e9e9e; font-style: italic; }
+.pyk-wynik .pyk-rada { color: #ffd54f; }
+.pyk-testy { padding: .5em .9em .7em; font-size: .74rem; background: var(--md-default-bg-color); }
+.pyk-testy ul { margin: .3em 0 0; padding-left: 1.1em; }
+.pyk-testy p { margin: 0; }
+.pyk-testy .pyk-ok { color: #2e7d32; }
+.pyk-testy .pyk-zle { color: #c62828; }
+.pyk-testy .pyk-info { color: var(--md-default-fg-color--light); }
+.pyk-uwaga { margin: 0; padding: .3em .9em .45em; font-size: .64rem;
+             color: var(--md-default-fg-color--light); }
+.pyk-zrodlo { display: none; }
+@media print {
+  .py-konsola { display: none !important; }
+  .pyk-zrodlo { display: block; }
+}

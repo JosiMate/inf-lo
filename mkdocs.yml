@@ -71,6 +71,10 @@ extra_javascript:
   - assets/js/quiz.js
   - assets/js/postep.js
   - assets/js/narzedzia.js
+  # Konsola Pythona przy przykładach. Interpreter (assets/pyodide/) pobiera
+  # się dopiero przy pierwszym kliknięciu „Uruchom” — python-worker.mjs
+  # ładuje go w osobnym wątku, więc nie ma go na tej liście.
+  - assets/js/python-konsola.js
 
 markdown_extensions:
   - abbr

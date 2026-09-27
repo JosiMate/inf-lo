@@ -1,0 +1,7 @@
+Pyodide 314.0.7 (CPython 3.14.2 skompilowany do WebAssembly)
+https://pyodide.org  ·  licencja: Mozilla Public License 2.0
+(https://github.com/pyodide/pyodide/blob/main/LICENSE)
+
+Pliki skopiowane bez zmian z pakietu npm "pyodide" 314.0.7.
+Używa ich konsola Pythona na stronach materiałów (assets/js/python-worker.mjs).
+Aktualizacja: podmień wszystkie pięć plików na nowszą wersję z tego samego pakietu.
