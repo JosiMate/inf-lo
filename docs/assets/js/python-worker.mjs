@@ -68,21 +68,33 @@ function strumien(id, typ) {
 onmessage = async ({ data }) => {
   await start;
   if (!py) return;
-  const { id, kod, wejscie, echo } = data;
+  const { id, kod, wejscie, echo, dopisek } = data;
 
   const tekst = String(wejscie ?? "").replace(/\r\n/g, "\n");
   const linie = tekst.trim() === "" ? [] : tekst.replace(/\n$/, "").split("\n");
   let i = 0;
   py.setStdin({ stdin: () => (i < linie.length ? linie[i++] : null) });
-  py.setStdout(strumien(id, "out"));
-  py.setStderr(strumien(id, "err"));
   py.globals.set("_TRYB_ECHO", echo !== false);
 
-  // Każde uruchomienie dostaje czystą przestrzeń nazw — jak nowy plik.
-  const przestrzen = py.runPython("dict()");
+  /* Test „dopisek” sprawdza funkcję ucznia: najpierw wykonujemy jego program,
+     wyciszając to, co sam wypisuje, a potem w tej samej przestrzeni nazw
+     krótki kod testu — i dopiero jego wynik trafia na stronę. */
+  const cisza = { write: (bufor) => bufor.length };
+  py.setStdout(dopisek ? cisza : strumien(id, "out"));
+  py.setStderr(dopisek ? cisza : strumien(id, "err"));
+
+  // Każde uruchomienie dostaje czystą przestrzeń nazw — jak nowy plik
+  // uruchomiony wprost, więc działa też `if __name__ == "__main__":`.
+  const przestrzen = py.runPython("dict(__name__='__main__')");
   try {
     await py.runPythonAsync(kod, { globals: przestrzen, filename: PLIK });
     py.runPython("import sys; sys.stdout.flush(); sys.stderr.flush()");
+    if (dopisek) {
+      py.setStdout(strumien(id, "out"));
+      py.setStderr(strumien(id, "err"));
+      await py.runPythonAsync(dopisek, { globals: przestrzen, filename: "<test>" });
+      py.runPython("import sys; sys.stdout.flush(); sys.stderr.flush()");
+    }
     postMessage({ id, typ: "koniec", ok: true });
   } catch (e) {
     try { py.runPython("import sys; sys.stdout.flush()"); } catch { /* nic */ }

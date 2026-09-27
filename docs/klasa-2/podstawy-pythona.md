@@ -63,11 +63,11 @@ Pierwsze uruchomienie trwa kilka sekund, bo przeglądarka pobiera interpreter
 Pythona. Potem każde kolejne jest natychmiastowe. Okienko pamięta twoją wersję
 kodu w tej przeglądarce, a **↺ Przykład** przywraca kod z materiału.
 
-!!! tip "Okienko do sprawdzania, online-python.com do pracy"
+!!! tip "Okienko nie zastępuje pliku"
 
     Okienka są po to, żeby od razu wypróbować przykład albo ćwiczenie. Program,
-    który oddajesz, piszesz jak dotąd w **online-python.com** i zapisujesz jako
-    plik `.py`. Okienko ma też limit: program działający dłużej niż 10 sekund
+    który oddajesz, zapisujesz jako plik `.py` — w ćwiczeniach przyciskiem
+    **⤓ Zapisz .py** w okienku albo jak dotąd w **online-python.com**. Okienko ma też limit: program działający dłużej niż 10 sekund
     zostanie zatrzymany — to ochrona przed nieskończoną pętlą.
 
 W domu możesz pracować tak samo w przeglądarce albo zainstalować Pythona
@@ -411,9 +411,9 @@ wiersza podczas szukania błędu.
 
 Każde ćwiczenie możesz zrobić w okienku pod jego treścią — przy ćwiczeniach 3
 i 4 przycisk **✓ Sprawdź** uruchomi twój program na kilku zestawach danych
-i powie, czy wynik się zgadza. Program do oddania zapisz jak zwykle: skopiuj go
-do online-python.com albo pobierz szkielet i uzupełnij go tam. Miejsca do
-uzupełnienia są oznaczone komentarzem `# TODO`.
+i powie, czy wynik się zgadza. Program do oddania zapiszesz przyciskiem
+**⤓ Zapisz .py** — albo, jak dotąd, pobierz szkielet i uzupełnij go
+w online-python.com. Miejsca do uzupełnienia są oznaczone komentarzem `# TODO`.
 
 [:material-language-python: Szkielet ćwiczeń (.py)](../pliki/python-cwiczenia-2loa.py){ .md-button .md-button--primary download="python-cwiczenia-2loa.py" }
 [:material-file-document-outline: Ściąga na jedną stronę (.docx)](../pliki/python-sciaga-2loa.docx){ .md-button download="python-sciaga-2loa.docx" }
@@ -435,7 +435,7 @@ uzupełnienia są oznaczone komentarzem `# TODO`.
     # TODO: dopisz dwa kolejne wiersze print()
     ```
 
-    <div class="py-konsola"></div>
+    <div class="py-konsola" data-nazwa="python-cw1.py"></div>
 
 
 !!! note "Ćwiczenie 2. Rachunek za zakupy"
@@ -455,7 +455,7 @@ uzupełnienia są oznaczone komentarzem `# TODO`.
     print(f"{sztuki} × {towar} = {razem} zł")
     ```
 
-    <div class="py-konsola" data-wejscie="zeszyt&#10;3.90&#10;3"></div>
+    <div class="py-konsola" data-nazwa="python-cw2.py" data-wejscie="zeszyt&#10;3.90&#10;3"></div>
 
 
 !!! note "Ćwiczenie 3. Sekundy na czas"
@@ -475,7 +475,7 @@ uzupełnienia są oznaczone komentarzem `# TODO`.
     print(f"{godziny} godz. {minuty} min {sekundy_koncowe} s")
     ```
 
-    <div class="py-konsola" data-wejscie="3725"><script type="application/json" class="py-testy">[{"wejscie": "3725", "wynik": "1 godz. 2 min 5 s"}, {"wejscie": "59", "wynik": "0 godz. 0 min 59 s"}, {"wejscie": "7200", "wynik": "2 godz. 0 min 0 s"}, {"wejscie": "86399", "wynik": "23 godz. 59 min 59 s"}]</script></div>
+    <div class="py-konsola" data-nazwa="python-cw3.py" data-wejscie="3725"><script type="application/json" class="py-testy">[{"wejscie": "3725", "wynik": "1 godz. 2 min 5 s"}, {"wejscie": "59", "wynik": "0 godz. 0 min 59 s"}, {"wejscie": "7200", "wynik": "2 godz. 0 min 0 s"}, {"wejscie": "86399", "wynik": "23 godz. 59 min 59 s"}]</script></div>
 
 
 !!! note "Ćwiczenie 4. Naprawa programu"
@@ -494,7 +494,7 @@ uzupełnienia są oznaczone komentarzem `# TODO`.
     print(f"Średnia ocen: {srednia}"
     ```
 
-    <div class="py-konsola" data-wejscie="4&#10;5&#10;3"><script type="application/json" class="py-testy">[{"wejscie": "4\n5\n3", "wynik": "Średnia ocen: 4.0"}, {"wejscie": "1\n2\n6", "wynik": "Średnia ocen: 3.0"}, {"wejscie": "5\n4\n4", "wynik": "Średnia ocen: 4.333333333333333"}, {"wejscie": "6\n6\n5", "wynik": "Średnia ocen: 5.666666666666667"}]</script></div>
+    <div class="py-konsola" data-nazwa="python-cw4.py" data-wejscie="4&#10;5&#10;3"><script type="application/json" class="py-testy">[{"wejscie": "4\n5\n3", "wynik": "Średnia ocen: 4.0"}, {"wejscie": "1\n2\n6", "wynik": "Średnia ocen: 3.0"}, {"wejscie": "5\n4\n4", "wynik": "Średnia ocen: 4.333333333333333"}, {"wejscie": "6\n6\n5", "wynik": "Średnia ocen: 5.666666666666667"}]</script></div>
 
 
 ## Sprawdź się

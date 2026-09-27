@@ -469,6 +469,7 @@
   margin: 0; padding: .7em .9em; border: 0; outline: none;
   font-family: var(--md-code-font-family); font-size: .8rem; line-height: 1.55;
   tab-size: 4; white-space: pre; overflow-x: auto;
+  max-height: 36em; overflow-y: auto;   /* długi szkielet przewija się w okienku */
   color: var(--md-code-fg-color); background: transparent;
 }
 .pyk-kod:focus { box-shadow: inset 0 0 0 2px var(--md-accent-fg-color); }
@@ -482,7 +483,7 @@
   color: var(--md-default-fg-color); background: var(--md-default-bg-color);
 }
 .md-typeset .pyk-wynik, .pyk-wynik {
-  margin: 0; padding: .7em .9em; max-height: 22em; overflow: auto;
+  margin: 0; padding: .7em .9em; max-height: 28em; overflow: auto;
   font-family: var(--md-code-font-family); font-size: .76rem; line-height: 1.5;
   white-space: pre-wrap; word-break: break-word;
   color: #e6e6e6; background: #1e1e24; border-radius: 0;

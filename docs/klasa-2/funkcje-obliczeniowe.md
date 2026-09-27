@@ -24,6 +24,13 @@
     8. skorzystać z funkcji wbudowanych oraz z modułu `math`
     9. sprawdzić własną funkcję na kilku danych, w tym na przypadku brzegowym
 
+!!! tip "Przykłady uruchomisz na tej stronie"
+
+    Pod przykładami są okienka z Pythonem, takie jak w poprzednim temacie:
+    zmień kod i kliknij **▶ Uruchom** (albo ++ctrl+enter++). W ćwiczeniach
+    przycisk **✓ Sprawdź** wywoła twoje funkcje na kilku danych i powie, czy
+    zwracają to, co trzeba.
+
 ## 1. Po co komu własna funkcja
 
 Kalkulator ocen klasowych ma policzyć średnią dla trzech osób:
@@ -51,6 +58,8 @@ print(srednia([4, 5, 3]))
 print(srednia([2, 3, 3, 4]))
 print(srednia([5, 5]))
 ```
+
+<div class="py-konsola"></div>
 
 ```text
 4.0
@@ -101,6 +110,8 @@ print(pole_prostokata(3, 4))
 print(pole_prostokata(10, 2))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 12
 20
@@ -127,6 +138,8 @@ print(dzielenie(10, 2))
 print(dzielenie(2, 10))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 5.0
 0.2
@@ -139,6 +152,7 @@ TypeError: pole_prostokata() missing 1 required positional argument: 'b'
 ```
 
 Komunikat podaje **nazwę brakującego parametru** — nie trzeba zgadywać.
+Sprawdź w okienku wyżej: dopisz `print(dzielenie(10))` i uruchom.
 
 ## 4. `return` kontra `print()`
 
@@ -154,6 +168,8 @@ To najważniejsza rzecz na tej lekcji i najczęstszy błąd na sprawdzianach.
     print(wynik)
     print(pole_zle(3, 4) * 2)
     ```
+
+    <div class="py-konsola"></div>
 
     ```text
     12
@@ -178,6 +194,8 @@ To najważniejsza rzecz na tej lekcji i najczęstszy błąd na sprawdzianach.
     print(pole(3, 4) * 2)
     print(pole(2, 5) + pole(3, 3))
     ```
+
+    <div class="py-konsola"></div>
 
     ```text
     12
@@ -205,6 +223,8 @@ def test(x):
 print(test(5))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 10
 ```
@@ -221,6 +241,8 @@ def podatek(kwota):
 print(podatek(200))
 print(stawka)
 ```
+
+<div class="py-konsola"></div>
 
 ```text
 46.0
@@ -245,6 +267,8 @@ print(cena_brutto(200))
 print(cena_brutto(200, 8))
 print(cena_brutto(200, 0))
 ```
+
+<div class="py-konsola"></div>
 
 ```text
 246.0
@@ -274,6 +298,8 @@ print(rabat(300))
 print(rabat(100))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 480.0
 270.0
@@ -302,6 +328,8 @@ def rabat(kwota):
     print(ocena(70))
     print(ocena(30))
     ```
+
+    <div class="py-konsola"></div>
 
     ```text
     zaliczone
@@ -336,6 +364,8 @@ print(math.ceil(4.1))
 print(math.floor(4.9))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 4.0
 3.1416
@@ -349,6 +379,8 @@ print(math.floor(4.9))
     print(round(2.5))
     print(round(3.5))
     ```
+
+    <div class="py-konsola"></div>
 
     ```text
     2
@@ -386,6 +418,8 @@ print(rabat(500))
 print(rabat(0))
 ```
 
+<div class="py-konsola"></div>
+
 ```text
 199
 180.0
@@ -411,9 +445,11 @@ całkowitą, a nie wynik mnożenia.
 
 ## Ćwiczenia
 
-Pobierz szkielet — miejsca do uzupełnienia są oznaczone komentarzem `# TODO`.
-Otwórz plik w Notatniku, skopiuj jego zawartość do edytora w przeglądarce
-i uruchamiaj program po każdym zadaniu.
+Każde ćwiczenie możesz zrobić w okienku pod jego treścią. Przycisk
+**✓ Sprawdź** wywołuje twoje funkcje na kilku danych — także na granicach
+przedziałów — i pokazuje, co się zgadza. **⤓ Zapisz .py** zapisuje kod
+z okienka jako plik. Możesz też pobrać cały szkielet i pracować
+w online-python.com. Miejsca do uzupełnienia są oznaczone komentarzem `# TODO`.
 
 [:material-language-python: Szkielet ćwiczeń (.py)](../pliki/python-funkcje-2loa.py){ .md-button .md-button--primary download="python-funkcje-2loa.py" }
 [:material-file-document-outline: Ściąga na jedną stronę (.docx)](../pliki/python-funkcje-sciaga-2loa.docx){ .md-button download="python-funkcje-sciaga-2loa.docx" }
@@ -426,6 +462,20 @@ i uruchamiaj program po każdym zadaniu.
     Wywołaj je dla boków 3 i 4, a potem dla 12,5 i 2. Wypisz wyniki jednym
     `print()` z f-napisem, w rodzaju: `Prostokąt 3 × 4: pole 12, obwód 14`.
 
+    ```python
+    def pole_prostokata(a, b):
+        return 0    # TODO: poprawny wzór na pole
+
+
+    # TODO: dopisz funkcję obwod_prostokata(a, b)
+
+
+    # print(f"Prostokąt 3 × 4: pole {TODO}, obwód {TODO}")
+    # TODO: to samo dla boków 12.5 i 2
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw1.py"><script type="application/json" class="py-testy">[{"kod": "print(pole_prostokata(3, 4))", "wynik": "12", "opis": "wywołanie", "pokaz": "pole_prostokata(3, 4)"}, {"kod": "print(pole_prostokata(12.5, 2))", "wynik": "25", "opis": "wywołanie", "pokaz": "pole_prostokata(12.5, 2)"}, {"kod": "print(obwod_prostokata(3, 4))", "wynik": "14", "opis": "wywołanie", "pokaz": "obwod_prostokata(3, 4)"}, {"kod": "print(obwod_prostokata(12.5, 2))", "wynik": "29", "opis": "wywołanie", "pokaz": "obwod_prostokata(12.5, 2)"}]</script></div>
+
 !!! note "Ćwiczenie 2. Przelicznik walut z wartością domyślną"
 
     Funkcja `na_zlotowki(kwota, kurs=4.30)` zwraca wartość podanej kwoty
@@ -434,6 +484,18 @@ i uruchamiaj program po każdym zadaniu.
     Sprawdź ją trzy razy: bez podania kursu, z kursem 4.15 i z kursem 0.
     Zapisz w karcie pracy, co wyszło w trzecim przypadku i czy taki wynik ma
     sens — a jeśli nie, co powinna zrobić funkcja.
+
+    ```python
+    def na_zlotowki(kwota, kurs):     # TODO: kurs ma mieć wartość domyślną 4.30
+        return 0                        # TODO: wzór
+
+
+    print(na_zlotowki(100))
+    print(na_zlotowki(100, 4.15))
+    print(na_zlotowki(100, 0))
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw2.py"><script type="application/json" class="py-testy">[{"kod": "print(na_zlotowki(100))", "wynik": "430", "opis": "wywołanie", "pokaz": "na_zlotowki(100)"}, {"kod": "print(na_zlotowki(20))", "wynik": "86", "opis": "wywołanie", "pokaz": "na_zlotowki(20)"}, {"kod": "print(na_zlotowki(100, 4.15))", "wynik": "415", "opis": "wywołanie", "pokaz": "na_zlotowki(100, 4.15)"}, {"kod": "print(na_zlotowki(10, 1))", "wynik": "10", "opis": "wywołanie", "pokaz": "na_zlotowki(10, 1)"}]</script></div>
 
 !!! note "Ćwiczenie 3. Kategoria wiekowa biletu"
 
@@ -450,11 +512,55 @@ i uruchamiaj program po każdym zadaniu.
     w karcie pracy. Jeżeli któraś granica wyjdzie źle, popraw warunek i napisz,
     co było nie tak.
 
+    ```python
+    def cena_biletu(wiek):
+        if wiek <= 6:
+            return 0
+        # TODO: pozostałe przedziały cennika
+
+
+    for w in [6, 7, 18, 19, 64, 65]:
+        print(w, "lat:", cena_biletu(w), "zł")
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw3.py"><script type="application/json" class="py-testy">[{"kod": "print(cena_biletu(3))", "wynik": "0", "opis": "wywołanie", "pokaz": "cena_biletu(3)"}, {"kod": "print(cena_biletu(6))", "wynik": "0", "opis": "wywołanie", "pokaz": "cena_biletu(6)"}, {"kod": "print(cena_biletu(7))", "wynik": "12", "opis": "wywołanie", "pokaz": "cena_biletu(7)"}, {"kod": "print(cena_biletu(18))", "wynik": "12", "opis": "wywołanie", "pokaz": "cena_biletu(18)"}, {"kod": "print(cena_biletu(19))", "wynik": "25", "opis": "wywołanie", "pokaz": "cena_biletu(19)"}, {"kod": "print(cena_biletu(64))", "wynik": "25", "opis": "wywołanie", "pokaz": "cena_biletu(64)"}, {"kod": "print(cena_biletu(65))", "wynik": "15", "opis": "wywołanie", "pokaz": "cena_biletu(65)"}, {"kod": "print(cena_biletu(90))", "wynik": "15", "opis": "wywołanie", "pokaz": "cena_biletu(90)"}]</script></div>
+
 !!! note "Ćwiczenie 4. Naprawa funkcji"
 
-    W szkielecie, w zadaniu 4, są trzy funkcje — każda z innym błędem.
-    Uruchamiaj po jednej, czytaj komunikat i poprawiaj. Zapisz w karcie pracy,
-    jaki błąd zgłosił Python i na czym polegała pomyłka.
+    W szkielecie, w zadaniu 4, są trzy funkcje — każda z innym błędem. Te same
+    funkcje stoją w trzech okienkach niżej. Uruchamiaj po jednej, czytaj
+    komunikat i poprawiaj. Zapisz w karcie pracy, jaki błąd zgłosił Python
+    i na czym polegała pomyłka.
+
+    ```python
+    # --- funkcja A ---
+    def podwoj(x):
+    return x * 2
+
+    print(podwoj(5))
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw4a.py"><script type="application/json" class="py-testy">[{"kod": "print(podwoj(5))", "wynik": "10", "opis": "wywołanie", "pokaz": "podwoj(5)"}, {"kod": "print(podwoj(-3))", "wynik": "-6", "opis": "wywołanie", "pokaz": "podwoj(-3)"}]</script></div>
+
+    ```python
+    # --- funkcja B ---
+    print(potroj(5))
+
+    def potroj(x):
+        return x * 3
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw4b.py"><script type="application/json" class="py-testy">[{"wejscie": "", "wynik": "15"}]</script></div>
+
+    ```python
+    # --- funkcja C ---
+    def suma_kwadratow(a, b):
+        print(a ** 2 + b ** 2)
+
+    print(suma_kwadratow(3, 4) + 1)
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw4c.py"><script type="application/json" class="py-testy">[{"kod": "print(suma_kwadratow(3, 4))", "wynik": "25", "opis": "wywołanie", "pokaz": "suma_kwadratow(3, 4)"}, {"kod": "print(suma_kwadratow(1, 2))", "wynik": "5", "opis": "wywołanie", "pokaz": "suma_kwadratow(1, 2)"}]</script></div>
 
 !!! note "Ćwiczenie 5. Złóż z części"
 
@@ -465,6 +571,24 @@ i uruchamiaj program po każdym zadaniu.
     Policz koszt dla pokoju 4 × 5 m przy cenie 89 zł/m². Wyjaśnij w karcie
     pracy, co się stanie z `koszt_paneli()`, jeżeli ktoś poprawi wzór
     w `pole_prostokata()`.
+
+    ```python
+    def pole_prostokata(a, b):
+        return 0    # TODO: wklej swoją poprawioną funkcję z ćwiczenia 1
+
+
+    def koszt_paneli(a, b, cena_za_m2):
+        return 0    # TODO: wywołaj w środku pole_prostokata — nie licz pola od nowa
+
+
+    print(koszt_paneli(4, 5, 89))
+    ```
+
+    <div class="py-konsola" data-nazwa="funkcje-cw5.py"><script type="application/json" class="py-testy">[{"kod": "print(koszt_paneli(4, 5, 89))", "wynik": "1780", "opis": "wywołanie", "pokaz": "koszt_paneli(4, 5, 89)"}, {"kod": "print(koszt_paneli(2.5, 4, 100))", "wynik": "1000", "opis": "wywołanie", "pokaz": "koszt_paneli(2.5, 4, 100)"}, {"kod": "pole_prostokata = lambda a, b: 1\nprint(koszt_paneli(4, 5, 89))", "wynik": "89", "opis": "czy", "pokaz": "koszt_paneli() liczy pole przez pole_prostokata()"}]</script></div>
+
+    Ostatni test podmienia na chwilę `pole_prostokata()` na funkcję, która
+    zawsze zwraca 1. Jeśli `koszt_paneli()` naprawdę z niej korzysta, koszt
+    wyjdzie równy cenie jednego metra.
 
 ## Sprawdź się
 
@@ -578,4 +702,5 @@ klawisz ++print-screen++ albo ++win+shift+s++.
 ---
 
 *Wszystkie wyniki w przykładach sprawdzono w Pythonie 3.12 — tej wersji używa
-środowisko online-python.com. Stan sprawdzony 20 września 2026 r.*
+środowisko online-python.com. Stan sprawdzony 20 września 2026 r.
+Okienka na tej stronie uruchamiają Python 3.14 w przeglądarce (Pyodide).*

@@ -22,7 +22,20 @@
  *
  * dokłada przycisk „Sprawdź”: program ucznia uruchamia się na tych danych
  * (bez wypisywania pytań z input()) i wynik porównuje się z oczekiwanym,
- * bez względu na nadmiarowe spacje.
+ * bez względu na nadmiarowe spacje; liczby porównuje się co do wartości.
+ * Zamiast danych test może sprawdzać funkcję ucznia:
+ *
+ *   {"kod": "print(cena_biletu(6))", "wynik": "0", "pokaz": "cena_biletu(6)"}
+ *
+ * — program ucznia wykonuje się po cichu, potem „kod” w tej samej przestrzeni
+ * nazw i porównywane jest tylko to, co wypisał „kod”. Pola nieobowiązkowe:
+ * "pokaz" (co wyświetlić zamiast kodu) i "opis" (słowo przed nim).
+ *
+ * Inne atrybuty znacznika:
+ *   data-plik="../pliki/szkielet.py"  kod wczytywany z pliku zamiast bloku
+ *                                     nad znacznikiem (długie szkielety);
+ *   data-nazwa="zadanie.py"           przycisk „Zapisz .py” z tą nazwą
+ *                                     (przy data-plik jest zawsze).
  *
  * Python działa w przeglądarce (Pyodide, w osobnym wątku). Nic nie jest
  * wysyłane na serwer. Interpreter (ok. 13 MB, w assets/pyodide/) pobiera się
@@ -34,7 +47,10 @@
 
   const KATALOG = (document.currentScript && document.currentScript.src)
     ? document.currentScript.src.replace(/[^/]+$/, "") : "";
-  const SERWIS = "inf-lo";
+  /* Wszystkie serwisy leżą pod jednym adresem josimate.github.io, więc
+     klucz w pamięci przeglądarki zaczyna się od nazwy serwisu. */
+  const SERWIS = /\.github\.io$/.test(location.hostname)
+    ? location.pathname.split("/")[1] : "lokalnie";
   const LIMIT_S = 10;
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -76,7 +92,7 @@
       this.zadania.clear();
     },
 
-    async uruchom(kod, wejscie, echo, wypisz) {
+    async uruchom(kod, wejscie, echo, wypisz, dopisek) {
       await this.uruchomWatek();
       return new Promise((koniec) => {
         const id = this.nastepneId++;
@@ -86,7 +102,7 @@
           koniec: (w) => { clearTimeout(licznik); koniec(w); },
         });
         licznik = setTimeout(() => this.zatrzymaj("czas"), LIMIT_S * 1000);
-        this.worker.postMessage({ id, kod, wejscie, echo });
+        this.worker.postMessage({ id, kod, wejscie, echo, dopisek });
       });
     },
   };
@@ -95,12 +111,31 @@
   const PODPOWIEDZI = {
     SyntaxError: "Błąd zapisu — sprawdź nawiasy, cudzysłowy i dwukropki we wskazanym wierszu. Brakujący nawias bywa wierszem wyżej.",
     IndentationError: "Złe wcięcie — przypadkowa spacja na początku wiersza albo brak wcięcia po dwukropku.",
-    NameError: "Python nie zna tej nazwy — literówka w nazwie zmiennej albo zmienna użyta, zanim cokolwiek do niej przypisano.",
+    NameError: "Python nie zna tej nazwy — literówka w nazwie, zmienna użyta, zanim cokolwiek do niej przypisano, albo funkcja wywołana wyżej niż jej def.",
     TypeError: "Te typy do siebie nie pasują. Czy nie łączysz napisu z liczbą? Pamiętaj: input() zawsze zwraca napis.",
     ValueError: "Dobra funkcja, zła wartość — na przykład int(\"3.5\") albo int(\"dwa\").",
     ZeroDivisionError: "Dzielenie przez zero.",
     EOFError: "Program pyta o więcej danych, niż wpisałeś w polu „Dane wejściowe” — dopisz kolejne wiersze, po jednym na każde input().",
+    IndexError: "Indeks poza listą — lista o długości n ma indeksy od 0 do n − 1.",
+    KeyError: "W słowniku nie ma takiego klucza.",
+    RecursionError: "Funkcja wywołuje samą siebie zbyt głęboko — brakuje warunku zakończenia albo dane są za duże na rekurencję (limit to około 1000 zagnieżdżeń).",
   };
+
+  /* Część błędów ma typowe przyczyny, które widać dopiero w treści komunikatu. */
+  function podpowiedz(rodzaj, komunikat) {
+    const m = String(komunikat || "");
+    if (rodzaj === "IndexError" && m.includes("pop from empty list"))
+      return "Zdejmujesz z pustej listy — na stosie nic już nie ma.";
+    if (rodzaj === "AttributeError" && m.includes("'NoneType'"))
+      return "Sięgasz do pola czegoś, co jest None — zwykle pętla przeszła za koniec listy albo brakuje sprawdzenia „is not None”.";
+    if (rodzaj === "TypeError" && m.includes("NoneType"))
+      return "Któraś wartość to None — najczęściej funkcja bez return. Sprawdź, czy funkcja zwraca wynik, a nie tylko go wypisuje.";
+    if (rodzaj === "TypeError" && /missing \d+ required positional argument/.test(m))
+      return "Za mało argumentów w wywołaniu — porównaj je z listą parametrów w def.";
+    if (rodzaj === "TypeError" && /takes \d+ positional arguments? but \d+ (was|were) given/.test(m))
+      return "Za dużo argumentów w wywołaniu — porównaj je z listą parametrów w def.";
+    return PODPOWIEDZI[rodzaj];
+  }
 
   /* ───────────────────────── edytor ───────────────────────── */
   const WCIECIE = "    ";
@@ -157,15 +192,33 @@
   const normalizuj = (s) => String(s ?? "").replace(/\r\n/g, "\n").split("\n")
     .map((l) => l.replace(/[ \t]+/g, " ").trim()).join("\n").trim();
 
+  /* Wynik zgadza się, gdy po ujednoliceniu odstępów tekst jest ten sam —
+     albo gdy obie strony są liczbami równymi co do wartości (12 i 12.0). */
+  const LICZBA = /^-?\d+(\.\d+)?([eE][-+]?\d+)?$/;
+  function zgodne(otrzymane, oczekiwane) {
+    const a = normalizuj(otrzymane), b = normalizuj(oczekiwane);
+    if (a === b) return true;
+    if (LICZBA.test(a) && LICZBA.test(b)) return Math.abs(Number(a) - Number(b)) < 1e-9;
+    return false;
+  }
+
+  function pobierzPlik(tekst, nazwa) {
+    const url = URL.createObjectURL(new Blob([tekst.replace(/\n/g, "\r\n")], { type: "text/x-python;charset=utf-8" }));
+    const a = Object.assign(document.createElement("a"), { href: url, download: nazwa });
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   /* ───────────────────────── widżet ───────────────────────── */
   function zbuduj(host, nr) {
     /* Kod bierzemy z bloku kodu stojącego tuż nad znacznikiem konsoli
        (albo, dla wygody, ze <script type="text/plain"> w środku). Blok
        zostaje w dokumencie — ukryty — żeby bez JavaScriptu i na wydruku
        przykład nadal był widoczny. */
+    const plik = host.dataset.plik || "";
     const zrodlo = host.querySelector('script[type="text/plain"]');
     let blok = null;
-    if (!zrodlo) {
+    if (!zrodlo && !plik) {
       for (let el = host.previousElementSibling; el; el = el.previousElementSibling) {
         if (el.matches(".highlight, pre")) { blok = el; break; }
         if (el.textContent.trim()) break;
@@ -173,7 +226,9 @@
     }
     const tekstBloku = blok ? (blok.querySelector("code") || blok).textContent : "";
     const testyEl = host.querySelector("script.py-testy");
-    const przyklad = ((zrodlo ? zrodlo.textContent : tekstBloku) || "").replace(/^\n+/, "").replace(/\s+$/, "") + "\n";
+    const oczysc = (s) => String(s || "").replace(/\r\n/g, "\n").replace(/^\n+/, "").replace(/\s+$/, "") + "\n";
+    let przyklad = oczysc(zrodlo ? zrodlo.textContent : tekstBloku);
+    const nazwaPliku = host.dataset.nazwa || (plik ? plik.split("/").pop() : "");
     if (blok) blok.classList.add("pyk-zrodlo");
     /* Wewnątrz admonicji Markdown owija znacznik w <p>, a przeglądarka
        rozcina go na dwa puste akapity wokół konsoli — sprzątamy je. */
@@ -183,7 +238,7 @@
     let testy = [];
     try { testy = testyEl ? JSON.parse(testyEl.textContent) : []; } catch { testy = []; }
     const wejscieDomyslne = host.dataset.wejscie ?? "";
-    const pokazWejscie = host.dataset.wejscie !== undefined || /\binput\s*\(/.test(przyklad);
+    const pokazWejscie = host.dataset.wejscie !== undefined || (!plik && /\binput\s*\(/.test(przyklad));
     const klucz = kluczKodu(nr);
     const zapisany = czytaj(klucz);
 
@@ -194,7 +249,8 @@
         <button type="button" class="pyk-zatrzymaj" hidden>■ Zatrzymaj</button>
         ${testy.length ? '<button type="button" class="pyk-sprawdz">✓ Sprawdź</button>' : ""}
         <span class="pyk-odstep"></span>
-        <button type="button" class="pyk-przywroc" title="Wróć do kodu z materiału">↺ Przykład</button>
+        ${nazwaPliku ? `<button type="button" class="pyk-zapisz" title="Zapisz kod z okienka jako plik ${esc(nazwaPliku)}">⤓ Zapisz .py</button>` : ""}
+        <button type="button" class="pyk-przywroc" title="${plik ? "Wczytaj szkielet od nowa" : "Wróć do kodu z materiału"}">↺ ${plik ? "Szkielet" : "Przykład"}</button>
       </div>
       <textarea class="pyk-kod" spellcheck="false" autocapitalize="off" autocomplete="off"
         aria-label="Kod programu w Pythonie"></textarea>
@@ -214,13 +270,17 @@
     const bSprawdz = host.querySelector(".pyk-sprawdz");
     const bPrzywroc = host.querySelector(".pyk-przywroc");
 
+    const bZapisz = host.querySelector(".pyk-zapisz");
+    const PRZYWROC = plik ? "„↺ Szkielet” wczytuje szkielet od nowa." : "„↺ Przykład” przywraca kod z materiału.";
+
     kod.value = zapisany != null ? zapisany : przyklad;
     if (wejscie) wejscie.value = wejscieDomyslne.replace(/\\n/g, "\n");
     const pokazUwage = () => {
       const zmieniony = kod.value !== przyklad;
       uwaga.hidden = !zmieniony;
       uwaga.textContent = zmieniony
-        ? "To twoja wersja kodu — zapamiętana w tej przeglądarce. „↺ Przykład” przywraca kod z materiału." : "";
+        ? "To twoja wersja kodu — zapamiętana tylko w tej przeglądarce" +
+          (bZapisz ? " (żeby ją oddać albo przenieść, użyj „⤓ Zapisz .py”). " : ". ") + PRZYWROC : "";
     };
     pokazUwage();
 
@@ -231,6 +291,25 @@
     });
 
     const dopasuj = podepnijEdytor(kod, () => uruchom());
+
+    if (bZapisz) bZapisz.addEventListener("click", () => pobierzPlik(kod.value, nazwaPliku));
+
+    /* Szkielet z pliku (data-plik) doczytujemy z serwera — jest tylko jedno
+       źródło prawdy: ten sam plik, który uczeń może pobrać przyciskiem. */
+    if (plik) {
+      if (zapisany == null) { kod.value = "# Wczytuję szkielet…\n"; kod.readOnly = true; }
+      fetch(new URL(plik, location.href))
+        .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+        .then((t) => {
+          przyklad = oczysc(t);
+          if (zapisany == null) kod.value = przyklad;
+          kod.readOnly = false; pokazUwage(); dopasuj();
+        })
+        .catch(() => {
+          kod.readOnly = false;
+          if (zapisany == null) kod.value = "# Nie udało się wczytać szkieletu — pobierz plik przyciskiem nad okienkiem.\n";
+        });
+    }
 
     bPrzywroc.addEventListener("click", () => {
       kod.value = przyklad; pisz(klucz, null); pokazUwage(); dopasuj();
@@ -286,7 +365,7 @@
       } else if (!odp.ok) {
         if (wynik.textContent && !wynik.textContent.endsWith("\n")) dopisz("\n");
         dopisz(odp.blad + "\n", "pyk-blad");
-        const rada = PODPOWIEDZI[odp.rodzaj];
+        const rada = podpowiedz(odp.rodzaj, String(odp.blad || "").trim().split("\n").pop());
         if (rada) dopisz("💡 " + rada + "\n", "pyk-rada");
       } else if (!wynik.textContent) {
         dopisz("(program zakończył się i niczego nie wypisał — w pliku wynik trzeba wypisać przez print())\n", "pyk-info");
@@ -308,11 +387,13 @@
           await silnik.uruchomWatek();
           for (const t of testy) {
             let wyjscie = "";
-            const odp = await silnik.uruchom(kod.value, t.wejscie ?? "", false, (s, typ) => { if (typ === "out") wyjscie += s; });
-            const dobrze = odp.ok && normalizuj(wyjscie) === normalizuj(t.wynik);
+            const odp = await silnik.uruchom(kod.value, t.wejscie ?? "", false,
+              (s, typ) => { if (typ === "out") wyjscie += s; }, t.kod);
+            const dobrze = odp.ok && zgodne(wyjscie, t.wynik);
             if (dobrze) zaliczone++;
             wiersze.push(`<li class="${dobrze ? "pyk-ok" : "pyk-zle"}">
               <strong>${dobrze ? "✔" : "✘"}</strong>
+              ${t.kod ? `${esc(t.opis || "sprawdzam")}: <code>${esc(t.pokaz || t.kod)}</code> · ` : ""}
               ${t.wejscie ? `dane: <code>${esc(String(t.wejscie).replace(/\n/g, " ⏎ "))}</code> · ` : ""}
               oczekiwano: <code>${esc(t.wynik)}</code>
               ${dobrze ? "" : ` · otrzymano: <code>${esc(odp.ok ? (normalizuj(wyjscie) || "(nic)") : (odp.przerwane ? "przerwano" : (odp.blad || "").split("\n").pop()))}</code>`}
