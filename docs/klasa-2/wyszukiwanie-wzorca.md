@@ -11,26 +11,25 @@
     a potem napiszesz to samo sam — **algorytmem naiwnym**, od którego
     zaczyna się każda rozmowa o wyszukiwaniu.
 
-!!! success "Cele lekcji"
+!!! success "Kryteria sukcesu — sprawdź się na koniec lekcji"
 
-    Po tej lekcji potrafisz:
+    Po tej lekcji:
 
-    1. wyjaśnić pojęcia: tekst, wzorzec, wystąpienie i pozycja wystąpienia
-    2. odczytać znak napisu po indeksie i wyciąć fragment napisu
-    3. sprawdzić operatorem `in`, czy wzorzec występuje w tekście, i znaleźć jego pozycję metodą `find()`
-    4. policzyć wystąpienia metodą `count()` i wyjaśnić, czego ona nie liczy
-    5. szukać bez względu na wielkość liter
-    6. powtórzyć polecenia dla kolejnych liczb pętlą `for` z `range()` i przerwać pętlę instrukcją `break`
-    7. opisać i zapisać w Pythonie algorytm naiwny wyszukiwania wzorca
-    8. ustalić, ile ustawień wzorca sprawdza algorytm, i uniknąć błędu o jeden
-    9. znaleźć wszystkie wystąpienia wzorca, także nakładające się na siebie
+    1. Wyjaśnię, czym są tekst, wzorzec i pozycja wystąpienia — i dlaczego pozycje liczy się od zera.
+    2. Wytnę z napisu fragment `tekst[i:i + m]` i powiem, ile ma znaków.
+    3. Sprawdzę operatorem `in`, czy wzorzec jest w tekście, znajdę jego pozycję metodą `find()` — i nie dam się złapać na pozycję 0 w warunku.
+    4. Zapiszę pętlę `for` z `range()` i przerwę ją instrukcją `break`.
+    5. Napiszę algorytm naiwny i wyjaśnię, dlaczego pętla to `range(n - m + 1)`, a nie `range(n - m)`.
+    6. Znajdę wystąpienia nakładające się i powiem, czego nie liczy `count()`.
 
 !!! tip "Przykłady uruchomisz na tej stronie"
 
     Pod przykładami są okienka z Pythonem, takie jak w poprzednich tematach:
-    zmień kod i kliknij **▶ Uruchom** (albo ++ctrl+enter++). W ćwiczeniach
-    przycisk **✓ Sprawdź** wywoła twoje funkcje na kilku tekstach i powie, czy
-    wynik się zgadza.
+    zmień kod i kliknij **▶ Uruchom** (albo ++ctrl+enter++). **Zanim
+    klikniesz, przewiduj**, co wypisze program — wynik sprawdzisz potem
+    w ramce „Przewiduj, potem sprawdź wynik”. W ćwiczeniach przycisk
+    **✓ Sprawdź** wywoła twoje funkcje na kilku tekstach i powie, czy wynik
+    się zgadza, a pod poleceniem są podpowiedzi — odsłaniaj je po kolei.
 
 ## 1. O co chodzi w wyszukiwaniu wzorca
 
@@ -59,7 +58,7 @@ znak:     A   N   A   N   A   S
 
 ```python
 tekst = "ANANAS"
-print(len(tekst))          # długość: 6
+print(len(tekst))          # długość napisu
 print(tekst[0], tekst[5])  # pierwszy i ostatni znak
 print(tekst[-1])           # ostatni znak, licząc od końca
 print(tekst[1:4])          # wycinek: znaki 1, 2, 3 — bez czwartego
@@ -67,12 +66,14 @@ print(tekst[1:4])          # wycinek: znaki 1, 2, 3 — bez czwartego
 
 <div class="py-konsola"></div>
 
-```text
-6
-A S
-S
-NAN
-```
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    6
+    A S
+    S
+    NAN
+    ```
 
 **Wycinek** `tekst[a:b]` zawiera znaki od indeksu `a` do `b − 1` — prawy koniec
 się nie liczy. Dzięki temu `tekst[i:i + m]` to dokładnie **m znaków od
@@ -100,14 +101,16 @@ print("ala" in zdanie, "ala" in zdanie.lower())
 
 <div class="py-konsola"></div>
 
-```text
-True
-7
--1
-2
-5
-False True
-```
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    True
+    7
+    -1
+    2
+    5
+    False True
+    ```
 
 Warto zwrócić uwagę na dwie rzeczy. `find("kot")` zwróciło 7, choć „kot” stoi
 w zdaniu dwa razy — `find()` podaje tylko **pierwsze** wystąpienie. A liter
@@ -127,10 +130,15 @@ litery **przed** porównaniem.
 
     <div class="py-konsola"></div>
 
-    Program wypisze **„nie ma”**, choć „Ala” stoi na samym początku. `find()`
-    zwróciło pozycję `0`, a zero w warunku znaczy tyle co fałsz. Brak wzorca
-    to `-1`, które w warunku jest prawdą. Do pytania „czy jest” służy `in`;
-    wynik `find()` porównuj jawnie: `if zdanie.find("Ala") != -1:`.
+    Przewiduj: „znalazłem” czy „nie ma”? Dopiero potem uruchom.
+
+    ??? success "Przewiduj, potem sprawdź wynik"
+
+        Program wypisze **„nie ma”**, choć „Ala” stoi na samym początku.
+        `find()` zwróciło pozycję `0`, a zero w warunku znaczy tyle co fałsz.
+        Brak wzorca to `-1`, które w warunku jest prawdą. Do pytania „czy jest”
+        służy `in`; wynik `find()` porównuj jawnie:
+        `if zdanie.find("Ala") != -1:`.
 
 ## 4. Pętla `for` — to samo dla kolejnych liczb
 
@@ -163,12 +171,14 @@ print("obroty pętli:", licznik)
 
 <div class="py-konsola"></div>
 
-```text
-0 K
-1 O
-2 T
-obroty pętli: 4
-```
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    0 K
+    1 O
+    2 T
+    obroty pętli: 4
+    ```
 
 ## 5. Algorytm naiwny
 
@@ -208,10 +218,12 @@ print(wystapienia("ABRAKADABRA", "KOT"))
 
 <div class="py-konsola"></div>
 
-```text
-[0, 7]
-[]
-```
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    [0, 7]
+    []
+    ```
 
 `wynik` zaczyna jako pusta lista `[]`, a `wynik.append(i)` dopisuje na jej
 koniec pozycję każdego znalezionego wystąpienia.
@@ -283,10 +295,12 @@ print(wystapienia("banana", "ana"))
 
 <div class="py-konsola"></div>
 
-```text
-1
-[1, 3]
-```
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    1
+    [1, 3]
+    ```
 
 Ile razy „ana” jest w „banana”? Zależy, jak liczyć. Wystąpienia na pozycjach
 1 i 3 **dzielą** środkowe „a”. `count()` po znalezieniu wystąpienia przeskakuje
@@ -341,6 +355,18 @@ oznaczone komentarzem `# TODO`.
 
     <div class="py-konsola" data-nazwa="wzorzec-cw1.py"><script type="application/json" class="py-testy">[{"wejscie": "", "wynik": "True\n19\n2\n-1"}]</script></div>
 
+    ??? tip "Podpowiedź 1"
+
+        `in` daje `True` albo `False`, `find()` — pozycję, `count()` — liczbę wystąpień.
+
+    ??? tip "Podpowiedź 2"
+
+        Każdy wynik w osobnym `print()`, w kolejności z polecenia. Szukany napis piszesz w cudzysłowie.
+
+    ??? tip "Podpowiedź 3"
+
+        Pierwszy wiersz: `print("boisku" in zdanie)`. Kolejne tak samo, z `find()` i `count()`.
+
 !!! note "Ćwiczenie 2. Bez względu na wielkość liter"
 
     Napisz funkcję `zawiera(tekst, wzorzec)`, która zwraca `True`, gdy wzorzec
@@ -357,6 +383,18 @@ oznaczone komentarzem `# TODO`.
     ```
 
     <div class="py-konsola" data-nazwa="wzorzec-cw2.py"><script type="application/json" class="py-testy">[{"kod": "print(zawiera(\"Ala ma kota\", \"ALA\"))", "wynik": "True", "opis": "wywołanie", "pokaz": "zawiera(\"Ala ma kota\", \"ALA\")"}, {"kod": "print(zawiera(\"Ala ma kota\", \"pies\"))", "wynik": "False", "opis": "wywołanie", "pokaz": "zawiera(\"Ala ma kota\", \"pies\")"}, {"kod": "print(zawiera(\"KOT\", \"kot\"))", "wynik": "True", "opis": "wywołanie", "pokaz": "zawiera(\"KOT\", \"kot\")"}, {"kod": "print(zawiera(\"Ala ma kota\", \"Kota\"))", "wynik": "True", "opis": "wywołanie", "pokaz": "zawiera(\"Ala ma kota\", \"Kota\")"}, {"kod": "print(zawiera(\"kot\", \"kot \"))", "wynik": "False", "opis": "wywołanie", "pokaz": "zawiera(\"kot\", \"kot \")"}]</script></div>
+
+    ??? tip "Podpowiedź 1"
+
+        Wielkość liter przestaje mieć znaczenie, gdy oba napisy zapiszesz tak samo — na przykład małymi literami.
+
+    ??? tip "Podpowiedź 2"
+
+        `lower()` zwraca nowy napis małymi literami. Trzeba go użyć i dla tekstu, i dla wzorca.
+
+    ??? tip "Podpowiedź 3"
+
+        `return wzorzec.lower() in tekst.lower()`
 
 !!! note "Ćwiczenie 3. Ile razy — naprawdę"
 
@@ -383,6 +421,18 @@ oznaczone komentarzem `# TODO`.
 
     <div class="py-konsola" data-nazwa="wzorzec-cw3.py"><script type="application/json" class="py-testy">[{"kod": "print(ile_wystapien(\"banana\", \"ana\"))", "wynik": "2", "opis": "wywołanie", "pokaz": "ile_wystapien(\"banana\", \"ana\")"}, {"kod": "print(ile_wystapien(\"aaaa\", \"aa\"))", "wynik": "3", "opis": "wywołanie", "pokaz": "ile_wystapien(\"aaaa\", \"aa\")"}, {"kod": "print(ile_wystapien(\"ABRAKADABRA\", \"ABRA\"))", "wynik": "2", "opis": "wywołanie", "pokaz": "ile_wystapien(\"ABRAKADABRA\", \"ABRA\")"}, {"kod": "print(ile_wystapien(\"xyzab\", \"ab\"))", "wynik": "1", "opis": "wywołanie", "pokaz": "ile_wystapien(\"xyzab\", \"ab\")"}, {"kod": "print(ile_wystapien(\"kot\", \"pies\"))", "wynik": "0", "opis": "wywołanie", "pokaz": "ile_wystapien(\"kot\", \"pies\")"}, {"kod": "print(ile_wystapien(\"Mama ma mamę\", \"ma\"))", "wynik": "3", "opis": "wywołanie", "pokaz": "ile_wystapien(\"Mama ma mamę\", \"ma\")"}]</script></div>
 
+    ??? tip "Podpowiedź 1"
+
+        Zacznij od funkcji `wystapienia` z sekcji 5. Zamiast dopisywać pozycję do listy, zwiększaj licznik.
+
+    ??? tip "Podpowiedź 2"
+
+        Pętla po `range(n - m + 1)`, a w niej warunek `if tekst[i:i + m] == wzorzec:`.
+
+    ??? tip "Podpowiedź 3"
+
+        W warunku `ile += 1`. `return ile` stoi na końcu funkcji — **poza** pętlą.
+
 !!! note "Ćwiczenie 4. Ile pracy wykonuje algorytm"
 
     Napisz funkcję `porownania(tekst, wzorzec)`, która przechodzi algorytmem
@@ -408,6 +458,24 @@ oznaczone komentarzem `# TODO`.
 
     <div class="py-konsola" data-nazwa="wzorzec-cw4.py"><script type="application/json" class="py-testy">[{"kod": "print(porownania(\"ABRAKADABRA\", \"ABRA\"))", "wynik": "16", "opis": "wywołanie", "pokaz": "porownania(\"ABRAKADABRA\", \"ABRA\")"}, {"kod": "print(porownania(\"aaaaaaaaab\", \"aaab\"))", "wynik": "28", "opis": "wywołanie", "pokaz": "porownania(\"aaaaaaaaab\", \"aaab\")"}, {"kod": "print(porownania(\"banana\", \"ana\"))", "wynik": "8", "opis": "wywołanie", "pokaz": "porownania(\"banana\", \"ana\")"}, {"kod": "print(porownania(\"abc\", \"d\"))", "wynik": "3", "opis": "wywołanie", "pokaz": "porownania(\"abc\", \"d\")"}, {"kod": "print(porownania(\"Mama ma mamę\", \"ma\"))", "wynik": "15", "opis": "wywołanie", "pokaz": "porownania(\"Mama ma mamę\", \"ma\")"}]</script></div>
 
+    ??? tip "Podpowiedź 1"
+
+        Potrzebna jest pętla w pętli: zewnętrzna po ustawieniach `i`, wewnętrzna po znakach wzorca `j` — jak w sekcji „Znak po znaku”.
+
+    ??? tip "Podpowiedź 2"
+
+        Licznik zwiększaj **przed** porównaniem znaków — wtedy policzysz też to ostatnie, nieudane.
+
+    ??? tip "Podpowiedź 3"
+
+        ```python
+        for i in range(n - m + 1):
+            for j in range(m):
+                licznik += 1
+                if tekst[i + j] != wzorzec[j]:
+                    break
+        ```
+
 !!! note "Ćwiczenie 5. Naprawa funkcji"
 
     Funkcja `pierwsze(tekst, wzorzec)` ma zwracać pozycję pierwszego
@@ -429,6 +497,18 @@ oznaczone komentarzem `# TODO`.
     ```
 
     <div class="py-konsola" data-nazwa="wzorzec-cw5.py"><script type="application/json" class="py-testy">[{"kod": "print(pierwsze(\"ABRAKADABRA\", \"ABRA\"))", "wynik": "0", "opis": "wywołanie", "pokaz": "pierwsze(\"ABRAKADABRA\", \"ABRA\")"}, {"kod": "print(pierwsze(\"ABRAKADABRA\", \"KAD\"))", "wynik": "4", "opis": "wywołanie", "pokaz": "pierwsze(\"ABRAKADABRA\", \"KAD\")"}, {"kod": "print(pierwsze(\"xyzab\", \"ab\"))", "wynik": "3", "opis": "wywołanie", "pokaz": "pierwsze(\"xyzab\", \"ab\")"}, {"kod": "print(pierwsze(\"kot\", \"kot\"))", "wynik": "0", "opis": "wywołanie", "pokaz": "pierwsze(\"kot\", \"kot\")"}, {"kod": "print(pierwsze(\"abc\", \"d\"))", "wynik": "-1", "opis": "wywołanie", "pokaz": "pierwsze(\"abc\", \"d\")"}]</script></div>
+
+    ??? tip "Podpowiedź 1"
+
+        Sprawdź funkcję na wzorcu stojącym na samym końcu tekstu, na przykład `pierwsze("xyzab", "ab")`.
+
+    ??? tip "Podpowiedź 2"
+
+        Sprawdź na wzorcu, który nie stoi na pozycji 0: `"KAD"` w `"ABRAKADABRA"`. Po którym ustawieniu funkcja się kończy?
+
+    ??? tip "Podpowiedź 3"
+
+        Jeden błąd siedzi w `range`, drugi we wcięciu `return -1` — ta instrukcja ma stać **za** pętlą.
 
 ## Sprawdź się
 
