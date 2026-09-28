@@ -11,6 +11,21 @@
     a potem napiszesz to samo sam — **algorytmem naiwnym**, od którego
     zaczyna się każda rozmowa o wyszukiwaniu.
 
+!!! question "Na rozgrzewkę — 3 minuty, bez zaglądania"
+
+    Odpowiedz w zeszycie, zanim zaczniesz nowy temat. Odpowiedzi rozwiń
+    dopiero wtedy, gdy wszyscy skończą — nie liczą się do oceny.
+
+    1. **Z poprzedniej lekcji.** Funkcja kończy się instrukcją `print(wynik)` zamiast `return wynik`. Co zwraca jej wywołanie?
+    2. **Sprzed kilku tygodni.** Co wypisze `print("3" + "4")`, a co `print(int("3") + 4)`?
+    3. **Z dawniejszych tematów.** Robisz prezentację na lekcję. Czy wolno ci użyć zdjęcia na licencji **CC BY-NC**, jeśli podasz autora?
+
+    ??? success "Odpowiedzi"
+
+        1. `None` — wynik pojawia się na ekranie, ale nie wraca do programu.
+        2. `34` i `7` — napisy się skleja, liczby dodaje.
+        3. Tak — NC zakazuje tylko użytku komercyjnego, a BY wymaga podania autora, co robisz.
+
 !!! success "Kryteria sukcesu — sprawdź się na koniec lekcji"
 
     Po tej lekcji:

@@ -10,6 +10,21 @@
     danymi, bez przepisywania wzoru. To jest moment, w którym program przestaje
     być listą poleceń, a zaczyna być zbudowany z części.
 
+!!! question "Na rozgrzewkę — 3 minuty, bez zaglądania"
+
+    Odpowiedz w zeszycie, zanim zaczniesz nowy temat. Odpowiedzi rozwiń
+    dopiero wtedy, gdy wszyscy skończą — nie liczą się do oceny.
+
+    1. **Z poprzedniej lekcji.** Użytkownik wpisał `2`. Co wypisze program `a = input()`, a pod nim `print(a + a)` — i dlaczego?
+    2. **Sprzed kilku tygodni.** Co musisz zrobić, korzystając ze zdjęcia na licencji **CC BY**?
+    3. **Z dawniejszych tematów.** W arkuszu w komórce B8 jest 13. Co pokaże `=JEŻELI(B8>=13;"zaliczone";"niezaliczone")`?
+
+    ??? success "Odpowiedzi"
+
+        1. `22` — `input()` zawsze zwraca napis, a dla napisów `+` oznacza sklejanie. Żeby wyszło 4, trzeba `int(input())`.
+        2. Podać autora — i dobrze też tytuł, licencję oraz odnośnik. BY to uznanie autorstwa.
+        3. „zaliczone” — warunek `>=` obejmuje także samą granicę. Za chwilę zapiszesz to samo w Pythonie, w funkcji.
+
 !!! success "Cele lekcji"
 
     Po tej lekcji potrafisz:
