@@ -11,7 +11,7 @@
     a potem napiszesz to samo sam — **algorytmem naiwnym**, od którego
     zaczyna się każda rozmowa o wyszukiwaniu.
 
-!!! question "Na rozgrzewkę — 3 minuty, bez zaglądania"
+??? rozgrzewka "Na rozgrzewkę — 3 minuty, bez zaglądania"
 
     Odpowiedz w zeszycie, zanim zaczniesz nowy temat. Odpowiedzi rozwiń
     dopiero wtedy, gdy wszyscy skończą — nie liczą się do oceny.

@@ -10,7 +10,7 @@
     danymi, bez przepisywania wzoru. To jest moment, w którym program przestaje
     być listą poleceń, a zaczyna być zbudowany z części.
 
-!!! question "Na rozgrzewkę — 3 minuty, bez zaglądania"
+??? rozgrzewka "Na rozgrzewkę — 3 minuty, bez zaglądania"
 
     Odpowiedz w zeszycie, zanim zaczniesz nowy temat. Odpowiedzi rozwiń
     dopiero wtedy, gdy wszyscy skończą — nie liczą się do oceny.
