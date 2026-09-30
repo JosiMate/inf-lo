@@ -409,9 +409,9 @@ wiersza podczas szukania błędu.
 
 ## Ćwiczenia
 
-Każde ćwiczenie możesz zrobić w okienku pod jego treścią — przy ćwiczeniach 3
-i 4 przycisk **✓ Sprawdź** uruchomi twój program na kilku zestawach danych
-i powie, czy wynik się zgadza. Program do oddania zapiszesz przyciskiem
+Każde ćwiczenie możesz zrobić w okienku pod jego treścią — przycisk
+**✓ Sprawdź** uruchomi twój program na kilku zestawach danych i powie, czy
+wynik się zgadza. Program do oddania zapiszesz przyciskiem
 **⤓ Zapisz .py** — albo, jak dotąd, pobierz szkielet i uzupełnij go
 w online-python.com. Miejsca do uzupełnienia są oznaczone komentarzem `# TODO`.
 
@@ -435,7 +435,7 @@ w online-python.com. Miejsca do uzupełnienia są oznaczone komentarzem `# TODO`
     # TODO: dopisz dwa kolejne wiersze print()
     ```
 
-    <div class="py-konsola" data-nazwa="python-cw1.py"></div>
+    <div class="py-konsola" data-nazwa="python-cw1.py"><script type="application/json" class="py-testy">[{"kod": "print(imie != 'TODO')", "wynik": "True", "opis": "czy", "pokaz": "imie ma już twoją wartość, a nie TODO"}, {"kod": "print(isinstance(klasa, str) and klasa != '')", "wynik": "True", "opis": "czy", "pokaz": "jest zmienna klasa z napisem"}, {"kod": "print(isinstance(przedmiot, str) and przedmiot != '')", "wynik": "True", "opis": "czy", "pokaz": "jest zmienna przedmiot z napisem"}]</script></div>
 
 
 !!! note "Ćwiczenie 2. Rachunek za zakupy"
@@ -455,7 +455,7 @@ w online-python.com. Miejsca do uzupełnienia są oznaczone komentarzem `# TODO`
     print(f"{sztuki} × {towar} = {razem} zł")
     ```
 
-    <div class="py-konsola" data-nazwa="python-cw2.py" data-wejscie="zeszyt&#10;3.90&#10;3"></div>
+    <div class="py-konsola" data-nazwa="python-cw2.py" data-wejscie="zeszyt&#10;3.90&#10;3"><script type="application/json" class="py-testy">[{"wejscie": "zeszyt\n3.90\n3", "kod": "print(isinstance(cena, float))", "wynik": "True", "opis": "czy", "pokaz": "cena jest liczbą rzeczywistą (float)"}, {"wejscie": "zeszyt\n3.90\n3", "kod": "print(isinstance(sztuki, int))", "wynik": "True", "opis": "czy", "pokaz": "sztuki są liczbą całkowitą (int)"}, {"wejscie": "zeszyt\n3.90\n3", "kod": "print(round(razem, 2))", "wynik": "11.7", "opis": "wartość", "pokaz": "razem"}, {"wejscie": "długopis\n2.5\n4", "kod": "print(round(razem, 2))", "wynik": "10", "opis": "wartość", "pokaz": "razem"}]</script></div>
 
 
 !!! note "Ćwiczenie 3. Sekundy na czas"
