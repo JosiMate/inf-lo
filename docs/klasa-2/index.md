@@ -161,3 +161,11 @@ je wykonać. Pełne zasady opisuje strona [wymagań edukacyjnych](wymagania-i-bh
     **Oddajesz:** kod, tabelę pomiarów, wykres i wyjaśnienie
 
 <!-- zadania6:end -->
+
+## Losowa rozgrzewka i powtórka
+
+Krótkie pytania sprawdzające wiedzę z tematów realizowanych w tej klasie.
+Możesz wlosować 3 pytania na początek lekcji albo wybrać tematy do powtórki przed sprawdzianem.
+Rozgrzewka służy do utrwalenia wiadomości i nie podlega ocenie.
+
+<div class="rozgrzewka-losowa" data-klasa="klasa-2"></div>

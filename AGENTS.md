@@ -214,6 +214,9 @@ Elementy w tej kolejności, od góry strony:
    - Pytania krótkie, z jednoznaczną odpowiedzią (wynik, liczba, nazwa,
      jedno zdanie). Najlepiej takie, które przygotowują dzisiejszy temat —
      odpowiedź może się kończyć zdaniem „dziś do tego wrócimy”.
+   - Każdy nowy albo dostosowywany temat dopisuje 4–6 pytań do
+     `docs/assets/rozgrzewki/klasa-N.json` (i uzupełnia `kolejnosc` oraz `tytuly`,
+     jeśli temat jest nowy), po czym uruchamia `python3 narzedzia/sprawdz_rozgrzewki.py`.
 4. **Kryteria sukcesu** — `!!! success` z listą numerowaną, pisaną językiem
    ucznia, w pierwszej osobie czasu przyszłego: „Napiszę…”, „Wyjaśnię…”,
    „Rozpoznam…”, „Dobiorę…”. Od 4 do 7 punktów, każdy do sprawdzenia
@@ -360,6 +363,14 @@ print("3" + "4")
 </div>
 ```
 
+### Widżet losowej rozgrzewki i powtórki (`rozgrzewka-losowa.js`)
+
+```html
+<div class="rozgrzewka-losowa" data-klasa="klasa-1"></div>
+```
+
+Widżet ładuje pytań z `docs/assets/rozgrzewki/klasa-N.json` zawierającego pola `klasa`, `kolejnosc`, `tytuly` oraz tablicę obiektów `pytania` (`id`, `temat`, `pytanie`, `odpowiedz`, opcjonalnie `kod`).
+
 ### Quiz „Sprawdź się”
 
 ```html
@@ -435,7 +446,8 @@ inaczej `mkdocs build --strict` zatrzyma się na martwym odnośniku.
    z uruchomieniem.
    Szkielety ćwiczeń nie przechodzą testów konsoli, rozwiązania (lokalne,
    niecommitowane) przechodzą wszystkie.
-4. Lista kontrolna standardu — każdy punkt odhacz w opisie PR:
+4. `python3 narzedzia/sprawdz_rozgrzewki.py` — zero błędów.
+5. Lista kontrolna standardu — każdy punkt odhacz w opisie PR:
    - [ ] „O tym temacie” (+ zwinięty plan lekcji, jeśli temat ma 2+ godziny)
    - [ ] rozgrzewka: 3 pytania (poprzednia lekcja / kilka tygodni / dawniej) z odpowiedziami
    - [ ] kryteria sukcesu w pierwszej osobie
@@ -444,7 +456,7 @@ inaczej `mkdocs build --strict` zatrzyma się na martwym odnośniku.
    - [ ] quiz, karta pracy, sposób oddania, zakończenie strony
    - [ ] spis tematów i nawigacja zaktualizowane
    - [ ] `git status`: w zmianach nie ma rozwiązań, kluczy, scenariuszy ani plików tymczasowych
-5. **Opis PR** po polsku: co dodałeś, lista zmienionych plików, część
+6. **Opis PR** po polsku: co dodałeś, lista zmienionych plików, część
    „Do sprawdzenia” (fakty, których nie byłeś pewien) i część „Dla
    nauczyciela” (np. pliki do przygotowania ręcznie, jak ściąga .docx).
    Nie wklejaj do opisu rozwiązań — repozytorium jest publiczne.

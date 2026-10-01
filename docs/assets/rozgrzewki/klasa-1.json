@@ -1,0 +1,157 @@
+{
+  "klasa": "klasa-1",
+  "kolejnosc": [
+    "bezpieczna-praca",
+    "podstawy-arkusza",
+    "instrukcje-warunkowe",
+    "porownywanie-ofert"
+  ],
+  "tytuly": {
+    "bezpieczna-praca": "Bezpieczna praca z komputerem",
+    "podstawy-arkusza": "Podstawy pracy z arkuszem",
+    "instrukcje-warunkowe": "Stosowanie instrukcji warunkowych",
+    "porownywanie-ofert": "Porównywanie ofert w arkuszu"
+  },
+  "pytania": [
+    {
+      "id": "lo1-bezpieczna-001",
+      "temat": "bezpieczna-praca",
+      "pytanie": "Ile znaków powinno mieć co najmniej hasło według obecnych zaleceń NIST, jeśli jest jedynym zabezpieczeniem konta?",
+      "odpowiedz": "Co najmniej 15 znaków — obecnie długość ma większe znaczenie niż wymuszone symbole specjalne.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-bezpieczna-002",
+      "temat": "bezpieczna-praca",
+      "pytanie": "Dlaczego nie należy wpisywać swojego prawdziwego hasła w internetowe testery i sprawdzarki siły haseł?",
+      "odpowiedz": "Hasło może zostać wysłane na cudzy serwer i przechwycone — do testu używa się hasła o podobnej budowie.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-bezpieczna-003",
+      "temat": "bezpieczna-praca",
+      "pytanie": "Która metoda uwierzytelniania dwuskładnikowego jest najodporniejsza na phishing: kod SMS czy klucz sprzętowy/passkey?",
+      "odpowiedz": "Klucz sprzętowy/passkey — jest powiązany z adresem strony i nie zadziała na podrobionej witrynie.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-bezpieczna-004",
+      "temat": "bezpieczna-praca",
+      "pytanie": "Co oznacza cyfra 1 w zasadzie tworzenia kopii zapasowych 3-2-1?",
+      "odpowiedz": "Co najmniej jedna kopia zapasowa musi być przechowywana poza domem/szkołą (np. w chmurze).",
+      "kod": ""
+    },
+    {
+      "id": "lo1-bezpieczna-005",
+      "temat": "bezpieczna-praca",
+      "pytanie": "Czy informacja o stanie zdrowia jest według RODO zwykłą daną osobową, czy szczególną kategorią danych?",
+      "odpowiedz": "Szczególną kategorią danych — podlega mocniejszej ochronie prawnej niż np. imię i nazwisko.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-arkusz-001",
+      "temat": "podstawy-arkusza",
+      "pytanie": "W komórce C7 stoi formuła =B7/$B$4. Jak będzie wyglądać po skopiowaniu do C8?",
+      "odpowiedz": "=B8/$B$4 — adres względny przesuwa się o wiersz, bezwzględny $B$4 zostaje.",
+      "kod": "=B7/$B$4"
+    },
+    {
+      "id": "lo1-arkusz-002",
+      "temat": "podstawy-arkusza",
+      "pytanie": "Od jakiego znaku musi rozpoczynać się każda formuła w arkuszu kalkulacyjnym?",
+      "odpowiedz": "Od znaku równości = — bez niego wpis zostanie potraktowany jako zwykły tekst.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-arkusz-003",
+      "temat": "podstawy-arkusza",
+      "pytanie": "Funkcja SUMA zwraca zero, mimo że w komórkach widać liczby. Co jest najczęstszą przyczyną?",
+      "odpowiedz": "Wpisy są tekstem (wyrównane do lewej), zwykle z powodu użycia kropki zamiast przecinka jako separatora dziesiętnego.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-arkusz-004",
+      "temat": "podstawy-arkusza",
+      "pytanie": "Który klawisz służy do szybkiego przełączania typu adresowania komórki między względnym, bezwzględnym i mieszanym?",
+      "odpowiedz": "Klawisz F4 (lub Shift+F4 w niektórych wersjach LibreOffice Calc).",
+      "kod": ""
+    },
+    {
+      "id": "lo1-arkusz-005",
+      "temat": "podstawy-arkusza",
+      "pytanie": "Jaki typ wykresu najlepiej nadaje się do pokazania zmiany temperatury w czasie?",
+      "odpowiedz": "Wykres liniowy — idealnie odzwierciedla przebieg zmienności wielkości w czasie.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-warunki-001",
+      "temat": "instrukcje-warunkowe",
+      "pytanie": "Próg zaliczenia wynosi 13 punktów. Uczeń zdobył dokładnie 13 punktów. Jaki wynik da warunek B5>13, a jaki B5>=13?",
+      "odpowiedz": "B5>13 da FAŁSZ, a B5>=13 da PRAWDA — do zaliczenia progu należy użyć operatora >=.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-warunki-002",
+      "temat": "instrukcje-warunkowe",
+      "pytanie": "Co pokaże formuła =SUMA(C1:C5), jeśli w komórkach C1:C5 wpisano z użyciem cudzysłowu formuły =JEŻELI(B1>=10;\"1\";\"0\")?",
+      "odpowiedz": "Pokaże 0 — cudzysłów zamienia liczby w tekst, a funkcja SUMA ignoruje wartości tekstowe.",
+      "kod": "=JEŻELI(B1>=10;\"1\";\"0\")"
+    },
+    {
+      "id": "lo1-warunki-003",
+      "temat": "instrukcje-warunkowe",
+      "pytanie": "Dlaczego zagnieżdżone funkcje JEŻELI do ustalania ocen trzeba budować od najwyższego progu?",
+      "odpowiedz": "Sprawdzanie kończy się na pierwszym prawdziwym warunku — przy odwróceniu kolejności każdy dostałby najniższą pozytywną ocenę.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-warunki-004",
+      "temat": "instrukcje-warunkowe",
+      "pytanie": "Której funkcji użyjesz w miejscu warunku JEŻELI, gdy klasyfikacja wymaga spełnienia dwóch warunków jednocześnie?",
+      "odpowiedz": "Funkcji ORAZ — zwraca PRAWDA tylko wtedy, gdy wszystkie podane warunki są prawdziwe.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-warunki-005",
+      "temat": "instrukcje-warunkowe",
+      "pytanie": "Jak zapisać kryterium w funkcji LICZ.JEŻELI, aby próg był pobierany dynamicznie z komórki C4?",
+      "odpowiedz": "\">=\"&$C$4 — operator porównania łączy się ze znakiem & z adresem komórki.",
+      "kod": "=LICZ.JEŻELI(B7:B24;\">=\"&$C$4)"
+    },
+    {
+      "id": "lo1-oferty-001",
+      "temat": "porownywanie-ofert",
+      "pytanie": "Opakowanie 0,3 l kosztuje 2,19 zł, a opakowanie 1 l kosztuje 4,59 zł. Które jest tańsze w przeliczeniu na litr?",
+      "odpowiedz": "Opakowanie 1 l (4,59 zł/l) wobec opakowania 0,3 l (7,30 zł/l).",
+      "kod": ""
+    },
+    {
+      "id": "lo1-oferty-002",
+      "temat": "porownywanie-ofert",
+      "pytanie": "Oferta A ma ratę 79 zł i brak opłaty na start, oferta C ma ratę 45 zł i opłatę na start 599 zł. Od czego zależy, która oferta jest tańsza?",
+      "odpowiedz": "Od liczby miesięcy (okresu umowy) — na krótki okres tańsza jest A, na długi (np. 24 miesiące) tańsza jest C.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-oferty-003",
+      "temat": "porownywanie-ofert",
+      "pytanie": "Co połączy ze sobą zestaw funkcji =INDEKS(Oferty; PODAJ.POZYCJĘ(MIN(Koszty); Koszty; 0))?",
+      "odpowiedz": "Zwróci nazwę oferty z zakresu Oferty, która ma najniższą wartość w zakresie Koszty.",
+      "kod": "=INDEKS(Oferty; PODAJ.POZYCJĘ(MIN(Koszty); Koszty; 0))"
+    },
+    {
+      "id": "lo1-oferty-004",
+      "temat": "porownywanie-ofert",
+      "pytanie": "Jaka funkcja pozwala policzyć łączną wartość koszyka (iloczyny ilości i cen) w jednej komórce bez kolumny pomocniczej?",
+      "odpowiedz": "SUMA.ILOCZYNÓW — mnoży odpowiadające sobie komórki dwóch zakresów i sumuje wyniki.",
+      "kod": "=SUMA.ILOCZYNÓW(Ilosci; Ceny)"
+    },
+    {
+      "id": "lo1-oferty-005",
+      "temat": "porownywanie-ofert",
+      "pytanie": "Jakie narzędzie w arkuszu pozwala automatycznie podświetlić kolorem najtańszą ofertę w tabeli?",
+      "odpowiedz": "Formatowanie warunkowe z regułą opartą na formule porównującej koszt z funkcją MIN.",
+      "kod": ""
+    }
+  ]
+}
