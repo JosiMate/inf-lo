@@ -17,6 +17,7 @@ Dodaj nowy temat: **„<tytuł dokładnie tak, jak w spisie tematów>”**.
 - Podstawa programowa: <…>
 - Poprzednie tematy, z których ma być rozgrzewka: <wypisz albo napisz
   „ustal sam ze spisu tematów”>
+- Pytania do banku rozgrzewek: dopisz 4–6 pytań do `docs/assets/rozgrzewki/klasa-N.json` i uruchom `python3 narzedzia/sprawdz_rozgrzewki.py`.
 
 ## Co ma być w treści
 

@@ -77,6 +77,8 @@ extra_javascript:
   # się dopiero przy pierwszym kliknięciu „Uruchom” — python-worker.mjs
   # ładuje go w osobnym wątku, więc nie ma go na tej liście.
   - assets/js/python-konsola.js
+  # Widżet losowania pytań na rozgrzewkę i powtórkę przed sprawdzianem.
+  - assets/js/rozgrzewka-losowa.js
 
 markdown_extensions:
   - abbr

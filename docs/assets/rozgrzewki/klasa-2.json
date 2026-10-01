@@ -1,0 +1,157 @@
+{
+  "klasa": "klasa-2",
+  "kolejnosc": [
+    "prawo-w-sieci",
+    "podstawy-pythona",
+    "funkcje-obliczeniowe",
+    "wyszukiwanie-wzorca"
+  ],
+  "tytuly": {
+    "prawo-w-sieci": "Prawo w sieci",
+    "podstawy-pythona": "Podstawy pracy w środowisku Python",
+    "funkcje-obliczeniowe": "Definiowanie funkcji obliczeniowych",
+    "wyszukiwanie-wzorca": "Wyszukiwanie wzorca w tekście"
+  },
+  "pytania": [
+    {
+      "id": "lo2-prawo-001",
+      "temat": "prawo-w-sieci",
+      "pytanie": "Czy autorskie prawa osobiste wygasają po 70 latach od śmierci twórcy?",
+      "odpowiedz": "Nie — autorskie prawa osobiste są niezbywalne i trwają bezterminowo (po 70 latach wygasają autorskie prawa majątkowe).",
+      "kod": ""
+    },
+    {
+      "id": "lo2-prawo-002",
+      "temat": "prawo-w-sieci",
+      "pytanie": "Co oznacza warunek SA w licencjach Creative Commons?",
+      "odpowiedz": "ShareAlike (na tych samych warunkach) — utwór zależny/przeróbka musi być opublikowany na tej samej licencji.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-prawo-003",
+      "temat": "prawo-w-sieci",
+      "pytanie": "Jakie cztery elementy należy podać przy poprawnym oznaczaniu utworu na licencji Creative Commons?",
+      "odpowiedz": "Autora, tytuł utworu, nazwę licencji oraz odnośnik do licencji/źródła.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-prawo-004",
+      "temat": "prawo-w-sieci",
+      "pytanie": "Czym różni się oprogramowanie freeware od wolnego oprogramowania (Free Software)?",
+      "odpowiedz": "Freeware jest darmowy, ale ma zamknięty kod źródłowy; wolne oprogramowanie daje swobodę wglądu i modyfikacji kodu.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-prawo-005",
+      "temat": "prawo-w-sieci",
+      "pytanie": "Czy sam pomysł na nową grę komputerową podlega ochronie prawa autorskiego?",
+      "odpowiedz": "Nie — prawo autorskie chroni wyłącznie sposób wyrażenia (np. kod, grafikę, scenariusz), a nie same pomysły.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-python-001",
+      "temat": "podstawy-pythona",
+      "pytanie": "Użytkownik wpisał liczbę 5 po wywołaniu a = input(). Jaki typ danych ma zmienna a i co wypisze print(a + a)?",
+      "odpowiedz": "Zmienna a ma typ str (napis), a program wypisze 55 (sklejenie napisów, nie dodawanie).",
+      "kod": "a = input()\nprint(a + a)"
+    },
+    {
+      "id": "lo2-python-002",
+      "temat": "podstawy-pythona",
+      "pytanie": "Co zwracają operatory // oraz % dla działania 200 // 60 i 200 % 60?",
+      "odpowiedz": "200 // 60 daje 3 (dzielenie całkowite), a 200 % 60 daje 20 (reszta z dzielenia).",
+      "kod": "print(200 // 60, 200 % 60)"
+    },
+    {
+      "id": "lo2-python-003",
+      "temat": "podstawy-pythona",
+      "pytanie": "Czym różni się zaokrąglanie liczby za pomocą int(3.9) od round(3.9)?",
+      "odpowiedz": "int(3.9) obcina część dziesiętną i daje 3, natomiast round(3.9) zaokrągla matematycznie do 4.",
+      "kod": "print(int(3.9), round(3.9))"
+    },
+    {
+      "id": "lo2-python-004",
+      "temat": "podstawy-pythona",
+      "pytanie": "W jaki sposób należy odczytywać komunikaty o błędach zgłaszane przez Pythona?",
+      "odpowiedz": "Od dołu — ostatni wiersz wskazuje rodzaj błędu, a wyższe wiersze podają numer pliku i linię.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-python-005",
+      "temat": "podstawy-pythona",
+      "pytanie": "Jaki typ danych zwraca w Pythonie zwykłe dzielenie operatorem / (np. 10 / 5)?",
+      "odpowiedz": "Typ float (liczba rzeczywista, 2.0) — zwykłe dzielenie zawsze daje wynik typu float.",
+      "kod": "print(10 / 5)"
+    },
+    {
+      "id": "lo2-funkcje-001",
+      "temat": "funkcje-obliczeniowe",
+      "pytanie": "Co zwróci wywołanie funkcji, która zamiast instrukcji return użyła print() do pokazania wyniku?",
+      "odpowiedz": "Zwróci wartość None — wynik pojawi się na ekranie, ale nie trafi do dalszych obliczeń programu.",
+      "kod": "def pole(a, b):\n    print(a * b)\n\nwynik = pole(3, 4)"
+    },
+    {
+      "id": "lo2-funkcje-002",
+      "temat": "funkcje-obliczeniowe",
+      "pytanie": "Czym różni się parametr od argumentu funkcji?",
+      "odpowiedz": "Parametr to zmienna zadeklarowana w definicji funkcji, a argument to konkretna wartość przekazywana podczas wywołania.",
+      "kod": "def f(parametr):\n    pass\n\nf(argument)"
+    },
+    {
+      "id": "lo2-funkcje-003",
+      "temat": "funkcje-obliczeniowe",
+      "pytanie": "Czy zmienna utworzona wewnątrz ciała funkcji jest widoczna poza nią?",
+      "odpowiedz": "Nie — jest to zmienna lokalna i próba jej użycia poza funkcją zgłosi błąd NameError.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-funkcje-004",
+      "temat": "funkcje-obliczeniowe",
+      "pytanie": "Jak działa instrukcja return, gdy zostanie wykonana wewnątrz funkcji?",
+      "odpowiedz": "Zwraca podaną wartość do miejsca wywołania i natychmiast kończy działanie funkcji.",
+      "kod": ""
+    },
+    {
+      "id": "lo2-funkcje-005",
+      "temat": "funkcje-obliczeniowe",
+      "pytanie": "Co się stanie, gdy przy definiowaniu funkcji zapiszesz def cena(netto, vat=23)?",
+      "odpowiedz": "Parametr vat otrzyma wartość domyślną 23 i przy wywołaniu cena(100) zostanie wyliczony z tą wartością.",
+      "kod": "def cena(netto, vat=23):\n    return netto * (100 + vat) / 100"
+    },
+    {
+      "id": "lo2-wzorzec-001",
+      "temat": "wyszukiwanie-wzorca",
+      "pytanie": "Co zwróci metoda find() dla napisu \"ABRAKADABRA\", gdy szukamy wzorca \"KAD\"?",
+      "odpowiedz": "Zwróci 4 — indeks pierwszego znaku dopasowania (pamiętając, że pozycje liczy się od 0).",
+      "kod": "print(\"ABRAKADABRA\".find(\"KAD\"))"
+    },
+    {
+      "id": "lo2-wzorzec-002",
+      "temat": "wyszukiwanie-wzorca",
+      "pytanie": "Dlaczego instrukcja if zdanie.find(\"Ala\"): wypisze „nie ma”, gdy słowo „Ala” stoi na samym początku zdania?",
+      "odpowiedz": "find() zwraca indeks 0, a liczba 0 w warunku logiki Pythona jest traktowana jako FAŁSZ (False).",
+      "kod": "zdanie = \"Ala ma kota\"\nif zdanie.find(\"Ala\"):\n    print(\"jest\")\nelse:\n    print(\"nie ma\")"
+    },
+    {
+      "id": "lo2-wzorzec-003",
+      "temat": "wyszukiwanie-wzorca",
+      "pytanie": "Ile możliwych ustawień wzorca o długości m sprawdza algorytm naiwny w tekście o długości n?",
+      "odpowiedz": "Sprawdza dokładnie n - m + 1 ustawień (pętla od indeksu 0 do n - m włącznie).",
+      "kod": "range(n - m + 1)"
+    },
+    {
+      "id": "lo2-wzorzec-004",
+      "temat": "wyszukiwanie-wzorca",
+      "pytanie": "Czym różni się wynik wywołania \"banana\".count(\"ana\") od wyszukiwania algorytmem naiwnym?",
+      "odpowiedz": "count() zwraca 1 (tylko wystąpienia rozłączne), a algorytm naiwny znajduje 2 wystąpienia (także nakładające się).",
+      "kod": "print(\"banana\".count(\"ana\"))"
+    },
+    {
+      "id": "lo2-wzorzec-005",
+      "temat": "wyszukiwanie-wzorca",
+      "pytanie": "Co wycina wyrażenie tekst[i:i + m] z napisu tekst?",
+      "odpowiedz": "Wycina fragment o długości m znaków, zaczynający się od indeksu i (od znaku i do i + m - 1).",
+      "kod": "tekst[i:i + m]"
+    }
+  ]
+}

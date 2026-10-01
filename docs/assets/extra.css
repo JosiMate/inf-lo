@@ -610,3 +610,270 @@
 .md-typeset details.rozgrzewka > summary::after {
   background-color: var(--rz-akcent);
 }
+
+/* ------------------------------------------------------------
+   Widżet losowej rozgrzewki i powtórki przed sprawdzianem
+   ------------------------------------------------------------ */
+.rz-losowa {
+  margin: 1.5em 0;
+  padding: 1.1em 1.3em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: .25rem solid var(--rz-akcent);
+  border-radius: .35rem;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.rz-naglowek {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8em;
+  margin-bottom: 1em;
+}
+
+.rz-tytul-bloku {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.rz-ikona-mozgu {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  background-color: var(--rz-akcent);
+  -webkit-mask-image: var(--md-admonition-icon--rozgrzewka);
+          mask-image: var(--md-admonition-icon--rozgrzewka);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  vertical-align: middle;
+}
+
+.rz-zakladki {
+  display: flex;
+  gap: .4em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: .4em;
+}
+
+.rz-zakladka {
+  padding: .35em .8em;
+  font-size: .8rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: background-color 150ms, color 150ms;
+}
+
+.rz-zakladka:hover {
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+
+.rz-zakladka.rz-aktywna {
+  background: var(--rz-akcent);
+  color: #ffffff;
+}
+
+.rz-pasek-opcji {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8em;
+  margin-bottom: 1.2em;
+  font-size: .82rem;
+}
+
+.rz-select, .rz-input-text {
+  padding: .35em .6em;
+  font: inherit;
+  font-size: .8rem;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: .25rem;
+  max-width: 100%;
+}
+
+.rz-select:focus, .rz-input-text:focus {
+  outline: 2px solid var(--rz-akcent);
+  outline-offset: -1px;
+}
+
+.rz-checkgroup {
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+  width: 100%;
+  margin-bottom: .8em;
+}
+
+.rz-check-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.rz-przycisk {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  padding: .35em .85em;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: .25rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  transition: background-color 120ms, border-color 120ms;
+}
+
+.rz-przycisk:hover:not(:disabled) {
+  border-color: var(--rz-akcent);
+  color: var(--rz-akcent);
+}
+
+.rz-przycisk:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.rz-przycisk-akcent {
+  background: var(--rz-akcent);
+  color: #ffffff;
+  border-color: var(--rz-akcent);
+}
+
+.rz-przycisk-akcent:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--rz-akcent) 85%, #000000);
+  color: #ffffff;
+}
+
+.rz-lista-pytan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+.rz-karta-pytania {
+  padding: .9em 1.1em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem;
+  background: var(--md-default-bg-color);
+}
+
+.rz-etykieta-pytania {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--rz-akcent);
+  margin-bottom: .3em;
+}
+
+.rz-tresc-pytania {
+  font-weight: 600;
+  font-size: .9rem;
+  margin: .2em 0 .6em;
+}
+
+.rz-kod-pytania {
+  margin: .5em 0 .8em;
+}
+
+.rz-kod-pytania pre {
+  margin: 0;
+  padding: .6em .8em;
+  font-family: var(--md-code-font-family, monospace);
+  font-size: .78rem;
+  background: var(--md-code-bg-color);
+  border-radius: .25rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.rz-odpowiedz-box {
+  margin-top: .8em;
+  padding: .7em .9em;
+  border-left: 3px solid #2e7d32;
+  background: rgba(46, 125, 50, .08);
+  font-size: .82rem;
+  border-radius: 0 .25rem .25rem 0;
+}
+
+.rz-przyciski-akcji {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6em;
+  margin-top: 1.2em;
+}
+
+.rz-komunikat-brak {
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+  padding: .8em 0;
+}
+
+/* Tryb tablicy (Fullscreen / Overlay) */
+.rz-losowa.rz-tablica-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  margin: 0;
+  padding: 2.5em 3em;
+  border-radius: 0;
+  border: none;
+  background: var(--md-default-bg-color);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.rz-losowa.rz-tablica-mode .rz-tresc-pytania {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.rz-losowa.rz-tablica-mode .rz-kod-pytania pre {
+  font-size: 1.1rem;
+  padding: 1em;
+}
+
+.rz-losowa.rz-tablica-mode .rz-odpowiedz-box {
+  font-size: 1.2rem;
+  padding: 1em 1.2em;
+}
+
+.rz-losowa.rz-tablica-mode .rz-etykieta-pytania {
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 375px) {
+  .rz-losowa {
+    padding: .8em .9em;
+  }
+  .rz-pasek-opcji {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .rz-select {
+    width: 100%;
+  }
+}
