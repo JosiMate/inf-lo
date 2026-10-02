@@ -432,6 +432,28 @@ wpisaniem (zasada 5).
 `poprawna` liczy się od 0. `odpowiedz` porównywana jest bez wielkości liter,
 polskich znaków i interpunkcji. Klucz `"typ"` jest ignorowany — nie dodawaj go.
 
+### Tryb »Na tablicę« (`tablica.js`)
+
+Skrypt `tablica.js` automatycznie dodaje przycisk „Na tablicę” w prawym górnym rogu tytułu dla wybranych ramek najwyższego poziomu (niezagnieżdżonych w innych ramkach):
+
+- **Rozgrzewka**: `.admonition.rozgrzewka` lub `details.rozgrzewka`;
+- **Kryteria sukcesu**: typ `success`, tytuł zaczyna się od „Kryteria sukcesu”;
+- **Ćwiczenie**: typ `note`, tytuł zaczyna się od „Ćwiczenie”;
+- **Przewiduj**: blok kodu z ramką `??? success` po nim (na tablicę trafia blok kodu razem z ramką, konsola `.py-konsola` zostaje ukryta, a wynik zwinięty) lub samodzielna ramka `!!! example "Przewiduj…"`;
+- **Krok po kroku**: `.kroki`.
+
+Autor tematu **niczego nie dopisuje** w Markdownie — ikonka pojawia się sama, jeśli temat trzyma się standardowych tytułów i typów ramek.
+
+Nad quizem „Sprawdź się” dodawany jest również przycisk „Na tablicę”, który otwiera dedykowany widok pełnoekranowy po jednym pytaniu naraz:
+
+- **Pytynie zamknięte**: odpowiedzi wyświetlane jako duże kafelki z literami A, B, C, D;
+- **Pytanie otwarte**: treść bez pola do wpisywania;
+- **Pokaż odpowiedź**: wyróżnia poprawny kafelek lub pokazuje wzorzec oraz wyjaśnienie;
+- **Obsługa klawiaturą (i pilotem do prezentacji)**:
+  - Strzałki `←` / `→` oraz `PageUp` / `PageDown`: zmiana pytania;
+  - `Spacja` lub `Enter`: „Pokaż odpowiedź”;
+  - `Escape`: zamknięcie widoku tablicy.
+
 ### Karta pracy na stronie tematu
 
 ```markdown

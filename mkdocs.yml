@@ -68,6 +68,7 @@ extra_javascript:
   - assets/js/karta.js
   # karty.js korzysta z window.KartaPracy, więc musi iść PO karta.js
   - assets/js/karty.js
+  - assets/js/tablica.js
   - assets/js/quiz.js
   - assets/js/postep.js
   - assets/js/narzedzia.js
