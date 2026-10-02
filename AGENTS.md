@@ -248,10 +248,12 @@ Elementy w tej kolejności, od góry strony:
    ```
 
    Ramki muszą stać jedna pod drugą, z tytułami dokładnie „Podpowiedź 1”,
-   „Podpowiedź 2”, „Podpowiedź 3”. Skrypt `docs/assets/js/podpowiedzi.js`
-   składa je na stronie w jeden blok odsłaniany po kolei („1 z 3”) —
-   trzeciej nie da się otworzyć bez dwóch pierwszych. Markdown się nie
-   zmienia; bez JavaScriptu i na wydruku zostają zwykłe ramki.
+   „Podpowiedź 2”… (liczba dowolna, także jedna). Skrypt
+   `docs/assets/js/podpowiedzi.js` zamienia je na stronie w jedną belkę
+   „Podpowiedzi” z przyciskiem odsłaniającym kolejne podpowiedzi jako karty —
+   ostatniej nie da się zobaczyć bez wcześniejszych. Markdown się nie
+   zmienia; bez JavaScriptu zostają zwykłe ramki, przed wydrukiem wszystko
+   się odsłania.
 
 8. **„Sprawdź się”** — quiz z natychmiastową odpowiedzią (7–8 pytań), składnia
    w sekcji 6. Każde `wyjasnienie` mówi, dlaczego poprawna odpowiedź jest
