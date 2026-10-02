@@ -19,16 +19,24 @@
     const inner = document.querySelector(".md-content__inner");
     if (!inner) return false;
 
+    // Strona tematu = ramka „O tym temacie” ORAZ coś, co ma tylko lekcja:
+    // kryteria sukcesu, rozgrzewka albo quiz „Sprawdź się”. Dzięki temu
+    // strony „Wymagania i bhp” (też mają „O tym temacie”) nie dostają
+    // przycisku.
     const children = Array.from(inner.children);
-    return children.some((el) => {
-      if (!el.classList.contains("admonition") && el.tagName !== "DETAILS") return false;
+    const tytulRamki = (el) => {
+      if (!el.classList.contains("admonition") && el.tagName !== "DETAILS") return "";
       const titleEl = el.querySelector(":scope > summary") || el.querySelector(":scope > .admonition-title");
-      if (!titleEl) return false;
-      const tytul = czyscTytul(titleEl.textContent).toLowerCase();
-      if (el.classList.contains("abstract") && tytul.startsWith("o tym temacie")) return true;
-      if (el.classList.contains("success") && tytul.startsWith("kryteria sukcesu")) return true;
-      return false;
-    });
+      return titleEl ? czyscTytul(titleEl.textContent).toLowerCase() : "";
+    };
+    const maOTymTemacie = children.some((el) =>
+      el.classList.contains("abstract") && tytulRamki(el).startsWith("o tym temacie"));
+    if (!maOTymTemacie) return false;
+    const maKryteria = children.some((el) =>
+      el.classList.contains("success") && tytulRamki(el).startsWith("kryteria sukcesu"));
+    const maRozgrzewke = children.some((el) => el.classList.contains("rozgrzewka"));
+    const maQuiz = !!inner.querySelector(".quiz");
+    return maKryteria || maRozgrzewke || maQuiz;
   }
 
   function czyWPoluTekstowym(target) {

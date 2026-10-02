@@ -434,7 +434,7 @@ polskich znaków i interpunkcji. Klucz `"typ"` jest ignorowany — nie dodawaj g
 
 ### Tryb »Prowadź lekcję« (`slajdy.js`)
 
-Skrypt `slajdy.js` dodaje przycisk „Prowadź lekcję” pod głównym nagłówkiem `h1` na stronach tematów (rozpoznawanych po ramce „O tym temacie” lub „Kryteria sukcesu”). Uruchamia pełnoekranową prezentację ze strony bez konieczności tworzenia osobnych slajdów.
+Skrypt `slajdy.js` dodaje przycisk „Prowadź lekcję” pod głównym nagłówkiem `h1` na stronach tematów (rozpoznawanych po ramce „O tym temacie” razem z kryteriami sukcesu, rozgrzewką albo quizem — dlatego strony „Wymagania i bhp” przycisku nie mają). Uruchamia pełnoekranową prezentację ze strony bez konieczności tworzenia osobnych slajdów.
 
 - **Podział automatyczny:** slajdy powstają z elementów najwyższego poziomu w `.md-content__inner`:
   1. **Slajd tytułowy:** nagłówek `h1` oraz ramka „O tym temacie”;
