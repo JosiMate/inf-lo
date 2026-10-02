@@ -556,6 +556,33 @@
   margin-bottom: 0.5rem;
 }
 
+/* ─── Belki w środku ramki zachowują się jak zakładki widżetu rozgrzewki:
+   zwinięta — szary napis (jak nieaktywna zakładka), po najechaniu napis
+   w kolorze ramki; rozwinięta — pełne tło w kolorze ramki i biały napis
+   (jak aktywna zakładka). Ramki najwyższego poziomu zostają bez zmian. */
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details):not([open]) > summary:is(.admonition-title, summary) {
+  color: var(--md-default-fg-color--light);
+}
+
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details):not([open]) > summary:is(.admonition-title, summary):hover {
+  color: var(--ui-akcent);
+}
+
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details)[open] > summary:is(.admonition-title, summary) {
+  background-color: var(--ui-akcent);
+  color: #fff;
+  border-bottom-color: transparent;
+}
+
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details)[open] > summary:is(.admonition-title, summary):hover {
+  background-color: color-mix(in srgb, var(--ui-akcent) 85%, #000);
+}
+
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details)[open] > summary:is(.admonition-title, summary)::before,
+[dir] .md-typeset :is(.admonition, details) details:is(.admonition, details)[open] > summary:is(.admonition-title, summary)::after {
+  background-color: #fff;
+}
+
 /* ─── Numery pytań w rozgrzewce jako kolorowe kółka. Tylko lista będąca
    bezpośrednio w ramce rozgrzewki — odpowiedzi w zagnieżdżonej ramce
    i zwykłe listy w treści zostają bez zmian. */
