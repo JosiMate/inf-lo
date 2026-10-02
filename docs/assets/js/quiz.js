@@ -29,6 +29,107 @@
     .normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/ł/g, "l").replace(/[^a-z0-9]+/g, "");
 
+  function otworzNaTablicy(pytania) {
+    if (!window.Tablica || typeof window.Tablica.otworz !== "function") return;
+
+    let idx = 0;
+    const odslonieta = new Array(pytania.length).fill(false);
+
+    const container = document.createElement("div");
+    container.className = "tb-quiz-widok";
+
+    function renderView() {
+      const q = pytania[idx];
+      const litery = ["A", "B", "C", "D", "E", "F"];
+      const jestOdslonieta = odslonieta[idx];
+
+      let opcjeHtml = "";
+      if (q.opcje) {
+        opcjeHtml = `<div class="tb-qz-kafelki">` +
+          q.opcje.map((o, i) => {
+            const litera = litery[i] || String(i + 1);
+            const jestPoprawna = i === q.poprawna;
+            let cls = "tb-kafelek";
+            if (jestOdslonieta) {
+              if (jestPoprawna) cls += " tb-kafelek-poprawny";
+              else cls += " tb-kafelek-przygaszony";
+            }
+            return `
+              <div class="${cls}">
+                <span class="tb-kafelek-litera">${litera}</span>
+                <span class="tb-kafelek-tresc">${esc(o)}</span>
+              </div>
+            `;
+          }).join("") +
+          `</div>`;
+      } else {
+        if (jestOdslonieta) {
+          const odpWzor = q.odpowiedz ? esc(q.odpowiedz[0]) : "";
+          opcjeHtml = `<div class="tb-qz-odpowiedz-otwarta">
+            <strong>Poprawna odpowiedź:</strong> <span>${odpWzor}</span>
+          </div>`;
+        } else {
+          opcjeHtml = `<div class="tb-qz-pusta-przestrzen"></div>`;
+        }
+      }
+
+      let wyjasnienieHtml = "";
+      if (jestOdslonieta && q.wyjasnienie) {
+        wyjasnienieHtml = `<div class="tb-qz-wyjasnienie">
+          <strong>Wyjaśnienie:</strong> ${esc(q.wyjasnienie)}
+        </div>`;
+      }
+
+      container.innerHTML = `
+        <div class="tb-qz-naglowek">Pytanie ${idx + 1} z ${pytania.length}</div>
+        <div class="tb-qz-tresc">${esc(q.pytanie)}</div>
+        ${opcjeHtml}
+        ${wyjasnienieHtml}
+        <div class="tb-qz-pasek">
+          <button type="button" class="pdp-przycisk tb-qz-prev" ${idx === 0 ? "disabled" : ""}>Poprzednie</button>
+          <button type="button" class="pdp-przycisk pdp-dalej tb-qz-pokaz">${jestOdslonieta ? "Schowaj odpowiedź" : "Pokaż odpowiedź"}</button>
+          <button type="button" class="pdp-przycisk tb-qz-next" ${idx === pytania.length - 1 ? "disabled" : ""}>Następne</button>
+        </div>
+      `;
+
+      container.querySelector(".tb-qz-prev").addEventListener("click", () => {
+        if (idx > 0) { idx--; renderView(); }
+      });
+      container.querySelector(".tb-qz-next").addEventListener("click", () => {
+        if (idx < pytania.length - 1) { idx++; renderView(); }
+      });
+      container.querySelector(".tb-qz-pokaz").addEventListener("click", () => {
+        odslonieta[idx] = !odslonieta[idx];
+        renderView();
+      });
+    }
+
+    const onKey = (e) => {
+      if (e.key === "ArrowLeft" || e.key === "PageUp") {
+        e.preventDefault();
+        if (idx > 0) { idx--; renderView(); }
+      } else if (e.key === "ArrowRight" || e.key === "PageDown") {
+        e.preventDefault();
+        if (idx < pytania.length - 1) { idx++; renderView(); }
+      } else if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        odslonieta[idx] = !odslonieta[idx];
+        renderView();
+      }
+    };
+
+    document.addEventListener("keydown", onKey, true);
+
+    renderView();
+
+    window.Tablica.otworz(container, {
+      tytul: "Quiz — Sprawdź się",
+      poZamknieciu: () => {
+        document.removeEventListener("keydown", onKey, true);
+      }
+    });
+  }
+
   function render(host, pytania) {
     const p = pytania.map((q, i) => {
       const wejscie = q.opcje
@@ -42,7 +143,14 @@
         <div class="qz-odzew" hidden></div></li>`;
     }).join("");
 
+    const tablicaPasek = (window.Tablica && typeof window.Tablica.otworz === "function")
+      ? `<div class="qz-pasek-tablica">
+           <button type="button" class="pdp-przycisk qz-btn-tablica" title="Widok na projektor">Na tablicę</button>
+         </div>`
+      : "";
+
     host.innerHTML = `<div class="qz">
+      ${tablicaPasek}
       <ol class="qz-lista">${p}</ol>
       <div class="qz-podsumowanie" hidden></div>
       <button type="button" class="qz-reset md-button">Zacznij od nowa</button>
@@ -96,6 +204,9 @@
     };
 
     host.addEventListener("click", (e) => {
+      if (e.target.closest(".qz-btn-tablica")) {
+        otworzNaTablicy(pytania);
+      }
       if (e.target.closest(".qz-sprawdz")) {
         const li = e.target.closest(".qz-pytanie");
         if (sprawdzJedno(li, pytania[Number(li.dataset.i)]) !== null) odswiezPodsumowanie();
@@ -114,11 +225,6 @@
     document.querySelectorAll(".quiz").forEach((host) => {
       if (host.dataset.gotowe) return;
 
-      /* Przy nawigacji natychmiastowej (navigation.instant) Material odtwarza
-       * znaczniki <script> z pobranej strony i gubi przy tym atrybut type,
-       * więc selektor script[type="application/json"] nic nie znajduje.
-       * Bierzemy więc pierwszy skrypt bez src, a gdy i tego nie ma —
-       * tekst samego kontenera. */
       const zrodlo = host.querySelector('script[type="application/json"]')
                   || host.querySelector("script:not([src])");
       const tekst = (zrodlo ? zrodlo.textContent : host.textContent).trim();

@@ -4,7 +4,6 @@
 (function () {
   "use strict";
 
-  // Zapamiętaj adres skryptu do bezwzględnego liczenia ścieżki JSON
   const scriptSrc = document.currentScript ? document.currentScript.src : "";
 
   function getJsonUrl(klasa) {
@@ -17,14 +16,10 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  function losujElement(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
-
   function losujUnikalne(dostepne, ile, wykluczoneIds) {
     let kandydaci = dostepne.filter((q) => !wykluczoneIds.has(q.id));
     if (kandydaci.length < ile) {
-      kandydaci = dostepne; // brak możliwości uniknięcia powtórek z poprzedniej serii
+      kandydaci = dostepne;
     }
     const kopia = [...kandydaci];
     const wynik = [];
@@ -36,15 +31,13 @@
   }
 
   function budujInterfejs(host, data) {
-    const klasa = data.klasa;
     const kolejnosc = data.kolejnosc || [];
     const tytuly = data.tytuly || {};
     const pytania = data.pytania || [];
 
-    let aktywnaZakladka = "lekcja"; // "lekcja" | "powtorka"
+    let aktywnaZakladka = "lekcja";
     let ostatnieIds = new Set();
     let pokazWszystkieOdpowiedzi = false;
-    let wybraneIdsPowtorka = new Set();
 
     host.className = "rz-losowa";
     host.innerHTML = `
@@ -80,11 +73,12 @@
       });
     });
 
-    // Tryb Tablicy / Pełnego Ekranu
-    let wTrybieTablicy = false;
+    // Tryb Tablicy
+    let handleTablicy = null;
+    let wTrybieTablicyFallback = false;
 
-    function wlaczTablice() {
-      wTrybieTablicy = true;
+    function wlaczTabliceFallback() {
+      wTrybieTablicyFallback = true;
       host.classList.add("rz-tablica-mode");
       btnTablica.textContent = "Zamknij";
       if (host.requestFullscreen) {
@@ -92,8 +86,8 @@
       }
     }
 
-    function wylaczTablice() {
-      wTrybieTablicy = false;
+    function wylaczTabliceFallback() {
+      wTrybieTablicyFallback = false;
       host.classList.remove("rz-tablica-mode");
       btnTablica.textContent = "Na tablicę";
       if (document.fullscreenElement) {
@@ -102,19 +96,38 @@
     }
 
     btnTablica.addEventListener("click", () => {
-      if (wTrybieTablicy) wylaczTablice();
-      else wlaczTablice();
+      if (handleTablicy) {
+        handleTablicy.zamknij();
+        return;
+      }
+
+      if (window.Tablica && typeof window.Tablica.otworz === "function") {
+        host.classList.add("rz-tablica-mode");
+        btnTablica.textContent = "Zamknij";
+
+        handleTablicy = window.Tablica.otworz(host, {
+          tytul: "Losowa rozgrzewka i powtórka",
+          poZamknieciu: () => {
+            host.classList.remove("rz-tablica-mode");
+            btnTablica.textContent = "Na tablicę";
+            handleTablicy = null;
+          }
+        });
+      } else {
+        if (wTrybieTablicyFallback) wylaczTabliceFallback();
+        else wlaczTabliceFallback();
+      }
     });
 
     document.addEventListener("fullscreenchange", () => {
-      if (!document.fullscreenElement && wTrybieTablicy) {
-        wylaczTablice();
+      if (!document.fullscreenElement && wTrybieTablicyFallback) {
+        wylaczTabliceFallback();
       }
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && wTrybieTablicy) {
-        wylaczTablice();
+      if (e.key === "Escape" && wTrybieTablicyFallback) {
+        wylaczTabliceFallback();
       }
     });
 
@@ -141,7 +154,6 @@
       const btnLosuj = paneLekcja.querySelector(".rz-btn-losuj-lekcja");
       const kontenerWyniku = paneLekcja.querySelector(".rz-wynik-lekcja");
 
-      // Domyślnie wybieramy ostatni temat z listy (lub drugi, jeśli jest więcej niż 1)
       if (kolejnosc.length > 1) {
         selectTemat.value = "1";
       }
@@ -159,46 +171,37 @@
         pokazWszystkieOdpowiedzi = false;
         const wczesniejszeSlugi = kolejnosc.slice(0, idx);
 
-        // Kategoria 1: z tematu bezpośrednio poprzedniego (idx - 1)
         const slug1 = kolejnosc[idx - 1];
         const pytania1 = pytania.filter((q) => q.temat === slug1);
 
-        // Kategoria 2: z tematu 2-3 pozycje wcześniej (idx - 2, idx - 3)
         const slugi2 = [kolejnosc[idx - 2], kolejnosc[idx - 3]].filter(Boolean);
         const pytania2 = pytania.filter((q) => slugi2.includes(q.temat));
 
-        // Kategoria 3: z dowolnego jeszcze dawniejszego (idx - 4 i wcześniej)
         const slugi3 = wczesniejszeSlugi.slice(0, Math.max(0, idx - 3));
         const pytania3 = pytania.filter((q) => slugi3.includes(q.temat));
 
         const wybranePytania = [];
         const uzyteIds = new Set();
 
-        // Dobór pytania 1
         let p1 = losujUnikalne(pytania1, 1, ostatnieIds)[0];
         if (!p1) p1 = losujUnikalne(pytania.filter(q => wczesniejszeSlugi.includes(q.temat)), 1, uzyteIds)[0];
         if (p1) { wybranePytania.push({ q: p1, etykieta: "Z poprzedniej lekcji." }); uzyteIds.add(p1.id); }
 
-        // Dobór pytania 2
         let p2 = losujUnikalne(pytania2.filter(q => !uzyteIds.has(q.id)), 1, ostatnieIds)[0];
         if (!p2) p2 = losujUnikalne(pytania.filter(q => wczesniejszeSlugi.includes(q.temat) && !uzyteIds.has(q.id)), 1, uzyteIds)[0];
         if (p2) { wybranePytania.push({ q: p2, etykieta: "Sprzed kilku tygodni." }); uzyteIds.add(p2.id); }
 
-        // Dobór pytania 3
         let p3 = losujUnikalne(pytania3.filter(q => !uzyteIds.has(q.id)), 1, ostatnieIds)[0];
         if (!p3) p3 = losujUnikalne(pytania.filter(q => wczesniejszeSlugi.includes(q.temat) && !uzyteIds.has(q.id)), 1, uzyteIds)[0];
         if (p3) { wybranePytania.push({ q: p3, etykieta: "Z dawniejszych tematów." }); uzyteIds.add(p3.id); }
 
-        // Zapamiętaj wylosowane ID, by uniknąć ich w następnym losowaniu
         ostatnieIds = uzyteIds;
-
         renderWybraneLekcja(kontenerWyniku, wybranePytania);
       }
 
       selectTemat.addEventListener("change", losujNaLekcje);
       btnLosuj.addEventListener("click", losujNaLekcje);
 
-      // Pierwsze automatyczne losowanie
       losujNaLekcje();
     }
 
