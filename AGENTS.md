@@ -432,6 +432,33 @@ wpisaniem (zasada 5).
 `poprawna` liczy się od 0. `odpowiedz` porównywana jest bez wielkości liter,
 polskich znaków i interpunkcji. Klucz `"typ"` jest ignorowany — nie dodawaj go.
 
+### Tryb »Prowadź lekcję« (`slajdy.js`)
+
+Skrypt `slajdy.js` dodaje przycisk „Prowadź lekcję” pod głównym nagłówkiem `h1` na stronach tematów (rozpoznawanych po ramce „O tym temacie” lub „Kryteria sukcesu”). Uruchamia pełnoekranową prezentację ze strony bez konieczności tworzenia osobnych slajdów.
+
+- **Podział automatyczny:** slajdy powstają z elementów najwyższego poziomu w `.md-content__inner`:
+  1. **Slajd tytułowy:** nagłówek `h1` oraz ramka „O tym temacie”;
+  2. **Rozgrzewka:** ramka `.rozgrzewka`;
+  3. **Kryteria sukcesu:** ramka `!!! success`;
+  4. **Sekcje `##`:** osobne slajdy dla ramek „Przewiduj…”, grupy przykładu z konsolą, bloku `.kroki` oraz ćwiczeń; pozostała treść sekcji tworzy slajdy w kolejności na stronie;
+  5. **Quiz „Sprawdź się”:** każde pytanie na osobnym slajdzie;
+  6. **Karta pracy:** slajd „Pracujemy na komputerach” z adresem strony i instrukcją;
+  7. **Ostatni slajd:** ponowne „Kryteria sukcesu” z tytułem „Kciuki: co już umiem?”.
+  Temat zgodny ze standardem nie wymaga żadnych zmian w Markdownie.
+
+- **Wymuszony podział `<!-- slajd -->`:**
+  - `<!-- slajd -->` na najwyższym poziomie (niewcięty) rozpoczyna nowy slajd w danym miejscu.
+  - `<!-- slajd: Tytuł slajdu -->` ustala własną etykietę nagłówkową dla tego slajdu.
+  - **Ważne:** komentarz wewnątrz ramki (wcięty) jest ignorowany przez podział i nie tworzy nowego slajdu.
+
+- **Obsługa klawiaturą (i pilotem):**
+  - `→`, `PageDown`, `Spacja`: najpierw odsłania po kolei ukryte elementy na slajdzie (wyniki „Przewiduj”, kroki, rozwinięte podpowiedzi, odpowiedź quizu); po odsłonięciu wszystkich przechodzi do następnego slajdu;
+  - `←`, `PageUp`: poprzedni slajd;
+  - `Shift + →`: następny slajd bez odsłaniania;
+  - `Home` / `End`: pierwszy / ostatni slajd;
+  - `M`: otwiera/zamyka spis slajdów (nawigacja strzałkami `↑`/`↓` i `Enter` lub kliknięcie myszą);
+  - `Escape`: zamyka spis slajdów, a jeśli jest zamknięty — wychodzi z trybu prezentacji.
+
 ### Tryb »Na tablicę« (`tablica.js`)
 
 Skrypt `tablica.js` automatycznie dodaje przycisk „Na tablicę” w prawym górnym rogu tytułu dla wybranych ramek najwyższego poziomu (niezagnieżdżonych w innych ramkach):

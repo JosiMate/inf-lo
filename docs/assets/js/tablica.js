@@ -17,6 +17,74 @@
     return Math.max(1, Math.min(2.2, z));
   }
 
+  function przenies(el, cel, opcje) {
+    if (!(el instanceof HTMLElement) || !(cel instanceof HTMLElement)) return null;
+    opcje = opcje || {};
+    const modyfikujStan = opcje.stan !== false;
+    const ukryjKonsole = opcje.ukryjKonsole !== false;
+
+    const placeHolder = document.createElement("span");
+    placeHolder.hidden = true;
+    placeHolder.dataset.tbMiejsce = "1";
+    el.before(placeHolder);
+
+    const savedDetailsStates = new Map();
+    const detailsList = Array.from(el.querySelectorAll("details"));
+    if (el.tagName === "DETAILS") detailsList.unshift(el);
+
+    detailsList.forEach((d) => {
+      savedDetailsStates.set(d, d.open);
+      if (modyfikujStan) {
+        if (d.classList.contains("pdp")) return;      // podpowiedzi: bez zmian
+
+        const sum = d.querySelector(":scope > summary");
+        const sumText = sum ? sum.textContent.trim().toLowerCase() : "";
+        const toWynik =
+          sumText.startsWith("odpowied") ||          // „Odpowiedzi” w rozgrzewce
+          sumText.startsWith("przewiduj") ||         // „Przewiduj, potem sprawdź wynik”
+          sumText.startsWith("wynik") ||
+          sumText.startsWith("rozwiązanie");
+
+        if (toWynik) d.open = false;                 // wynik zawsze zwinięty
+        else if (d === el) d.open = true;            // ramka główna rozwinięta
+      }
+    });
+
+    const konsole = el.classList.contains("py-konsola")
+      ? [el] : Array.from(el.querySelectorAll(".py-konsola"));
+    const prevKonsole = konsole.map((k) => k.style.display);
+    if (ukryjKonsole) {
+      konsole.forEach((k) => { k.style.display = "none"; });
+    }
+
+    cel.appendChild(el);
+
+    return {
+      el,
+      placeHolder,
+      savedDetailsStates,
+      konsole,
+      prevKonsole,
+      restoreDetailsState: modyfikujStan
+    };
+  }
+
+  function odloz(uchwyt) {
+    if (!uchwyt || !uchwyt.el) return;
+    const { el, placeHolder, savedDetailsStates, konsole, prevKonsole, restoreDetailsState } = uchwyt;
+
+    if (restoreDetailsState && savedDetailsStates) {
+      savedDetailsStates.forEach((wasOpen, d) => { d.open = wasOpen; });
+    }
+    if (konsole && prevKonsole) {
+      konsole.forEach((k, i) => { k.style.display = prevKonsole[i] || ""; });
+    }
+    if (placeHolder && placeHolder.parentNode) {
+      placeHolder.before(el);
+      placeHolder.remove();
+    }
+  }
+
   function otworz(elementyInput, opcje) {
     opcje = opcje || {};
 
@@ -66,42 +134,8 @@
 
     elementy.forEach((el) => {
       if (!(el instanceof HTMLElement)) return;
-
-      const placeHolder = document.createElement("span");
-      placeHolder.hidden = true;
-      placeHolder.dataset.tbMiejsce = "1";
-      el.before(placeHolder);
-
-      // Zapamiętujemy stan wszystkich bloków, żeby po zamknięciu przywrócić
-      // stronę dokładnie do stanu sprzed otwarcia.
-      const savedDetailsStates = new Map();
-      const detailsList = Array.from(el.querySelectorAll("details"));
-      if (el.tagName === "DETAILS") detailsList.unshift(el);
-
-      detailsList.forEach((d) => {
-        savedDetailsStates.set(d, d.open);
-        if (d.classList.contains("pdp")) return;      // podpowiedzi: bez zmian
-
-        const sum = d.querySelector(":scope > summary");
-        const sumText = sum ? sum.textContent.trim().toLowerCase() : "";
-        const toWynik =
-          sumText.startsWith("odpowied") ||          // „Odpowiedzi” w rozgrzewce
-          sumText.startsWith("przewiduj") ||         // „Przewiduj, potem sprawdź wynik”
-          sumText.startsWith("wynik") ||
-          sumText.startsWith("rozwiązanie");
-
-        if (toWynik) d.open = false;                 // wynik zawsze zwinięty
-        else if (d === el) d.open = true;            // ramka główna rozwinięta
-      });
-
-      const konsole = el.classList.contains("py-konsola")
-        ? [el] : Array.from(el.querySelectorAll(".py-konsola"));
-      const prevKonsole = konsole.map((k) => k.style.display);
-      konsole.forEach((k) => { k.style.display = "none"; });
-
-      kontener.appendChild(el);
-
-      przeniesioneObiekty.push({ el, placeHolder, savedDetailsStates, konsole, prevKonsole });
+      const uchwyt = przenies(el, kontener, { stan: true, ukryjKonsole: true });
+      if (uchwyt) przeniesioneObiekty.push(uchwyt);
     });
 
     if (!elementy.length && typeof elementyInput === "string") {
@@ -142,13 +176,8 @@
 
       document.body.style.overflow = prevBodyOverflow;
 
-      przeniesioneObiekty.forEach(({ el, placeHolder, savedDetailsStates, konsole, prevKonsole }) => {
-        savedDetailsStates.forEach((wasOpen, d) => { d.open = wasOpen; });
-        konsole.forEach((k, i) => { k.style.display = prevKonsole[i] || ""; });
-        if (placeHolder.parentNode) {
-          placeHolder.before(el);
-          placeHolder.remove();
-        }
+      przeniesioneObiekty.forEach((uchwyt) => {
+        odloz(uchwyt);
       });
 
       nakladka.remove();
@@ -281,6 +310,9 @@
 
   window.Tablica = {
     otworz: otworz,
+    przenies: przenies,
+    odloz: odloz,
+    liczZoom: liczZoom,
     start: inicjalizujRamki
   };
 

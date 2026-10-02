@@ -29,19 +29,14 @@
     .normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/ł/g, "l").replace(/[^a-z0-9]+/g, "");
 
-  function otworzNaTablicy(pytania) {
-    if (!window.Tablica || typeof window.Tablica.otworz !== "function") return;
+  function widokPytania(host, pytanie, nr, ile) {
+    if (!(host instanceof HTMLElement) || !pytanie) return null;
 
-    let idx = 0;
-    const odslonieta = new Array(pytania.length).fill(false);
+    let jestOdslonieta = false;
 
-    const container = document.createElement("div");
-    container.className = "tb-quiz-widok";
-
-    function renderView() {
-      const q = pytania[idx];
+    function render() {
+      const q = pytanie;
       const litery = ["A", "B", "C", "D", "E", "F"];
-      const jestOdslonieta = odslonieta[idx];
 
       let opcjeHtml = "";
       if (q.opcje) {
@@ -80,17 +75,71 @@
         </div>`;
       }
 
+      const naglowekHtml = ile ? `<div class="tb-qz-naglowek">Pytanie ${nr} z ${ile}</div>` : "";
+
+      host.innerHTML = `
+        <div class="tb-quiz-widok">
+          ${naglowekHtml}
+          <div class="tb-qz-tresc">${esc(q.pytanie)}</div>
+          ${opcjeHtml}
+          ${wyjasnienieHtml}
+        </div>
+      `;
+    }
+
+    render();
+
+    return {
+      odslon: () => {
+        if (!jestOdslonieta) {
+          jestOdslonieta = true;
+          render();
+        }
+      },
+      schowaj: () => {
+        if (jestOdslonieta) {
+          jestOdslonieta = false;
+          render();
+        }
+      },
+      przelacz: () => {
+        jestOdslonieta = !jestOdslonieta;
+        render();
+      },
+      czyOdslonieta: () => jestOdslonieta
+    };
+  }
+
+  function otworzNaTablicy(pytania) {
+    if (!window.Tablica || typeof window.Tablica.otworz !== "function") return;
+
+    let idx = 0;
+
+    const container = document.createElement("div");
+    container.className = "tb-quiz-tablica-wrapper";
+
+    let uchwytWidoku = null;
+
+    function renderView() {
       container.innerHTML = `
-        <div class="tb-qz-naglowek">Pytanie ${idx + 1} z ${pytania.length}</div>
-        <div class="tb-qz-tresc">${esc(q.pytanie)}</div>
-        ${opcjeHtml}
-        ${wyjasnienieHtml}
+        <div class="tb-qz-host"></div>
         <div class="tb-qz-pasek">
           <button type="button" class="pdp-przycisk tb-qz-prev" ${idx === 0 ? "disabled" : ""}>Poprzednie</button>
-          <button type="button" class="pdp-przycisk pdp-dalej tb-qz-pokaz">${jestOdslonieta ? "Schowaj odpowiedź" : "Pokaż odpowiedź"}</button>
+          <button type="button" class="pdp-przycisk pdp-dalej tb-qz-pokaz">Pokaż odpowiedź</button>
           <button type="button" class="pdp-przycisk tb-qz-next" ${idx === pytania.length - 1 ? "disabled" : ""}>Następne</button>
         </div>
       `;
+
+      const host = container.querySelector(".tb-qz-host");
+      const btnPokaz = container.querySelector(".tb-qz-pokaz");
+
+      uchwytWidoku = widokPytania(host, pytania[idx], idx + 1, pytania.length);
+
+      const odswiezPrzycisk = () => {
+        if (uchwytWidoku) {
+          btnPokaz.textContent = uchwytWidoku.czyOdslonieta() ? "Schowaj odpowiedź" : "Pokaż odpowiedź";
+        }
+      };
 
       container.querySelector(".tb-qz-prev").addEventListener("click", () => {
         if (idx > 0) { idx--; renderView(); }
@@ -98,9 +147,11 @@
       container.querySelector(".tb-qz-next").addEventListener("click", () => {
         if (idx < pytania.length - 1) { idx++; renderView(); }
       });
-      container.querySelector(".tb-qz-pokaz").addEventListener("click", () => {
-        odslonieta[idx] = !odslonieta[idx];
-        renderView();
+      btnPokaz.addEventListener("click", () => {
+        if (uchwytWidoku) {
+          uchwytWidoku.przelacz();
+          odswiezPrzycisk();
+        }
       });
     }
 
@@ -112,11 +163,13 @@
         e.preventDefault();
         if (idx < pytania.length - 1) { idx++; renderView(); }
       } else if (e.key === " " || e.key === "Enter") {
-        // Na przycisku spacja/Enter mają go po prostu nacisnąć
         if (e.target && e.target.closest && e.target.closest("button")) return;
         e.preventDefault();
-        odslonieta[idx] = !odslonieta[idx];
-        renderView();
+        if (uchwytWidoku) {
+          uchwytWidoku.przelacz();
+          const btnPokaz = container.querySelector(".tb-qz-pokaz");
+          if (btnPokaz) btnPokaz.textContent = uchwytWidoku.czyOdslonieta() ? "Schowaj odpowiedź" : "Pokaż odpowiedź";
+        }
       }
     };
 
@@ -243,6 +296,10 @@
       podepnij(host, pytania);
     });
   }
+
+  window.Quiz = {
+    widokPytania: widokPytania
+  };
 
   if (typeof document$ !== "undefined") document$.subscribe(start);
   else document.addEventListener("DOMContentLoaded", start);
