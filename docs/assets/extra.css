@@ -900,3 +900,37 @@
     width: 100%;
   }
 }
+
+/* ------------------------------------------------------------ podpowiedzi po kolei
+   Blok budowany przez podpowiedzi.js z sąsiadujących ramek „Podpowiedź 1–3”.
+   Kolor bierze z ramki ćwiczenia (--ui-akcent), jak belki w środku ramek. */
+.md-typeset .pdp { margin: 1em 0 .3em; }
+.md-typeset .pdp > details.pdp-ukryta { display: none; }
+.md-typeset .pdp > details { margin-block: .5em; }
+.pdp-pasek {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5em .8em;
+  margin-top: .6em;
+}
+.pdp-pasek button {
+  font: inherit; font-size: .7rem; font-weight: 700; cursor: pointer;
+  padding: .35em .9em; border-radius: var(--ui-promien-maly, .3rem);
+  border: 1px solid var(--ui-akcent, var(--md-accent-fg-color));
+  color: var(--ui-akcent, var(--md-accent-fg-color)); background: transparent;
+  transition: background-color .15s ease, color .15s ease;
+}
+.pdp-pasek .pdp-dalej:hover,
+.pdp-pasek .pdp-dalej:focus-visible {
+  background: var(--ui-akcent, var(--md-accent-fg-color)); color: #fff;
+}
+.pdp-pasek .pdp-schowaj {
+  border-color: var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+}
+.pdp-pasek .pdp-schowaj:hover { color: var(--md-default-fg-color); }
+.pdp-pasek button[hidden] { display: none; }
+.pdp-licznik { font-size: .68rem; font-weight: 600; color: var(--md-default-fg-color--light); }
+
+@media print {
+  .md-typeset .pdp > details.pdp-ukryta { display: block; }
+  .pdp-pasek { display: none; }
+}

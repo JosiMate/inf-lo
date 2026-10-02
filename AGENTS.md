@@ -247,6 +247,12 @@ Elementy w tej kolejności, od góry strony:
        Prawie gotowe rozwiązanie z jednym zdaniem wyjaśnienia.
    ```
 
+   Ramki muszą stać jedna pod drugą, z tytułami dokładnie „Podpowiedź 1”,
+   „Podpowiedź 2”, „Podpowiedź 3”. Skrypt `docs/assets/js/podpowiedzi.js`
+   składa je na stronie w jeden blok odsłaniany po kolei („1 z 3”) —
+   trzeciej nie da się otworzyć bez dwóch pierwszych. Markdown się nie
+   zmienia; bez JavaScriptu i na wydruku zostają zwykłe ramki.
+
 8. **„Sprawdź się”** — quiz z natychmiastową odpowiedzią (7–8 pytań), składnia
    w sekcji 6. Każde `wyjasnienie` mówi, dlaczego poprawna odpowiedź jest
    poprawna, a kusząca błędna — błędna.
