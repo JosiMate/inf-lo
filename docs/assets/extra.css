@@ -224,6 +224,9 @@
 .qz-opcja { display: flex; align-items: flex-start; gap: .5em; padding: .35em .55em;
             border-radius: .25rem; border: 1px solid transparent; cursor: pointer; }
 .qz-opcja:hover { background: var(--md-code-bg-color); }
+/* Długie formuły w odpowiedziach (np. =JEŻELI(…)) łamią się, zamiast
+   rozpychać stronę na telefonie. */
+.qz-opcja > span { min-width: 0; overflow-wrap: anywhere; }
 .qz-opcja.qz-dobra { border-color: #2e7d32; background: rgba(46, 125, 50, .1); }
 .qz-opcja.qz-zla   { border-color: #c62828; background: rgba(198, 40, 40, .1); }
 .qz-tekst { width: min(100%, 22rem); padding: .45em .6em; font: inherit; font-size: .8rem;
