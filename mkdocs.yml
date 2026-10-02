@@ -81,6 +81,8 @@ extra_javascript:
   - assets/js/rozgrzewka-losowa.js
   # Podpowiedzi pod ćwiczeniami odsłaniane po kolei (1 z 3, 2 z 3…).
   - assets/js/podpowiedzi.js
+  # Rozwiązanie krok po kroku (ramka !!! kroki z listą numerowaną).
+  - assets/js/kroki.js
 
 markdown_extensions:
   - abbr

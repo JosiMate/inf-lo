@@ -166,6 +166,56 @@ Czyta się to z góry na dół jak listę pytań: *czy co najmniej 95%? jeżeli 
 czy co najmniej 85%?* — i tak dalej. Pierwszy warunek, który okaże się
 prawdziwy, kończy sprawę; dalsze nie są już sprawdzane.
 
+!!! kroki "Krok po kroku: od dwóch ocen do sześciu"
+
+    Budujemy ocenę w `D15` z wyniku procentowego w `C15`. Progi: 95% — 6,
+    85% — 5, 70% — 4, 50% — 3, 30% — 2, poniżej — 1. Zanim odsłonisz kolejny
+    krok, spróbuj sam przewidzieć, jak będzie wyglądał.
+
+    1. **Jeden próg, dwa wyniki.** Zaczynamy od środka skali — formuła zna
+       na razie tylko trójkę i dwójkę:
+
+        ```text
+        =JEŻELI(C15>=50%;3;2)
+        ```
+
+        Sprawdź od razu: 50% daje 3, 49% daje 2. Krótka formuła, którą
+        sprawdziłeś, to fundament — dalej już tylko ją rozbudowujesz.
+
+    2. **Wyższy próg dokładasz z przodu.** Cała dotychczasowa formuła (bez
+       znaku `=`) staje się argumentem „co, gdy fałsz” nowego `JEŻELI`:
+
+        ```text
+        =JEŻELI(C15>=70%;4;JEŻELI(C15>=50%;3;2))
+        ```
+
+        Dlaczego z przodu? Bo arkusz sprawdza warunki od lewej i kończy na
+        pierwszym prawdziwym — najwyższy próg musi być sprawdzony pierwszy.
+
+    3. **Ta sama sztuczka dla 85% i 95%.** Za każdym razem nowe `JEŻELI`
+       z przodu i jeden nawias więcej na końcu:
+
+        ```text
+        =JEŻELI(C15>=95%;6;JEŻELI(C15>=85%;5;JEŻELI(C15>=70%;4;JEŻELI(C15>=50%;3;2))))
+        ```
+
+        Policz nawiasy zamykające: cztery `JEŻELI`, więc cztery `)` na końcu.
+
+    4. **Najniższy próg na samym końcu.** Ostatnia dwójka to dziś „wszystko
+       poniżej 50%”. Zamieniasz ją na jeszcze jedno `JEŻELI`, żeby oddzielić
+       jedynkę:
+
+        ```text
+        =JEŻELI(C15>=95%;6;JEŻELI(C15>=85%;5;JEŻELI(C15>=70%;4;JEŻELI(C15>=50%;3;JEŻELI(C15>=30%;2;1)))))
+        ```
+
+        Pięć `JEŻELI`, pięć nawiasów zamykających. To ta sama formuła co
+        wyżej, tylko w jednym wierszu.
+
+    5. **Sprawdź na progach.** Wpisz w `C15` kolejno 95%, 94%, 30% i 29%.
+       Powinieneś zobaczyć 6, 5, 2 i 1. Jeśli na samym progu wychodzi ocena
+       za niska, w którymś warunku stoi `>` zamiast `>=`.
+
 !!! example "Przewiduj"
 
     Jaką ocenę wystawi ta formuła uczniowi z wynikiem **68%**? A uczniowi

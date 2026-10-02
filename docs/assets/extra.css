@@ -979,3 +979,92 @@
 @media print {
   .pdp-pasek { display: none; }
 }
+
+/* ------------------------------------------------------------ rozwiązanie krok po kroku
+   Ramka typu „kroki” (!!! kroki "…") z listą numerowaną. kroki.js odsłania
+   kroki po kolei; przyciski dzieli z podpowiedziami (.pdp-przycisk). */
+:root {
+  --md-admonition-icon--kroki: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M15 5v4h-4v4H7v4H3v2h6v-4h4v-4h4V7h4V5z%22/%3E%3C/svg%3E');
+  --kr-akcent: #5c6bc0;
+}
+[data-md-color-scheme="slate"] { --kr-akcent: #7986cb; }
+/* (0,3,0) — musi przebić `.md-typeset .admonition { --ui-akcent }` z
+   stylesheets/extra.css, który ładuje się później. */
+.md-typeset .admonition.kroki,
+.md-typeset details.kroki {
+  --ui-akcent: var(--kr-akcent);
+  border-color: var(--kr-akcent);
+}
+.md-typeset .kroki > .admonition-title::before,
+.md-typeset .kroki > summary::before {
+  background-color: var(--kr-akcent);
+  -webkit-mask-image: var(--md-admonition-icon--kroki);
+          mask-image: var(--md-admonition-icon--kroki);
+}
+.md-typeset details.kroki > summary::after { background-color: var(--kr-akcent); }
+
+/* Kroki jako karty z numerem w kółku (jak pytania rozgrzewki). */
+.md-typeset .kroki > ol {
+  list-style: none;
+  counter-reset: kr-nr;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+.md-typeset .kroki > ol > li {
+  counter-increment: kr-nr;
+  position: relative;
+  margin: 0 0 .7em;
+  padding: .7em 1em .7em 3rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--ui-promien-maly, .3rem);
+  background: var(--md-default-bg-color);
+}
+.md-typeset .kroki > ol > li::before {
+  content: counter(kr-nr);
+  position: absolute;
+  inset-inline-start: .9rem;
+  top: .75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  background-color: var(--kr-akcent);
+  color: #fff;
+  font-size: .66rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.md-typeset .kroki > ol > li[hidden],
+.md-typeset .kroki > ol[hidden] { display: none; }
+.md-typeset .kroki > ol > li.pdp-nowa { animation: pdp-wejscie .3s ease-out; }
+.md-typeset .kroki > ol > li > :last-child { margin-bottom: 0; }
+.md-typeset .kroki > ol > li .highlight { margin: .5em 0; }
+.kr-pasek {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6em .9em;
+  margin: .8em 0 .3em;
+}
+.md-typeset .pdp-przycisk.kr-dalej {
+  background: var(--ui-akcent);
+  border-color: var(--ui-akcent);
+  color: #fff;
+}
+.md-typeset .pdp-przycisk.kr-dalej:hover {
+  background: color-mix(in srgb, var(--ui-akcent) 85%, #000);
+}
+.md-typeset .pdp-przycisk.kr-wszystkie:hover,
+.md-typeset .pdp-przycisk.kr-od-nowa:hover {
+  border-color: var(--ui-akcent);
+  color: var(--ui-akcent);
+}
+@media print {
+  .kr-pasek { display: none; }
+  .md-typeset .kroki > ol > li::before {
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+}

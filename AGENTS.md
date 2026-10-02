@@ -379,6 +379,34 @@ print("3" + "4")
 
 Widżet ładuje pytań z `docs/assets/rozgrzewki/klasa-N.json` zawierającego pola `klasa`, `kolejnosc`, `tytuly` oraz tablicę obiektów `pytania` (`id`, `temat`, `pytanie`, `odpowiedz`, opcjonalnie `kod`).
 
+### Rozwiązanie krok po kroku (`kroki.js`)
+
+Element **opcjonalny**, tylko w najtrudniejszych tematach — rozwiązany
+przykład pokazywany przed samodzielnym ćwiczeniem. Ramka typu `kroki`
+z listą numerowaną; każdy punkt to jeden krok: pogrubiony tytuł, formuła
+albo kod (blok wcięty pod punktem listy), jedno zdanie „dlaczego”:
+
+```markdown
+!!! kroki "Krok po kroku: …"
+
+    Krótki opis zadania i prośba, żeby uczeń przewidział kolejny krok.
+
+    1. **Tytuł kroku.** Co robimy.
+
+        ```text
+        =JEŻELI(C15>=50%;3;2)
+        ```
+
+        Dlaczego tak — jedno zdanie.
+
+    2. **Następny krok.** …
+```
+
+Skrypt chowa kroki i dokłada przyciski „Pokaż krok N”, „Pokaż wszystkie”,
+„Zacznij od nowa”. Bez JavaScriptu i na wydruku widać całą listę. Kroki
+3–6, ostatni to sprawdzenie wyniku. Każdą formułę i kod sprawdź przed
+wpisaniem (zasada 5).
+
 ### Quiz „Sprawdź się”
 
 ```html
