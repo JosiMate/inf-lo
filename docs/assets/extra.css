@@ -131,7 +131,7 @@
   margin: 1.8em 0;
   padding: 1.1em 1.3em;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: .35rem;
+  border-radius: var(--ui-promien, .35rem);
   background: var(--md-code-bg-color);
 }
 .kp-zadanie h3 { margin: 0 0 .2em; font-size: 1.05rem; }
@@ -257,7 +257,7 @@
 .spis-tematow tr.pg-zrobiony td:first-child { opacity: .55; }
 
 /* ---------------------------------------------------------- narzędzia */
-.nz { margin: 1.2em 0; padding: 1.1em 1.3em; border-radius: .35rem;
+.nz { margin: 1.2em 0; padding: 1.1em 1.3em; border-radius: var(--ui-promien, .35rem);
       border: 1px solid var(--md-default-fg-color--lightest);
       background: var(--md-code-bg-color); }
 .nz input[type="text"] { width: 100%; padding: .5em .65em; font: inherit; font-size: .82rem;
@@ -510,7 +510,7 @@
 .py-konsola {
   margin: 1em 0 1.4em;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: .35rem;
+  border-radius: var(--ui-promien, .35rem);
   background: var(--md-code-bg-color);
   overflow: hidden;
 }
@@ -619,7 +619,7 @@
   padding: 1.1em 1.3em;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-left: .25rem solid var(--rz-akcent);
-  border-radius: .35rem;
+  border-radius: var(--ui-promien, .35rem);
   background: var(--md-code-bg-color);
   color: var(--md-default-fg-color);
 }

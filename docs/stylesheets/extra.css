@@ -24,6 +24,8 @@
   --ui-promien-maly: 0.3rem;
   /* Szerokość paska akcentu przy callout — odpowiednik border-l-4. */
   --ui-pasek: 0.2rem;
+  /* Pasek akcentu przy callout — grubszy, jak w widżecie rozgrzewki. */
+  --ui-pasek-callout: 0.25rem;
   /* Krycie tła karty callout — kilka procent koloru typu domieszane do tła
      strony. Tyle wystarczy, żeby karta była widoczna, a nie krzyczała. */
   --ui-tlo-callout: 4.5%;
@@ -42,20 +44,25 @@
 }
 
 /* ═══════════════════════════ 1. Karty callout ═══════════════════════════
-   Material domyślnie rysuje ramkę dookoła całej karty i dokłada cień.
-   Zostawiamy wyłącznie pasek po lewej — reszta karty opiera się na tle
-   w kolorze typu, rozcieńczonym do kilku procent. Prawe rogi zaokrąglone,
-   lewe płaskie, żeby pasek czytał się jako pasek, a nie jako obwódka. */
+   Ten sam wygląd co widżet losowej rozgrzewki: cienka obwódka dookoła,
+   wyraźniejszy pasek akcentu po lewej i wszystkie cztery rogi zaokrąglone
+   (--ui-promien). Tło karty to kolor typu rozcieńczony do kilku procent,
+   bez cienia. */
 
 .md-typeset .admonition,
 .md-typeset details {
   /* akcent domyślny; poszczególne typy nadpisują go niżej */
   --ui-akcent: #448aff;
 
-  border-width: 0 0 0 var(--ui-pasek);
-  border-style: solid;
-  border-color: var(--ui-akcent);
-  border-radius: 0 var(--ui-promien) var(--ui-promien) 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: var(--ui-pasek-callout) solid var(--ui-akcent);
+  border-radius: var(--ui-promien);
+  /* Material i własne typy (karta, rozgrzewka) ustawiają border-color całej
+     ramce w kolorze typu — mocniejszym selektorem. Kolor typu ma zostać
+     tylko na pasku, więc trzy pozostałe boki wymuszamy. */
+  border-top-color: var(--md-default-fg-color--lightest) !important;
+  border-right-color: var(--md-default-fg-color--lightest) !important;
+  border-bottom-color: var(--md-default-fg-color--lightest) !important;
 
   background-color: var(--md-default-bg-color); /* zapas, gdyby color-mix nie zadziałał */
   background-color: color-mix(in srgb, var(--ui-akcent) var(--ui-tlo-callout), var(--md-default-bg-color));
