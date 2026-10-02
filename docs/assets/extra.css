@@ -614,6 +614,19 @@
   background-color: var(--rz-akcent);
 }
 
+/* Ramki zagnieżdżone w rozgrzewce („Odpowiedzi”) dostają jej pomarańczowy
+   akcent zamiast własnego koloru typu — pasek, tło, belka, ikona i strzałka.
+   Cała rozgrzewka zostaje w jednej palecie. Selektory z :is(...) muszą
+   przebić reguły Materiala dla typów (np. .success), które mają (0,3,1). */
+.md-typeset .rozgrzewka :is(.admonition, details) {
+  --ui-akcent: var(--rz-akcent);
+  border-left-color: var(--rz-akcent);
+}
+.md-typeset .rozgrzewka :is(.admonition, details) > :is(.admonition-title, summary)::before,
+.md-typeset .rozgrzewka :is(.admonition, details) > :is(.admonition-title, summary)::after {
+  background-color: var(--rz-akcent);
+}
+
 /* ------------------------------------------------------------
    Widżet losowej rozgrzewki i powtórki przed sprawdzianem
    ------------------------------------------------------------ */
