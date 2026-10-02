@@ -9,12 +9,18 @@
 
   let aktywnaNakladka = null;
 
+  // Powiększenie treści na tablicy. Zamiast podbijać rozmiary czcionek
+  // (ramki Materiala mają rozmiary w rem i rozjeżdżały się) skalujemy cały
+  // kontener przez `zoom` — ramki, kod, tabele i przyciski rosną razem.
+  function liczZoom() {
+    const z = Math.min(window.innerWidth / 1000, window.innerHeight / 560);
+    return Math.max(1, Math.min(2.2, z));
+  }
+
   function otworz(elementyInput, opcje) {
     opcje = opcje || {};
 
-    if (aktywnaNakladka && aktywnaNakladka.zamknij) {
-      aktywnaNakladka.zamknij();
-    }
+    if (aktywnaNakladka) aktywnaNakladka.zamknij();
 
     const tytul = opcje.tytul || "Tryb tablicy";
 
@@ -32,10 +38,13 @@
 
     document.body.style.overflow = "hidden";
 
+    // `md-typeset` jest konieczne: style ramek, kodu i przycisków Materiala
+    // (i nasze) działają tylko wewnątrz `.md-typeset`.
     const nakladka = document.createElement("div");
-    nakladka.className = "tb-nakladka";
+    nakladka.className = "tb-nakladka md-typeset";
     nakladka.setAttribute("role", "dialog");
     nakladka.setAttribute("aria-modal", "true");
+    nakladka.setAttribute("aria-label", tytul);
     nakladka.setAttribute("tabindex", "-1");
 
     nakladka.innerHTML = `
@@ -50,123 +59,63 @@
 
     const kontener = nakladka.querySelector(".tb-kontener");
     const btnZamknij = nakladka.querySelector(".tb-btn-zamknij");
+    const ustawZoom = () => { kontener.style.zoom = String(liczZoom()); };
+    ustawZoom();
 
     const przeniesioneObiekty = [];
 
-    if (elementy.length > 0) {
-      elementy.forEach((el) => {
-        if (!(el instanceof HTMLElement)) return;
+    elementy.forEach((el) => {
+      if (!(el instanceof HTMLElement)) return;
 
-        const placeHolder = document.createElement("span");
-        placeHolder.hidden = true;
-        placeHolder.dataset.tbMiejsce = "1";
-        el.before(placeHolder);
+      const placeHolder = document.createElement("span");
+      placeHolder.hidden = true;
+      placeHolder.dataset.tbMiejsce = "1";
+      el.before(placeHolder);
 
-        const savedDetailsStates = new Map();
-        const detailsList = el.querySelectorAll ? Array.from(el.querySelectorAll("details")) : [];
-        if (el.tagName === "DETAILS") detailsList.unshift(el);
+      // Zapamiętujemy stan wszystkich bloków, żeby po zamknięciu przywrócić
+      // stronę dokładnie do stanu sprzed otwarcia.
+      const savedDetailsStates = new Map();
+      const detailsList = Array.from(el.querySelectorAll("details"));
+      if (el.tagName === "DETAILS") detailsList.unshift(el);
 
-        detailsList.forEach((d) => {
-          savedDetailsStates.set(d, d.open);
+      detailsList.forEach((d) => {
+        savedDetailsStates.set(d, d.open);
+        if (d.classList.contains("pdp")) return;      // podpowiedzi: bez zmian
 
-          if (d === el) {
-            d.open = true;
-          } else {
-            const sum = d.querySelector(":scope > summary");
-            const sumText = sum ? sum.textContent.trim().toLowerCase() : "";
-            const isAnswerOrPred =
-              d.classList.contains("success") ||
-              sumText.startsWith("odpowiedzi") ||
-              sumText.startsWith("przewiduj");
+        const sum = d.querySelector(":scope > summary");
+        const sumText = sum ? sum.textContent.trim().toLowerCase() : "";
+        const toWynik =
+          sumText.startsWith("odpowied") ||          // „Odpowiedzi” w rozgrzewce
+          sumText.startsWith("przewiduj") ||         // „Przewiduj, potem sprawdź wynik”
+          sumText.startsWith("wynik") ||
+          sumText.startsWith("rozwiązanie");
 
-            if (isAnswerOrPred) {
-              d.open = false;
-            }
-          }
-        });
-
-        const pyKonsola = el.classList.contains("py-konsola") ? el : el.querySelector(".py-konsola");
-        let prevKonsolaDisplay = null;
-        if (pyKonsola) {
-          prevKonsolaDisplay = pyKonsola.style.display;
-          pyKonsola.style.display = "none";
-        }
-
-        kontener.appendChild(el);
-
-        przeniesioneObiekty.push({
-          el: el,
-          placeHolder: placeHolder,
-          savedDetailsStates: savedDetailsStates,
-          pyKonsola: pyKonsola,
-          prevKonsolaDisplay: prevKonsolaDisplay
-        });
+        if (toWynik) d.open = false;                 // wynik zawsze zwinięty
+        else if (d === el) d.open = true;            // ramka główna rozwinięta
       });
-    } else if (typeof elementyInput === "string") {
+
+      const konsole = el.classList.contains("py-konsola")
+        ? [el] : Array.from(el.querySelectorAll(".py-konsola"));
+      const prevKonsole = konsole.map((k) => k.style.display);
+      konsole.forEach((k) => { k.style.display = "none"; });
+
+      kontener.appendChild(el);
+
+      przeniesioneObiekty.push({ el, placeHolder, savedDetailsStates, konsole, prevKonsole });
+    });
+
+    if (!elementy.length && typeof elementyInput === "string") {
       kontener.innerHTML = elementyInput;
     }
 
     document.body.appendChild(nakladka);
-
-    setTimeout(() => {
-      try { nakladka.focus(); } catch (e) {}
-    }, 50);
+    setTimeout(() => { try { nakladka.focus(); } catch (e) {} }, 50);
 
     if (nakladka.requestFullscreen) {
       nakladka.requestFullscreen().catch(() => {});
     }
 
-    let isClosing = false;
-
-    function zamknij() {
-      if (isClosing) return;
-      isClosing = true;
-
-      if (document.fullscreenElement) {
-        document.exitFullscreen().catch(() => {});
-      }
-
-      document.body.style.overflow = prevBodyOverflow;
-
-      przeniesioneObiekty.forEach((item) => {
-        const { el, placeHolder, savedDetailsStates, pyKonsola, prevKonsolaDisplay } = item;
-
-        if (savedDetailsStates) {
-          savedDetailsStates.forEach((wasOpen, d) => {
-            d.open = wasOpen;
-          });
-        }
-
-        if (pyKonsola) {
-          pyKonsola.style.display = prevKonsolaDisplay || "";
-        }
-
-        if (placeHolder && placeHolder.parentNode) {
-          placeHolder.before(el);
-          placeHolder.remove();
-        }
-      });
-
-      if (nakladka.parentNode) {
-        nakladka.parentNode.removeChild(nakladka);
-      }
-
-      window.scrollTo(scrollX, scrollY);
-
-      if (prevFocus && typeof prevFocus.focus === "function") {
-        try { prevFocus.focus(); } catch (e) {}
-      }
-
-      aktywnaNakladka = null;
-
-      if (typeof opcje.poZamknieciu === "function") {
-        opcje.poZamknieciu();
-      }
-    }
-
-    aktywnaNakladka = { nakladka: nakladka, zamknij: zamknij };
-
-    btnZamknij.addEventListener("click", zamknij);
+    let zamknieta = false;
 
     const onKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -175,27 +124,53 @@
         zamknij();
       }
     };
-    document.addEventListener("keydown", onKeyDown, true);
-
     const onFSChange = () => {
-      if (!document.fullscreenElement && nakladka.parentNode) {
-        zamknij();
-      }
+      if (!document.fullscreenElement) zamknij();
     };
-    document.addEventListener("fullscreenchange", onFSChange);
 
-    const origZamknij = zamknij;
-    aktywnaNakladka.zamknij = () => {
+    function zamknij() {
+      if (zamknieta) return;
+      zamknieta = true;
+
       document.removeEventListener("keydown", onKeyDown, true);
       document.removeEventListener("fullscreenchange", onFSChange);
-      origZamknij();
-    };
+      window.removeEventListener("resize", ustawZoom);
 
-    return {
-      nakladka: nakladka,
-      kontener: kontener,
-      zamknij: aktywnaNakladka.zamknij
-    };
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
+
+      document.body.style.overflow = prevBodyOverflow;
+
+      przeniesioneObiekty.forEach(({ el, placeHolder, savedDetailsStates, konsole, prevKonsole }) => {
+        savedDetailsStates.forEach((wasOpen, d) => { d.open = wasOpen; });
+        konsole.forEach((k, i) => { k.style.display = prevKonsole[i] || ""; });
+        if (placeHolder.parentNode) {
+          placeHolder.before(el);
+          placeHolder.remove();
+        }
+      });
+
+      nakladka.remove();
+      window.scrollTo(scrollX, scrollY);
+
+      if (prevFocus && typeof prevFocus.focus === "function") {
+        try { prevFocus.focus({ preventScroll: true }); } catch (e) {}
+      }
+
+      if (aktywnaNakladka && aktywnaNakladka.nakladka === nakladka) aktywnaNakladka = null;
+
+      if (typeof opcje.poZamknieciu === "function") opcje.poZamknieciu();
+    }
+
+    btnZamknij.addEventListener("click", zamknij);
+    document.addEventListener("keydown", onKeyDown, true);
+    document.addEventListener("fullscreenchange", onFSChange);
+    window.addEventListener("resize", ustawZoom);
+
+    aktywnaNakladka = { nakladka, zamknij };
+
+    return { nakladka, kontener, zamknij };
   }
 
   function czyscTytul(str) {

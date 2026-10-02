@@ -102,14 +102,12 @@
       }
 
       if (window.Tablica && typeof window.Tablica.otworz === "function") {
-        host.classList.add("rz-tablica-mode");
-        btnTablica.textContent = "Zamknij";
+        // Bez klasy rz-tablica-mode: nakładka tablica.js sama powiększa treść
+        // i ma własny przycisk „Zamknij”.
 
         handleTablicy = window.Tablica.otworz(host, {
           tytul: "Losowa rozgrzewka i powtórka",
           poZamknieciu: () => {
-            host.classList.remove("rz-tablica-mode");
-            btnTablica.textContent = "Na tablicę";
             handleTablicy = null;
           }
         });

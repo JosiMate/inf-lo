@@ -112,6 +112,8 @@
         e.preventDefault();
         if (idx < pytania.length - 1) { idx++; renderView(); }
       } else if (e.key === " " || e.key === "Enter") {
+        // Na przycisku spacja/Enter mają go po prostu nacisnąć
+        if (e.target && e.target.closest && e.target.closest("button")) return;
         e.preventDefault();
         odslonieta[idx] = !odslonieta[idx];
         renderView();

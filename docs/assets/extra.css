@@ -971,9 +971,6 @@
   color: var(--ui-akcent, var(--rz-akcent));
 }
 
-.tb-kontener .tb-btn-ramka {
-  display: none !important;
-}
 .md-typeset .pdp-przycisk:focus-visible {
   outline: 2px solid var(--ui-akcent, var(--rz-akcent));
   outline-offset: 2px;
@@ -1074,32 +1071,39 @@
 }
 
 /* ------------------------------------------------------------
-   tryb Na tablicę (tablica.js, quiz.js, extra.css)
+   tryb Na tablicę (tablica.js, quiz.js, rozgrzewka-losowa.js)
+   Nakładka ma klasę md-typeset, więc ramki, kod i przyciski wyglądają jak
+   na stronie. Powiększenie robi `zoom` ustawiany w tablica.js (zależny od
+   rozmiaru ekranu), dlatego rozmiary poniżej są zwykłe, „stronowe”.
    ------------------------------------------------------------ */
 
-/* Przycisk "Na tablicę" przy ramkach i quizie */
-.tb-btn-ramka {
+/* Przycisk „Na tablicę” w tytule ramki */
+.md-typeset .tb-btn-ramka {
+  float: right;
   display: inline-flex;
   align-items: center;
   gap: .35em;
-  float: right;
-  margin-left: auto;
-  padding: .25em .65em;
+  margin: -.1rem 0 -.1rem .6rem;
+  padding: .15em .6em;
   font: inherit;
-  font-size: .68rem;
+  font-size: .62rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.5;
   border-radius: var(--ui-promien-maly, .25rem);
   border: 1px solid var(--md-default-fg-color--lighter);
   background: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
+  color: var(--md-default-fg-color--light);
   cursor: pointer;
   transition: background-color 120ms, border-color 120ms, color 120ms;
 }
-
-.tb-btn-ramka:hover {
+.md-typeset .tb-btn-ramka:hover,
+.md-typeset .tb-btn-ramka:focus-visible {
   border-color: var(--ui-akcent, var(--rz-akcent));
   color: var(--ui-akcent, var(--rz-akcent));
+}
+@media screen and (max-width: 600px) {
+  .md-typeset .tb-btn-ramka { font-size: 0; gap: 0; padding: .3em .45em; }
+  .md-typeset .tb-btn-ramka .tb-ikona-ekran { font-size: .7rem; }
 }
 
 .tb-ikona-ekran {
@@ -1117,188 +1121,153 @@
 }
 
 .qz-pasek-tablica {
-  margin-bottom: .8em;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: .8em;
 }
 
-/* Nakładka trybu tablicy */
-.tb-nakladka {
+/* Nakładka */
+.md-typeset.tb-nakladka {
   position: fixed;
   inset: 0;
   z-index: 9999;
   display: flex;
   flex-direction: column;
+  margin: 0;
   background: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
+  color: var(--md-typeset-color, var(--md-default-fg-color));
   overflow: hidden;
   box-sizing: border-box;
 }
-
 .tb-naglowek {
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .8rem 1.5rem;
+  gap: 1rem;
+  padding: .6rem 1.5rem;
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
   background: var(--md-code-bg-color);
-  flex: none;
 }
-
 .tb-tytul {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--md-default-fg-color);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
-.tb-btn-zamknij {
-  padding: .4em 1em;
-  font-size: .85rem;
-  font-weight: 700;
-}
-
+.md-typeset .tb-btn-zamknij { flex: none; font-size: .8rem; }
 .tb-tresc {
   flex: 1;
   overflow-y: auto;
-  padding: 1.8rem 1.5rem;
-  box-sizing: border-box;
+  padding: 1.2rem 1.5rem 2rem;
 }
-
 .tb-kontener {
-  max-width: 1400px;
+  max-width: 44rem;
   margin: 0 auto;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-  line-height: 1.5;
 }
-
-.tb-kontener pre,
-.tb-kontener code,
-.tb-kontener .highlight {
-  font-size: clamp(1rem, 1.8vw, 1.4rem);
-  line-height: 1.5;
-}
-
-.tb-kontener table {
-  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
-}
-
-.tb-kontener .admonition,
-.tb-kontener details {
-  margin: 1.2em 0;
-  font-size: inherit;
-}
+.tb-kontener > :first-child { margin-top: 0; }
+.tb-kontener .tb-btn-ramka,
+.tb-kontener .rz-btn-tablica { display: none !important; }
+/* Konsola Pythona jest na tablicy ukryta (tablica.js), więc pokazujemy
+   zwykły blok z kodem, który konsola na stronie zastępuje edytorem. */
+.tb-kontener .pyk-zrodlo { display: block; }
 
 /* Quiz na tablicy */
 .tb-quiz-widok {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: .7rem;
 }
-
 .tb-qz-naglowek {
-  font-size: clamp(.9rem, 1.5vw, 1.2rem);
+  font-size: .65rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .04em;
-  color: var(--md-accent-fg-color, var(--rz-akcent));
+  letter-spacing: .05em;
+  color: var(--md-default-fg-color--light);
 }
-
 .tb-qz-tresc {
-  font-size: clamp(1.3rem, 2.8vw, 2.2rem);
+  font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.35;
-  margin-bottom: .5rem;
 }
-
 .tb-qz-kafelki {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
-  margin: 1rem 0;
+  gap: .45rem;
 }
-
 .tb-kafelek {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.2rem;
-  border: 2px solid var(--md-default-fg-color--lighter);
+  gap: .75rem;
+  padding: .45rem .8rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: var(--ui-promien, .4rem);
-  background: var(--md-code-bg-color);
+  background: var(--md-default-bg-color);
   transition: background-color 150ms, border-color 150ms, opacity 150ms;
 }
-
 .tb-kafelek-litera {
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  background: var(--md-default-fg-color--lighter);
-  color: var(--md-default-bg-color);
-  font-size: 1.1rem;
+  background: var(--ui-akcent, var(--rz-akcent));
+  color: #fff;
+  font-size: .8rem;
   font-weight: 700;
-  flex: none;
 }
-
 .tb-kafelek-tresc {
   flex: 1;
   min-width: 0;
   overflow-wrap: anywhere;
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-size: .9rem;
   font-weight: 600;
 }
-
 .tb-kafelek-poprawny {
   border-color: #2e7d32;
-  background: rgba(46, 125, 50, .14);
+  background: color-mix(in srgb, #2e7d32 14%, var(--md-default-bg-color));
 }
-
-.tb-kafelek-poprawny .tb-kafelek-litera {
-  background: #2e7d32;
-  color: #ffffff;
-}
-
-.tb-kafelek-przygaszony {
-  opacity: 0.45;
-}
+.tb-kafelek-poprawny .tb-kafelek-litera { background: #2e7d32; }
+[data-md-color-scheme="slate"] .tb-kafelek-poprawny { border-color: #66bb6a; }
+[data-md-color-scheme="slate"] .tb-kafelek-poprawny .tb-kafelek-litera { background: #43a047; }
+.tb-kafelek-przygaszony { opacity: .4; }
 
 .tb-qz-odpowiedz-otwarta {
-  padding: 1.2rem 1.5rem;
-  border-left: .35rem solid #2e7d32;
-  background: rgba(46, 125, 50, .12);
+  padding: .7rem 1rem;
+  border-left: .25rem solid #2e7d32;
   border-radius: var(--ui-promien-maly, .3rem);
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  background: color-mix(in srgb, #2e7d32 12%, var(--md-default-bg-color));
+  font-size: .9rem;
 }
-
-.tb-qz-pusta-przestrzen {
-  min-height: 4rem;
-}
-
+.tb-qz-pusta-przestrzen { min-height: 3rem; }
 .tb-qz-wyjasnienie {
-  padding: 1rem 1.3rem;
+  padding: .6rem .9rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: var(--ui-promien-maly, .3rem);
   background: var(--md-code-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-size: .75rem;
 }
-
+/* Pasek przycisków zawsze widoczny u dołu ekranu, nawet przy długim pytaniu */
 .tb-qz-pasek {
+  position: sticky;
+  bottom: -2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .8rem;
-  margin-top: 1rem;
+  gap: .6rem;
+  padding: .5rem 0 2rem;
+  background: var(--md-default-bg-color);
 }
-
-.tb-qz-pasek button:disabled {
-  opacity: .45;
+.md-typeset .tb-qz-pasek .pdp-przycisk:disabled {
+  opacity: .4;
   cursor: not-allowed;
 }
 
 @media print {
-  .tb-btn-ramka,
+  .md-typeset .tb-btn-ramka,
   .qz-pasek-tablica,
   .tb-nakladka {
     display: none !important;
