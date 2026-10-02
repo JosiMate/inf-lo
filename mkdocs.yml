@@ -84,6 +84,8 @@ extra_javascript:
   - assets/js/podpowiedzi.js
   # Rozwiązanie krok po kroku (ramka !!! kroki z listą numerowaną).
   - assets/js/kroki.js
+  # Tryb »Prowadź lekcję« (prezentacja slajd po slajdzie ze strony tematu).
+  - assets/js/slajdy.js
 
 markdown_extensions:
   - abbr
