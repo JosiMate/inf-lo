@@ -23,7 +23,7 @@
     ??? success "Odpowiedzi"
 
         1. `None` — wynik pojawia się na ekranie, ale nie wraca do programu.
-        2. `34` i `7` — napisy się skleja, liczby dodaje.
+        2. `34` i `7` — `+` napisy skleja, a liczby dodaje.
         3. Tak — NC zakazuje tylko użytku komercyjnego, a BY wymaga podania autora, co robisz.
 
 !!! success "Kryteria sukcesu — sprawdź się na koniec lekcji"
@@ -285,6 +285,14 @@ print(wystapienia("ABRAKADABRA", "ABRA"))
 ```
 
 <div class="py-konsola"></div>
+
+??? success "Przewiduj, potem sprawdź wynik"
+
+    ```text
+    [0, 7]
+    ```
+
+    Wynik ten sam co z wycinkiem — zmienił się tylko sposób porównywania.
 
 W najgorszym razie przy każdym z `n − m + 1` ustawień trzeba porównać wszystkie
 `m` znaków — na przykład szukając `aaab` w tekście `aaaaaaaaab`. Dla długiego
@@ -555,46 +563,46 @@ oznaczone komentarzem `# TODO`.
     "pytanie": "Czym jest tekst[i:i + m] w algorytmie naiwnym?",
     "typ": "jedna",
     "opcje": [
-      "Fragmentem tekstu o długości m, zaczynającym się na pozycji i",
       "Znakiem na pozycji i + m",
       "Fragmentem od początku tekstu do pozycji i + m",
+      "Fragmentem m znaków tekstu od pozycji i",
       "Wzorcem przesuniętym o i miejsc"
     ],
-    "poprawna": 0,
+    "poprawna": 2,
     "wyjasnienie": "Wycinek obejmuje znaki od i do i + m − 1 — prawy koniec się nie liczy. To dokładnie ten fragment tekstu, który leży pod przyłożonym wzorcem."
   },
   {
     "pytanie": "Program zawiera warunek if zdanie.find(\"Ala\"): i wypisuje „nie ma”, choć zdanie zaczyna się od „Ala”. Dlaczego?",
     "typ": "jedna",
     "opcje": [
-      "find() zwraca 0, a zero w warunku znaczy tyle co fałsz",
       "find() rozróżnia wielkość liter",
       "find() zwraca -1, gdy wzorzec jest na początku",
-      "Warunek musi mieć nawiasy"
+      "Warunek musi mieć nawiasy wokół find()",
+      "find() zwraca 0, a 0 w warunku to fałsz"
     ],
-    "poprawna": 0,
+    "poprawna": 3,
     "wyjasnienie": "Wzorzec stoi na pozycji 0, więc find() zwraca 0 — a ono w warunku jest fałszem. Do pytania „czy jest” służy operator in albo porównanie find(...) != -1."
   },
   {
     "pytanie": "Jak sprawdzić, czy w tekście jest słowo „kot”, niezależnie od wielkości liter?",
     "typ": "jedna",
     "opcje": [
-      "\"kot\" in tekst.lower()",
       "\"kot\" in tekst",
       "tekst.find(\"KOT\") > 0",
+      "\"kot\" in tekst.lower()",
       "tekst.count(\"kot\") == 1"
     ],
-    "poprawna": 0,
+    "poprawna": 2,
     "wyjasnienie": "lower() zamienia cały tekst na małe litery, więc „Kot” i „KOT” stają się „kot”. Wzorzec też musi być zapisany małymi literami."
   },
   {
     "pytanie": "Dlaczego algorytm nazywa się naiwnym?",
     "typ": "jedna",
     "opcje": [
-      "Bo po każdym przesunięciu porównuje od nowa i nie wykorzystuje tego, co już sprawdził",
-      "Bo czasem nie znajduje wzorca",
-      "Bo działa tylko dla krótkich tekstów",
-      "Bo nie rozróżnia wielkości liter"
+      "Bo po każdym przesunięciu zaczyna porównywać od nowa",
+      "Bo czasem pomija wystąpienia na końcu tekstu",
+      "Bo działa poprawnie tylko dla krótkich tekstów",
+      "Bo nie rozróżnia wielkich i małych liter"
     ],
     "poprawna": 0,
     "wyjasnienie": "Algorytm naiwny jest poprawny — zawsze znajdzie wszystkie wystąpienia. Jest tylko rozrzutny: przesuwa wzorzec o jedno miejsce i zapomina, co porównał przy poprzednim ustawieniu."
