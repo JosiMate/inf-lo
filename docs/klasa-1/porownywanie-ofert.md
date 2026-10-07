@@ -7,25 +7,53 @@
 
     Dwa opakowania tego samego proszku, trzy oferty na ten sam telefon, dwa
     sklepy z tą samą listą zakupów. Każda strona pokazuje jedną ładną liczbę —
-    i żadna z tych liczb nie da się porównać z pozostałymi wprost.
+    i żadnej z tych liczb nie da się porównać z pozostałymi wprost.
 
-    Ta lekcja jest o tym, jak **sprowadzić oferty do wspólnej miary**, policzyć
+    Ten temat jest o tym, jak **sprowadzić oferty do wspólnej miary**, policzyć
     to w arkuszu tak, żeby dało się zmienić założenia jednym kliknięciem, i na
     koniec powiedzieć, czego policzona kwota **nie obejmuje**.
 
-!!! success "Cele lekcji"
+    ??? abstract "Plan dwóch lekcji"
 
-    Po tej lekcji potrafisz:
+        | Lekcja | Sekcje | Ćwiczenia |
+        | :---: | --- | --- |
+        | 1 | 1–3: wspólna miara, cena jednostkowa, koszt całkowity | 1–2 |
+        | 2 | 4–9: nazwy, lista rozwijana, `INDEKS` i `PODAJ.POZYCJĘ`, formatowanie warunkowe, `SUMA.ILOCZYNÓW`, wniosek | 3–5 |
 
-    1. wskazać, co trzeba wyrównać między ofertami, zanim zaczniesz je porównywać
-    2. policzyć **cenę jednostkową** i wyjaśnić, dlaczego większe opakowanie bywa droższe
-    3. policzyć **koszt całkowity** oferty ratalnej za ten sam okres
-    4. nadać komórce i zakresowi **nazwę** i użyć jej w formule zamiast adresu
-    5. ograniczyć wpisywanie **listą rozwijaną** przez poprawność danych
-    6. wskazać najlepszą ofertę funkcjami `MIN`, `INDEKS` i `PODAJ.POZYCJĘ`, a nie wzrokiem
-    7. podświetlić wynik **formatowaniem warunkowym**
-    8. policzyć cały koszyk jedną formułą `SUMA.ILOCZYNÓW`
-    9. napisać wniosek, który mówi też, czego ta liczba nie uwzględnia
+??? rozgrzewka "Na rozgrzewkę — 3 minuty, bez zaglądania"
+
+    Odpowiedz w zeszycie, zanim zaczniesz nowy temat. Odpowiedzi rozwiń
+    dopiero wtedy, gdy wszyscy skończą — nie liczą się do oceny.
+
+    1. **Z poprzedniej lekcji.** W `B2` jest tekst `Sklep A`. Co pokaże
+       `=JEŻELI(B2="Sklep A";100;200)`? A co, gdy w `B2` ktoś wpisze
+       `Sklep A` ze spacją na końcu?
+    2. **Sprzed kilku tygodni.** Formułę `=D5*$B$2` kopiujesz z wiersza 5
+       do wiersza 7. Jak będzie wyglądać w wierszu 7?
+    3. **Z dawniejszych tematów.** 250 g sera kosztuje 9 zł. Ile kosztuje
+       kilogram?
+
+    ??? success "Odpowiedzi"
+
+        1. **100**, a ze spacją na końcu — **200**. Dla arkusza „Sklep A ”
+           to inny tekst niż „Sklep A”, choć na ekranie wyglądają tak samo.
+           Dziś zrobisz listę rozwijaną, która takie pomyłki wyklucza.
+        2. `=D7*$B$2` — adres względny przesunął się o dwa wiersze, a `$B$2`
+           został na miejscu. Dziś w `B2` stanie liczba miesięcy umowy.
+        3. **36 zł** — kilogram to cztery razy po 250 g. To jest cena
+           jednostkowa; dziś policzy ją arkusz.
+
+!!! success "Kryteria sukcesu — sprawdź się na koniec tematu"
+
+    Po tym temacie:
+
+    1. Wskażę, co trzeba wyrównać między ofertami — ilość, okres, zakres — zanim zacznę je porównywać.
+    2. Policzę cenę jednostkową i koszt całkowity oferty ratalnej, biorąc okres z jednej komórki.
+    3. Nadam komórce i zakresowi nazwę i użyję jej w formule zamiast adresu.
+    4. Zrobię listę rozwijaną i powiem, przed jakim błędem chroni.
+    5. Wskażę najtańszą ofertę formułą z `MIN`, `INDEKS` i `PODAJ.POZYCJĘ` i podświetlę ją formatowaniem warunkowym.
+    6. Policzę cały koszyk jedną formułą `SUMA.ILOCZYNÓW`.
+    7. Napiszę wniosek: która oferta wygrywa, o ile i przy jakim założeniu.
 
 ## 1. Zanim policzysz: sprowadź oferty do wspólnej miary
 
@@ -46,9 +74,12 @@ potrzebujesz**.
 !!! tip "Dwie liczby, które w Polsce sprzedawca musi ci pokazać"
 
     Ustawa z 9 maja 2014 r. o informowaniu o cenach towarów i usług każe podać
-    obok ceny sprzedaży także **cenę jednostkową** — za litr, kilogram, metr,
-    metr kwadratowy albo sztukę (wolno też za 100 g czy 100 ml). Właśnie po to,
-    żeby dało się porównać opakowania różnej wielkości.
+    obok ceny sprzedaży także **cenę jednostkową**. Za jaką jednostkę — mówi
+    rozporządzenie w sprawie uwidaczniania cen: za litr, kilogram, metr, metr
+    kwadratowy albo sztukę. Inną jednostkę dziesiętną, na przykład 100 g, sklep
+    może przyjąć tylko wtedy, gdy uzasadnia to rodzaj towaru albo ilość,
+    w jakiej się go zwykle sprzedaje. Wszystko po to, żeby dało się porównać
+    opakowania różnej wielkości.
 
     Od początku 2023 roku przy każdej obniżce trzeba dodatkowo podać
     **najniższą cenę z 30 dni przed obniżką**. Dzięki temu widać, czy „−40%"
@@ -67,17 +98,31 @@ W arkuszu to jedna formuła skopiowana w dół:
 =C5/D5/10     to samo przeliczone na 100 g albo 100 ml
 ```
 
-| Produkt | Cena | Zawartość | Za kilogram |
-| --- | ---: | ---: | ---: |
-| Płatki owsiane, mała paczka | 4,29 zł | 0,5 kg | **8,58 zł** |
-| Płatki owsiane, duża paczka | 7,99 zł | 1 kg | **7,99 zł** |
-| Proszek do prania, mniejszy | 39,99 zł | 2,6 kg | **15,38 zł** |
-| Proszek do prania, większy | 71,99 zł | 4,5 kg | **16,00 zł** |
+| Produkt | Cena | Zawartość |
+| --- | ---: | ---: |
+| Płatki owsiane, mała paczka | 4,29 zł | 0,5 kg |
+| Płatki owsiane, duża paczka | 7,99 zł | 1 kg |
+| Proszek do prania, mniejszy | 39,99 zł | 2,6 kg |
+| Proszek do prania, większy | 71,99 zł | 4,5 kg |
 
-Przy płatkach większe opakowanie rzeczywiście się opłaca. Przy proszku —
-**nie**: kilogram z dużego pudełka kosztuje o 62 grosze więcej. Reguła „większe
-zawsze tańsze" jest regułą kciuka, a nie prawem natury; dlatego się to liczy,
-a nie zgaduje.
+!!! example "Przewiduj"
+
+    W obu parach większe opakowanie ma niższą cenę za kilogram? Zgadnij, zanim
+    policzysz — potem policz w pamięci albo na kalkulatorze.
+
+    ??? success "Przewiduj, potem sprawdź wynik"
+
+        | Produkt | Za kilogram |
+        | --- | ---: |
+        | Płatki owsiane, mała paczka | 8,58 zł |
+        | Płatki owsiane, duża paczka | **7,99 zł** |
+        | Proszek do prania, mniejszy | **15,38 zł** |
+        | Proszek do prania, większy | 16,00 zł |
+
+        Przy płatkach większe opakowanie rzeczywiście się opłaca. Przy proszku —
+        **nie**: kilogram z dużego pudełka kosztuje o 62 grosze więcej. Reguła
+        „większe zawsze tańsze” jest regułą kciuka, a nie prawem natury; dlatego
+        się to liczy, a nie zgaduje.
 
 !!! warning "Jednostki muszą być te same w całej kolumnie"
 
@@ -103,16 +148,29 @@ bezwzględnym. Dzięki temu zmiana okresu z 24 na 12 przelicza całą tabelę.
 
 Trzy oferty na ten sam telefon:
 
-| Oferta | Na start | Rata | Aktywacja | **Za 24 mies.** | **Za 12 mies.** |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| A. Tania rata | 0 zł | 79 zł | 49 zł | 1945 zł | **997 zł** |
-| B. Rabat na start | 299 zł | 59 zł | 0 zł | 1715 zł | 1007 zł |
-| C. Wszystko w cenie | 599 zł | 45 zł | 0 zł | **1679 zł** | 1139 zł |
+| Oferta | Na start | Rata | Aktywacja |
+| --- | ---: | ---: | ---: |
+| A. Tania rata | 0 zł | 79 zł | 49 zł |
+| B. Rabat na start | 299 zł | 59 zł | 0 zł |
+| C. Wszystko w cenie | 599 zł | 45 zł | 0 zł |
 
-Na dwa lata najtańsza jest oferta **C**. Na rok — **A**, a C jest najdroższa
-z całej trójki. To nie jest sztuczka z liczbami, tylko sedno sprawy: **ranking
-ofert zależy od okresu**, dla którego liczysz. Dlatego okres ustala się raz,
-na początku, i taki sam dla wszystkich ofert.
+!!! example "Przewiduj"
+
+    Która oferta jest najtańsza, gdy umowa trwa **24 miesiące**? A która, gdy
+    trwa **12 miesięcy**? Zapisz obie odpowiedzi, zanim rozwiniesz.
+
+    ??? success "Przewiduj, potem sprawdź wynik"
+
+        | Oferta | Za 24 mies. | Za 12 mies. |
+        | --- | ---: | ---: |
+        | A. Tania rata | 1945 zł | **997 zł** |
+        | B. Rabat na start | 1715 zł | 1007 zł |
+        | C. Wszystko w cenie | **1679 zł** | 1139 zł |
+
+        Na dwa lata najtańsza jest oferta **C**. Na rok — **A**, a C jest
+        najdroższa z całej trójki. To nie jest sztuczka z liczbami, tylko sedno
+        sprawy: **ranking ofert zależy od okresu**, dla którego liczysz. Dlatego
+        okres ustala się raz, na początku, i taki sam dla wszystkich ofert.
 
 !!! danger "RRSO porównuje się tylko przy tej samej kwocie i tym samym okresie"
 
@@ -166,13 +224,23 @@ Porównanie sypie się od literówki: `Sklep A` z dodatkową spacją na końcu t
 arkusza **inny tekst** niż `Sklep A`, więc `LICZ.JEŻELI` go nie znajdzie,
 a `PODAJ.POZYCJĘ` zwróci błąd. Lekarstwem jest niewpisywanie z ręki.
 
-**Dane → Poprawność danych** (tak samo w Calcu i w Excelu) → *Zezwalaj:*
-**Lista** albo **Zakres komórek** → wskaż zakres z dopuszczalnymi wartościami.
-W komórce pojawi się strzałka i lista do wyboru.
+=== "LibreOffice Calc"
 
-Na karcie **Komunikat o błędzie** warto ustawić *Zatrzymaj* — wtedy wartość
-spoza listy w ogóle nie wejdzie. Przy ustawieniu *Ostrzeżenie* wejdzie po
-potwierdzeniu, a to zwykle nie o to chodzi.
+    **Dane → Poprawność** → karta **Kryteria** → *Zezwalaj:* **Zakres
+    komórek** → w polu *Źródło* wskaż zakres z dopuszczalnymi wartościami.
+
+    Na karcie **Komunikat o błędzie** ustaw *Akcja:* **Zatrzymaj**.
+
+=== "Microsoft Excel"
+
+    **Dane → Poprawność danych** → karta **Ustawienia** → *Dozwolone:*
+    **Lista** → w polu *Źródło* wskaż zakres z dopuszczalnymi wartościami.
+
+    Na karcie **Alert o błędzie** ustaw *Styl:* **Zatrzymaj**.
+
+W komórce pojawi się strzałka i lista do wyboru. Ustawienie *Zatrzymaj*
+sprawia, że wartość spoza listy w ogóle nie wejdzie. Przy *Ostrzeżeniu*
+wejdzie po potwierdzeniu, a to zwykle nie o to chodzi.
 
 ## 6. Niech arkusz sam wskaże najlepszą ofertę
 
@@ -199,12 +267,25 @@ Oba zakresy — `Oferty` i `Koszty` — muszą mieć **tyle samo wierszy** i zac
 się w tym samym miejscu, bo inaczej pozycja z jednego wskaże nie ten wiersz
 w drugim.
 
+!!! example "Przewiduj"
+
+    Przy 24 miesiącach formuła pokazuje `C. Wszystko w cenie`. Zmieniasz `Okres`
+    na **12**. Co pokaże teraz `PODAJ.POZYCJĘ(MIN(Koszty); Koszty; 0)`, a co
+    cała formuła z `INDEKS`?
+
+    ??? success "Przewiduj, potem sprawdź wynik"
+
+        `MIN(Koszty)` da **997**, ta kwota stoi na **1.** pozycji zakresu, więc
+        `PODAJ.POZYCJĘ` zwróci `1`, a cała formuła — `A. Tania rata`. Nikt nie
+        poprawiał zwycięzcy ręcznie: przeliczył się razem z okresem.
+
 !!! warning "Remis i ręczne przepisywanie"
 
     Gdy dwie oferty wychodzą równo, `PODAJ.POZYCJĘ` zwróci **pierwszą z nich**
     i o drugiej nigdy się nie dowiesz. Dlatego obok warto trzymać `MAX(Koszty)`
     i różnicę `=MAX(Koszty)-MIN(Koszty)`: gdy różnica jest groszowa, ofert
-    praktycznie nie różnicuje cena i decydują inne rzeczy.
+    praktycznie nie różnicuje cena i decydują inne rzeczy. W polskim
+    LibreOffice funkcja `MAX` nazywa się `MAKS`.
 
     Nigdy nie wpisuj zwycięzcy ręcznie. Po zmianie okresu w `B2` nazwa
     przeliczy się sama — a ręcznie wpisany tekst zostanie taki, jaki był,
@@ -213,11 +294,24 @@ w drugim.
 ## 7. Formatowanie warunkowe — żeby wynik było widać
 
 Formatowanie warunkowe maluje komórkę wtedy, gdy warunek jest prawdziwy.
-Zaznacz kolumnę z kosztami i dodaj regułę typu **Formuła jest**:
+Zaznacz wiersze tabeli `A5:F7` (albo samą kolumnę kosztów `F5:F7`) i dodaj
+regułę z formułą:
 
 ```text
 =$F5=MIN($F$5:$F$7)
 ```
+
+=== "LibreOffice Calc"
+
+    **Format → Formatowanie warunkowe → Warunek…** → zamiast *Wartość komórki
+    jest* wybierz **Formuła jest**, wpisz formułę i w polu *Zastosuj styl*
+    wybierz **Nowy styl…** z zielonym tłem.
+
+=== "Microsoft Excel"
+
+    **Narzędzia główne → Formatowanie warunkowe → Nowa reguła** → **Użyj
+    formuły do określenia komórek, które należy sformatować** → wpisz formułę
+    → **Formatuj…** → karta **Wypełnienie**.
 
 Dolar przed kolumną (`$F5`) sprawia, że reguła zawsze patrzy na kolumnę F,
 a numer wiersza bez dolara przesuwa się wraz z kolejnymi komórkami zakresu —
@@ -245,9 +339,12 @@ Funkcja mnoży pierwszą liczbę z pierwszą, drugą z drugą i tak dalej, a wyn
 od razu dodaje. Jedna formuła zamiast kolumny plus sumy.
 
 Warunki są dwa: oba zakresy muszą mieć **dokładnie tyle samo komórek** (inaczej
-dostaniesz błąd) i muszą zawierać **liczby** — pusta komórka liczy się jak
-zero, ale wpisane „brak" albo cena z kropką zamiast przecinka zaniży wynik po
-cichu.
+dostaniesz błąd) i muszą zawierać **liczby**. Pusta komórka i wpisane „brak”
+liczą się jak zero. Cena z kropką zamiast przecinka jest gorsza: zostaje
+tekstem i liczy się jak zero albo arkusz bierze ją za datę — `3.05` to 3 maja,
+czyli liczba ponad 46 tysięcy. Wynik wychodzi wtedy po cichu za mały albo
+o wiele za duży. Liczba wpisana poprawnie stoi przy **prawej** krawędzi
+komórki.
 
 !!! tip "Kiedy mimo wszystko kolumna pomocnicza jest lepsza"
 
@@ -273,10 +370,26 @@ założeniu**. „Najtańsza jest C" to za mało. „Przy 24 ratach najtańsza j
 o 266 zł od najdroższej; przy 12 ratach wygrywa A, więc wybór zależy od tego,
 jak długo chcę być związany umową" — to jest odpowiedź.
 
+!!! warning "Najczęstsze błędy przy porównywaniu ofert"
+
+    | Objaw | Przyczyna | Co zrobić |
+    | --- | --- | --- |
+    | Cena za kilogram w jednym wierszu tysiąc razy za mała | w kolumnie gramy obok kilogramów | jedna jednostka w całej kolumnie, przeliczona przy wpisywaniu |
+    | Po zmianie okresu koszty się nie zmieniają | liczba miesięcy wpisana w formułę | `$B$2` albo nazwa `Okres` |
+    | Po skopiowaniu w dół koszty są przypadkowe | `B2` bez dolarów przesunął się na `B3`, `B4` | ++f4++ → `$B$2` albo nazwa |
+    | Na zielono jest jedna komórka albo wszystkie | w regule brak `$` przed `F` albo zakres `MIN` bez dolarów | `=$F5=MIN($F$5:$F$7)` |
+    | `SUMA.ILOCZYNÓW` zwraca błąd | zakresy różnej wielkości | oba zakresy od wiersza 5 do 12 |
+    | Suma koszyka dziwnie mała albo ogromna | cena z kropką: tekst albo data | przecinek; liczba stoi przy prawej krawędzi |
+    | `#N/D` przy szukaniu nazwy sklepu | literówka albo spacja na końcu tekstu | lista rozwijana zamiast wpisywania |
+    | Zwycięzca nie zmienia się po zmianie okresu | wpisany ręcznie | formuła z `INDEKS` i `PODAJ.POZYCJĘ` |
+
 ## Ćwiczenia
 
 Pobierz skoroszyt — dane są już wpisane, ty dodajesz formuły. Żółte komórki są
 do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
+
+Ćwiczenia 1 i 2 robi każdy — to wymagania na oceny 2–3 i pierwsza lekcja.
+Ćwiczenia 3–5 są na oceny 4–5 i na drugą lekcję.
 
 [:material-file-excel: Skoroszyt do ćwiczeń (.xlsx)](../pliki/arkusz-oferty-1a.xlsx){ .md-button .md-button--primary download="arkusz-oferty-1a.xlsx" }
 
@@ -298,6 +411,21 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
     Teraz wpisz w `B2` liczbę **12**. Jeżeli wyniki nie drgnęły, okres jest
     wklepany w formułę na sztywno. Zapisz, która oferta wygrywa teraz — i o ile.
 
+    ??? tip "Podpowiedź 1"
+
+        Koszt całkowity ma trzy składniki: opłatę na start, ratę razy liczbę
+        miesięcy i aktywację. Wszystkie są w wierszu 5 — oprócz liczby miesięcy,
+        która stoi w `B2`.
+
+    ??? tip "Podpowiedź 2"
+
+        Przy kopiowaniu w dół `B2` nie może się przesunąć: ++f4++ zamienia go
+        na `$B$2`. Zamiast dolarów możesz wpisać nazwę `Okres`.
+
+    ??? tip "Podpowiedź 3"
+
+        W `F5`: `=C5+D5*$B$2+E5` (albo `=C5+D5*Okres+E5`), skopiuj do `F7`.
+
 !!! note "Ćwiczenie 3. Nazwy i automatyczny werdykt — zakładka *Telefon*"
 
     Nazwij zakres z nazwami ofert `Oferty`, a zakres z kosztami `Koszty`
@@ -305,9 +433,27 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
 
     Wypełnij pole podsumowania pod tabelą: najniższy koszt, nazwa najtańszej
     oferty formułą z `INDEKS` i `PODAJ.POZYCJĘ`, oraz różnica między najdroższą
-    a najtańszą. Na koniec dodaj formatowanie warunkowe zaznaczające na zielono
-    wiersz z najniższym kosztem — i sprawdź, czy zielony przeskakuje, gdy
-    zmienisz `Okres` na 12.
+    a najtańszą. Na koniec zaznacz `A5:F7` i dodaj formatowanie warunkowe
+    zaznaczające na zielono wiersz z najniższym kosztem — i sprawdź, czy zielony
+    przeskakuje, gdy zmienisz `Okres` na 12.
+
+    ??? tip "Podpowiedź 1"
+
+        Zaznacz `A5:A7`, kliknij w **Pole nazwy**, wpisz `Oferty` i naciśnij
+        ++enter++. Tak samo `F5:F7` → `Koszty`. Najniższy koszt to jedna funkcja
+        na zakresie `Koszty`.
+
+    ??? tip "Podpowiedź 2"
+
+        Buduj od środka. Najpierw wpisz `=PODAJ.POZYCJĘ(MIN(Koszty);Koszty;0)`
+        i sprawdź, że przy 24 miesiącach daje `3`. Potem obłóż to funkcją
+        `INDEKS(Oferty; …)`. Różnica to `MAX` minus `MIN`.
+
+    ??? tip "Podpowiedź 3"
+
+        `B9`: `=MIN(Koszty)`, `B10`: `=INDEKS(Oferty;PODAJ.POZYCJĘ(MIN(Koszty);Koszty;0))`,
+        `B11`: `=MAX(Koszty)-MIN(Koszty)` (w Calcu `MAKS`). Regułę formatowania
+        przepisz z sekcji 7.
 
 !!! note "Ćwiczenie 4. Dwa sklepy, jeden koszyk — zakładka *Koszyk*"
 
@@ -319,6 +465,22 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
     z ośmiu** pozycji, a mimo to cały koszyk jest w nim droższy o 4,20 zł.
     Zapisz w jednym zdaniu, dlaczego liczenie pozycji zawodzi.
 
+    ??? tip "Podpowiedź 1"
+
+        Wartość koszyka to suma iloczynów *ilość × cena* dla każdej pozycji.
+        Ilości są w `C5:C12`, ceny sklepu A w `D5:D12`, sklepu B w `E5:E12`.
+
+    ??? tip "Podpowiedź 2"
+
+        `SUMA.ILOCZYNÓW(ilości; ceny)` — oba zakresy od wiersza 5 do 12. Jeśli
+        chcesz skopiować formułę w prawo, ilości zablokuj: `$C$5:$C$12`.
+
+    ??? tip "Podpowiedź 3"
+
+        W `D14`: `=SUMA.ILOCZYNÓW($C$5:$C$12;D5:D12)`, skopiuj do `E14`. Żeby
+        wyjaśnić wynik, policz przewagę sklepu B przy wodzie, serze i soku:
+        różnica ceny razy ilość.
+
 !!! note "Ćwiczenie 5. Wybór sklepu i koszt dojazdu — zakładka *Koszyk*"
 
     W komórce `B2` zrób listę rozwijaną z dwiema wartościami (poprawność danych,
@@ -329,6 +491,22 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
     w wierszu 16. Który sklep wygrywa teraz? Na koniec zmień koszt dojazdu do
     sklepu B tak, żeby obie sumy końcowe były równe — zapisz tę kwotę.
 
+    ??? tip "Podpowiedź 1"
+
+        Lista: zaznacz `B2` i ustaw poprawność danych ze źródłem `$H$4:$H$5`
+        (sekcja 5). W `D2`: jeżeli w `B2` stoi „Sklep A”, pokaż wartość koszyka
+        sklepu A, w przeciwnym razie — sklepu B.
+
+    ??? tip "Podpowiedź 2"
+
+        `=JEŻELI(B2="Sklep A";D14;E14)`. Suma końcowa to wartość koszyka plus
+        koszt dojazdu z wiersza 15.
+
+    ??? tip "Podpowiedź 3"
+
+        `D16`: `=D14+D15`, skopiuj do `E16`. Obie sumy są równe, gdy dojazd do
+        sklepu B kosztuje tyle, ile wynosi różnica `D16-E14`.
+
 ## Sprawdź się
 
 <div class="quiz" markdown="0">
@@ -336,7 +514,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
 [
   {
     "pytanie": "Opakowanie 0,3 l kosztuje 2,19 zł, a karton 1 l — 4,59 zł. Które jest tańsze w przeliczeniu na litr?",
-    "typ": "jedna",
     "opcje": [
       "Karton: 4,59 zł/l wobec 7,30 zł/l",
       "Butelka: 2,19 zł to mniej niż 4,59 zł",
@@ -348,7 +525,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "W kolumnie „Zawartość” jeden wiersz ma wpisane 150 (gramy), a pozostałe 0,4 i 1 (kilogramy). Co zrobi formuła =C5/D5 ?",
-    "typ": "jedna",
     "opcje": [
       "Zgłosi błąd #ARG!, bo jednostki się nie zgadzają",
       "Sama rozpozna gramy po wielkości liczby",
@@ -360,7 +536,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Oferta A: 0 zł na start, 79 zł rata, 49 zł aktywacji. Oferta C: 599 zł na start, 45 zł rata. Która jest tańsza?",
-    "typ": "jedna",
     "opcje": [
       "A — ma niższą opłatę początkową",
       "C — ma niższą ratę",
@@ -372,7 +547,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Liczba miesięcy stoi w komórce B2. Który zapis pozwoli przeliczyć całą tabelę po zmianie okresu?",
-    "typ": "jedna",
     "opcje": [
       "=C5 + D5*24 + E5",
       "=C5 + D5*$B$2 + E5",
@@ -384,7 +558,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Po co nadaje się komórce nazwę, skoro adres $B$2 działa tak samo?",
-    "typ": "jedna",
     "opcje": [
       "Nazwa przyspiesza przeliczanie arkusza",
       "Nazwa pozwala pominąć znak równości na początku formuły",
@@ -396,7 +569,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Co zwróci formuła =INDEKS(Oferty; PODAJ.POZYCJĘ(MIN(Koszty); Koszty; 0)) ?",
-    "typ": "jedna",
     "opcje": [
       "Nazwę oferty o najniższym koszcie",
       "Najniższy koszt spośród ofert",
@@ -408,7 +580,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Sklep A ma niższą cenę w pięciu z ośmiu pozycji koszyka, a mimo to cały koszyk jest w nim droższy. Jak to możliwe?",
-    "typ": "jedna",
     "opcje": [
       "To niemożliwe — ktoś pomylił się w formule",
       "Bo SUMA.ILOCZYNÓW pomija pierwszy wiersz zakresu",
@@ -416,11 +587,10 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
       "Bo liczy się nie liczba tańszych pozycji, tylko ilość razy różnica ceny"
     ],
     "poprawna": 3,
-    "wyjasnienie": "Trzy pozycje, w których tańszy jest sklep B, kupujemy w dużych ilościach, więc ich przewaga przeważa pięć drobnych oszczędności w sklepie A. Dlatego koszyk się liczy, a nie zlicza."
+    "wyjasnienie": "Liczy się różnica ceny razy kupowana ilość. Sklep B jest tańszy przy wodzie i soku, które kupujemy w dużych ilościach, i przy serze, gdzie różnica wynosi aż 6 zł na kilogramie. Te trzy pozycje dają mu 18 zł przewagi — więcej niż 13,80 zł z pięciu drobnych oszczędności w sklepie A. Dlatego koszyk się liczy, a nie zlicza."
   },
   {
     "pytanie": "Zakres Ilosci ma 8 komórek, a Ceny — 9. Co zrobi =SUMA.ILOCZYNÓW(Ilosci; Ceny) ?",
-    "typ": "jedna",
     "opcje": [
       "Policzy osiem par i dziewiątą cenę pominie",
       "Zgłosi błąd, bo zakresy mają różną wielkość",
@@ -432,7 +602,6 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
   },
   {
     "pytanie": "Zaznaczyłeś na zielono formatowaniem warunkowym wiersz z najniższym kosztem. Co jeszcze musi znaleźć się w opracowaniu?",
-    "typ": "jedna",
     "opcje": [
       "Nic — kolor jest wystarczającym wnioskiem",
       "Wykres kołowy z udziałem każdej oferty",
@@ -449,7 +618,8 @@ do wypełnienia, niebieskie liczby to dane wejściowe, które wolno zmieniać.
 ## Karta pracy
 
 Wypełnij kartę na tej stronie, a potem pobierz gotowy dokument Worda i oddaj
-go przez **Zadania domowe w dzienniku VULCAN**.
+go przez **Zadania domowe w dzienniku VULCAN**. Do zrzutów ekranu wystarczy
+klawisz ++print-screen++ albo ++win+shift+s++.
 
 <div class="kp-podsumowanie" data-karta="porownywanie-ofert"></div>
 
@@ -461,7 +631,11 @@ go przez **Zadania domowe w dzienniku VULCAN**.
 
 ---
 
-*Nazwy funkcji podane są w wersji polskiej. W angielskim interfejsie to kolejno
-`MIN`, `MAX`, `INDEX`, `MATCH`, `SUMPRODUCT` i `IF`. Ceny w skoroszycie są
-przykładowe i służą wyłącznie do ćwiczenia metody — do zadania z karty pracy
-zbierasz własne, aktualne.*
+*Nazwy funkcji podane są w polskiej wersji Excela (w polskim LibreOffice
+`MAX` to `MAKS`). W angielskim interfejsie to kolejno `MIN`, `MAX`, `INDEX`,
+`MATCH`, `SUMPRODUCT` i `IF`. Ceny w skoroszycie są przykładowe i służą
+wyłącznie do ćwiczenia metody — wyniki podane w ćwiczeniach policzono na tych
+danych, a do zadania z karty pracy zbierasz własne, aktualne. Przepisy o cenie
+jednostkowej: ustawa z 9 maja 2014 r. o informowaniu o cenach towarów i usług
+i rozporządzenie Ministra Rozwoju i Technologii z 19 grudnia 2022 r. w sprawie
+uwidaczniania cen towarów i usług. Stan sprawdzony 7 października 2026 r.*
