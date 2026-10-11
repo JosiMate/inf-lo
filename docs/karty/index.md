@@ -53,6 +53,16 @@ otwierasz, klikając nazwę tematu.
     "plik": "wyszukiwanie-wzorca",
     "tytul": "Klasa 2 · Wyszukiwanie wzorca w tekście",
     "url": "../klasa-2/wyszukiwanie-wzorca/#karta"
+  },
+  {
+    "plik": "przetwarzanie-napisow",
+    "tytul": "Klasa 2 · Przetwarzanie napisów",
+    "url": "../klasa-2/przetwarzanie-napisow/#karta"
+  },
+  {
+    "plik": "szyfrowanie",
+    "tytul": "Klasa 2 · Szyfrowanie i deszyfrowanie tekstu",
+    "url": "../klasa-2/szyfrowanie/#karta"
   }
 ]
 </script>

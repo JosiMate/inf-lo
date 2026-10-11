@@ -1,0 +1,171 @@
+{
+ "id": "inf-lo-szyfrowanie",
+ "tytul": "Szyfrowanie i deszyfrowanie tekstu",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-SZYFR",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Pojęcia i szyfr Cezara na kartce",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Sekcje 1–2 i ćwiczenie 1. Szyfrowanie na kartce rób bez komputera.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_jawny",
+       "Tekst jawny — co to jest",
+       ""
+      ],
+      [
+       "z1_szyfrogram",
+       "Szyfrogram — co to jest",
+       ""
+      ],
+      [
+       "z1_klucz",
+       "Klucz — co to jest i jaki jest w szyfrze Cezara",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_informatyka",
+       "INFORMATYKA zaszyfrowane kluczem 3 (na kartce)",
+       ""
+      ],
+      [
+       "z1_kot",
+       "NRW odszyfrowane kluczem 3",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Kody znaków",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Sekcja 3 i ćwiczenie 1.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "wiersze": 4,
+     "pytanie": "Przepisz program z ćwiczenia 1."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_ord",
+       "ord(\"A\"), ord(\"Z\"), ord(\"a\")",
+       ""
+      ],
+      [
+       "z2_chr",
+       "chr(67) i chr(ord(\"K\") + 1)",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Szyfrowanie w Pythonie",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenia 2 i 3.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod",
+     "wiersze": 14,
+     "pytanie": "Przepisz funkcje przesun() i szyfruj()."
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_reszta",
+     "wiersze": 3,
+     "pytanie": "Do czego w funkcji przesun() służy % 26? Co by się stało z literą Z i kluczem 3 bez niego?"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z3_zrzut",
+     "opis": "okienko z funkcją szyfruj() po kliknięciu ✓ Sprawdź"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Deszyfrowanie",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Sekcja 5 i ćwiczenie 4.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z4_kod",
+     "wiersze": 3,
+     "pytanie": "Przepisz funkcję deszyfruj()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_wiadomosc",
+       "NRQLHF ZBFLHFCNL odszyfrowane kluczem 3",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_minus",
+     "wiersze": 3,
+     "pytanie": "Dlaczego do odszyfrowania wystarczy wywołać szyfruj() z kluczem -k? Co robi z ujemnym numerem % 26?"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Łamanie szyfru",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Sekcje 6–7 i ćwiczenie 5.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 8,
+     "pytanie": "Przepisz funkcję zlam()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_klucz",
+       "Klucz dla VLCEVZHVL UFECZ H DLWT 12",
+       ""
+      ],
+      [
+       "z5_tekst",
+       "Odszyfrowana wiadomość",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_slaby",
+     "wiersze": 3,
+     "pytanie": "Podaj dwa powody, dla których szyfr Cezara jest słaby."
+    }
+   ]
+  }
+ ]
+}

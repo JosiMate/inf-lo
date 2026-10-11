@@ -4,13 +4,17 @@
     "prawo-w-sieci",
     "podstawy-pythona",
     "funkcje-obliczeniowe",
-    "wyszukiwanie-wzorca"
+    "wyszukiwanie-wzorca",
+    "przetwarzanie-napisow",
+    "szyfrowanie"
   ],
   "tytuly": {
     "prawo-w-sieci": "Prawo w sieci",
     "podstawy-pythona": "Podstawy pracy w środowisku Python",
     "funkcje-obliczeniowe": "Definiowanie funkcji obliczeniowych",
-    "wyszukiwanie-wzorca": "Wyszukiwanie wzorca w tekście"
+    "wyszukiwanie-wzorca": "Wyszukiwanie wzorca w tekście",
+    "przetwarzanie-napisow": "Przetwarzanie napisów",
+    "szyfrowanie": "Szyfrowanie i deszyfrowanie tekstu"
   },
   "pytania": [
     {
@@ -152,6 +156,70 @@
       "pytanie": "Co wycina wyrażenie tekst[i:i + m] z napisu tekst?",
       "odpowiedz": "Wycina fragment o długości m znaków, zaczynający się od indeksu i (od znaku i do i + m - 1).",
       "kod": "tekst[i:i + m]"
+    },
+    {
+      "id": "lo2-napisy-001",
+      "temat": "przetwarzanie-napisow",
+      "pytanie": "Co wypisze print(\"PYTHON\"[::-1])?",
+      "odpowiedz": "NOHTYP — wycinek z krokiem −1 odwraca napis.",
+      "kod": "print(\"PYTHON\"[::-1])"
+    },
+    {
+      "id": "lo2-napisy-002",
+      "temat": "przetwarzanie-napisow",
+      "pytanie": "Zmienna imie ma wartość \"ola\". Wykonujesz imie.upper(). Jaką wartość ma teraz imie?",
+      "odpowiedz": "Nadal \"ola\" — metody napisów zwracają nowy napis, a nie zmieniają oryginału. Trzeba zapisać imie = imie.upper().",
+      "kod": "imie.upper()"
+    },
+    {
+      "id": "lo2-napisy-003",
+      "temat": "przetwarzanie-napisow",
+      "pytanie": "Ile elementów ma lista \"Ala ma kota\".split()?",
+      "odpowiedz": "Trzy: ['Ala', 'ma', 'kota'].",
+      "kod": "\"Ala ma kota\".split()"
+    },
+    {
+      "id": "lo2-napisy-004",
+      "temat": "przetwarzanie-napisow",
+      "pytanie": "Jaki napis zbuduje pętla: wynik = \"\", for znak in \"abc\": wynik = znak + wynik?",
+      "odpowiedz": "\"cba\" — każdy znak trafia przed to, co już jest."
+    },
+    {
+      "id": "lo2-napisy-005",
+      "temat": "przetwarzanie-napisow",
+      "pytanie": "Co to jest palindrom i jak sprawdzić go w Pythonie jednym porównaniem?",
+      "odpowiedz": "Tekst czytany tak samo od przodu i od tyłu; t == t[::-1] po zamianie na małe litery i usunięciu spacji."
+    },
+    {
+      "id": "lo2-szyfr-001",
+      "temat": "szyfrowanie",
+      "pytanie": "Zaszyfruj szyfrem Cezara z kluczem 3 słowo KOT.",
+      "odpowiedz": "NRW — każda litera trzy miejsca dalej w alfabecie."
+    },
+    {
+      "id": "lo2-szyfr-002",
+      "temat": "szyfrowanie",
+      "pytanie": "Co wypisze print(ord(\"A\"), chr(66))?",
+      "odpowiedz": "65 B — ord() podaje kod znaku, chr() znak o danym kodzie.",
+      "kod": "print(ord(\"A\"), chr(66))"
+    },
+    {
+      "id": "lo2-szyfr-003",
+      "temat": "szyfrowanie",
+      "pytanie": "Po co w szyfrze Cezara jest działanie (numer + k) % 26?",
+      "odpowiedz": "Żeby po Z wrócić na początek alfabetu — reszta z dzielenia zawija numery 26, 27… na 0, 1…"
+    },
+    {
+      "id": "lo2-szyfr-004",
+      "temat": "szyfrowanie",
+      "pytanie": "Czym różni się deszyfrowanie od łamania szyfru?",
+      "odpowiedz": "Deszyfrowanie odbywa się przy znajomości klucza, łamanie — bez niego."
+    },
+    {
+      "id": "lo2-szyfr-005",
+      "temat": "szyfrowanie",
+      "pytanie": "Ile kluczy trzeba sprawdzić, żeby na pewno złamać szyfr Cezara?",
+      "odpowiedz": "25 — klucze od 1 do 25; klucz 26 nic nie zmienia."
     }
   ]
 }

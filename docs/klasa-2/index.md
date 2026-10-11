@@ -29,8 +29,9 @@ ciebie i nie ma nic wspólnego z ocenami.
 | **[Podstawy pracy w środowisku Python](podstawy-pythona.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Definiowanie funkcji obliczeniowych](funkcje-obliczeniowe.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Wyszukiwanie wzorca w tekście](wyszukiwanie-wzorca.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Przetwarzanie napisów | 1 | *w przygotowaniu* |
-| Szyfrowanie i deszyfrowanie tekstu | 2 | *w przygotowaniu* |
+| **[Przetwarzanie napisów](przetwarzanie-napisow.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
+| **[Szyfrowanie i deszyfrowanie tekstu](szyfrowanie.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
+| **[Wiesz, umiesz, zdasz — połowa działu II](powtorka-dzial-2-czesc-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Algorytm Euklidesa w praktyce | 1 | *w przygotowaniu* |
 | Badanie własności liczb całkowitych | 2 | *w przygotowaniu* |
 | Sortowanie bąbelkowe i przez wstawianie | 2 | *w przygotowaniu* |

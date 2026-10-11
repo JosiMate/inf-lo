@@ -1,0 +1,167 @@
+{
+ "id": "inf-lo-przetwarzanie-napisow",
+ "tytul": "Przetwarzanie napisów",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-NAPISY",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Wycinki i metody napisów",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Ćwiczenie 1 oraz przykłady z sekcji 1 i 4. Najpierw zapisz przewidywanie, dopiero potem uruchom.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_krok",
+       "Wynik \"PYTHON\"[::2] i \"PYTHON\"[::-1]",
+       ""
+      ],
+      [
+       "z1_strip",
+       "Wynik \"  jan kowalski  \".strip().title()",
+       ""
+      ],
+      [
+       "z1_split",
+       "Ile elementów ma \"Ala ma kota\".split() i jak wyglądają",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z1_kod",
+     "wiersze": 5,
+     "pytanie": "Przepisz swój program z ćwiczenia 1."
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Pętla po znakach",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ćwiczenie 2. Funkcja <code>ile_cyfr(tekst)</code>.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "wiersze": 7,
+     "pytanie": "Przepisz funkcję ile_cyfr()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_pokoj",
+       "ile_cyfr(\"Pokój 214, piętro 2\")",
+       ""
+      ],
+      [
+       "z2_tel",
+       "ile_cyfr(\"tel. 600 700 800\")",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_licznik",
+     "wiersze": 2,
+     "pytanie": "Co by się stało, gdyby licznik = 0 stał w środku pętli, a nie przed nią?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Inicjały",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ćwiczenie 3. Funkcja <code>inicjaly(osoba)</code>.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod",
+     "wiersze": 7,
+     "pytanie": "Przepisz funkcję inicjaly()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_wlasne",
+       "Twoje imię i nazwisko i wynik funkcji dla nich",
+       ""
+      ],
+      [
+       "z3_upper",
+       "Po co w funkcji jest upper()?",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Numer karty na paragonie",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 4. Funkcja <code>maskuj(numer)</code>.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z4_kod",
+     "wiersze": 5,
+     "pytanie": "Przepisz funkcję maskuj()."
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_krotki",
+     "wiersze": 3,
+     "pytanie": "Czy twoja funkcja działa dla numeru z trzema cyframi? Dlaczego?"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "okienko z funkcją maskuj() po kliknięciu ✓ Sprawdź"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Palindrom",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 5 i sekcja 5. Funkcja logiczna <code>czy_palindrom(tekst)</code> bez wycinka <code>[::-1]</code>.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 9,
+     "pytanie": "Przepisz funkcję czy_palindrom()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_przyklad",
+       "Twój palindrom z co najmniej dwóch wyrazów",
+       ""
+      ],
+      [
+       "z5_wynik",
+       "Wynik twojej funkcji dla niego",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_przygotowanie",
+     "wiersze": 3,
+     "pytanie": "Dlaczego tekst trzeba najpierw przygotować (lower(), replace()), a dopiero potem porównać z odwróceniem?"
+    }
+   ]
+  }
+ ]
+}
