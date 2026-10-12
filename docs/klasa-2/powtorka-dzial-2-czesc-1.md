@@ -1,4 +1,4 @@
-# Wiesz, umiesz, zdasz — połowa działu II
+# Podsumowanie materiału
 
 !!! abstract "O tym temacie"
 
