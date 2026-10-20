@@ -10,16 +10,16 @@
     się do jednej umiejętności: **napisać formułę raz i skopiować ją tak,
     żeby wszędzie działała poprawnie**.
 
-!!! success "Cele lekcji"
+!!! success "Kryteria sukcesu — sprawdź się na koniec tematu"
 
-    Po tej lekcji potrafisz:
+    Po tym temacie:
 
-    1. wskazać w arkuszu komórkę, zakres, wiersz, kolumnę i arkusz oraz odczytać adres komórki
-    2. rozróżnić dane liczbowe, tekstowe i daty oraz nadać im właściwy format
-    3. zastosować funkcje SUMA, ŚREDNIA, MIN, MAKS i JEŻELI do konkretnego zestawienia
-    4. napisać formułę z adresowaniem względnym i bezwzględnym i skopiować ją tak, żeby wszędzie liczyła poprawnie
-    5. dobrać typ wykresu do rodzaju danych i uzasadnić wybór
-    6. zinterpretować wynik obliczeń i ocenić, czy jest sensowny
+    1. Wskażę w arkuszu komórkę, zakres, wiersz, kolumnę i arkusz oraz odczytam adres komórki.
+    2. Rozpoznam po wyrównaniu, czy w komórce jest liczba, tekst czy data, i naprawię liczbę, która wkleiła się jako tekst.
+    3. Policzę zestawienie funkcjami `SUMA`, `ŚREDNIA`, `MIN`, `MAX` i `ZAOKR`.
+    4. Napiszę formułę raz i skopiuję ją tak, żeby wszędzie liczyła poprawnie — z adresem bezwzględnym (`$`) tam, gdzie odwołuję się do jednej komórki.
+    5. Dobiorę typ wykresu do danych i uzasadnię wybór.
+    6. Ocenię, czy wynik ma sens: zauważę wartość odstającą i powiem, jak zmienia ona średnią.
 
 ## 1. Z czego składa się arkusz
 

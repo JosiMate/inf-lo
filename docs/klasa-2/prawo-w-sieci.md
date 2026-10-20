@@ -10,16 +10,16 @@
     umieć rozstrzygnąć konkretne pytanie: *czy mogę użyć tego zdjęcia
     w swojej pracy i co muszę przy nim napisać*.
 
-!!! success "Cele lekcji"
+!!! success "Kryteria sukcesu — sprawdź się na koniec tematu"
 
-    Po tej lekcji potrafisz:
+    Po tym temacie:
 
-    1. rozstrzygnąć, czy dany materiał jest utworem w rozumieniu prawa autorskiego
-    2. odróżnić prawa osobiste od majątkowych i wskazać, które z nich wygasają
-    3. zastosować dozwolony użytek osobisty i edukacyjny do konkretnej sytuacji
-    4. rozpoznać licencje Creative Commons i powiedzieć, na co pozwala każdy z ich warunków
-    5. opisać źródło wykorzystanego materiału tak, aby spełnić wymagania licencji
-    6. wskazać, co w prawie autorskim zmieniła nowelizacja z 2024 roku
+    1. Rozstrzygnę, czy dany materiał jest utworem, i uzasadnię to jednym zdaniem.
+    2. Odróżnię prawa osobiste od majątkowych i powiem, które z nich wygasają.
+    3. Ocenię, czy w konkretnej sytuacji mogę skorzystać z dozwolonego użytku osobistego, prawa cytatu albo domeny publicznej.
+    4. Odczytam licencję Creative Commons i powiem, na co pozwala każdy jej warunek.
+    5. Podpiszę wykorzystane zdjęcie zgodnie z licencją: autor, tytuł, licencja, odnośnik.
+    6. Wskażę, co w prawie autorskim zmieniła nowelizacja z 2024 roku.
 
 ## 1. Co jest utworem
 

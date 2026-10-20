@@ -25,19 +25,17 @@
         2. Podać autora — i dobrze też tytuł, licencję oraz odnośnik. BY to uznanie autorstwa.
         3. „zaliczone” — warunek `>=` obejmuje także samą granicę. Za chwilę zapiszesz to samo w Pythonie, w funkcji.
 
-!!! success "Cele lekcji"
+!!! success "Kryteria sukcesu — sprawdź się na koniec tematu"
 
-    Po tej lekcji potrafisz:
+    Po tym temacie:
 
-    1. zdefiniować własną funkcję instrukcją `def` i poprawnie ją wciąć
-    2. przekazać do funkcji dane przez parametry i wywołać ją z argumentami
-    3. zwrócić wynik instrukcją `return` i użyć go w dalszych obliczeniach
-    4. wyjaśnić, czym różni się `return` od `print()` i co to znaczy, że funkcja zwraca `None`
-    5. rozpoznać zmienną lokalną i wyjaśnić, dlaczego nie widać jej poza funkcją
-    6. zastosować wartość domyślną parametru
-    7. umieścić w funkcji instrukcję warunkową i zwrócić różny wynik w zależności od danych
-    8. skorzystać z funkcji wbudowanych oraz z modułu `math`
-    9. sprawdzić własną funkcję na kilku danych, w tym na przypadku brzegowym
+    1. Zdefiniuję funkcję instrukcją `def` z parametrami i poprawnym wcięciem.
+    2. Wywołam funkcję z argumentami i użyję wyniku zwróconego przez `return` w dalszych obliczeniach.
+    3. Wyjaśnię różnicę między `return` a `print()` i powiem, skąd w wyniku bierze się `None`.
+    4. Wyjaśnię, dlaczego zmiennej lokalnej nie widać poza funkcją.
+    5. Zastosuję wartość domyślną parametru.
+    6. Napiszę funkcję z warunkiem i sprawdzę ją na wartościach granicznych progów.
+    7. Skorzystam z funkcji wbudowanych i z modułu `math`.
 
 !!! tip "Przykłady uruchomisz na tej stronie"
 

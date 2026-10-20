@@ -10,17 +10,16 @@
     wyniku, wczytanie danych od użytkownika i **przeczytanie komunikatu
     o błędzie zamiast zgadywania**. Na tym stoi wszystko, co będzie dalej.
 
-!!! success "Cele lekcji"
+!!! success "Kryteria sukcesu — sprawdź się na koniec tematu"
 
-    Po tej lekcji potrafisz:
+    Po tym temacie:
 
-    1. uruchomić program w środowisku Pythona i zapisać swoją pracę jako plik `.py`
-    2. odróżnić tryb interaktywny (konsolę) od skryptu i wiedzieć, kiedy który jest wygodniejszy
-    3. wypisać dane na ekran instrukcją `print()` i wczytać je instrukcją `input()`
-    4. utworzyć zmienną, rozpoznać typ `int`, `float` i `str` oraz przekształcić jeden w drugi
-    5. użyć operatorów arytmetycznych, w tym `//`, `%` i `**`
-    6. odczytać komunikat o błędzie: wskazać numer wiersza i rodzaj błędu, a potem go poprawić
-    7. opisać kod komentarzem
+    1. Uruchomię kod w konsoli i w skrypcie, powiem, kiedy wygodniejszy jest który tryb, i zapiszę pracę jako plik `.py`.
+    2. Wypiszę dane instrukcją `print()` i wczytam je instrukcją `input()`.
+    3. Utworzę zmienne typów `int`, `float` i `str` i zamienię tekst z `input()` na liczbę.
+    4. Użyję operatorów arytmetycznych, w tym `//`, `%` i `**`, i przewidzę ich wynik.
+    5. Odczytam komunikat o błędzie — numer wiersza i rodzaj błędu — i poprawię program.
+    6. Opiszę swój kod komentarzem.
 
 ## 1. Środowisko — startujemy w przeglądarce
 
