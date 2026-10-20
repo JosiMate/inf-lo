@@ -211,7 +211,7 @@
     if (host.dataset.gotowe) return;
     host.dataset.gotowe = "1";
     let dane = {};
-    try { dane = JSON.parse(host.querySelector("script[type='application/json']").textContent); } catch { /* domyślne */ }
+    try { dane = JSON.parse(host.querySelector("script[type='application/json'], script:not([src])").textContent); } catch { /* domyślne */ }
     const tryby = (dane.tryby || ["naiwny", "kmp", "horspool"]).filter((t) => ALG[t]);
     zbuduj(host, tryby);
 
