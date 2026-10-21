@@ -22,7 +22,7 @@ i wymagania na poszczególne oceny.
 
     Arkusz kalkulacyjny, grafika wektorowa i rastrowa, edytor tekstu.
 
-    23 tematy · 30 godzin · gotowe 5 materiałów
+    23 tematy · 30 godzin · gotowe 7 materiałów
 
     [:material-format-list-bulleted: Tematy](klasa-1/index.md){ .md-button .md-button--primary }
     [:material-clipboard-check: Wymagania](klasa-1/wymagania-i-bhp.md){ .md-button }

@@ -28,7 +28,7 @@ def parse_nav_yml(nav_path):
     """
     Prosty parser .nav.yml do odczytania wpisów w sekcji nav:
     - "Tytuł": plik.md
-    Pomija index.md, wymagania-i-bhp.md i strony powtórek (powtorka-*.md).
+    Pomija index.md, wymagania-i-bhp.md i strony powtórek oraz kart podsumowujących (powtorka-*.md, podsumowanie-*.md).
     """
     tematy = []
     if not os.path.exists(nav_path):
@@ -49,7 +49,7 @@ def parse_nav_yml(nav_path):
                 if match:
                     md_file = match.group(1)
                     slug = md_file.replace(".md", "")
-                    if slug not in ("index", "wymagania-i-bhp") and not slug.startswith("powtorka"):
+                    if slug not in ("index", "wymagania-i-bhp") and not slug.startswith(("powtorka", "podsumowanie")):
                         tematy.append(slug)
     return tematy
 
@@ -57,7 +57,7 @@ def parse_nav_yml(nav_path):
 def find_extra_md_files(klasa_dir, nav_tematy):
     """
     Wyszukuje pliki .md w katalogu klasy spoza nav_tematy
-    (z wyjątkiem index.md, wymagania-i-bhp.md i powtorka-*.md), posortowane alfabetycznie.
+    (z wyjątkiem index.md, wymagania-i-bhp.md, powtorka-*.md i podsumowanie-*.md), posortowane alfabetycznie.
     Odtwarza działanie append_unmatched: true.
     """
     extra = []
@@ -67,7 +67,7 @@ def find_extra_md_files(klasa_dir, nav_tematy):
     for fname in sorted(os.listdir(klasa_dir)):
         if fname.endswith(".md"):
             slug = fname[:-3]
-            if slug in ("index", "wymagania-i-bhp") or slug.startswith("powtorka"):
+            if slug in ("index", "wymagania-i-bhp") or slug.startswith(("powtorka", "podsumowanie")):
                 continue
             if slug not in nav_tematy:
                 extra.append(slug)

@@ -1,0 +1,249 @@
+{
+ "id": "inf-lo-zakupy-grupowe",
+ "tytul": "Zakupy grupowe z arkuszem",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "ZAKUPY",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Wspólne zamówienie",
+   "poziom": "wymagania konieczne i podstawowe · oceny 2–3",
+   "polecenie": "Ćwiczenie 1, zakładka <em>Zamówienia</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_formula",
+       "Formuła z kolumny „Wartość”",
+       "przepisz z wiersza 5"
+      ],
+      [
+       "z1_suma",
+       "Suma całego zamówienia (F20)",
+       ""
+      ],
+      [
+       "z1_zrodlo",
+       "Źródło listy rozwijanej w kolumnie „Osoba”",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z1_dlaczego",
+     "wiersze": 2,
+     "pytanie": "Dlaczego zakresy obejmują także puste wiersze 17–19?"
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Kto ile zamówił",
+   "poziom": "wymagania podstawowe i rozszerzające · oceny 3–4",
+   "polecenie": "Ćwiczenie 2, zakładka <em>Rozliczenie</em>. Wpisz wyniki <strong>po</strong> poprawieniu błędnego wiersza.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_licz",
+       "Formuła z kolumny „Liczba pozycji” dla Oli",
+       "przepisz z wiersza 9"
+      ],
+      [
+       "z2_suma",
+       "Formuła z kolumny „Wartość towaru” dla Oli",
+       ""
+      ],
+      [
+       "z2_przed",
+       "Ile wynosiło D13 przed poprawką",
+       ""
+      ],
+      [
+       "z2_wiersz",
+       "Numer wiersza w Zamówieniach, w którym był błąd, i co było nie tak",
+       ""
+      ],
+      [
+       "z2_kuba",
+       "Wartość towaru Kuby po poprawce",
+       ""
+      ],
+      [
+       "z2_maja",
+       "Ile sztuk zamówiła Maja",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_kontrola",
+     "wiersze": 2,
+     "pytanie": "Po co liczy się sumę kontrolną, skoro każda formuła „działa”?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Dostawa i rabat",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 3, zakładka <em>Rozliczenie</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_dostawa",
+       "Formuła z komórki B16 (dostawa)",
+       ""
+      ],
+      [
+       "z3_rabat",
+       "Formuła z komórki B17 (rabat)",
+       ""
+      ],
+      [
+       "z3_faktura",
+       "Faktura sklepu (B18)",
+       ""
+      ],
+      [
+       "z3_390",
+       "Faktura po zmianie progu w B4 na 390",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_rowne",
+     "wiersze": 2,
+     "pytanie": "Dlaczego w warunku dostawy jest >=, a nie >?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Podział kosztów",
+   "poziom": "wymagania rozszerzające i dopełniające · oceny 4–5",
+   "polecenie": "Ćwiczenie 4, zakładka <em>Rozliczenie</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_udzial",
+       "Formuła z kolumny „Udział w dostawie”",
+       ""
+      ],
+      [
+       "z4_ola",
+       "Do zapłaty — Ola",
+       ""
+      ],
+      [
+       "z4_kuba",
+       "Do zapłaty — Kuba",
+       ""
+      ],
+      [
+       "z4_maja",
+       "Do zapłaty — Maja",
+       ""
+      ],
+      [
+       "z4_szymon",
+       "Do zapłaty — Szymon",
+       ""
+      ],
+      [
+       "z4_roznica",
+       "Wynik w B19",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_grosz",
+     "wiersze": 3,
+     "pytanie": "Skąd wziął się grosz w B19 i jak byś go rozliczył? Napisz, kto płaci i ile."
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Saldo i jeden długopis",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 5, obie zakładki.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_regula",
+       "Formuła reguły formatowania warunkowego",
+       ""
+      ],
+      [
+       "z5_dluznicy",
+       "Kto jest na czerwono i ile jest winien",
+       ""
+      ],
+      [
+       "z5_faktura",
+       "Faktura po dopisaniu długopisu dla Szymona",
+       ""
+      ],
+      [
+       "z5_szymon",
+       "Ile teraz zapłaci Szymon",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z5_zrzut",
+     "opis": "zakładka Rozliczenie po dopisaniu długopisu, z widocznymi saldami"
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_wniosek",
+     "wiersze": 4,
+     "pytanie": "Czy grupa powinna dobrać coś do koszyka, gdy brakuje niewiele do progu darmowej dostawy? Uzasadnij liczbami z arkusza i napisz, przy jakim założeniu to się nie opłaca."
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_poziom",
+     "pytanie": "Gdybyś jutro organizował zakupy grupowe dla klasy, arkusz rozliczenia przygotowałbyś",
+     "opcje": [
+      "samodzielnie, od początku do końca",
+      "samodzielnie, ale z zaglądaniem do materiału",
+      "z pomocą nauczyciela",
+      "jeszcze nie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_trudne",
+     "wiersze": 3,
+     "pytanie": "Co sprawiło największy kłopot i jak sobie z tym poradziłeś?"
+    }
+   ]
+  }
+ ]
+}

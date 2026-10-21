@@ -4,13 +4,15 @@
     "bezpieczna-praca",
     "podstawy-arkusza",
     "instrukcje-warunkowe",
-    "porownywanie-ofert"
+    "porownywanie-ofert",
+    "zakupy-grupowe"
   ],
   "tytuly": {
     "bezpieczna-praca": "Bezpieczna praca z komputerem",
     "podstawy-arkusza": "Podstawy pracy z arkuszem",
     "instrukcje-warunkowe": "Stosowanie instrukcji warunkowych",
-    "porownywanie-ofert": "Porównywanie ofert w arkuszu"
+    "porownywanie-ofert": "Porównywanie ofert w arkuszu",
+    "zakupy-grupowe": "Zakupy grupowe z arkuszem"
   },
   "pytania": [
     {
@@ -151,6 +153,41 @@
       "temat": "porownywanie-ofert",
       "pytanie": "Jakie narzędzie w arkuszu pozwala automatycznie podświetlić kolorem najtańszą ofertę w tabeli?",
       "odpowiedz": "Formatowanie warunkowe z regułą opartą na formule porównującej koszt z funkcją MIN.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-zakupy-001",
+      "temat": "zakupy-grupowe",
+      "pytanie": "Dlaczego przy wspólnym zamówieniu lepiej mieć jedną tabelę z kolumną „Osoba” niż osobną tabelkę dla każdego?",
+      "odpowiedz": "Bo jedną formułą z warunkiem (SUMA.JEŻELI) policzysz każdego, a nowa osoba to tylko nowe wiersze — nie trzeba przerabiać formuł.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-zakupy-002",
+      "temat": "zakupy-grupowe",
+      "pytanie": "W kolumnie „Osoba” ktoś wpisał „Kuba ” ze spacją na końcu. Co się stanie z sumą Kuby liczoną funkcją SUMA.JEŻELI?",
+      "odpowiedz": "Ta pozycja wypadnie z sumy Kuby — dla arkusza „Kuba ” to inny tekst niż „Kuba”. Chroni przed tym lista rozwijana i suma kontrolna.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-zakupy-003",
+      "temat": "zakupy-grupowe",
+      "pytanie": "Co zwróci formuła =ZAOKR(24,99/4;2) i ile razem zbiorą cztery osoby, jeśli każda zapłaci tyle?",
+      "odpowiedz": "6,25 zł; razem 25,00 zł — o grosz więcej, niż kosztuje dostawa.",
+      "kod": "=ZAOKR(24,99/4;2)"
+    },
+    {
+      "id": "lo1-zakupy-004",
+      "temat": "zakupy-grupowe",
+      "pytanie": "Darmowa dostawa jest od 400 zł, wartość zamówienia stoi w B15, próg w B4, a koszt dostawy w B3. Jak wygląda formuła dostawy?",
+      "odpowiedz": "=JEŻELI(B15>=B4;0;B3) — znak >=, bo zamówienie za dokładnie 400 zł też ma darmową dostawę.",
+      "kod": "=JEŻELI(B15>=B4;0;B3)"
+    },
+    {
+      "id": "lo1-zakupy-005",
+      "temat": "zakupy-grupowe",
+      "pytanie": "Wpłacono 100 zł, do zapłaty jest 115,56 zł. Jakie jest saldo, liczone jako wpłacono minus do zapłaty, i co oznacza jego znak?",
+      "odpowiedz": "−15,56 zł — liczba ujemna oznacza, że osoba jest jeszcze winna tyle pieniędzy.",
       "kod": ""
     }
   ]

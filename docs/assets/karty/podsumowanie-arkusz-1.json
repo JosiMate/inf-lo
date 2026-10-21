@@ -1,0 +1,223 @@
+{
+ "id": "inf-lo-podsumowanie-arkusz-1",
+ "tytul": "Karta pracy — arkusz kalkulacyjny, część 1",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "ARKUSZ-1",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Ile kosztuje wyjazd",
+   "poziom": "wymagania konieczne · ocena 2 · ok. 5 minut",
+   "polecenie": "Zadanie 1, zakładka <em>Koszty</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_formula",
+       "Formuła z komórki C6",
+       "przepisz dokładnie"
+      ],
+      [
+       "z1_suma",
+       "Koszt dla całej klasy (C10)",
+       ""
+      ],
+      [
+       "z1_osoba",
+       "Koszt na jedną osobę (B10)",
+       ""
+      ],
+      [
+       "z1_max",
+       "Najdroższa pozycja na osobę (B11)",
+       ""
+      ],
+      [
+       "z1_20",
+       "Koszt dla klasy po zmianie B3 na 20",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Kto już wpłacił",
+   "poziom": "wymagania podstawowe · ocena 3 · ok. 8 minut",
+   "polecenie": "Zadanie 2, zakładka <em>Wpłaty</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_status",
+       "Formuła z komórki C6 (status)",
+       ""
+      ],
+      [
+       "z2_brakuje",
+       "Formuła z komórki D6 (brakuje)",
+       ""
+      ],
+      [
+       "z2_suma",
+       "Suma wpłat",
+       ""
+      ],
+      [
+       "z2_rozliczonych",
+       "Liczba rozliczonych",
+       ""
+      ],
+      [
+       "z2_razem",
+       "Brakuje razem",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_uczen9",
+     "wiersze": 2,
+     "pytanie": "Uczeń 9 wpłacił więcej, niż trzeba. Co pokazuje dla niego Twoja kolumna „Brakuje” i czy to dobrze?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Który przewoźnik",
+   "poziom": "wymagania rozszerzające · ocena 4 · ok. 10 minut",
+   "polecenie": "Zadanie 3, zakładka <em>Przewoźnicy</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_formula",
+       "Formuła z komórki E7 (koszt całkowity)",
+       ""
+      ],
+      [
+       "z3_auto",
+       "Auto-Tour — koszt całkowity",
+       ""
+      ],
+      [
+       "z3_szybki",
+       "Szybki Bus — koszt całkowity",
+       ""
+      ],
+      [
+       "z3_mikro",
+       "Mikrobus Max — koszt całkowity",
+       ""
+      ],
+      [
+       "z3_nazwa",
+       "Formuła z komórki B12",
+       ""
+      ],
+      [
+       "z3_zwyciezca",
+       "Najtańszy przewoźnik i koszt na osobę",
+       ""
+      ],
+      [
+       "z3_24",
+       "Kto wygrywa przy 24 osobach",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z3_zrzut",
+     "opis": "zakładka Przewoźnicy z zielonym wierszem najtańszej oferty"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Kto komu oddaje",
+   "poziom": "wymagania dopełniające · ocena 5 · ok. 12 minut",
+   "polecenie": "Zadanie 4, zakładka <em>Wydatki</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_formula",
+       "Formuła z komórki B16 (wydał)",
+       ""
+      ],
+      [
+       "z4_udzial",
+       "Udział jednej osoby",
+       ""
+      ],
+      [
+       "z4_zosia",
+       "Saldo — Zosia",
+       ""
+      ],
+      [
+       "z4_antek",
+       "Saldo — Antek",
+       ""
+      ],
+      [
+       "z4_lena",
+       "Saldo — Lena",
+       ""
+      ],
+      [
+       "z4_wiktor",
+       "Saldo — Wiktor",
+       ""
+      ],
+      [
+       "z4_suma",
+       "Suma sald (D20)",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_kto",
+     "wiersze": 4,
+     "pytanie": "Kto komu i ile oddaje? Napisz tak, żeby po przelewach każdy był rozliczony. Wyjaśnij, dlaczego suma sald nie wynosi zero."
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z5_doszedlem",
+     "pytanie": "Samodzielnie doszedłem do zadania",
+     "opcje": [
+      "1",
+      "2",
+      "3",
+      "4 — wszystkie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_trudne",
+     "wiersze": 3,
+     "pytanie": "Które zadanie sprawiło największy kłopot i czego jeszcze muszę się douczyć?"
+    }
+   ]
+  }
+ ]
+}

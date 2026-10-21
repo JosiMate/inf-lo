@@ -35,6 +35,16 @@ otwierasz, klikając nazwę tematu.
     "url": "../klasa-1/porownywanie-ofert/#karta"
   },
   {
+    "plik": "zakupy-grupowe",
+    "tytul": "Klasa 1 · Zakupy grupowe z arkuszem",
+    "url": "../klasa-1/zakupy-grupowe/#karta"
+  },
+  {
+    "plik": "podsumowanie-arkusz-1",
+    "tytul": "Klasa 1 · Karta pracy — arkusz kalkulacyjny, część 1",
+    "url": "../klasa-1/podsumowanie-arkusz-1/#karta"
+  },
+  {
     "plik": "prawo-w-sieci",
     "tytul": "Klasa 2 · Prawo w sieci",
     "url": "../klasa-2/prawo-w-sieci/#karta"
