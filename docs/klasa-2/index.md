@@ -32,6 +32,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 | **[Przetwarzanie napisów](przetwarzanie-napisow.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Szyfrowanie i deszyfrowanie tekstu](szyfrowanie.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Wiesz, umiesz, zdasz — połowa działu II](powtorka-dzial-2-czesc-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
+| **[Karta pracy — Python, część 1](podsumowanie-python-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Algorytm Euklidesa w praktyce | 1 | *w przygotowaniu* |
 | Badanie własności liczb całkowitych | 2 | *w przygotowaniu* |
 | Sortowanie bąbelkowe i przez wstawianie | 2 | *w przygotowaniu* |

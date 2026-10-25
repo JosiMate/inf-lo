@@ -73,6 +73,11 @@ otwierasz, klikając nazwę tematu.
     "plik": "szyfrowanie",
     "tytul": "Klasa 2 · Szyfrowanie i deszyfrowanie tekstu",
     "url": "../klasa-2/szyfrowanie/#karta"
+  },
+  {
+    "plik": "podsumowanie-python-1",
+    "tytul": "Klasa 2 · Karta pracy — Python, część 1",
+    "url": "../klasa-2/podsumowanie-python-1/#karta"
   }
 ]
 </script>

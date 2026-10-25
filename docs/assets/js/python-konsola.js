@@ -225,7 +225,12 @@
       }
     }
     const tekstBloku = blok ? (blok.querySelector("code") || blok).textContent : "";
-    const testyEl = host.querySelector("script.py-testy");
+    /* Po przejściu z menu (navigation.instant) Material wstawia skrypty z treści
+       strony na nowo i gubi przy tym atrybuty type i class — testy szukamy więc
+       także po samym znaczniku <script> bez src, tak jak quiz.js i karty.js. */
+    const testyEl = host.querySelector("script.py-testy")
+      || host.querySelector('script[type="application/json"]')
+      || [...host.querySelectorAll("script:not([src])")].find((s) => s !== zrodlo && /^\s*\[/.test(s.textContent));
     const oczysc = (s) => String(s || "").replace(/\r\n/g, "\n").replace(/^\n+/, "").replace(/\s+$/, "") + "\n";
     let przyklad = oczysc(zrodlo ? zrodlo.textContent : tekstBloku);
     const nazwaPliku = host.dataset.nazwa || (plik ? plik.split("/").pop() : "");

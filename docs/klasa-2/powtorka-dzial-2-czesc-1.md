@@ -31,8 +31,8 @@ odpowiedz w zeszycie, zanim odsłonisz odpowiedź.
 ## 2. Co musisz umieć
 
 Przejdź listę i uczciwie oceń każdy punkt. Litera w nawiasie to poziom
-wymagań na pracy bieżącej: **K** — ocena dopuszczająca, **P** —
-dostateczna, **R** — dobra, **D** — bardzo dobra. Przy punktach, których nie
+wymagań na pracy bieżącej — na lekcji albo na karcie domowej: **K** — ocena
+dopuszczająca, **P** — dostateczna, **R** — dobra, **D** — bardzo dobra. Przy punktach, których nie
 jesteś pewien, wróć do tematu — odnośnik prowadzi prosto do niego.
 Samoocenę z kryteriów sukcesu w tematach zobaczysz też na stronie
 [Mój postęp](../moj-postep.md).
@@ -330,15 +330,23 @@ bieżącej — ale sprawdzają te same umiejętności. Litera przy tytule to poz
 
 ## 6. Jak wygląda praca bieżąca
 
-- **Forma.** Piszesz przy komputerze, przez **45 minut**, na stronie
-  [Sprawdzian przy komputerze](https://josimate.github.io/sprawdziany/).
+- **Dwie części, dwie oceny.** Część na lekcji to krótkie polecenia.
+  Część domowa to [Karta pracy — Python, część 1](podsumowanie-python-1.md):
+  dłuższe programy na Twoich własnych danych, praca obowiązkowa. Każda część
+  ma osobną ocenę bieżącą, liczoną tak samo — według poziomów z tabeli niżej.
+- **Na lekcji.** Piszesz przy komputerze, przez około **30 minut**, na
+  stronie [Sprawdzian przy komputerze](https://josimate.github.io/sprawdziany/).
   Na początku lekcji dostajesz plik arkusza swojej grupy, wczytujesz go
   i odpowiadasz w polach na stronie. Na koniec klikasz **Wyślij do
   nauczyciela**.
-- **Zakres.** Pięć tematów z tej strony. Zadania są takie jak ćwiczenia
-  z lekcji: napisać krótki program albo funkcję, podać wynik jej wywołania,
-  zaszyfrować coś na kartce, wyjaśnić coś jednym zdaniem.
-- **Programy uruchamiasz** w online-python.com. Kod wklejasz w pole
+- **Zakres na lekcji.** Napisy i wycinki, proste funkcje z `return`
+  i `if` / `elif`, liczba ustawień wzorca, szyfr Cezara na kartce, `ord()`
+  i `chr()`. Do tego dwa polecenia z gotowym kodem: uzupełnić brakujące
+  wiersze funkcji i znaleźć błąd w funkcji szyfrującej. Wyjaśnienia — jednym,
+  dwoma zdaniami.
+- **Zakres w domu.** Pętla po znakach, budowanie napisu, algorytm naiwny,
+  funkcja szyfrująca, palindrom i łamanie szyfru — szczegóły na stronie karty.
+- **Programy na lekcji uruchamiasz** w online-python.com. Kod wklejasz w pole
   odpowiedzi razem z wynikiem, który wypisał.
 - **Ocenianie bez punktów.** Każde polecenie ma poziom: K, P, R albo D.
   Ocenę wyznacza najwyższy poziom zaliczony w całości razem ze wszystkimi
@@ -356,7 +364,7 @@ bieżącej — ale sprawdzają te same umiejętności. Litera przy tytule to poz
 Opłaca się więc najpierw domknąć poziom niższy, a dopiero potem sięgać
 wyżej. Szóstki na tej pracy nie ma — zdobywa się ją zadaniem działowym
 opisanym w [spisie tematów](index.md).
-Ocena z tej pracy jest **oceną bieżącą** i nie podlega poprawie — poprawiać
+Oceny z obu części są **ocenami bieżącymi** i nie podlegają poprawie — poprawiać
 można sprawdziany z całego działu, a ten zakres wróci na sprawdzianie
 kończącym dział II.
 

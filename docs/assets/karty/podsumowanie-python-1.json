@@ -1,0 +1,214 @@
+{
+ "id": "inf-lo-podsumowanie-python-1",
+ "tytul": "Karta pracy — Python, część 1",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "PYTHON-1",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Funkcje na napisach",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Zadanie 1. Wpisz na górze karty <strong>numer w dzienniku</strong> — według niego sprawdzam Twoje wyniki.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z1_kod",
+     "pytanie": "Kod funkcji skrot() i odwroc()",
+     "wiersze": 6
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_skrot",
+       "skrot(twoje słowo)",
+       ""
+      ],
+      [
+       "z1_odwroc",
+       "odwroc(twoje słowo)",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Pętla po znakach i ustawienia wzorca",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Zadanie 2.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "pytanie": "Kod funkcji ile_razy()",
+     "wiersze": 7
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_ile",
+       "ile_razy(zdanie, twoja litera)",
+       ""
+      ],
+      [
+       "z2_ustawienia",
+       "Ile ustawień twojego wzorca w tekście DNA",
+       ""
+      ],
+      [
+       "z2_obliczenie",
+       "Obliczenie liczby ustawień",
+       "np. 10 − 3 + 1 = 8"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Nowy napis, wszystkie wystąpienia, szyfrowanie",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Zadanie 3.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod_bez",
+     "pytanie": "Kod funkcji bez_samoglosek()",
+     "wiersze": 7
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_kod_wyst",
+     "pytanie": "Kod funkcji wystapienia()",
+     "wiersze": 8
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_kod_szyfr",
+     "pytanie": "Kod funkcji szyfruj() (razem z funkcjami pomocniczymi)",
+     "wiersze": 10
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_bez",
+       "bez_samoglosek(twoje słowo)",
+       ""
+      ],
+      [
+       "z3_wyst",
+       "wystapienia(DNA, twój wzorzec)",
+       ""
+      ],
+      [
+       "z3_szyfr",
+       "szyfruj(twoje słowo wielkimi literami, twój klucz)",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z3_zrzut",
+     "opis": "okienko z funkcją szyfruj() po kliknięciu ✓ Sprawdź i wywołaniem dla twoich danych"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Palindromy, łamanie szyfru, granice pętli",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Zadanie 4.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z4_kod_pal",
+     "pytanie": "Kod funkcji czy_palindrom()",
+     "wiersze": 5
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_pal",
+       "czy_palindrom(\"Kobyła ma mały bok\"), (\"Python\"), (twoje słowo)",
+       "trzy wyniki po przecinku"
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_kod_zlam",
+     "pytanie": "Kod funkcji zlam() (razem z szyfruj())",
+     "wiersze": 10
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_klucz",
+       "Klucz twojej przechwyconej wiadomości",
+       ""
+      ],
+      [
+       "z4_tekst",
+       "Tekst jawny",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_bez1",
+       "wystapienia(DNA, twój wzorzec) po usunięciu „+ 1” w range()",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_granica",
+     "pytanie": "Dlaczego w range() jest + 1? Odpowiedz na swoich danych: zmienił się wynik czy nie — i dlaczego?",
+     "wiersze": 4
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Samoocena i źródła",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z5_doszedlem",
+     "pytanie": "Samodzielnie doszedłem do zadania",
+     "opcje": [
+      "1",
+      "2",
+      "3",
+      "4 — wszystkie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_zrodla",
+     "pytanie": "Z czego korzystałem: strony tematów, podręcznik, pomoc kogoś, asystent AI — i przy którym zadaniu?",
+     "wiersze": 3
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_trudne",
+     "pytanie": "Co sprawiło największy kłopot?",
+     "wiersze": 2
+    }
+   ]
+  }
+ ]
+}
