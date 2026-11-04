@@ -31,7 +31,7 @@ ciebie i nie ma nic wspólnego z ocenami.
 | **[Porównywanie ofert w arkuszu](porownywanie-ofert.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Zakupy grupowe z arkuszem](zakupy-grupowe.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Karta pracy — arkusz kalkulacyjny, część 1](podsumowanie-arkusz-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Wykresy funkcji w arkuszu | 1 | *w przygotowaniu* |
+| **[Wykresy funkcji w arkuszu](wykresy-funkcji.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Komputerowe wspomaganie pomiarów | 1 | *w przygotowaniu* |
 | Symulacje komputerowe w arkuszu | 2 | *w przygotowaniu* |
 | Tabele przestawne | 1 | *w przygotowaniu* |

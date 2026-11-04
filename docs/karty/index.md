@@ -45,6 +45,11 @@ otwierasz, klikając nazwę tematu.
     "url": "../klasa-1/podsumowanie-arkusz-1/#karta"
   },
   {
+    "plik": "wykresy-funkcji",
+    "tytul": "Klasa 1 · Wykresy funkcji w arkuszu",
+    "url": "../klasa-1/wykresy-funkcji/#karta"
+  },
+  {
     "plik": "prawo-w-sieci",
     "tytul": "Klasa 2 · Prawo w sieci",
     "url": "../klasa-2/prawo-w-sieci/#karta"

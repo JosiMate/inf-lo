@@ -5,14 +5,16 @@
     "podstawy-arkusza",
     "instrukcje-warunkowe",
     "porownywanie-ofert",
-    "zakupy-grupowe"
+    "zakupy-grupowe",
+    "wykresy-funkcji"
   ],
   "tytuly": {
     "bezpieczna-praca": "Bezpieczna praca z komputerem",
     "podstawy-arkusza": "Podstawy pracy z arkuszem",
     "instrukcje-warunkowe": "Stosowanie instrukcji warunkowych",
     "porownywanie-ofert": "Porównywanie ofert w arkuszu",
-    "zakupy-grupowe": "Zakupy grupowe z arkuszem"
+    "zakupy-grupowe": "Zakupy grupowe z arkuszem",
+    "wykresy-funkcji": "Wykresy funkcji w arkuszu"
   },
   "pytania": [
     {
@@ -188,6 +190,41 @@
       "temat": "zakupy-grupowe",
       "pytanie": "Wpłacono 100 zł, do zapłaty jest 115,56 zł. Jakie jest saldo, liczone jako wpłacono minus do zapłaty, i co oznacza jego znak?",
       "odpowiedz": "−15,56 zł — liczba ujemna oznacza, że osoba jest jeszcze winna tyle pieniędzy.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-wykresy-001",
+      "temat": "wykresy-funkcji",
+      "pytanie": "Jakiego typu wykresu używasz do narysowania funkcji z tabeli wartości i dlaczego nie liniowego?",
+      "odpowiedz": "Punktowego (XY) — stawia punkty nad prawdziwymi wartościami x. Liniowy traktuje x jak podpisy w równych odstępach.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-wykresy-002",
+      "temat": "wykresy-funkcji",
+      "pytanie": "Parametry a i b są w B2 i B3, a x w A5. Jak wygląda formuła y = a·x + b, którą skopiujesz w dół?",
+      "odpowiedz": "=$B$2*A5+$B$3 — parametry z dolarami, x bez.",
+      "kod": "=$B$2*A5+$B$3"
+    },
+    {
+      "id": "lo1-wykresy-003",
+      "temat": "wykresy-funkcji",
+      "pytanie": "W A7 jest 3. Co pokaże komórka z formułą =-A7^2?",
+      "odpowiedz": "9 — minus liczy się przed potęgowaniem, czyli (−3)². Poprawnie: =-(A7^2).",
+      "kod": "=-A7^2"
+    },
+    {
+      "id": "lo1-wykresy-004",
+      "temat": "wykresy-funkcji",
+      "pytanie": "Co na wykresie funkcji y = a·x + b zmienia parametr b, a co parametr a?",
+      "odpowiedz": "b przesuwa prostą w górę lub w dół (punkt przecięcia z osią Y), a decyduje o nachyleniu — przy ujemnym prosta opada.",
+      "kod": ""
+    },
+    {
+      "id": "lo1-wykresy-005",
+      "temat": "wykresy-funkcji",
+      "pytanie": "Linia trendu przejazdów taksówką ma równanie y = 3,27x + 8,41. Co oznaczają te dwie liczby?",
+      "odpowiedz": "3,27 zł to stawka za każdy kilometr, 8,41 zł — opłata startowa (kwota dla x = 0).",
       "kod": ""
     }
   ]

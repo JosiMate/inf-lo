@@ -1,0 +1,249 @@
+{
+ "id": "inf-lo-wykresy-funkcji",
+ "tytul": "Wykresy funkcji w arkuszu",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 1",
+ "klasa": "1A",
+ "sufiks": "WYKRESY",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Funkcja liniowa",
+   "poziom": "wymagania konieczne i podstawowe · oceny 2–3",
+   "polecenie": "Ćwiczenie 1, zakładka <em>Liniowa</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_formula",
+       "Formuła z komórki B5",
+       "przepisz ją dokładnie"
+      ],
+      [
+       "z1_y3",
+       "Wartość y dla x = 3",
+       ""
+      ],
+      [
+       "z1_zero",
+       "Punkt, w którym prosta przecina oś X",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "wybor",
+     "id": "z1_typ",
+     "pytanie": "Jaki typ wykresu wstawiłeś?",
+     "opcje": [
+      "punktowy (XY) z liniami",
+      "liniowy",
+      "kolumnowy",
+      "punktowy bez linii"
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z1_zrzut",
+     "opis": "tabela i wykres z tytułem i opisanymi osiami"
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Parametry a i b",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Ćwiczenie 2, zakładka <em>Liniowa</em>. Zmieniasz tylko B2 i B3.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_y3",
+       "a = −1, b = 2: wartość y dla x = 3",
+       ""
+      ],
+      [
+       "z2_zero",
+       "a = −1, b = 2: miejsce zerowe",
+       ""
+      ],
+      [
+       "z2_a0",
+       "a = 0, b = 3: jak wygląda wykres",
+       ""
+      ],
+      [
+       "z2_wlasne",
+       "Twoja para a i b dla prostej przez punkt (0; 0)",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_wniosek",
+     "wiersze": 2,
+     "pytanie": "Co na wykresie zmienia parametr a, a co parametr b?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Funkcja kwadratowa",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 3, zakładka <em>Kwadratowa</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_formula",
+       "Formuła z komórki B7",
+       ""
+      ],
+      [
+       "z3_zera",
+       "Miejsca zerowe dla a = 1, b = −2, c = −3",
+       ""
+      ],
+      [
+       "z3_wierzcholek",
+       "Wierzchołek paraboli dla tych parametrów",
+       ""
+      ],
+      [
+       "z3_odwrotna",
+       "a = −1, b = 2, c = 3: co się zmieniło, a co zostało",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_minus",
+     "wiersze": 2,
+     "pytanie": "Kolega narysował y = −x² formułą =-A7^2 i parabola otworzyła się do góry. Dlaczego i jak to poprawić?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Pokrętło",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 4, zakładka <em>Kwadratowa</em>: pokrętło połączone z E2, zakres 0–40, w B2 formuła =(E2-20)/10; b = −2, c = −3.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_ustawienia",
+       "Ustawienia pokrętła: minimum, maksimum, krok, łącze komórki",
+       ""
+      ],
+      [
+       "z4_a0",
+       "Jak wygląda wykres przy a = 0 i dlaczego",
+       ""
+      ],
+      [
+       "z4_ujemne",
+       "Ile miejsc zerowych ma funkcja przy a = −1",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z4_rosnie",
+     "wiersze": 2,
+     "pytanie": "Co dzieje się z parabolą, gdy a rośnie od 0,1 do 2?"
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "pokrętło, parametry i wykres paraboli dla wybranego a"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Linia trendu i prognoza",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenie 5, zakładka <em>Taksówka</em>.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_rownanie",
+       "Równanie linii trendu (tak, jak pokazał je arkusz)",
+       ""
+      ],
+      [
+       "z5_stawka",
+       "Stawka za 1 km (E5)",
+       ""
+      ],
+      [
+       "z5_start",
+       "Opłata startowa (E6)",
+       ""
+      ],
+      [
+       "z5_prognoza",
+       "Prognoza za 15 km (E9)",
+       ""
+      ],
+      [
+       "z5_tytul",
+       "Formuła z komórki E10",
+       ""
+      ],
+      [
+       "z5_20",
+       "Tytuł wykresu po wpisaniu 20 km w E8",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z5_zrzut",
+     "opis": "wykres z punktami, linią trendu, równaniem i tytułem pobranym z komórki"
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_wniosek",
+     "wiersze": 3,
+     "pytanie": "Dlaczego punktów nie łączy się linią? Na ile wierzysz prognozie za 20 km — i za 150 km?"
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_poziom",
+     "pytanie": "Wykres funkcji z lekcji matematyki narysowałbym w arkuszu",
+     "opcje": [
+      "samodzielnie, od tabeli do opisanego wykresu",
+      "samodzielnie, ale z zaglądaniem do materiału",
+      "z pomocą nauczyciela",
+      "jeszcze nie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_trudne",
+     "wiersze": 2,
+     "pytanie": "Co sprawiło największy kłopot i jak sobie z tym poradziłeś?"
+    }
+   ]
+  }
+ ]
+}
