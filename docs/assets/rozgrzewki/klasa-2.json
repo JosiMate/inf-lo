@@ -6,7 +6,9 @@
     "funkcje-obliczeniowe",
     "wyszukiwanie-wzorca",
     "przetwarzanie-napisow",
-    "szyfrowanie"
+    "szyfrowanie",
+    "algorytm-euklidesa",
+    "wlasnosci-liczb"
   ],
   "tytuly": {
     "prawo-w-sieci": "Prawo w sieci",
@@ -14,7 +16,9 @@
     "funkcje-obliczeniowe": "Definiowanie funkcji obliczeniowych",
     "wyszukiwanie-wzorca": "Wyszukiwanie wzorca w tekście",
     "przetwarzanie-napisow": "Przetwarzanie napisów",
-    "szyfrowanie": "Szyfrowanie i deszyfrowanie tekstu"
+    "szyfrowanie": "Szyfrowanie i deszyfrowanie tekstu",
+    "algorytm-euklidesa": "Algorytm Euklidesa w praktyce",
+    "wlasnosci-liczb": "Badanie własności liczb całkowitych"
   },
   "pytania": [
     {
@@ -220,6 +224,69 @@
       "temat": "szyfrowanie",
       "pytanie": "Ile kluczy trzeba sprawdzić, żeby na pewno złamać szyfr Cezara?",
       "odpowiedz": "25 — klucze od 1 do 25; klucz 26 nic nie zmienia."
+    },
+    {
+      "id": "lo2-euklides-001",
+      "temat": "algorytm-euklidesa",
+      "pytanie": "Policz NWD(84, 36) algorytmem Euklidesa z odejmowaniem. Jakie pary (a, b) powstają po drodze?",
+      "odpowiedz": "(48, 36), (12, 36), (12, 24), (12, 12) — NWD = 12."
+    },
+    {
+      "id": "lo2-euklides-002",
+      "temat": "algorytm-euklidesa",
+      "pytanie": "Kiedy kończy się pętla while a != b: …?",
+      "odpowiedz": "Gdy warunek przestanie być prawdziwy, czyli gdy a == b. Warunek sprawdzany jest przed każdym obrotem."
+    },
+    {
+      "id": "lo2-euklides-003",
+      "temat": "algorytm-euklidesa",
+      "pytanie": "Po a, b = 360, 150 wykonano a, b = b, a % b. Ile wynoszą a i b?",
+      "odpowiedz": "a = 150, b = 60 — obie wartości po prawej liczone są ze starych a i b.",
+      "kod": "a, b = b, a % b"
+    },
+    {
+      "id": "lo2-euklides-004",
+      "temat": "algorytm-euklidesa",
+      "pytanie": "Jak policzyć NWW(a, b), mając funkcję nwd()?",
+      "odpowiedz": "a * b // nwd(a, b) — bo NWD · NWW = a · b.",
+      "kod": "a * b // nwd(a, b)"
+    },
+    {
+      "id": "lo2-euklides-005",
+      "temat": "algorytm-euklidesa",
+      "pytanie": "Co się stanie po wywołaniu nwd_odejmowanie(5, 0)?",
+      "odpowiedz": "Pętla nigdy się nie skończy: 5 − 0 = 5 i a nie zrówna się z b."
+    },
+    {
+      "id": "lo2-liczby-001",
+      "temat": "wlasnosci-liczb",
+      "pytanie": "Który warunek w Pythonie znaczy, że d jest dzielnikiem n?",
+      "odpowiedz": "n % d == 0 — reszta z dzielenia równa zero.",
+      "kod": "n % d == 0"
+    },
+    {
+      "id": "lo2-liczby-002",
+      "temat": "wlasnosci-liczb",
+      "pytanie": "Dlaczego 1 nie jest liczbą pierwszą?",
+      "odpowiedz": "Liczba pierwsza ma dokładnie dwa dzielniki, a 1 ma tylko jeden."
+    },
+    {
+      "id": "lo2-liczby-003",
+      "temat": "wlasnosci-liczb",
+      "pytanie": "Do jakiej liczby wystarczy sprawdzać dzielniki 97, żeby stwierdzić, że jest pierwsza?",
+      "odpowiedz": "Do 9 — bo 9 · 9 = 81 ≤ 97, a 10 · 10 = 100 > 97."
+    },
+    {
+      "id": "lo2-liczby-004",
+      "temat": "wlasnosci-liczb",
+      "pytanie": "Funkcja z warunkiem while d * d < n: daje dobre wyniki dla 7, 10, 13. Którą liczbę dopisać do testów, żeby wyłapać błąd?",
+      "odpowiedz": "Kwadrat liczby pierwszej, np. 49 albo 4 — funkcja uzna je za pierwsze."
+    },
+    {
+      "id": "lo2-liczby-005",
+      "temat": "wlasnosci-liczb",
+      "pytanie": "Od której liczby zaczynasz skreślać wielokrotności 5 w sicie Eratostenesa i dlaczego?",
+      "odpowiedz": "Od 25 = 5 · 5 — mniejsze wielokrotności 5 skreśliły już 2 i 3."
     }
   ]
 }

@@ -33,8 +33,8 @@ ciebie i nie ma nic wspólnego z ocenami.
 | **[Szyfrowanie i deszyfrowanie tekstu](szyfrowanie.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Wiesz, umiesz, zdasz — połowa działu II](powtorka-dzial-2-czesc-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | **[Karta pracy — Python, część 1](podsumowanie-python-1.md)** | — | :material-check-circle:{ title="Materiał gotowy" } gotowe |
-| Algorytm Euklidesa w praktyce | 1 | *w przygotowaniu* |
-| Badanie własności liczb całkowitych | 2 | *w przygotowaniu* |
+| **[Algorytm Euklidesa w praktyce](algorytm-euklidesa.md)** | 1 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
+| **[Badanie własności liczb całkowitych](wlasnosci-liczb.md)** | 2 | :material-check-circle:{ title="Materiał gotowy" } gotowe |
 | Sortowanie bąbelkowe i przez wstawianie | 2 | *w przygotowaniu* |
 
 ### Dział III. Tworzenie stron internetowych

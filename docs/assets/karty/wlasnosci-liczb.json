@@ -1,0 +1,191 @@
+{
+ "id": "inf-lo-wlasnosci-liczb",
+ "tytul": "Badanie własności liczb całkowitych",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-LICZBY",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "Dzielniki i liczby pierwsze",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Sekcje 1–2 i 5 oraz ćwiczenie 1. Sito rób na kartce.",
+   "pola": [
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_2026",
+       "Dzielniki liczby 2026",
+       ""
+      ],
+      [
+       "z1_czy",
+       "Czy 2026 jest liczbą pierwszą? Dlaczego?",
+       ""
+      ],
+      [
+       "z1_jeden",
+       "Dlaczego 1 nie jest liczbą pierwszą?",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z1_sito",
+     "wiersze": 2,
+     "pytanie": "Sito Eratostenesa na kartce: wypisz wszystkie liczby pierwsze do 50."
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Funkcja czy_pierwsza()",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Sekcja 2 i ćwiczenie 2.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "wiersze": 7,
+     "pytanie": "Przepisz funkcję czy_pierwsza()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_91",
+       "czy_pierwsza(91) — wynik i dlaczego",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Do pierwiastka i testy",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Sekcje 3–4 i ćwiczenie 3.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod",
+     "wiersze": 9,
+     "pytanie": "Przepisz funkcję czy_pierwsza_szybko()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_obroty",
+       "Ile obrotów pętli while dla n = 97",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_49",
+     "wiersze": 2,
+     "pytanie": "Po co w testach funkcji jest liczba 49? Jaki błąd wyłapuje?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "Liczby pierwsze w przedziale",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Ćwiczenie 4.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z4_kod",
+     "wiersze": 6,
+     "pytanie": "Przepisz funkcję ile_pierwszych()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_1000",
+       "Liczby pierwsze od 1 do 1000 — ile",
+       ""
+      ],
+      [
+       "z4_2000",
+       "Liczby pierwsze od 2000 do 2100 — ile",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "okienko z ćwiczenia 4 po kliknięciu ✓ Sprawdź"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Rozkład na czynniki i sito",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Ćwiczenia 5 i 6.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 12,
+     "pytanie": "Przepisz funkcję rozklad()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_2026",
+       "rozklad(2026)",
+       ""
+      ],
+      [
+       "z5_9991",
+       "rozklad(9991)",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_sito",
+     "wiersze": 2,
+     "pytanie": "Dlaczego w sicie skreślanie wielokrotności p zaczyna się od p * p, a nie od 2 * p?"
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_poziom",
+     "pytanie": "Funkcję sprawdzającą, czy liczba jest pierwsza, napisałbym",
+     "opcje": [
+      "samodzielnie, bez zaglądania do materiału",
+      "samodzielnie, ale z zaglądaniem do materiału",
+      "z pomocą nauczyciela",
+      "jeszcze nie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_trudne",
+     "wiersze": 2,
+     "pytanie": "Co sprawiło największy kłopot i jak sobie z tym poradziłeś?"
+    }
+   ]
+  }
+ ]
+}

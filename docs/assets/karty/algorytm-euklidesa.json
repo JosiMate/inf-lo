@@ -1,0 +1,192 @@
+{
+ "id": "inf-lo-algorytm-euklidesa",
+ "tytul": "Algorytm Euklidesa w praktyce",
+ "przedmiot": "PCEiKZ Szczucin · informatyka, zakres podstawowy · klasa 2",
+ "klasa": "2LOA",
+ "sufiks": "INF-LO-EUKLIDES",
+ "zadania": [
+  {
+   "nr": 1,
+   "tytul": "NWD na kartce",
+   "poziom": "wymagania konieczne · ocena 2",
+   "polecenie": "Sekcje 1–2. Licz bez komputera.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z1_kroki",
+     "wiersze": 4,
+     "pytanie": "Zapisz kolejne pary (a, b) algorytmu z odejmowaniem dla NWD(84, 36)."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z1_nwd",
+       "NWD(84, 36)",
+       ""
+      ],
+      [
+       "z1_plytki",
+       "Największa kwadratowa płytka na podłogę 240 × 180 cm — długość boku",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "nr": 2,
+   "tytul": "Pętla while",
+   "poziom": "wymagania podstawowe · ocena 3",
+   "polecenie": "Sekcja 3 i ćwiczenia 1–2.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z2_kod",
+     "wiersze": 8,
+     "pytanie": "Przepisz funkcję nwd_odejmowanie()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z2_ile",
+       "Ile odejmowań wykonał program z ćwiczenia 2 dla 1071 i 462",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z2_zero",
+     "wiersze": 2,
+     "pytanie": "Co się stanie po wywołaniu nwd_odejmowanie(5, 0) i dlaczego?"
+    }
+   ]
+  },
+  {
+   "nr": 3,
+   "tytul": "Euklides z dzieleniem",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Sekcja 4 i ćwiczenie 3.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z3_kod",
+     "wiersze": 5,
+     "pytanie": "Przepisz funkcję nwd()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z3_pary",
+       "Kolejne pary (a, b) dla NWD(84, 36) z resztą z dzielenia",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z3_rownolegle",
+     "wiersze": 2,
+     "pytanie": "Dlaczego zamiast a, b = b, a % b nie można napisać w dwóch wierszach a = b i b = a % b?"
+    }
+   ]
+  },
+  {
+   "nr": 4,
+   "tytul": "NWW",
+   "poziom": "wymagania rozszerzające · ocena 4",
+   "polecenie": "Sekcja 5 i ćwiczenie 4.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z4_kod",
+     "wiersze": 3,
+     "pytanie": "Przepisz funkcję nww()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z4_nww",
+       "NWW(84, 36)",
+       ""
+      ],
+      [
+       "z4_tramwaj",
+       "Tramwaj co 15 minut, autobus co 25 minut, razem o 7:00 — o której znów razem?",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "zrzut",
+     "id": "z4_zrzut",
+     "opis": "okienko z ćwiczenia 4 po kliknięciu ✓ Sprawdź"
+    }
+   ]
+  },
+  {
+   "nr": 5,
+   "tytul": "Ułamki",
+   "poziom": "wymagania dopełniające · ocena 5",
+   "polecenie": "Sekcja 6 i ćwiczenie 5.",
+   "pola": [
+    {
+     "typ": "tekst",
+     "id": "z5_kod",
+     "wiersze": 10,
+     "pytanie": "Przepisz funkcje skroc() i dodaj()."
+    },
+    {
+     "typ": "tabela",
+     "wiersze": [
+      [
+       "z5_skroc",
+       "84/126 po skróceniu",
+       ""
+      ],
+      [
+       "z5_dodaj",
+       "7/12 + 5/18",
+       ""
+      ]
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z5_po_co",
+     "wiersze": 2,
+     "pytanie": "Do czego przy dodawaniu ułamków potrzebna jest NWW, a do czego NWD?"
+    }
+   ]
+  },
+  {
+   "nr": 6,
+   "tytul": "Samoocena",
+   "poziom": "",
+   "polecenie": "Krótko i szczerze — to nie jest oceniane na stopień.",
+   "pola": [
+    {
+     "typ": "wybor",
+     "id": "z6_poziom",
+     "pytanie": "NWD dwóch liczb policzyłbym w Pythonie",
+     "opcje": [
+      "samodzielnie, bez zaglądania do materiału",
+      "samodzielnie, ale z zaglądaniem do materiału",
+      "z pomocą nauczyciela",
+      "jeszcze nie"
+     ]
+    },
+    {
+     "typ": "tekst",
+     "id": "z6_trudne",
+     "wiersze": 2,
+     "pytanie": "Co sprawiło największy kłopot i jak sobie z tym poradziłeś?"
+    }
+   ]
+  }
+ ]
+}

@@ -15,3 +15,5 @@ nav:
   - "Szyfrowanie i deszyfrowanie tekstu": szyfrowanie.md
   - "Wiesz, umiesz, zdasz — połowa działu II": powtorka-dzial-2-czesc-1.md
   - "Karta pracy — Python, część 1": podsumowanie-python-1.md
+  - "Algorytm Euklidesa w praktyce": algorytm-euklidesa.md
+  - "Badanie własności liczb całkowitych": wlasnosci-liczb.md
